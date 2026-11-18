@@ -26,6 +26,10 @@ A follow-up question can reuse the model. A changed source document calls for so
 
 [Reproduce a source-to-model-to-answer study](examples/source-to-answer/README.md). This is an agent-guided workflow: the CLI consumes an authored recipe, not arbitrary prose, and does not autonomously certify the interpretation.
 
+## Review the interpretation, not just the syntax
+
+Before delivery, the skill calls for a separate [source-interpretation review](references/source-interpretation-review.md): concurrency outcomes, acknowledgment versus completion, complete boundary messages, and changes across revisions. A hash-bound review receipt and regression tests help prevent recorded source expectations from being omitted or silently invalidated. They do not replace independent engineering judgment.
+
 ## Why this exists
 
 A slide can explain an architecture but lose its model. A modeling environment can preserve the model but be difficult for a wider audience to use. This skill offers a practical middle ground:

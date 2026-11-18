@@ -1,0 +1,80 @@
+{
+  "fixtureRole": "Minimal recipe excerpts for source-review tests; not a complete native architecture input.",
+  "scenarios": [
+    {
+      "id": "SC_ASSESS",
+      "description": "No response leaves that branch awaiting; never fabricate a contribution.",
+      "transitions": [
+        {
+          "from": "sensor",
+          "to": "gate",
+          "condition": "Validity outcome returned: valid, invalid or unavailable"
+        },
+        {
+          "from": "risk",
+          "to": "gate",
+          "condition": "Risk outcome returned: confirmed, unconfirmed or unavailable"
+        }
+      ]
+    },
+    {
+      "id": "SC_NOTICE",
+      "transitions": [
+        {
+          "from": "ack",
+          "to": "recorded",
+          "condition": "Acknowledgment recorded; assessment completion independent"
+        }
+      ],
+      "steps": [
+        {
+          "id": "recorded",
+          "function": "F_ACK_RECORD"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "id": "F_ACK_RECORD",
+      "label": "Record acknowledgment without asserting whether an assessment has separately completed"
+    }
+  ],
+  "contextExchanges": [
+    {
+      "id": "CX_SENSOR_REQ",
+      "basis": "proposed",
+      "sourceRefs": [
+        "ME-02"
+      ]
+    },
+    {
+      "id": "CX_RISK_REQ",
+      "basis": "proposed",
+      "sourceRefs": [
+        "ME-02"
+      ]
+    },
+    {
+      "id": "CX_TECH_ACK",
+      "basis": "proposed",
+      "sourceRefs": [
+        "ME-04"
+      ]
+    },
+    {
+      "id": "CX_CONS_ACK",
+      "basis": "proposed",
+      "sourceRefs": [
+        "ME-04"
+      ]
+    },
+    {
+      "id": "CX_CLEAR",
+      "basis": "proposed",
+      "sourceRefs": [
+        "ME-05"
+      ]
+    }
+  ]
+}

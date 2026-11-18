@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "basis": "source-first-independent-review",
+  "sourceSha256": "431d0cb54b7cb472bb790e6639acd2b7210744a830f48f8dcc30761b697d497e",
+  "recipeSha256": "a224232de8b2ec56ba9b8c262d826f26f08ddd7e8709f45daf15f36303e7eec9",
+  "checks": [
+    {
+      "id": "JOIN",
+      "focus": "concurrency-outcomes",
+      "sourceRefs": [
+        "ME-02"
+      ],
+      "status": "supported",
+      "rationale": "Returned unavailable is an outcome at the join, not a positive result or no response.",
+      "assertions": [
+        {
+          "path": "/scenarios/0/transitions/0/condition",
+          "equals": "Validity outcome returned: valid, invalid or unavailable"
+        },
+        {
+          "path": "/scenarios/0/transitions/1/condition",
+          "equals": "Risk outcome returned: confirmed, unconfirmed or unavailable"
+        },
+        {
+          "path": "/scenarios/0/description",
+          "equals": "No response leaves that branch awaiting; never fabricate a contribution."
+        }
+      ]
+    },
+    {
+      "id": "ACK",
+      "focus": "message-phases",
+      "sourceRefs": [
+        "ME-04"
+      ],
+      "status": "supported",
+      "rationale": "The ordinary recorded target makes no claim about independently completed assessment.",
+      "assertions": [
+        {
+          "path": "/scenarios/1/transitions/0/to",
+          "equals": "recorded"
+        },
+        {
+          "path": "/scenarios/1/steps/0/function",
+          "equals": "F_ACK_RECORD"
+        },
+        {
+          "path": "/functions/0/label",
+          "equals": "Record acknowledgment without asserting whether an assessment has separately completed"
+        }
+      ]
+    },
+    {
+      "id": "BOUNDARY",
+      "focus": "boundary-exchanges",
+      "sourceRefs": [
+        "ME-02",
+        "ME-04",
+        "ME-05"
+      ],
+      "status": "supported",
+      "rationale": "Requests, per-request evidence and clearance are represented; transport mechanism remains unspecified.",
+      "assertions": [
+        {
+          "path": "/contextExchanges",
+          "containsIds": [
+            "CX_SENSOR_REQ",
+            "CX_RISK_REQ",
+            "CX_TECH_ACK",
+            "CX_CONS_ACK",
+            "CX_CLEAR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV",
+      "focus": "revision-identity",
+      "sourceRefs": [
+        "REVISION"
+      ],
+      "status": "not-applicable",
+      "rationale": "This minimal fixture has one revision; it does not establish cross-revision identity.",
+      "assertions": []
+    }
+  ]
+}
