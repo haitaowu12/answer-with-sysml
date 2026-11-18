@@ -163,7 +163,8 @@ class Graph:
             description='A display grouping of explicit authored records. Inspect the members for exact model endpoints.', **extra)
         return identity
 
-    def render(self):
+    def render(self, theme="paper"):
+        from architecture_palette import paint, stylesheet
         names = {key: 'n' + str(i) for i, key in enumerate(self.nodes)}
         marks = {}
         q = lambda value: json.dumps(str(value), ensure_ascii=False)
@@ -171,6 +172,7 @@ class Graph:
                  'graph [rankdir=TB, bgcolor="transparent", pad="0.32", nodesep="0.34", ranksep="0.52", splines=polyline, outputorder=edgesfirst, fontname="Arial"];',
                  'node [shape=box, style="rounded,filled", margin="0.16,0.12", fontname="Arial", fontsize=14, color="#527975", fillcolor="#eff7f4", fontcolor="#153c3a", penwidth=1.2];',
                  'edge [fontname="Arial", fontsize=10.5, color="#6b7e86", fontcolor="#40565e", arrowsize=0.7, penwidth=1.1];']
+        lines = [stylesheet(line, theme) for line in lines]
         for identity, node in self.nodes.items():
             mark = 'mark-' + digest((self.key + ':node:' + identity).encode())[:16]
             marks[mark] = (identity, 'node')
@@ -194,7 +196,7 @@ class Graph:
                              fillcolor='#335e59', color='#335e59', label='', xlabel=node['label'], fontsize='10')
             if node['boundary']:
                 attrs.update(style='rounded,dashed,filled', fillcolor='#f6f6f3', color='#a8afa9', fontcolor='#596660')
-            lines.append(names[identity] + ' [' + ','.join(k + '=' + q(v) for k, v in attrs.items()) + '];')
+            lines.append(names[identity] + ' [' + ','.join(k + '=' + q(paint(v,theme) if k in ('color','fillcolor','fontcolor') else v) for k, v in attrs.items()) + '];')
         for index, edge in enumerate(self.edges):
             mark = 'mark-' + digest((self.key + ':edge:' + str(index)).encode())[:16]
             marks[mark] = (edge['id'], 'edge')
@@ -209,7 +211,7 @@ class Graph:
                 attrs.update(color='#588b86', fontcolor='#355f5a')
             if self.ranks:
                 attrs['constraint'] = 'false'
-            lines.append(names[edge['source']] + ' -> ' + names[edge['target']] + ' [' + ','.join(k + '=' + q(v) for k, v in attrs.items()) + '];')
+            lines.append(names[edge['source']] + ' -> ' + names[edge['target']] + ' [' + ','.join(k + '=' + q(paint(v,theme) if k in ('color','fillcolor','fontcolor') else v) for k, v in attrs.items()) + '];')
         previous = None
         for i, rank in enumerate(self.ranks):
             rank = [x for x in rank if x in names]
@@ -242,7 +244,7 @@ class Graph:
                     nodes=list(self.nodes), relationIds=[e['id'] for e in self.edges])
 
 
-def make_views(packet, records):
+def make_views(packet, records, theme="paper"):
     graphs = []
     functions, fc = hierarchy(packet, 'functions')
     components, cc = hierarchy(packet, 'logicalComponents')
@@ -423,7 +425,7 @@ def make_views(packet, records):
             g.edge(rid, machine['id'] + '/' + transition['from'], machine['id'] + '/' + transition['to'],
                    transition.get('event') or transition.get('guard', ''), kind='transition')
         graphs.append(g)
-    return {g.key: g.render() for g in graphs}
+    return {g.key: g.render(theme) for g in graphs}
 
 
 def assurance(checks, architecture_raw, model_raw, bindings_raw):
@@ -446,7 +448,7 @@ def assurance(checks, architecture_raw, model_raw, bindings_raw):
                 reviewReadiness=checks.get('reviewReadiness', 'not assessed') if checks else 'not assessed')
 
 
-def build(architecture, model, bindings, output, *, checks=None, evidence=None):
+def build(architecture, model, bindings, output, *, checks=None, evidence=None, theme="paper"):
     architecture, model, bindings, output = map(Path, (architecture, model, bindings, output))
     raw, model_raw, bindings_raw = architecture.read_bytes(), model.read_bytes(), bindings.read_bytes()
     packet, mapping = json.loads(raw), json.loads(bindings_raw)
@@ -460,7 +462,7 @@ def build(architecture, model, bindings, output, *, checks=None, evidence=None):
     check_data = json.loads(check_raw) if check_raw else None
     legacy = json.loads(Path(evidence).read_bytes()) if evidence else {}
     records = record_index(packet, mapping)
-    views = make_views(packet, records)
+    views = make_views(packet, records, theme)
     legacy_records = []
     for item in legacy.get('records', []):
         legacy_records.append({k: deepcopy(item[k]) for k in ('id', 'label', 'kind', 'text', 'section', 'chapter', 'pages', 'status', 'q') if k in item})
@@ -485,8 +487,9 @@ def build(architecture, model, bindings, output, *, checks=None, evidence=None):
         target = output / name
         if target.exists() and target.read_bytes() != content:
             raise ValueError('Export would replace a different input artifact: ' + name)
+    from architecture_palette import stylesheet
     template = (HERE / 'architecture_review.html').read_text()
-    page = template.replace('<!-- READER_CSS -->', '<style>' + (HERE / 'architecture_review.css').read_text() + '</style>')
+    page = template.replace('<!-- READER_CSS -->', '<style>' + stylesheet((HERE / 'architecture_review.css').read_text(), theme) + '</style>')
     page = page.replace('<!-- READER_DATA -->', '<script type="application/json" id="reader-data">' + encoded(payload) + '</script>')
     page = page.replace('<!-- READER_JS -->', '<script>' + (HERE / 'architecture_review.js').read_text() + '</script>')
     page = page.replace('<!-- PAGE_TITLE -->', html.escape(packet.get('title', 'Architecture review')))
@@ -511,11 +514,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for key in ('architecture', 'model', 'bindings', 'output'):
         parser.add_argument('--' + key, type=Path, required=True)
+    parser.add_argument('--theme', choices=['paper','blueprint','ink'], default='paper')
     parser.add_argument('--checks', type=Path)
     parser.add_argument('--evidence', type=Path, help='Optional legacy whole-data.json source inventory')
     args = parser.parse_args()
     print(json.dumps(build(args.architecture, args.model, args.bindings, args.output,
-                           checks=args.checks, evidence=args.evidence), indent=2))
+                           checks=args.checks, evidence=args.evidence, theme=args.theme), indent=2))
 
 
 if __name__ == '__main__':

@@ -1,0 +1,2569 @@
+{
+  "schemaVersion": 1,
+  "title": "Agent skills: from reusable know-how to verified work",
+  "source": {
+    "id": "SKILLS",
+    "title": "Agent Skills primary-source evidence and teaching model",
+    "path": "source.md",
+    "sha256": "e1c27c8b3971d0b30a8d3b8a181cb89a345958e12fac2d5468bf241b17defac0"
+  },
+  "scope": {
+    "name": "Skill-enabled work and skill improvement",
+    "boundary": "Conceptual lifecycle across package, agent, host and tools. Codex-specific facts are explicitly scoped; maintenance gates are a proposed design.",
+    "included": [
+      "Package anatomy",
+      "Progressive disclosure",
+      "Selection and trust",
+      "Execution and checking",
+      "Authoring and evaluation",
+      "Source-to-SysML example"
+    ],
+    "excluded": [
+      "Hidden product internals",
+      "Training algorithms",
+      "Measured performance",
+      "Universal collision policy"
+    ],
+    "phase": "Teaching architecture",
+    "decision": "Understand how to use and improve skills without confusing guidance with tool access",
+    "requiredConcerns": [
+      "operational",
+      "system",
+      "logical",
+      "requirements",
+      "verification"
+    ],
+    "requiredScenarioKinds": [
+      "nominal",
+      "failure",
+      "recovery"
+    ]
+  },
+  "actors": [
+    {
+      "id": "USER",
+      "label": "Task owner",
+      "description": "Supplies intent, inputs and decisions.",
+      "sourceRefs": [
+        "S5",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft"
+    },
+    {
+      "id": "AUTHOR",
+      "label": "Skill maintainer",
+      "description": "Curates focused methods and tests candidate revisions.",
+      "sourceRefs": [
+        "S6",
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft"
+    },
+    {
+      "id": "HOST",
+      "label": "Host runtime",
+      "description": "Discovers accessible packages and mediates access and execution.",
+      "sourceRefs": [
+        "S4",
+        "S5",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft"
+    },
+    {
+      "id": "TOOLS",
+      "label": "Execution tools",
+      "description": "Return operation results, artifacts or errors.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft"
+    },
+    {
+      "id": "REVIEWER",
+      "label": "Independent evaluator",
+      "description": "Judges actual outcomes against task expectations.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft"
+    }
+  ],
+  "operationalActivities": [
+    {
+      "id": "OA_TASK",
+      "label": "Achieve a requested outcome",
+      "description": "Use suitable guidance on actual user inputs.",
+      "sourceRefs": [
+        "S5",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "performer": "USER"
+    },
+    {
+      "id": "OA_PROVISION",
+      "label": "Make guidance usable",
+      "description": "Provide discoverable and trusted packages within the host environment.",
+      "sourceRefs": [
+        "S4",
+        "S5"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "performer": "HOST"
+    },
+    {
+      "id": "OA_OPERATE",
+      "label": "Carry out a bounded operation",
+      "description": "Execute a requested permitted operation and return evidence.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "performer": "TOOLS"
+    },
+    {
+      "id": "OA_MAINTAIN",
+      "label": "Improve reusable know-how",
+      "description": "Revise a method in response to new needs and observed failures.",
+      "sourceRefs": [
+        "S6",
+        "S8",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "performer": "AUTHOR"
+    },
+    {
+      "id": "OA_EVAL",
+      "label": "Compare actual outcomes",
+      "description": "Judge candidate outputs independently of the authoring context.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "performer": "REVIEWER"
+    }
+  ],
+  "logicalComponents": [
+    {
+      "id": "LC_ROOT",
+      "label": "Skill-enabled work system",
+      "description": "Teaching boundary connecting reusable guidance, task application and improvement.",
+      "sourceRefs": [
+        "S9",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft"
+    },
+    {
+      "id": "LC_REASON",
+      "label": "Agent interpretation",
+      "description": "Turns intent and guidance into task-specific decisions.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_CONTEXT",
+      "label": "Working context",
+      "description": "Contains the currently relevant instructions and evidence, not every installed file.",
+      "sourceRefs": [
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_PACKAGE",
+      "label": "Skill package",
+      "description": "Reusable authored content; not an autonomous worker.",
+      "sourceRefs": [
+        "S1",
+        "S2"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_META",
+      "label": "Name and description",
+      "description": "Discovery and matching metadata.",
+      "sourceRefs": [
+        "S2",
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_PACKAGE"
+    },
+    {
+      "id": "LC_METHOD",
+      "label": "SKILL.md workflow",
+      "description": "Task method read after selection.",
+      "sourceRefs": [
+        "S2",
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_PACKAGE"
+    },
+    {
+      "id": "LC_REF",
+      "label": "References",
+      "description": "Detailed knowledge read on demand.",
+      "sourceRefs": [
+        "S2",
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_PACKAGE"
+    },
+    {
+      "id": "LC_SCRIPT",
+      "label": "Scripts",
+      "description": "Optional repeatable executable helpers.",
+      "sourceRefs": [
+        "S2",
+        "S7"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_PACKAGE"
+    },
+    {
+      "id": "LC_ASSET",
+      "label": "Assets",
+      "description": "Reusable templates and output material.",
+      "sourceRefs": [
+        "S2"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_PACKAGE"
+    },
+    {
+      "id": "LC_EXEC",
+      "label": "Execution coordination",
+      "description": "Requests operations and interprets their outcomes.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_ASSURE",
+      "label": "Outcome assurance",
+      "description": "Checks source meaning and observable output.",
+      "sourceRefs": [
+        "S8",
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_MAINTAIN",
+      "label": "Skill evolution",
+      "description": "Compares candidate revisions and retains the released baseline.",
+      "sourceRefs": [
+        "S8",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "parent": "LC_ROOT"
+    }
+  ],
+  "functions": [
+    {
+      "id": "F_ROOT",
+      "label": "Turn reusable guidance into useful work",
+      "description": "Connect task fulfillment to evidence-based improvement.",
+      "sourceRefs": [
+        "S9",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "realizes": [
+        "OA_TASK",
+        "OA_MAINTAIN"
+      ]
+    },
+    {
+      "id": "F_DISCOVER",
+      "label": "Discover usable packages",
+      "description": "Locate available packages under host discovery and trust policy.",
+      "sourceRefs": [
+        "S4",
+        "S5"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_PROVISION"
+      ]
+    },
+    {
+      "id": "F_CATALOG",
+      "label": "Expose names and descriptions",
+      "description": "Provide a compact catalogue rather than load all workflows.",
+      "sourceRefs": [
+        "S2",
+        "S3",
+        "S5"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_PROVISION"
+      ]
+    },
+    {
+      "id": "F_SELECT",
+      "label": "Choose relevant guidance",
+      "description": "Use explicit selection or permitted description-based matching; a match may be absent.",
+      "sourceRefs": [
+        "S5",
+        "S6"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_LOAD",
+      "label": "Read selected workflow",
+      "description": "Bring the selected SKILL.md instructions into context.",
+      "sourceRefs": [
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_PLAN",
+      "label": "Interpret method for this task",
+      "description": "Apply instructions to intent, constraints and current evidence.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_REFERENCE",
+      "label": "Read relevant reference",
+      "description": "Load only detail needed for the current task.",
+      "sourceRefs": [
+        "S2",
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_ASSET",
+      "label": "Use relevant template",
+      "description": "Adapt an output resource to current evidence.",
+      "sourceRefs": [
+        "S2",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_GATE",
+      "label": "Check execution prerequisites",
+      "description": "Separate permission, available tool and dependency checks from skill selection.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_OPERATE"
+      ]
+    },
+    {
+      "id": "F_CALL",
+      "label": "Request permitted operation",
+      "description": "Use an existing tool or optional script with explicit inputs.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_OPERATE"
+      ]
+    },
+    {
+      "id": "F_RESULT",
+      "label": "Inspect returned result",
+      "description": "Read outputs, errors and artifacts rather than assume success.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_OPERATE"
+      ]
+    },
+    {
+      "id": "F_VERIFY",
+      "label": "Check the actual outcome",
+      "description": "Check expected meaning and observable output before delivery.",
+      "sourceRefs": [
+        "S8",
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_ANSWER",
+      "label": "Deliver the grounded result",
+      "description": "Return the outcome supported by available evidence.",
+      "sourceRefs": [
+        "S9",
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_PLAIN",
+      "label": "Proceed without this skill",
+      "description": "Continue normally when no suitable available guidance applies.",
+      "sourceRefs": [
+        "S5",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_BLOCK",
+      "label": "Retain unresolved outcome",
+      "description": "Explain a specific blocker or use a permitted alternative without claiming completion.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_OPERATE"
+      ]
+    },
+    {
+      "id": "F_DRAFT",
+      "label": "Draft a focused revision",
+      "description": "Specify purpose, triggers, inputs, method and outputs.",
+      "sourceRefs": [
+        "S6",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_MAINTAIN"
+      ]
+    },
+    {
+      "id": "F_TRIAL",
+      "label": "Run comparable tasks",
+      "description": "Use realistic prompts and negative cases for candidate and baseline.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_EVAL"
+      ]
+    },
+    {
+      "id": "F_COMPARE",
+      "label": "Compare observed outputs",
+      "description": "Combine behavioral assertions with human quality judgment.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_EVAL"
+      ]
+    },
+    {
+      "id": "F_REVISE",
+      "label": "Repair observed weaknesses",
+      "description": "Change the method based on actual failure evidence.",
+      "sourceRefs": [
+        "S8",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_MAINTAIN"
+      ]
+    },
+    {
+      "id": "F_RELEASE",
+      "label": "Record evaluated baseline",
+      "description": "Promote the reviewed candidate while retaining its evidence and predecessor.",
+      "sourceRefs": [
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_MAINTAIN"
+      ]
+    },
+    {
+      "id": "F_INTERPRET",
+      "label": "Interpret source into model assertions",
+      "description": "Identify source entities, responsibilities, exchanges and lifecycle conditions.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_MODEL",
+      "label": "Author candidate SysML",
+      "description": "Express sourced meaning and distinguish engineering assumptions.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_TASK"
+      ]
+    },
+    {
+      "id": "F_QUALIFY",
+      "label": "Check native model relationships",
+      "description": "Run the available native checker against the exact candidate.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_OPERATE"
+      ]
+    },
+    {
+      "id": "F_RENDER",
+      "label": "Build model-backed HTML views",
+      "description": "Project the same model into question-led views.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "level": "system",
+      "parent": "F_ROOT",
+      "realizes": [
+        "OA_OPERATE"
+      ]
+    }
+  ],
+  "allocations": [
+    {
+      "id": "AL_F_DISCOVER",
+      "label": "Discover usable packages",
+      "description": "Locate available packages under host discovery and trust policy.",
+      "sourceRefs": [
+        "S4",
+        "S5"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_DISCOVER",
+      "component": "LC_CONTEXT",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_CATALOG",
+      "label": "Expose names and descriptions",
+      "description": "Provide a compact catalogue rather than load all workflows.",
+      "sourceRefs": [
+        "S2",
+        "S3",
+        "S5"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_CATALOG",
+      "component": "LC_CONTEXT",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_SELECT",
+      "label": "Choose relevant guidance",
+      "description": "Use explicit selection or permitted description-based matching; a match may be absent.",
+      "sourceRefs": [
+        "S5",
+        "S6"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_SELECT",
+      "component": "LC_REASON",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_LOAD",
+      "label": "Read selected workflow",
+      "description": "Bring the selected SKILL.md instructions into context.",
+      "sourceRefs": [
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_LOAD",
+      "component": "LC_CONTEXT",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_PLAN",
+      "label": "Interpret method for this task",
+      "description": "Apply instructions to intent, constraints and current evidence.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_PLAN",
+      "component": "LC_REASON",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_REFERENCE",
+      "label": "Read relevant reference",
+      "description": "Load only detail needed for the current task.",
+      "sourceRefs": [
+        "S2",
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_REFERENCE",
+      "component": "LC_CONTEXT",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_ASSET",
+      "label": "Use relevant template",
+      "description": "Adapt an output resource to current evidence.",
+      "sourceRefs": [
+        "S2",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_ASSET",
+      "component": "LC_REASON",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_GATE",
+      "label": "Check execution prerequisites",
+      "description": "Separate permission, available tool and dependency checks from skill selection.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_GATE",
+      "component": "LC_EXEC",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_CALL",
+      "label": "Request permitted operation",
+      "description": "Use an existing tool or optional script with explicit inputs.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_CALL",
+      "component": "LC_EXEC",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_RESULT",
+      "label": "Inspect returned result",
+      "description": "Read outputs, errors and artifacts rather than assume success.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_RESULT",
+      "component": "LC_EXEC",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_VERIFY",
+      "label": "Check the actual outcome",
+      "description": "Check expected meaning and observable output before delivery.",
+      "sourceRefs": [
+        "S8",
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_VERIFY",
+      "component": "LC_ASSURE",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_ANSWER",
+      "label": "Deliver the grounded result",
+      "description": "Return the outcome supported by available evidence.",
+      "sourceRefs": [
+        "S9",
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_ANSWER",
+      "component": "LC_REASON",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_PLAIN",
+      "label": "Proceed without this skill",
+      "description": "Continue normally when no suitable available guidance applies.",
+      "sourceRefs": [
+        "S5",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_PLAIN",
+      "component": "LC_REASON",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_BLOCK",
+      "label": "Retain unresolved outcome",
+      "description": "Explain a specific blocker or use a permitted alternative without claiming completion.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_BLOCK",
+      "component": "LC_EXEC",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_DRAFT",
+      "label": "Draft a focused revision",
+      "description": "Specify purpose, triggers, inputs, method and outputs.",
+      "sourceRefs": [
+        "S6",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_DRAFT",
+      "component": "LC_MAINTAIN",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_TRIAL",
+      "label": "Run comparable tasks",
+      "description": "Use realistic prompts and negative cases for candidate and baseline.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_TRIAL",
+      "component": "LC_ASSURE",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_COMPARE",
+      "label": "Compare observed outputs",
+      "description": "Combine behavioral assertions with human quality judgment.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_COMPARE",
+      "component": "LC_ASSURE",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_REVISE",
+      "label": "Repair observed weaknesses",
+      "description": "Change the method based on actual failure evidence.",
+      "sourceRefs": [
+        "S8",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_REVISE",
+      "component": "LC_MAINTAIN",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_RELEASE",
+      "label": "Record evaluated baseline",
+      "description": "Promote the reviewed candidate while retaining its evidence and predecessor.",
+      "sourceRefs": [
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_RELEASE",
+      "component": "LC_MAINTAIN",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_INTERPRET",
+      "label": "Interpret source into model assertions",
+      "description": "Identify source entities, responsibilities, exchanges and lifecycle conditions.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_INTERPRET",
+      "component": "LC_REASON",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_MODEL",
+      "label": "Author candidate SysML",
+      "description": "Express sourced meaning and distinguish engineering assumptions.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_MODEL",
+      "component": "LC_REASON",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_QUALIFY",
+      "label": "Check native model relationships",
+      "description": "Run the available native checker against the exact candidate.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_QUALIFY",
+      "component": "LC_EXEC",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    },
+    {
+      "id": "AL_F_RENDER",
+      "label": "Build model-backed HTML views",
+      "description": "Project the same model into question-led views.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "function": "F_RENDER",
+      "component": "LC_EXEC",
+      "rationale": "A conceptual responsibility, not a claim about a product service."
+    }
+  ],
+  "exchanges": [
+    {
+      "id": "X_0",
+      "label": "Available package identity",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S4"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_DISCOVER",
+      "target": "F_CATALOG",
+      "item": "Available package identity",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_1",
+      "label": "Names and descriptions",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_CATALOG",
+      "target": "F_SELECT",
+      "item": "Names and descriptions",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_2",
+      "label": "Selected package identity",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S5"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_SELECT",
+      "target": "F_LOAD",
+      "item": "Selected package identity",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_3",
+      "label": "Workflow instructions",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_LOAD",
+      "target": "F_PLAN",
+      "item": "Workflow instructions",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_4",
+      "label": "Relevant domain detail",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_REFERENCE",
+      "target": "F_PLAN",
+      "item": "Relevant domain detail",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_5",
+      "label": "Chosen template",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S2",
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_ASSET",
+      "target": "F_RENDER",
+      "item": "Chosen template",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_6",
+      "label": "Proposed operation and inputs",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_PLAN",
+      "target": "F_GATE",
+      "item": "Proposed operation and inputs",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_7",
+      "label": "Permitted operation with prerequisites",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_GATE",
+      "target": "F_CALL",
+      "item": "Permitted operation with prerequisites",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_8",
+      "label": "Operation identity",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S7"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_CALL",
+      "target": "F_RESULT",
+      "item": "Operation identity",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_9",
+      "label": "Artifact or error evidence",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_RESULT",
+      "target": "F_VERIFY",
+      "item": "Artifact or error evidence",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_10",
+      "label": "Reviewed outcome",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_VERIFY",
+      "target": "F_ANSWER",
+      "item": "Reviewed outcome",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_11",
+      "label": "Candidate and baseline revisions",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_DRAFT",
+      "target": "F_TRIAL",
+      "item": "Candidate and baseline revisions",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_12",
+      "label": "Observed paired results",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_TRIAL",
+      "target": "F_COMPARE",
+      "item": "Observed paired results",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_13",
+      "label": "Failure evidence",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_COMPARE",
+      "target": "F_REVISE",
+      "item": "Failure evidence",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_14",
+      "label": "Revised candidate",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S8",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_REVISE",
+      "target": "F_TRIAL",
+      "item": "Revised candidate",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_15",
+      "label": "Candidate evaluation evidence",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_COMPARE",
+      "target": "F_RELEASE",
+      "item": "Candidate evaluation evidence",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_16",
+      "label": "Released package",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_RELEASE",
+      "target": "F_DISCOVER",
+      "item": "Released package",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_17",
+      "label": "Task and source brief",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_PLAN",
+      "target": "F_INTERPRET",
+      "item": "Task and source brief",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_18",
+      "label": "Source-linked model assertions",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_INTERPRET",
+      "target": "F_MODEL",
+      "item": "Source-linked model assertions",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_19",
+      "label": "Candidate native model",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_MODEL",
+      "target": "F_QUALIFY",
+      "item": "Candidate native model",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_20",
+      "label": "Qualified model and report",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_QUALIFY",
+      "target": "F_RENDER",
+      "item": "Qualified model and report",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_21",
+      "label": "HTML views and model bindings",
+      "description": "Potential information transfer; temporal conditions are in scenarios.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_RENDER",
+      "target": "F_VERIFY",
+      "item": "HTML views and model bindings",
+      "kind": "data",
+      "condition": "Applicable to the current task or revision"
+    },
+    {
+      "id": "X_PLAIN",
+      "label": "No matching available skill",
+      "description": "Alternative outcome retained explicitly.",
+      "sourceRefs": [
+        "S5",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_SELECT",
+      "target": "F_PLAIN",
+      "item": "No matching available skill",
+      "kind": "data",
+      "condition": "The named alternative applies"
+    },
+    {
+      "id": "X_BLOCK",
+      "label": "Unavailable prerequisite or permission",
+      "description": "Alternative outcome retained explicitly.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "F_GATE",
+      "target": "F_BLOCK",
+      "item": "Unavailable prerequisite or permission",
+      "kind": "data",
+      "condition": "The named alternative applies"
+    }
+  ],
+  "contextExchanges": [
+    {
+      "id": "CX_0",
+      "label": "Intent, input files and explicit selection",
+      "description": "The task owner supplies the requested outcome, source files and any explicitly selected skill to the agent.",
+      "sourceRefs": [
+        "S5",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "USER",
+      "target": "LC_REASON",
+      "item": "Intent, input files and explicit selection",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    },
+    {
+      "id": "CX_1",
+      "label": "Accessible trusted package locations",
+      "description": "The host exposes package locations that are available in its environment and allowed by its trust policy; a remote host may not have local user files.",
+      "sourceRefs": [
+        "S4"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "HOST",
+      "target": "LC_PACKAGE",
+      "item": "Accessible trusted package locations",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    },
+    {
+      "id": "CX_2",
+      "label": "Capabilities and permission disposition",
+      "description": "Before an operation is requested, the host provides which tools are available and whether the intended action is allowed. A matching skill does not supply that authority.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "HOST",
+      "target": "LC_EXEC",
+      "item": "Capabilities and permission disposition",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    },
+    {
+      "id": "CX_3",
+      "label": "Operation request and inputs",
+      "description": "Execution coordination sends the selected tool an operation name and explicit inputs only after the applicable prerequisites and permissions are satisfied.",
+      "sourceRefs": [
+        "S7"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "LC_EXEC",
+      "target": "TOOLS",
+      "item": "Operation request and inputs",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    },
+    {
+      "id": "CX_4",
+      "label": "Output artifact or error",
+      "description": "The tool returns an output artifact or an error. Execution coordination inspects that response before the agent can treat the task as complete.",
+      "sourceRefs": [
+        "S7"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "TOOLS",
+      "target": "LC_EXEC",
+      "item": "Output artifact or error",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    },
+    {
+      "id": "CX_5",
+      "label": "Reviewed result or precise blocker",
+      "description": "The agent returns the checked result to the task owner, or identifies the work that remains unresolved.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "LC_REASON",
+      "target": "USER",
+      "item": "Reviewed result or precise blocker",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    },
+    {
+      "id": "CX_6",
+      "label": "Candidate revision and intended behavior",
+      "description": "The maintainer submits an identified candidate revision with the task scope and behavior it is intended to improve.",
+      "sourceRefs": [
+        "S6",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "AUTHOR",
+      "target": "LC_MAINTAIN",
+      "item": "Candidate revision and intended behavior",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    },
+    {
+      "id": "CX_7",
+      "label": "Candidate and baseline outputs",
+      "description": "Outcome assurance supplies candidate and baseline outputs from comparable tasks for independent review.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "LC_ASSURE",
+      "target": "REVIEWER",
+      "item": "Candidate and baseline outputs",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    },
+    {
+      "id": "CX_8",
+      "label": "Comparative quality judgment",
+      "description": "The evaluator returns observed strengths, failures and regressions, without treating a favorable single example as universal reliability.",
+      "sourceRefs": [
+        "S8"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "source": "REVIEWER",
+      "target": "LC_ASSURE",
+      "item": "Comparative quality judgment",
+      "kind": "data",
+      "condition": "When the corresponding task, operation or revision requires this exchange"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC_DISCLOSE",
+      "label": "How much does the agent load?",
+      "description": "How much does the agent load?",
+      "sourceRefs": [
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "kind": "nominal",
+      "steps": [
+        {
+          "id": "discover",
+          "function": "F_DISCOVER",
+          "label": "Discover usable packages"
+        },
+        {
+          "id": "catalog",
+          "function": "F_CATALOG",
+          "label": "Expose names and descriptions"
+        },
+        {
+          "id": "select",
+          "function": "F_SELECT",
+          "label": "Choose relevant guidance"
+        },
+        {
+          "id": "load",
+          "function": "F_LOAD",
+          "label": "Read selected workflow"
+        },
+        {
+          "id": "plan",
+          "function": "F_PLAN",
+          "label": "Interpret method for this task"
+        },
+        {
+          "id": "reference",
+          "function": "F_REFERENCE",
+          "label": "Read relevant reference"
+        },
+        {
+          "id": "asset",
+          "function": "F_ASSET",
+          "label": "Use relevant template"
+        },
+        {
+          "id": "answer",
+          "function": "F_ANSWER",
+          "label": "Deliver the grounded result"
+        },
+        {
+          "id": "plain",
+          "function": "F_PLAIN",
+          "label": "Proceed without this skill"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "discover",
+          "to": "catalog",
+          "condition": "Usable packages available",
+          "id": "SC_DISCLOSE_T1"
+        },
+        {
+          "from": "catalog",
+          "to": "select",
+          "condition": "Task received",
+          "id": "SC_DISCLOSE_T2"
+        },
+        {
+          "from": "select",
+          "to": "load",
+          "condition": "Explicit choice or relevant permitted match",
+          "id": "SC_DISCLOSE_T3"
+        },
+        {
+          "from": "select",
+          "to": "plain",
+          "condition": "No suitable available skill",
+          "id": "SC_DISCLOSE_T4"
+        },
+        {
+          "from": "load",
+          "to": "plan",
+          "condition": "Chosen instructions read",
+          "id": "SC_DISCLOSE_T5"
+        },
+        {
+          "from": "plan",
+          "to": "reference",
+          "condition": "Additional knowledge needed",
+          "id": "SC_DISCLOSE_T6"
+        },
+        {
+          "from": "reference",
+          "to": "plan",
+          "condition": "Needed detail read",
+          "id": "SC_DISCLOSE_T7"
+        },
+        {
+          "from": "plan",
+          "to": "asset",
+          "condition": "Template needed",
+          "id": "SC_DISCLOSE_T8"
+        },
+        {
+          "from": "asset",
+          "to": "plan",
+          "condition": "Template available",
+          "id": "SC_DISCLOSE_T9"
+        },
+        {
+          "from": "plan",
+          "to": "answer",
+          "condition": "Instruction-only answer supported",
+          "id": "SC_DISCLOSE_T10"
+        }
+      ],
+      "entryStep": "discover",
+      "exitSteps": [
+        "answer",
+        "plain"
+      ],
+      "exitGuards": {
+        "answer": "Task answered with selected guidance",
+        "plain": "No skill-based outcome asserted"
+      },
+      "entryConditions": "The named teaching situation and required source inputs apply.",
+      "exitConditions": "One of the explicitly declared outcomes is reached; an unresolved result is not completion."
+    },
+    {
+      "id": "SC_EXEC",
+      "label": "Why does a selected skill still fail?",
+      "description": "Why does a selected skill still fail?",
+      "sourceRefs": [
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "kind": "failure",
+      "steps": [
+        {
+          "id": "plan",
+          "function": "F_PLAN",
+          "label": "Interpret method for this task"
+        },
+        {
+          "id": "gate",
+          "function": "F_GATE",
+          "label": "Check execution prerequisites"
+        },
+        {
+          "id": "call",
+          "function": "F_CALL",
+          "label": "Request permitted operation"
+        },
+        {
+          "id": "result",
+          "function": "F_RESULT",
+          "label": "Inspect returned result"
+        },
+        {
+          "id": "verify",
+          "function": "F_VERIFY",
+          "label": "Check the actual outcome"
+        },
+        {
+          "id": "answer",
+          "function": "F_ANSWER",
+          "label": "Deliver the grounded result"
+        },
+        {
+          "id": "block",
+          "function": "F_BLOCK",
+          "label": "Retain unresolved outcome"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "plan",
+          "to": "verify",
+          "condition": "No operation required",
+          "id": "SC_EXEC_T1"
+        },
+        {
+          "from": "plan",
+          "to": "gate",
+          "condition": "Operation needed",
+          "id": "SC_EXEC_T2"
+        },
+        {
+          "from": "gate",
+          "to": "call",
+          "condition": "Permission and prerequisites satisfied",
+          "id": "SC_EXEC_T3"
+        },
+        {
+          "from": "gate",
+          "to": "block",
+          "condition": "Required permission or capability absent",
+          "id": "SC_EXEC_T4"
+        },
+        {
+          "from": "call",
+          "to": "result",
+          "condition": "Tool returns",
+          "id": "SC_EXEC_T5"
+        },
+        {
+          "from": "result",
+          "to": "verify",
+          "condition": "Usable output returned",
+          "id": "SC_EXEC_T6"
+        },
+        {
+          "from": "result",
+          "to": "block",
+          "condition": "Error or unusable output",
+          "id": "SC_EXEC_T7"
+        },
+        {
+          "from": "verify",
+          "to": "answer",
+          "condition": "Required checks support outcome",
+          "id": "SC_EXEC_T8"
+        },
+        {
+          "from": "verify",
+          "to": "block",
+          "condition": "Required outcome not established",
+          "id": "SC_EXEC_T9"
+        }
+      ],
+      "entryStep": "plan",
+      "exitSteps": [
+        "answer",
+        "block"
+      ],
+      "exitGuards": {
+        "answer": "Outcome checked and delivered",
+        "block": "Unresolved work retained as unresolved"
+      },
+      "entryConditions": "The named teaching situation and required source inputs apply.",
+      "exitConditions": "One of the explicitly declared outcomes is reached; an unresolved result is not completion."
+    },
+    {
+      "id": "SC_IMPROVE",
+      "label": "How does a skill get better?",
+      "description": "How does a skill get better?",
+      "sourceRefs": [
+        "S6",
+        "S8",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "kind": "recovery",
+      "steps": [
+        {
+          "id": "draft",
+          "function": "F_DRAFT",
+          "label": "Draft a focused revision"
+        },
+        {
+          "id": "trial",
+          "function": "F_TRIAL",
+          "label": "Run comparable tasks"
+        },
+        {
+          "id": "compare",
+          "function": "F_COMPARE",
+          "label": "Compare observed outputs"
+        },
+        {
+          "id": "revise",
+          "function": "F_REVISE",
+          "label": "Repair observed weaknesses"
+        },
+        {
+          "id": "release",
+          "function": "F_RELEASE",
+          "label": "Record evaluated baseline"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "draft",
+          "to": "trial",
+          "condition": "Candidate and baseline identified",
+          "id": "SC_IMPROVE_T1"
+        },
+        {
+          "from": "trial",
+          "to": "compare",
+          "condition": "Comparable outcomes collected",
+          "id": "SC_IMPROVE_T2"
+        },
+        {
+          "from": "compare",
+          "to": "revise",
+          "condition": "Failure or regression observed",
+          "id": "SC_IMPROVE_T3"
+        },
+        {
+          "from": "revise",
+          "to": "trial",
+          "condition": "Changed candidate requires fresh tests",
+          "id": "SC_IMPROVE_T4"
+        },
+        {
+          "from": "compare",
+          "to": "release",
+          "condition": "Evidence supports intended improvement",
+          "id": "SC_IMPROVE_T5"
+        }
+      ],
+      "entryStep": "draft",
+      "exitSteps": [
+        "release"
+      ],
+      "exitGuards": {
+        "release": "Reviewed candidate recorded; no universal quality claim"
+      },
+      "entryConditions": "The named teaching situation and required source inputs apply.",
+      "exitConditions": "One of the explicitly declared outcomes is reached; an unresolved result is not completion."
+    },
+    {
+      "id": "SC_SYSML",
+      "label": "Example: explain how agent skills work",
+      "description": "Example: explain how agent skills work",
+      "sourceRefs": [
+        "S10",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "kind": "nominal",
+      "steps": [
+        {
+          "id": "load",
+          "function": "F_LOAD",
+          "label": "Read selected workflow"
+        },
+        {
+          "id": "interpret",
+          "function": "F_INTERPRET",
+          "label": "Interpret source into model assertions"
+        },
+        {
+          "id": "model",
+          "function": "F_MODEL",
+          "label": "Author candidate SysML"
+        },
+        {
+          "id": "gate",
+          "function": "F_GATE",
+          "label": "Check execution prerequisites"
+        },
+        {
+          "id": "qualify",
+          "function": "F_QUALIFY",
+          "label": "Check native model relationships"
+        },
+        {
+          "id": "render",
+          "function": "F_RENDER",
+          "label": "Build model-backed HTML views"
+        },
+        {
+          "id": "verify",
+          "function": "F_VERIFY",
+          "label": "Check the actual outcome"
+        },
+        {
+          "id": "answer",
+          "function": "F_ANSWER",
+          "label": "Deliver the grounded result"
+        },
+        {
+          "id": "block",
+          "function": "F_BLOCK",
+          "label": "Retain unresolved outcome"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "load",
+          "to": "interpret",
+          "condition": "Answer with SysML selected",
+          "id": "SC_SYSML_T1"
+        },
+        {
+          "from": "interpret",
+          "to": "model",
+          "condition": "Sources and assumptions separated",
+          "id": "SC_SYSML_T2"
+        },
+        {
+          "from": "model",
+          "to": "gate",
+          "condition": "Candidate ready to check",
+          "id": "SC_SYSML_T3"
+        },
+        {
+          "from": "gate",
+          "to": "qualify",
+          "condition": "Checker available and permitted",
+          "id": "SC_SYSML_T4"
+        },
+        {
+          "from": "gate",
+          "to": "block",
+          "condition": "Native checking unavailable",
+          "id": "SC_SYSML_T5"
+        },
+        {
+          "from": "qualify",
+          "to": "model",
+          "condition": "Native errors require repair",
+          "id": "SC_SYSML_T6"
+        },
+        {
+          "from": "qualify",
+          "to": "render",
+          "condition": "Exact candidate qualified",
+          "id": "SC_SYSML_T7"
+        },
+        {
+          "from": "render",
+          "to": "verify",
+          "condition": "Model-backed views produced",
+          "id": "SC_SYSML_T8"
+        },
+        {
+          "from": "verify",
+          "to": "model",
+          "condition": "Source-meaning defect found",
+          "id": "SC_SYSML_T9"
+        },
+        {
+          "from": "verify",
+          "to": "render",
+          "condition": "Layout or interaction defect found",
+          "id": "SC_SYSML_T10"
+        },
+        {
+          "from": "verify",
+          "to": "answer",
+          "condition": "Source and delivered views checked",
+          "id": "SC_SYSML_T11"
+        }
+      ],
+      "entryStep": "load",
+      "exitSteps": [
+        "answer",
+        "block"
+      ],
+      "exitGuards": {
+        "answer": "Source, native model and views delivered",
+        "block": "No false native qualification claim"
+      },
+      "entryConditions": "The named teaching situation and required source inputs apply.",
+      "exitConditions": "One of the explicitly declared outcomes is reached; an unresolved result is not completion."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R_DISCLOSE",
+      "label": "Expose metadata before loading relevant detail.",
+      "description": "Expose metadata before loading relevant detail.",
+      "sourceRefs": [
+        "S3"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "subject": "F_CATALOG",
+      "statement": "Expose metadata before loading relevant detail.",
+      "condition": "When the relevant function is performed",
+      "criterion": "Expose metadata before loading relevant detail.",
+      "derivedFrom": [
+        "F_CATALOG"
+      ],
+      "rationale": "Preserve the distinction needed for this teaching system.",
+      "verificationIds": [
+        "V_R_DISCLOSE"
+      ]
+    },
+    {
+      "id": "R_HOST",
+      "label": "Do not turn one host selection policy into a format-wide fact.",
+      "description": "Codex permits explicit selection and description-based matching; its duplicate-name behavior comes from OpenAI documentation, not from the open package format.",
+      "sourceRefs": [
+        "S4",
+        "S5",
+        "S12"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "subject": "F_SELECT",
+      "statement": "Do not turn one host selection policy into a format-wide fact.",
+      "condition": "When the relevant function is performed",
+      "criterion": "Do not turn one host selection policy into a format-wide fact.",
+      "derivedFrom": [
+        "F_SELECT"
+      ],
+      "rationale": "Preserve the distinction needed for this teaching system.",
+      "verificationIds": [
+        "V_R_HOST"
+      ]
+    },
+    {
+      "id": "R_OPTIONAL",
+      "label": "Permit useful instruction-only work without requiring scripts.",
+      "description": "Permit useful instruction-only work without requiring scripts.",
+      "sourceRefs": [
+        "S6"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "subject": "F_PLAN",
+      "statement": "Permit useful instruction-only work without requiring scripts.",
+      "condition": "When the relevant function is performed",
+      "criterion": "Permit useful instruction-only work without requiring scripts.",
+      "derivedFrom": [
+        "F_PLAN"
+      ],
+      "rationale": "Preserve the distinction needed for this teaching system.",
+      "verificationIds": [
+        "V_R_OPTIONAL"
+      ]
+    },
+    {
+      "id": "R_AUTH",
+      "label": "A skill selection must not be treated as permission for an operation.",
+      "description": "A package can explain how to run a command, but execution still depends on host permission, an available tool and satisfied runtime dependencies.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "subject": "F_GATE",
+      "statement": "A skill selection must not be treated as permission for an operation.",
+      "condition": "When the relevant function is performed",
+      "criterion": "A skill selection must not be treated as permission for an operation.",
+      "derivedFrom": [
+        "F_GATE"
+      ],
+      "rationale": "Preserve the distinction needed for this teaching system.",
+      "verificationIds": [
+        "V_R_AUTH"
+      ]
+    },
+    {
+      "id": "R_RESULT",
+      "label": "Distinguish tool invocation, returned output and verified outcome.",
+      "description": "Distinguish tool invocation, returned output and verified outcome.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "subject": "F_VERIFY",
+      "statement": "Distinguish tool invocation, returned output and verified outcome.",
+      "condition": "When the relevant function is performed",
+      "criterion": "Distinguish tool invocation, returned output and verified outcome.",
+      "derivedFrom": [
+        "F_VERIFY"
+      ],
+      "rationale": "Preserve the distinction needed for this teaching system.",
+      "verificationIds": [
+        "V_R_RESULT"
+      ]
+    },
+    {
+      "id": "R_EVAL",
+      "label": "Evaluate the changed candidate against the baseline before recording improvement.",
+      "description": "Evaluate the changed candidate against the baseline before recording improvement.",
+      "sourceRefs": [
+        "S8",
+        "S11"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "subject": "F_RELEASE",
+      "statement": "Evaluate the changed candidate against the baseline before recording improvement.",
+      "condition": "When the relevant function is performed",
+      "criterion": "Evaluate the changed candidate against the baseline before recording improvement.",
+      "derivedFrom": [
+        "F_RELEASE"
+      ],
+      "rationale": "Preserve the distinction needed for this teaching system.",
+      "verificationIds": [
+        "V_R_EVAL"
+      ]
+    },
+    {
+      "id": "R_SOURCE",
+      "label": "Preserve source evidence and identify model assumptions.",
+      "description": "Preserve source evidence and identify model assumptions.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "subject": "F_MODEL",
+      "statement": "Preserve source evidence and identify model assumptions.",
+      "condition": "When the relevant function is performed",
+      "criterion": "Preserve source evidence and identify model assumptions.",
+      "derivedFrom": [
+        "F_MODEL"
+      ],
+      "rationale": "Preserve the distinction needed for this teaching system.",
+      "verificationIds": [
+        "V_R_SOURCE"
+      ]
+    },
+    {
+      "id": "R_FRESH",
+      "label": "Native qualification applies to the checked candidate bytes only.",
+      "description": "Native qualification applies to the checked candidate bytes only.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "subject": "F_QUALIFY",
+      "statement": "Native qualification applies to the checked candidate bytes only.",
+      "condition": "When the relevant function is performed",
+      "criterion": "Native qualification applies to the checked candidate bytes only.",
+      "derivedFrom": [
+        "F_QUALIFY"
+      ],
+      "rationale": "Preserve the distinction needed for this teaching system.",
+      "verificationIds": [
+        "V_R_FRESH"
+      ]
+    }
+  ],
+  "verificationCases": [
+    {
+      "id": "V_R_DISCLOSE",
+      "label": "Check R_DISCLOSE",
+      "description": "Review source and a counterexample for this obligation.",
+      "sourceRefs": [
+        "S3"
+      ],
+      "basis": "proposed",
+      "status": "planned",
+      "requirementIds": [
+        "R_DISCLOSE"
+      ],
+      "method": "Source review and behavioral example",
+      "setup": "Inspect the corresponding native subject and the positive and negative scenario branches.",
+      "expectedResult": "Expose metadata before loading relevant detail."
+    },
+    {
+      "id": "V_R_HOST",
+      "label": "Check R_HOST",
+      "description": "Review source and a counterexample for this obligation.",
+      "sourceRefs": [
+        "S4",
+        "S5",
+        "S12"
+      ],
+      "basis": "proposed",
+      "status": "planned",
+      "requirementIds": [
+        "R_HOST"
+      ],
+      "method": "Source review and behavioral example",
+      "setup": "Inspect the corresponding native subject and the positive and negative scenario branches.",
+      "expectedResult": "Do not turn one host selection policy into a format-wide fact."
+    },
+    {
+      "id": "V_R_OPTIONAL",
+      "label": "Check R_OPTIONAL",
+      "description": "Review source and a counterexample for this obligation.",
+      "sourceRefs": [
+        "S6"
+      ],
+      "basis": "proposed",
+      "status": "planned",
+      "requirementIds": [
+        "R_OPTIONAL"
+      ],
+      "method": "Source review and behavioral example",
+      "setup": "Inspect the corresponding native subject and the positive and negative scenario branches.",
+      "expectedResult": "Permit useful instruction-only work without requiring scripts."
+    },
+    {
+      "id": "V_R_AUTH",
+      "label": "Check R_AUTH",
+      "description": "Review source and a counterexample for this obligation.",
+      "sourceRefs": [
+        "S9"
+      ],
+      "basis": "proposed",
+      "status": "planned",
+      "requirementIds": [
+        "R_AUTH"
+      ],
+      "method": "Source review and behavioral example",
+      "setup": "Inspect the corresponding native subject and the positive and negative scenario branches.",
+      "expectedResult": "A skill selection must not be treated as permission for an operation."
+    },
+    {
+      "id": "V_R_RESULT",
+      "label": "Check R_RESULT",
+      "description": "Review source and a counterexample for this obligation.",
+      "sourceRefs": [
+        "S7",
+        "S9"
+      ],
+      "basis": "proposed",
+      "status": "planned",
+      "requirementIds": [
+        "R_RESULT"
+      ],
+      "method": "Source review and behavioral example",
+      "setup": "Inspect the corresponding native subject and the positive and negative scenario branches.",
+      "expectedResult": "Distinguish tool invocation, returned output and verified outcome."
+    },
+    {
+      "id": "V_R_EVAL",
+      "label": "Check R_EVAL",
+      "description": "Review source and a counterexample for this obligation.",
+      "sourceRefs": [
+        "S8",
+        "S11"
+      ],
+      "basis": "proposed",
+      "status": "planned",
+      "requirementIds": [
+        "R_EVAL"
+      ],
+      "method": "Source review and behavioral example",
+      "setup": "Inspect the corresponding native subject and the positive and negative scenario branches.",
+      "expectedResult": "Evaluate the changed candidate against the baseline before recording improvement."
+    },
+    {
+      "id": "V_R_SOURCE",
+      "label": "Check R_SOURCE",
+      "description": "Review source and a counterexample for this obligation.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "proposed",
+      "status": "planned",
+      "requirementIds": [
+        "R_SOURCE"
+      ],
+      "method": "Source review and behavioral example",
+      "setup": "Inspect the corresponding native subject and the positive and negative scenario branches.",
+      "expectedResult": "Preserve source evidence and identify model assumptions."
+    },
+    {
+      "id": "V_R_FRESH",
+      "label": "Check R_FRESH",
+      "description": "Review source and a counterexample for this obligation.",
+      "sourceRefs": [
+        "S10"
+      ],
+      "basis": "proposed",
+      "status": "planned",
+      "requirementIds": [
+        "R_FRESH"
+      ],
+      "method": "Source review and behavioral example",
+      "setup": "Inspect the corresponding native subject and the positive and negative scenario branches.",
+      "expectedResult": "Native qualification applies to the checked candidate bytes only."
+    }
+  ],
+  "stateMachines": [
+    {
+      "id": "SM_REVISION",
+      "label": "A skill revision is not automatically a release",
+      "description": "Proposed lifecycle of an identified revision; prior released revision remains usable while the candidate is evaluated.",
+      "sourceRefs": [
+        "S11"
+      ],
+      "basis": "proposed",
+      "status": "proposed",
+      "subject": "LC_MAINTAIN",
+      "initial": "draft",
+      "terminalStates": [
+        "retired"
+      ],
+      "terminalPolicy": "ongoing",
+      "lifecycleExitCondition": "An identified revision can be retired; future revisions have their own evidence.",
+      "states": [
+        {
+          "id": "draft",
+          "label": "Draft"
+        },
+        {
+          "id": "evaluating",
+          "label": "Under evaluation"
+        },
+        {
+          "id": "released",
+          "label": "Released baseline"
+        },
+        {
+          "id": "retired",
+          "label": "Retired"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "ST1",
+          "from": "draft",
+          "to": "evaluating",
+          "event": "Candidate frozen",
+          "guard": "Test tasks and baseline identified",
+          "effect": "Collect candidate-specific evidence"
+        },
+        {
+          "id": "ST2",
+          "from": "evaluating",
+          "to": "draft",
+          "event": "Regression found",
+          "guard": "Outcome fails intended expectation",
+          "effect": "Revise candidate"
+        },
+        {
+          "id": "ST3",
+          "from": "evaluating",
+          "to": "released",
+          "event": "Review completed",
+          "guard": "Evidence supports release",
+          "effect": "Record exact released revision"
+        },
+        {
+          "id": "ST4",
+          "from": "released",
+          "to": "retired",
+          "event": "Replacement accepted",
+          "guard": "New revision independently evaluated",
+          "effect": "Retain historical evidence"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D_HOST",
+      "label": "Host integration remains specific",
+      "description": "Check the receiving host for package locations, duplicate-name handling, trust filtering and implicit invocation settings before assuming a shared folder behaves identically there.",
+      "sourceRefs": [
+        "S4",
+        "S5",
+        "S12"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "question": "Which host and current configuration?",
+      "affects": [
+        "F_DISCOVER",
+        "F_SELECT",
+        "F_GATE"
+      ],
+      "options": [
+        "Use current host documentation",
+        "Keep unsupported behavior unspecified"
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "id": "I_LAYER",
+      "label": "A skill is one layer, not the whole agent",
+      "description": "Package guidance, contextual reasoning and execution have different roles.",
+      "sourceRefs": [
+        "S2",
+        "S7",
+        "S9"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "observation": "The package supplies content while tools return effects and evidence.",
+      "implication": "Improve instructions for judgment failures; improve tooling for execution failures.",
+      "relatedIds": [
+        "LC_PACKAGE",
+        "LC_REASON",
+        "LC_EXEC",
+        "F_VERIFY"
+      ]
+    },
+    {
+      "id": "I_PORTABLE",
+      "label": "Portable format does not guarantee portable execution",
+      "description": "Packages can be shared while runtime prerequisites differ.",
+      "sourceRefs": [
+        "S4",
+        "S7"
+      ],
+      "basis": "derived",
+      "status": "draft",
+      "observation": "Discovery, tool access and dependencies belong to the receiving host.",
+      "implication": "Check environment compatibility when reusing a skill.",
+      "relatedIds": [
+        "F_DISCOVER",
+        "F_GATE",
+        "D_HOST"
+      ]
+    }
+  ],
+  "coverage": {
+    "sourceSections": [
+      {
+        "sourceSection": "S1",
+        "modelIds": [
+          "LC_PACKAGE"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S2",
+        "modelIds": [
+          "F_CATALOG",
+          "F_REFERENCE",
+          "F_ASSET",
+          "LC_PACKAGE",
+          "LC_META",
+          "LC_METHOD",
+          "LC_REF",
+          "LC_SCRIPT",
+          "LC_ASSET"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S3",
+        "modelIds": [
+          "F_CATALOG",
+          "F_LOAD",
+          "F_REFERENCE",
+          "R_DISCLOSE",
+          "LC_CONTEXT",
+          "LC_META",
+          "LC_METHOD",
+          "LC_REF"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S4",
+        "modelIds": [
+          "F_DISCOVER",
+          "R_HOST",
+          "D_HOST"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S5",
+        "modelIds": [
+          "F_DISCOVER",
+          "F_CATALOG",
+          "F_SELECT",
+          "F_PLAIN",
+          "R_HOST",
+          "D_HOST"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S6",
+        "modelIds": [
+          "F_SELECT",
+          "F_DRAFT",
+          "R_OPTIONAL"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S7",
+        "modelIds": [
+          "F_GATE",
+          "F_CALL",
+          "F_RESULT",
+          "R_RESULT",
+          "LC_SCRIPT",
+          "LC_EXEC"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S8",
+        "modelIds": [
+          "F_VERIFY",
+          "F_TRIAL",
+          "F_COMPARE",
+          "F_REVISE",
+          "R_EVAL",
+          "LC_ASSURE",
+          "LC_MAINTAIN"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S9",
+        "modelIds": [
+          "F_ROOT",
+          "F_PLAN",
+          "F_ASSET",
+          "F_GATE",
+          "F_CALL",
+          "F_RESULT",
+          "F_ANSWER",
+          "F_PLAIN",
+          "F_BLOCK",
+          "R_AUTH",
+          "R_RESULT",
+          "LC_ROOT",
+          "LC_REASON",
+          "LC_EXEC"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S10",
+        "modelIds": [
+          "F_VERIFY",
+          "F_ANSWER",
+          "F_INTERPRET",
+          "F_MODEL",
+          "F_QUALIFY",
+          "F_RENDER",
+          "R_SOURCE",
+          "R_FRESH",
+          "LC_ASSURE"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S11",
+        "modelIds": [
+          "F_ROOT",
+          "F_DRAFT",
+          "F_REVISE",
+          "F_RELEASE",
+          "R_EVAL",
+          "LC_ROOT",
+          "LC_MAINTAIN",
+          "SM_REVISION"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      },
+      {
+        "sourceSection": "S12",
+        "modelIds": [
+          "R_HOST",
+          "D_HOST"
+        ],
+        "reason": "Source assertion or explicitly labeled teaching interpretation."
+      }
+    ]
+  }
+}

@@ -26,6 +26,19 @@ A follow-up question can reuse the model. A changed source document calls for so
 
 [Reproduce a source-to-model-to-answer study](examples/source-to-answer/README.md). This is an agent-guided workflow: the CLI consumes an authored recipe, not arbitrary prose, and does not autonomously certify the interpretation.
 
+## Explain before exposing the workbench
+
+Choose the reader's questions, visual forms and palette deliberately. The
+[explanation design workflow](references/explanation-design.md) separates an
+accessible answer from the full engineering inspection reader, preserves source
+roles, and requires testing the exact delivered surface. Navigation remains
+usable without scripting instead of hiding answers behind fragile controls.
+
+[Explore how agent skills work](examples/agent-skills/answer.html) for a
+question-led example with package, process, contrast and native behavior views.
+Its [source, model and reproducible checks](examples/agent-skills/README.md)
+remain available behind the explanation.
+
 ## Review the interpretation, not just the syntax
 
 Before delivery, the skill calls for a separate [source-interpretation review](references/source-interpretation-review.md): concurrency outcomes, acknowledgment versus completion, complete boundary messages, and changes across revisions. A hash-bound review receipt and regression tests help prevent recorded source expectations from being omitted or silently invalidated. They do not replace independent engineering judgment.

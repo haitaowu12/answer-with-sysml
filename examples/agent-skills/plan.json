@@ -1,0 +1,147 @@
+{
+  "title": "Skills turn know-how into repeatable work",
+  "summary": "The agent reasons. The skill brings a method. Tools perform operations. The useful result depends on how those pieces work together.",
+  "theme": "paper",
+  "modelSha256": "e327d0694ebb2f34c7dd273746ebeac80b4ac4b24793c26a131c6712d9c8e80a",
+  "scope": "The open Agent Skills format is distinct from Codex-specific behavior. The lifecycle and responsibility groups are a teaching design, not a claim about hidden product internals.",
+  "sources": [
+    {
+      "url": "https://agentskills.io/specification",
+      "title": "Agent Skills specification",
+      "role": "The open package contract and progressive disclosure; not a specification of Codex internals."
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "title": "OpenAI: Build skills",
+      "role": "Codex invocation, local discovery and plugin distribution."
+    },
+    {
+      "url": "https://agentskills.io/client-implementation/adding-skills-support",
+      "title": "Agent Skills: client implementation",
+      "role": "Integration guidance and trust boundaries; host choices can differ."
+    },
+    {
+      "url": "https://agentskills.io/skill-creation/using-scripts",
+      "title": "Agent Skills: script interfaces",
+      "role": "Dependencies, inputs, returned outputs and errors."
+    },
+    {
+      "url": "https://agentskills.io/skill-creation/evaluating-skills",
+      "title": "Agent Skills: evaluating output quality",
+      "role": "Same-task comparisons, edge cases and independent evaluation."
+    }
+  ],
+  "sections": [
+    {
+      "id": "roles",
+      "nav": "The pieces",
+      "question": "What changes when you add a skill?",
+      "answer": "You give the agent a reusable way of doing a job. You do not replace its model or give it new permissions. Better guidance and better tools solve different problems.",
+      "layout": "contrast",
+      "modelIds": [
+        "LC_REASON",
+        "LC_PACKAGE",
+        "LC_EXEC"
+      ]
+    },
+    {
+      "id": "package",
+      "nav": "Inside a skill",
+      "question": "What is actually inside the folder?",
+      "answer": "SKILL.md combines a discoverable name and description with the method itself. Supporting folders are optional: reading a reference, using a template and executing a script are different actions.",
+      "layout": "composition",
+      "modelIds": [
+        "LC_META",
+        "LC_METHOD",
+        "LC_REF",
+        "LC_SCRIPT",
+        "LC_ASSET"
+      ],
+      "trace": {
+        "modelId": "LC_SCRIPT",
+        "sourceRef": "S2",
+        "sourceText": "Scripts, references and assets are optional; they provide executable helpers, detailed reading and reusable output resources respectively."
+      }
+    },
+    {
+      "id": "loading",
+      "nav": "Loading",
+      "question": "How does the method reach the agent?",
+      "answer": "First the agent sees what is available. A relevant or explicit selection loads the full method. It then pulls in supporting detail only when the task needs it, rather than loading every installed skill.",
+      "layout": "process",
+      "modelIds": [
+        "F_CATALOG",
+        "F_SELECT",
+        "F_LOAD",
+        "F_PLAN"
+      ],
+      "scenarioId": "SC_DISCLOSE",
+      "diagram": "scenarios-scenario-sc_disclose.svg",
+      "diagramAlt": "Full native behavior for How does the method reach the agent?",
+      "diagramCaption": ""
+    },
+    {
+      "id": "boundary",
+      "nav": "Execution",
+      "question": "Why can a skill be selected but still not finish?",
+      "answer": "Selecting a method is not executing it. The host must supply a permitted operation and its prerequisites; the returned result must still satisfy the task. Instruction-only work can skip execution altogether.",
+      "layout": "relationships",
+      "modelIds": [
+        "CX_2",
+        "CX_3",
+        "CX_4"
+      ],
+      "diagram": "scenarios-scenario-sc_exec.svg",
+      "diagramAlt": "Native action flow distinguishes no-tool answer, permission or prerequisite blocker, tool error and verified result.",
+      "diagramCaption": "The native flow preserves both the useful path and the unresolved outcomes."
+    },
+    {
+      "id": "worked-example",
+      "nav": "A real task",
+      "question": "\u201cExplain how agent skills work.\u201d",
+      "answer": "The agent interprets the specification and host documentation; the skill supplies the modeling method. A native checker checks the model, a builder produces the views, and the agent reviews what those views actually communicate. The model remains editable behind the answer.",
+      "layout": "process",
+      "modelIds": [
+        "F_INTERPRET",
+        "F_MODEL",
+        "F_GATE",
+        "F_QUALIFY",
+        "F_RENDER",
+        "F_VERIFY",
+        "F_ANSWER"
+      ],
+      "scenarioId": "SC_SYSML",
+      "diagram": "scenarios-scenario-sc_sysml.svg",
+      "diagramAlt": "Full native behavior for \u201cExplain how agent skills work.\u201d",
+      "diagramCaption": ""
+    },
+    {
+      "id": "improvement",
+      "nav": "Improvement",
+      "question": "How do you know a revised skill is better?",
+      "answer": "Use the same realistic task against the candidate and its baseline. Compare the actual outputs, including difficult cases. Fix what failed and repeat. A rewritten instruction file is a candidate, not evidence of improvement.",
+      "layout": "process",
+      "modelIds": [
+        "F_DRAFT",
+        "F_TRIAL",
+        "F_COMPARE"
+      ],
+      "scenarioId": "SC_IMPROVE",
+      "diagram": "scenarios-scenario-sc_improve.svg",
+      "diagramAlt": "Full native behavior for How do you know a revised skill is better?",
+      "diagramCaption": ""
+    },
+    {
+      "id": "portability",
+      "nav": "Portability",
+      "question": "What travels, and what depends on the host?",
+      "answer": "The folder format travels. Discovery, tool availability and permission behavior still depend on the host. agentskills.io defines the format; OpenAI documents Codex behavior. They are not interchangeable authorities.",
+      "layout": "contrast",
+      "modelIds": [
+        "D_HOST",
+        "R_HOST",
+        "R_AUTH"
+      ]
+    }
+  ]
+}

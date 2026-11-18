@@ -27,6 +27,7 @@ SOURCE_PATHS = (
     'workbench/tools/reference-pilot/architecture_check.py',
     'workbench/tools/reference-pilot/architecture_workbench.py',
     'workbench/tools/reference-pilot/architecture_review.py',
+    'workbench/tools/reference-pilot/architecture_palette.py',
     'workbench/tools/reference-pilot/syson_review.py',
     'workbench/tools/reference-pilot/architecture_review.html',
     'workbench/tools/reference-pilot/architecture_review.css',
