@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="668pt" height="702pt" viewBox="0.00 0.00 668.08 702.08" role="img" aria-label="Which events and guards change the service state, and what obligation follows?" data-view-id="scenarios|states|SM_TOOL" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 679.04)">
+<title>architecture</title>
+
+<g id="mark-a46d0c819395f778" class="edge" data-record-id="SM_TOOL/ST_01" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Ready reservation committed">
+<title>n0-&gt;n1</title>
+<g id="a_mark-a46d0c819395f778"><a ns1:title="Ready reservation committed">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M202.42,-622.75C136.31,-610.52 20,-589 20,-589 20,-589 20,-565 20,-565 20,-565 27.4,-558.66 36.45,-550.9" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="38.2,-552.63 41.92,-546.21 35.01,-548.91 38.2,-552.63" />
+</a>
+</g>
+<text text-anchor="middle" x="64" y="-580.6" font-family="Arial" font-size="10.50" fill="#355f5a">Ready reservation</text>
+<text text-anchor="middle" x="64" y="-568.6" font-family="Arial" font-size="10.50" fill="#355f5a">committed</text>
+</g>
+
+<g id="mark-d9f82a12c946871d" class="edge" data-record-id="SM_TOOL/ST_03" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Member withdraws">
+<title>n1-&gt;n0</title>
+<g id="a_mark-d9f82a12c946871d"><a ns1:title="Member withdraws">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M92.78,-546.08C112.39,-565.12 137,-589 137,-589 137,-589 166.83,-600.39 195.42,-611.31" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="194.85,-613.71 202.26,-613.92 196.59,-609.13 194.85,-613.71" />
+</a>
+</g>
+<text text-anchor="middle" x="182.5" y="-574.6" font-family="Arial" font-size="10.50" fill="#355f5a">Member withdraws</text>
+</g>
+
+<g id="mark-d3b5dcb0d4f6e4c2" class="edge" data-record-id="SM_TOOL/ST_02" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Notice delivery confirmed">
+<title>n1-&gt;n2</title>
+<g id="a_mark-d3b5dcb0d4f6e4c2"><a ns1:title="Notice delivery confirmed">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M85.34,-497.79C95.64,-483.15 107,-467 107,-467 107,-467 127.46,-459.08 149.19,-450.67" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="150.31,-452.86 155.95,-448.05 148.54,-448.29 150.31,-452.86" />
+</a>
+</g>
+<text text-anchor="middle" x="167.5" y="-470.6" font-family="Arial" font-size="10.50" fill="#355f5a">Notice delivery confirmed</text>
+</g>
+
+<g id="mark-e64b2b565de17a23" class="edge" data-record-id="SM_TOOL/ST_04" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect New fault found">
+<title>n1-&gt;n5</title>
+<g id="a_mark-e64b2b565de17a23"><a ns1:title="New fault found">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M58.96,-497.82C47.4,-471.16 30,-431 30,-431 30,-431 30,-431 30,-227 30,-227 117.68,-175.6 168.56,-145.78" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="170.08,-147.73 174.88,-142.07 167.6,-143.5 170.08,-147.73" />
+</a>
+</g>
+<text text-anchor="middle" x="67.5" y="-329.6" font-family="Arial" font-size="10.50" fill="#355f5a">New fault found</text>
+</g>
+
+<g id="mark-ab51caa7d4b46a10" class="edge" data-record-id="SM_TOOL/ST_06" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Expiry or withdrawal disposition recorded">
+<title>n2-&gt;n0</title>
+<g id="a_mark-ab51caa7d4b46a10"><a ns1:title="Expiry or withdrawal disposition recorded">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M214.3,-448.16C222.02,-457.43 230,-467 230,-467 230,-467 238.97,-553.53 243.88,-600.88" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="241.44,-601.14 244.6,-607.85 246.32,-600.64 241.44,-601.14" />
+</a>
+</g>
+<text text-anchor="middle" x="285.5" y="-525.6" font-family="Arial" font-size="10.50" fill="#355f5a">Expiry or withdrawal</text>
+<text text-anchor="middle" x="285.5" y="-513.6" font-family="Arial" font-size="10.50" fill="#355f5a">disposition recorded</text>
+</g>
+
+<g id="mark-1cfc3dbed52913ab" class="edge" data-record-id="SM_TOOL/ST_05" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Custody transfer recorded">
+<title>n2-&gt;n3</title>
+<g id="a_mark-1cfc3dbed52913ab"><a ns1:title="Custody transfer recorded">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M209.3,-411.84C217.65,-396.41 230,-373.62 239.27,-356.5" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="241.6,-357.34 242.78,-350.01 237.3,-355 241.6,-357.34" />
+</a>
+</g>
+<text text-anchor="middle" x="294.5" y="-378.6" font-family="Arial" font-size="10.50" fill="#355f5a">Custody transfer recorded</text>
+</g>
+
+<g id="mark-5c1b15520222ab5c" class="edge" data-record-id="SM_TOOL/ST_07" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect New tool fault found">
+<title>n2-&gt;n5</title>
+<g id="a_mark-5c1b15520222ab5c"><a ns1:title="New tool fault found">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M194.34,-411.76C182.45,-375.56 156,-295 156,-295 156,-295 156,-271 156,-271 156,-271 168,-204 168,-204 168,-204 182.58,-172 193.18,-148.74" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="195.52,-149.53 196.19,-142.14 191.06,-147.5 195.52,-149.53" />
+</a>
+</g>
+<text text-anchor="middle" x="203.5" y="-280.6" font-family="Arial" font-size="10.50" fill="#355f5a">New tool fault found</text>
+</g>
+
+<g id="mark-6d5ac8e99b2be97e" class="edge" data-record-id="SM_TOOL/ST_08" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Steward confirms returned-tool receipt">
+<title>n3-&gt;n4</title>
+<g id="a_mark-6d5ac8e99b2be97e"><a ns1:title="Steward confirms returned-tool receipt">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M254.37,-313.7C256.41,-298.88 259.39,-277.18 261.82,-259.46" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="264.3,-259.41 262.82,-252.14 259.44,-258.75 264.3,-259.41" />
+</a>
+</g>
+<text text-anchor="middle" x="307.5" y="-286.6" font-family="Arial" font-size="10.50" fill="#355f5a">Steward confirms</text>
+<text text-anchor="middle" x="307.5" y="-274.6" font-family="Arial" font-size="10.50" fill="#355f5a">returned-tool receipt</text>
+</g>
+
+<g id="mark-652bff8a55a648e1" class="edge" data-record-id="SM_TOOL/ST_09" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Fit return assessment recorded">
+<title>n4-&gt;n0</title>
+<g id="a_mark-652bff8a55a648e1"><a ns1:title="Fit return assessment recorded">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M318.77,-252.09C341.08,-261.85 362,-271 362,-271 362,-271 381,-331 381,-331 381,-523 381,-523 381,-523 381,-523 321.15,-571.24 281.45,-603.24" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="279.66,-601.53 275.75,-607.83 282.73,-605.35 279.66,-601.53" />
+</a>
+</g>
+<text text-anchor="middle" x="433" y="-433.6" font-family="Arial" font-size="10.50" fill="#355f5a">Fit return assessment</text>
+<text text-anchor="middle" x="433" y="-421.6" font-family="Arial" font-size="10.50" fill="#355f5a">recorded</text>
+</g>
+
+<g id="mark-a4d5328c5d139515" class="edge" data-record-id="SM_TOOL/ST_10" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Unfit return assessment recorded">
+<title>n4-&gt;n5</title>
+<g id="a_mark-a4d5328c5d139515"><a ns1:title="Unfit return assessment recorded">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M251.93,-203.85C241.84,-187.25 228.29,-164.96 218.17,-148.32" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="220.07,-146.72 214.34,-142.02 215.88,-149.27 220.07,-146.72" />
+</a>
+</g>
+<text text-anchor="middle" x="295" y="-176.6" font-family="Arial" font-size="10.50" fill="#355f5a">Unfit return assessment</text>
+<text text-anchor="middle" x="295" y="-164.6" font-family="Arial" font-size="10.50" fill="#355f5a">recorded</text>
+</g>
+
+<g id="mark-d62e25012b3ebb87" class="edge" data-record-id="SM_TOOL/ST_11" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Coordinator releases quarantine">
+<title>n5-&gt;n0</title>
+<g id="a_mark-d62e25012b3ebb87"><a ns1:title="Coordinator releases quarantine">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M254.43,-136.79C299.34,-147.29 358,-161 358,-161 358,-161 522,-227 522,-227 522,-523 522,-523 522,-523 522,-523 377.93,-579.58 298.35,-610.83" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="297.42,-608.57 291.8,-613.41 299.21,-613.13 297.42,-608.57" />
+</a>
+</g>
+<text text-anchor="middle" x="572" y="-384.6" font-family="Arial" font-size="10.50" fill="#355f5a">Coordinator releases</text>
+<text text-anchor="middle" x="572" y="-372.6" font-family="Arial" font-size="10.50" fill="#355f5a">quarantine</text>
+</g>
+
+<g id="mark-e172c293038852dc" class="edge" data-record-id="SM_TOOL/ST_12" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Coordinator retires tool">
+<title>n5-&gt;n6</title>
+<g id="a_mark-e172c293038852dc"><a ns1:title="Coordinator retires tool">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M204,-105.76C204,-93.93 204,-77.84 204,-63.44" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="206.45,-63.1 204,-56.1 201.55,-63.1 206.45,-63.1" />
+</a>
+</g>
+<text text-anchor="middle" x="259" y="-78.6" font-family="Arial" font-size="10.50" fill="#355f5a">Coordinator retires tool</text>
+</g>
+
+<g id="mark-00d058c30e63f77b" class="node" data-record-id="SM_TOOL/available" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Available">
+<title>n0</title>
+<g id="a_mark-00d058c30e63f77b"><a ns1:title="Available">
+<path fill="#edf0fb" stroke="#7b86b2" stroke-width="1.2" d="M279.5,-656C279.5,-656 214.5,-656 214.5,-656 208.5,-656 202.5,-650 202.5,-644 202.5,-644 202.5,-620 202.5,-620 202.5,-614 208.5,-608 214.5,-608 214.5,-608 279.5,-608 279.5,-608 285.5,-608 291.5,-614 291.5,-620 291.5,-620 291.5,-644 291.5,-644 291.5,-650 285.5,-656 279.5,-656" />
+<text text-anchor="middle" x="247" y="-635.8" font-family="Arial" font-size="14.00" fill="#34416c">Available</text>
+<text text-anchor="middle" x="247" y="-620.8" font-family="Arial" font-size="14.00" fill="#34416c">Initial state</text>
+</a>
+</g>
+</g>
+
+<g id="mark-195fc62665842053" class="node" data-record-id="SM_TOOL/pending_notice" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reserved, pending notification">
+<title>n1</title>
+<g id="a_mark-195fc62665842053"><a ns1:title="Reserved, pending notification">
+<path fill="#edf0fb" stroke="#7b86b2" stroke-width="1.2" d="M126,-546C126,-546 12,-546 12,-546 6,-546 0,-540 0,-534 0,-534 0,-510 0,-510 0,-504 6,-498 12,-498 12,-498 126,-498 126,-498 132,-498 138,-504 138,-510 138,-510 138,-534 138,-534 138,-540 132,-546 126,-546" />
+<text text-anchor="middle" x="69" y="-525.8" font-family="Arial" font-size="14.00" fill="#34416c">Reserved, pending</text>
+<text text-anchor="middle" x="69" y="-510.8" font-family="Arial" font-size="14.00" fill="#34416c">notification</text>
+</a>
+</g>
+</g>
+
+<g id="mark-1896ba0d90a22653" class="node" data-record-id="SM_TOOL/ready" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Ready under confirmed hold">
+<title>n2</title>
+<g id="a_mark-1896ba0d90a22653"><a ns1:title="Ready under confirmed hold">
+<path fill="#edf0fb" stroke="#7b86b2" stroke-width="1.2" d="M285.5,-448C285.5,-448 114.5,-448 114.5,-448 108.5,-448 102.5,-442 102.5,-436 102.5,-436 102.5,-424 102.5,-424 102.5,-418 108.5,-412 114.5,-412 114.5,-412 285.5,-412 285.5,-412 291.5,-412 297.5,-418 297.5,-424 297.5,-424 297.5,-436 297.5,-436 297.5,-442 291.5,-448 285.5,-448" />
+<text text-anchor="middle" x="200" y="-426.3" font-family="Arial" font-size="14.00" fill="#34416c">Ready under confirmed hold</text>
+</a>
+</g>
+</g>
+
+<g id="mark-1a2783a23c4bc096" class="node" data-record-id="SM_TOOL/on_loan" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect On loan">
+<title>n3</title>
+<g id="a_mark-1a2783a23c4bc096"><a ns1:title="On loan">
+<path fill="#edf0fb" stroke="#7b86b2" stroke-width="1.2" d="M276.5,-350C276.5,-350 227.5,-350 227.5,-350 221.5,-350 215.5,-344 215.5,-338 215.5,-338 215.5,-326 215.5,-326 215.5,-320 221.5,-314 227.5,-314 227.5,-314 276.5,-314 276.5,-314 282.5,-314 288.5,-320 288.5,-326 288.5,-326 288.5,-338 288.5,-338 288.5,-344 282.5,-350 276.5,-350" />
+<text text-anchor="middle" x="252" y="-328.3" font-family="Arial" font-size="14.00" fill="#34416c">On loan</text>
+</a>
+</g>
+</g>
+
+<g id="mark-25462597a7f8de85" class="node" data-record-id="SM_TOOL/awaiting_assessment" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Library custody, awaiting assessment">
+<title>n4</title>
+<g id="a_mark-25462597a7f8de85"><a ns1:title="Library custody, awaiting assessment">
+<path fill="#edf0fb" stroke="#7b86b2" stroke-width="1.2" d="M340,-252C340,-252 192,-252 192,-252 186,-252 180,-246 180,-240 180,-240 180,-216 180,-216 180,-210 186,-204 192,-204 192,-204 340,-204 340,-204 346,-204 352,-210 352,-216 352,-216 352,-240 352,-240 352,-246 346,-252 340,-252" />
+<text text-anchor="middle" x="266" y="-231.8" font-family="Arial" font-size="14.00" fill="#34416c">Library custody, awaiting</text>
+<text text-anchor="middle" x="266" y="-216.8" font-family="Arial" font-size="14.00" fill="#34416c">assessment</text>
+</a>
+</g>
+</g>
+
+<g id="mark-34f69108ec9f7d52" class="node" data-record-id="SM_TOOL/quarantined" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Quarantined">
+<title>n5</title>
+<g id="a_mark-34f69108ec9f7d52"><a ns1:title="Quarantined">
+<path fill="#edf0fb" stroke="#7b86b2" stroke-width="1.2" d="M242,-142C242,-142 166,-142 166,-142 160,-142 154,-136 154,-130 154,-130 154,-118 154,-118 154,-112 160,-106 166,-106 166,-106 242,-106 242,-106 248,-106 254,-112 254,-118 254,-118 254,-130 254,-130 254,-136 248,-142 242,-142" />
+<text text-anchor="middle" x="204" y="-120.3" font-family="Arial" font-size="14.00" fill="#34416c">Quarantined</text>
+</a>
+</g>
+</g>
+
+<g id="mark-d70a09362963f325" class="node" data-record-id="SM_TOOL/retired" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Retired">
+<title>n6</title>
+<g id="a_mark-d70a09362963f325"><a ns1:title="Retired">
+<path fill="#edf0fb" stroke="#7b86b2" stroke-width="1.2" d="M257.5,-52C257.5,-52 150.5,-52 150.5,-52 144.5,-52 138.5,-46 138.5,-40 138.5,-40 138.5,-16 138.5,-16 138.5,-10 144.5,-4 150.5,-4 150.5,-4 257.5,-4 257.5,-4 263.5,-4 269.5,-10 269.5,-16 269.5,-16 269.5,-40 269.5,-40 269.5,-46 263.5,-52 257.5,-52" />
+<path fill="none" stroke="#7b86b2" stroke-width="1.2" d="M261.5,-56C261.5,-56 146.5,-56 146.5,-56 140.5,-56 134.5,-50 134.5,-44 134.5,-44 134.5,-12 134.5,-12 134.5,-6 140.5,0 146.5,0 146.5,0 261.5,0 261.5,0 267.5,0 273.5,-6 273.5,-12 273.5,-12 273.5,-44 273.5,-44 273.5,-50 267.5,-56 261.5,-56" />
+<text text-anchor="middle" x="204" y="-31.8" font-family="Arial" font-size="14.00" fill="#153c3a">Retired</text>
+<text text-anchor="middle" x="204" y="-16.8" font-family="Arial" font-size="14.00" fill="#153c3a">Declared terminal</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

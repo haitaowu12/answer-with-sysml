@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="1448pt" height="264pt" viewBox="0.00 0.00 1448.08 264.08" role="img" aria-label="Which smaller responsibilities compose this function?" data-view-id="functions|decomposition|F_LOAN" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 241.04)">
+<title>architecture</title>
+
+<g id="mark-991d664e7d0586c1" class="edge" data-record-id="projection:functions|decomposition|F_LOAN:parent-F_NOTICE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Notify and transfer the reserved tool">
+<title>n0-&gt;n1</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M74.84,-169.88C73.7,-158.15 73.72,-143.96 74.91,-132.35" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="76.67,-132.38 75.54,-127.21 73.2,-131.96 76.67,-132.38" />
+</g>
+
+
+<g id="mark-140dc0454726908c" class="edge" data-record-id="projection:functions|decomposition|F_LOAN:parent-F_CONFIRM" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Notify and transfer the reserved tool">
+<title>n0-&gt;n2</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M136.5,-169.99C161.71,-159.15 191.83,-146.2 217.63,-135.1" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="218.49,-136.64 222.39,-133.05 217.11,-133.42 218.49,-136.64" />
+</g>
+
+<g id="mark-ff15ce7b64c17277" class="edge" data-record-id="projection:functions|decomposition|F_LOAN:parent-F_HOLD" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Notify and transfer the reserved tool">
+<title>n0-&gt;n3</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M161.75,-176.76C247.93,-158.99 374,-133 374,-133 374,-133 376.73,-132.4 381.3,-131.4" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="381.95,-133.05 386.46,-130.27 381.2,-129.63 381.95,-133.05" />
+</g>
+
+<g id="mark-53dd6cfb18f5d711" class="edge" data-record-id="projection:functions|decomposition|F_LOAN:parent-F_EXPIRY" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Notify and transfer the reserved tool">
+<title>n0-&gt;n4</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M161.68,-183.56C302.48,-166.66 583,-133 583,-133 583,-133 585.7,-132.45 590.26,-131.51" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="590.87,-133.17 595.41,-130.45 590.16,-129.74 590.87,-133.17" />
+</g>
+
+<g id="mark-62a204710e40093e" class="edge" data-record-id="projection:functions|decomposition|F_LOAN:parent-F_MATCH" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Notify and transfer the reserved tool">
+<title>n0-&gt;n5</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M161.75,-186.46C349.14,-170.91 806,-133 806,-133 806,-133 806,-85 806,-85 806,-85 763.6,-62.08 731.21,-44.57" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="731.74,-42.87 726.51,-42.03 730.08,-45.95 731.74,-42.87" />
+</g>
+
+<g id="mark-0aee7871382f8707" class="edge" data-record-id="projection:functions|decomposition|F_LOAN:parent-F_ACCEPT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Notify and transfer the reserved tool">
+<title>n0-&gt;n6</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M161.7,-186.64C352.67,-171.19 825,-133 825,-133 825,-133 861.92,-84.37 886.22,-52.37" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="887.78,-53.21 889.41,-48.17 884.99,-51.09 887.78,-53.21" />
+</g>
+
+<g id="mark-9c202bcfc3ef30c0" class="edge" data-record-id="projection:functions|decomposition|F_LOAN:parent-F_TRANSFER" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Notify and transfer the reserved tool">
+<title>n0-&gt;n7</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M161.72,-186.94C359.77,-171.71 863,-133 863,-133 863,-133 985.26,-82.02 1061.78,-50.11" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="1062.81,-51.58 1066.76,-48.04 1061.47,-48.35 1062.81,-51.58" />
+</g>
+
+<g id="mark-27744373a242d73b" class="edge" data-record-id="projection:functions|decomposition|F_LOAN:parent-F_ONLOAN" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Notify and transfer the reserved tool">
+<title>n0-&gt;n8</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M161.61,-187.49C373.23,-172.66 939,-133 939,-133 939,-133 1145.59,-74.44 1254.52,-43.56" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="1255.3,-45.16 1259.63,-42.11 1254.34,-41.79 1255.3,-45.16" />
+</g>
+
+
+<g id="mark-3a04e50c06775afb" class="node" data-record-id="F_LOAN" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Notify and transfer the reserved tool">
+<title>n0</title>
+<g id="a_mark-3a04e50c06775afb"><a ns1:title="Notify and transfer the reserved tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M149.5,-218C149.5,-218 16.5,-218 16.5,-218 10.5,-218 4.5,-212 4.5,-206 4.5,-206 4.5,-182 4.5,-182 4.5,-176 10.5,-170 16.5,-170 16.5,-170 149.5,-170 149.5,-170 155.5,-170 161.5,-176 161.5,-182 161.5,-182 161.5,-206 161.5,-206 161.5,-212 155.5,-218 149.5,-218" />
+<text text-anchor="middle" x="83" y="-197.8" font-family="Arial" font-size="14.00" fill="#153c3a">Notify and transfer the</text>
+<text text-anchor="middle" x="83" y="-182.8" font-family="Arial" font-size="14.00" fill="#153c3a">reserved tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-e9e5b6e3c0f55917" class="node" data-record-id="F_NOTICE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Deliver the ready notice">
+<title>n1</title>
+<g id="a_mark-e9e5b6e3c0f55917"><a ns1:title="Deliver the ready notice">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M154,-127C154,-127 12,-127 12,-127 6,-127 0,-121 0,-115 0,-115 0,-103 0,-103 0,-97 6,-91 12,-91 12,-91 154,-91 154,-91 160,-91 166,-97 166,-103 166,-103 166,-115 166,-115 166,-121 160,-127 154,-127" />
+<text text-anchor="middle" x="83" y="-105.3" font-family="Arial" font-size="14.00" fill="#153c3a">Deliver the ready notice</text>
+</a>
+</g>
+</g>
+
+<g id="mark-d5b18fb6c1fa423f" class="node" data-record-id="F_CONFIRM" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Record confirmed notice delivery">
+<title>n2</title>
+<g id="a_mark-d5b18fb6c1fa423f"><a ns1:title="Record confirmed notice delivery">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M350,-133C350,-133 202,-133 202,-133 196,-133 190,-127 190,-121 190,-121 190,-97 190,-97 190,-91 196,-85 202,-85 202,-85 350,-85 350,-85 356,-85 362,-91 362,-97 362,-97 362,-121 362,-121 362,-127 356,-133 350,-133" />
+<text text-anchor="middle" x="276" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Record confirmed notice</text>
+<text text-anchor="middle" x="276" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">delivery</text>
+</a>
+</g>
+</g>
+
+<g id="mark-930253b1e66050b9" class="node" data-record-id="F_HOLD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Govern the confirmed hold interval">
+<title>n3</title>
+<g id="a_mark-930253b1e66050b9"><a ns1:title="Govern the confirmed hold interval">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M559.5,-133C559.5,-133 398.5,-133 398.5,-133 392.5,-133 386.5,-127 386.5,-121 386.5,-121 386.5,-97 386.5,-97 386.5,-91 392.5,-85 398.5,-85 398.5,-85 559.5,-85 559.5,-85 565.5,-85 571.5,-91 571.5,-97 571.5,-97 571.5,-121 571.5,-121 571.5,-127 565.5,-133 559.5,-133" />
+<text text-anchor="middle" x="479" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Govern the confirmed hold</text>
+<text text-anchor="middle" x="479" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">interval</text>
+</a>
+</g>
+</g>
+
+<g id="mark-8aa2a537d0d5552d" class="node" data-record-id="F_EXPIRY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Resolve expiry, withdrawal or extension">
+<title>n4</title>
+<g id="a_mark-8aa2a537d0d5552d"><a ns1:title="Resolve expiry, withdrawal or extension">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M782.5,-133C782.5,-133 607.5,-133 607.5,-133 601.5,-133 595.5,-127 595.5,-121 595.5,-121 595.5,-97 595.5,-97 595.5,-91 601.5,-85 607.5,-85 607.5,-85 782.5,-85 782.5,-85 788.5,-85 794.5,-91 794.5,-97 794.5,-97 794.5,-121 794.5,-121 794.5,-127 788.5,-133 782.5,-133" />
+<text text-anchor="middle" x="695" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Resolve expiry, withdrawal or</text>
+<text text-anchor="middle" x="695" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">extension</text>
+</a>
+</g>
+</g>
+
+<g id="mark-bf290258efdb4b00" class="node" data-record-id="F_MATCH" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Match the collection case">
+<title>n5</title>
+<g id="a_mark-bf290258efdb4b00"><a ns1:title="Match the collection case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M771.5,-42C771.5,-42 618.5,-42 618.5,-42 612.5,-42 606.5,-36 606.5,-30 606.5,-30 606.5,-18 606.5,-18 606.5,-12 612.5,-6 618.5,-6 618.5,-6 771.5,-6 771.5,-6 777.5,-6 783.5,-12 783.5,-18 783.5,-18 783.5,-30 783.5,-30 783.5,-36 777.5,-42 771.5,-42" />
+<text text-anchor="middle" x="695" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Match the collection case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-01dcaa7900f4a9f9" class="node" data-record-id="F_ACCEPT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Capture terms and identified-tool receipt acceptance">
+<title>n6</title>
+<g id="a_mark-01dcaa7900f4a9f9"><a ns1:title="Capture terms and identified-tool receipt acceptance">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M994.5,-48C994.5,-48 819.5,-48 819.5,-48 813.5,-48 807.5,-42 807.5,-36 807.5,-36 807.5,-12 807.5,-12 807.5,-6 813.5,0 819.5,0 819.5,0 994.5,0 994.5,0 1000.5,0 1006.5,-6 1006.5,-12 1006.5,-12 1006.5,-36 1006.5,-36 1006.5,-42 1000.5,-48 994.5,-48" />
+<text text-anchor="middle" x="907" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Capture terms and identified-</text>
+<text text-anchor="middle" x="907" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">tool receipt acceptance</text>
+</a>
+</g>
+</g>
+
+<g id="mark-6730400190426534" class="node" data-record-id="F_TRANSFER" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Record custody transfer to member">
+<title>n7</title>
+<g id="a_mark-6730400190426534"><a ns1:title="Record custody transfer to member">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1201.5,-48C1201.5,-48 1042.5,-48 1042.5,-48 1036.5,-48 1030.5,-42 1030.5,-36 1030.5,-36 1030.5,-12 1030.5,-12 1030.5,-6 1036.5,0 1042.5,0 1042.5,0 1201.5,0 1201.5,0 1207.5,0 1213.5,-6 1213.5,-12 1213.5,-12 1213.5,-36 1213.5,-36 1213.5,-42 1207.5,-48 1201.5,-48" />
+<text text-anchor="middle" x="1122" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Record custody transfer to</text>
+<text text-anchor="middle" x="1122" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">member</text>
+</a>
+</g>
+</g>
+
+<g id="mark-baf16116458e9e40" class="node" data-record-id="F_ONLOAN" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Record the tool on loan">
+<title>n8</title>
+<g id="a_mark-baf16116458e9e40"><a ns1:title="Record the tool on loan">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1390,-42C1390,-42 1250,-42 1250,-42 1244,-42 1238,-36 1238,-30 1238,-30 1238,-18 1238,-18 1238,-12 1244,-6 1250,-6 1250,-6 1390,-6 1390,-6 1396,-6 1402,-12 1402,-18 1402,-18 1402,-30 1402,-30 1402,-36 1396,-42 1390,-42" />
+<text text-anchor="middle" x="1320" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Record the tool on loan</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

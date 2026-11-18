@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="723pt" height="1037pt" viewBox="0.00 0.00 722.58 1037.08" role="img" aria-label="How does this case progress, branch and recover under its declared conditions?" data-view-id="scenarios|scenario|SC_RECOVER" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 1014.04)">
+<title>architecture</title>
+
+<g id="mark-1753ce84f63bd842" class="edge" data-record-id="SC_RECOVER_T01" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Steward confirms identified physical receipt and library custody">
+<title>n0-&gt;n1</title>
+<g id="a_mark-1753ce84f63bd842"><a ns1:title="Steward confirms identified physical receipt and library custody">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M494.5,-942.7C494.5,-920.84 494.5,-888.01 494.5,-864.16" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="496.95,-864.06 494.5,-857.06 492.05,-864.06 496.95,-864.06" />
+</a>
+</g>
+<text text-anchor="middle" x="537.5" y="-915.6" font-family="Arial" font-size="10.50" fill="#355f5a">Steward confirms</text>
+<text text-anchor="middle" x="537.5" y="-903.6" font-family="Arial" font-size="10.50" fill="#355f5a">identified physical</text>
+<text text-anchor="middle" x="537.5" y="-891.6" font-family="Arial" font-size="10.50" fill="#355f5a">receipt and library</text>
+<text text-anchor="middle" x="537.5" y="-879.6" font-family="Arial" font-size="10.50" fill="#355f5a">custody</text>
+</g>
+
+<g id="mark-357373eea9eb59f9" class="edge" data-record-id="SC_RECOVER_T03" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Returned tool assessed unfit">
+<title>n1-&gt;n2</title>
+<g id="a_mark-357373eea9eb59f9"><a ns1:title="Returned tool assessed unfit">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M459.68,-808.79C445.11,-799.08 431.5,-790 431.5,-790 431.5,-790 429.29,-771.03 427.35,-754.42" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="429.73,-753.7 426.49,-747.03 424.86,-754.27 429.73,-753.7" />
+</a>
+</g>
+<text text-anchor="middle" x="488" y="-781.6" font-family="Arial" font-size="10.50" fill="#355f5a">Returned tool assessed</text>
+<text text-anchor="middle" x="488" y="-769.6" font-family="Arial" font-size="10.50" fill="#355f5a">unfit</text>
+</g>
+
+<g id="mark-b294aa77de97c334" class="edge" data-record-id="SC_RECOVER_T02" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Returned tool assessed fit">
+<title>n1-&gt;n6</title>
+<g id="a_mark-b294aa77de97c334"><a ns1:title="Returned tool assessed fit">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M523.24,-808.79C535.26,-799.08 546.5,-790 546.5,-790 546.5,-790 563.5,-730 563.5,-730 563.5,-730 563.5,-730 563.5,-410 563.5,-410 546.5,-326 546.5,-326 546.5,-326 539.68,-319.78 531.3,-312.12" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="532.74,-310.12 525.92,-307.21 529.44,-313.74 532.74,-310.12" />
+</a>
+</g>
+<text text-anchor="middle" x="620" y="-579.6" font-family="Arial" font-size="10.50" fill="#355f5a">Returned tool assessed</text>
+<text text-anchor="middle" x="620" y="-567.6" font-family="Arial" font-size="10.50" fill="#355f5a">fit</text>
+</g>
+
+<g id="mark-40a34b146e451f98" class="edge" data-record-id="SC_RECOVER_T04" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Coordinator considers the repair disposition">
+<title>n2-&gt;n3</title>
+<g id="a_mark-40a34b146e451f98"><a ns1:title="Coordinator considers the repair disposition">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M403.05,-710.84C383,-694.8 352.99,-670.79 331.35,-653.48" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="332.76,-651.47 325.77,-649.01 329.7,-655.3 332.76,-651.47" />
+</a>
+</g>
+<text text-anchor="middle" x="441.5" y="-683.6" font-family="Arial" font-size="10.50" fill="#355f5a">Coordinator considers the</text>
+<text text-anchor="middle" x="441.5" y="-671.6" font-family="Arial" font-size="10.50" fill="#355f5a">repair disposition</text>
+</g>
+
+<g id="mark-58d2bfdb633045f8" class="edge" data-record-id="SC_RECOVER_T05" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect External repair request authorised; await provider report">
+<title>n3-&gt;n4</title>
+<g id="a_mark-58d2bfdb633045f8"><a ns1:title="External repair request authorised; await provider report">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M319.44,-612.65C335.31,-594.23 360.45,-565.03 377.89,-544.77" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="379.88,-546.21 382.6,-539.31 376.17,-543.01 379.88,-546.21" />
+</a>
+</g>
+<text text-anchor="middle" x="420" y="-585.6" font-family="Arial" font-size="10.50" fill="#355f5a">External repair request</text>
+<text text-anchor="middle" x="420" y="-573.6" font-family="Arial" font-size="10.50" fill="#355f5a">authorised; await</text>
+<text text-anchor="middle" x="420" y="-561.6" font-family="Arial" font-size="10.50" fill="#355f5a">provider report</text>
+</g>
+
+<g id="mark-474d66626d916ecc" class="edge" data-record-id="SC_RECOVER_T06" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Repair decision remains pending">
+<title>n3-&gt;n9</title>
+<g id="a_mark-474d66626d916ecc"><a ns1:title="Repair decision remains pending">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M222.56,-612.95C177.84,-603.64 131.5,-594 131.5,-594 131.5,-594 117.97,-527.9 110.43,-491.07" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="112.81,-490.49 109.01,-484.13 108.01,-491.48 112.81,-490.49" />
+</a>
+</g>
+<text text-anchor="middle" x="189" y="-579.6" font-family="Arial" font-size="10.50" fill="#355f5a">Repair decision remains</text>
+<text text-anchor="middle" x="189" y="-567.6" font-family="Arial" font-size="10.50" fill="#355f5a">pending</text>
+</g>
+
+<g id="mark-8c5b2407baacd0f3" class="edge" data-record-id="SC_RECOVER_T07" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Repair report received regardless of completion wording">
+<title>n4-&gt;n5</title>
+<g id="a_mark-8c5b2407baacd0f3"><a ns1:title="Repair report received regardless of completion wording">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M398.62,-502.65C399.79,-484.7 401.61,-456.52 402.92,-436.35" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="405.37,-436.45 403.38,-429.31 400.48,-436.14 405.37,-436.45" />
+</a>
+</g>
+<text text-anchor="middle" x="461.5" y="-475.6" font-family="Arial" font-size="10.50" fill="#355f5a">Repair report received</text>
+<text text-anchor="middle" x="461.5" y="-463.6" font-family="Arial" font-size="10.50" fill="#355f5a">regardless of completion</text>
+<text text-anchor="middle" x="461.5" y="-451.6" font-family="Arial" font-size="10.50" fill="#355f5a">wording</text>
+</g>
+
+<g id="mark-2363b80356b1b6e0" class="edge" data-record-id="SC_RECOVER_T08" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Steward records fit reassessment and coordinator permits quarantine release">
+<title>n5-&gt;n6</title>
+<g id="a_mark-2363b80356b1b6e0"><a ns1:title="Steward records fit reassessment and coordinator permits quarantine release">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M414.24,-392.6C428.01,-367.99 451.5,-326 451.5,-326 451.5,-326 458.9,-319.66 467.95,-311.9" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="469.7,-313.63 473.42,-307.21 466.51,-309.91 469.7,-313.63" />
+</a>
+</g>
+<text text-anchor="middle" x="498" y="-365.6" font-family="Arial" font-size="10.50" fill="#355f5a">Steward records fit</text>
+<text text-anchor="middle" x="498" y="-353.6" font-family="Arial" font-size="10.50" fill="#355f5a">reassessment and</text>
+<text text-anchor="middle" x="498" y="-341.6" font-family="Arial" font-size="10.50" fill="#355f5a">coordinator permits</text>
+<text text-anchor="middle" x="498" y="-329.6" font-family="Arial" font-size="10.50" fill="#355f5a">quarantine…</text>
+</g>
+
+<g id="mark-324780d6c910eedc" class="edge" data-record-id="SC_RECOVER_T09" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Defects remain or tool is unfit; retain quarantine">
+<title>n5-&gt;n7</title>
+<g id="a_mark-324780d6c910eedc"><a ns1:title="Defects remain or tool is unfit; retain quarantine">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M356.66,-392.95C330.56,-383.64 303.5,-374 303.5,-374 303.5,-374 303.5,-326 303.5,-326 303.5,-326 304.3,-317.56 305.19,-308.25" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="307.65,-308.28 305.87,-301.08 302.77,-307.82 307.65,-308.28" />
+</a>
+</g>
+<text text-anchor="middle" x="361.5" y="-353.6" font-family="Arial" font-size="10.50" fill="#355f5a">Defects remain or tool is</text>
+<text text-anchor="middle" x="361.5" y="-341.6" font-family="Arial" font-size="10.50" fill="#355f5a">unfit; retain quarantine</text>
+</g>
+
+<g id="mark-81a96da035d0548e" class="edge" data-record-id="SC_RECOVER_T12" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Required fit/release evidence supports available status">
+<title>n6-&gt;n8</title>
+<g id="a_mark-81a96da035d0548e"><a ns1:title="Required fit/release evidence supports available status">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M479.8,-258.6C459.47,-235.62 431.5,-204 431.5,-204 431.5,-204 408.54,-196.22 382.38,-187.36" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="383.08,-185.01 375.67,-185.09 381.51,-189.65 383.08,-185.01" />
+</a>
+</g>
+<text text-anchor="middle" x="509.5" y="-231.6" font-family="Arial" font-size="10.50" fill="#355f5a">Required fit/release</text>
+<text text-anchor="middle" x="509.5" y="-219.6" font-family="Arial" font-size="10.50" fill="#355f5a">evidence supports</text>
+<text text-anchor="middle" x="509.5" y="-207.6" font-family="Arial" font-size="10.50" fill="#355f5a">available status</text>
+</g>
+
+<g id="mark-da5f4cc170f6fd92" class="edge" data-record-id="SC_RECOVER_T10" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Coordinator requests a separate new repair attempt">
+<title>n7-&gt;n3</title>
+<g id="a_mark-da5f4cc170f6fd92"><a ns1:title="Coordinator requests a separate new repair attempt">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M303.43,-301.08C300.66,-312.71 297.5,-326 297.5,-326 297.5,-326 284.5,-448 284.5,-448 284.5,-448 284.5,-484 284.5,-484 284.5,-484 295.53,-564.5 301.21,-605.95" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="298.79,-606.36 302.17,-612.97 303.64,-605.7 298.79,-606.36" />
+</a>
+</g>
+<text text-anchor="middle" x="339.5" y="-475.6" font-family="Arial" font-size="10.50" fill="#355f5a">Coordinator requests a</text>
+<text text-anchor="middle" x="339.5" y="-463.6" font-family="Arial" font-size="10.50" fill="#355f5a">separate new repair</text>
+<text text-anchor="middle" x="339.5" y="-451.6" font-family="Arial" font-size="10.50" fill="#355f5a">attempt</text>
+</g>
+
+<g id="mark-9f0bfcc134d4d960" class="edge" data-record-id="SC_RECOVER_T11" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Coordinator retires tool with recorded disposition">
+<title>n7-&gt;n8</title>
+<g id="a_mark-9f0bfcc134d4d960"><a ns1:title="Coordinator retires tool with recorded disposition">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M307.5,-264.81C307.5,-245.98 307.5,-215.41 307.5,-192.49" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="309.95,-192.34 307.5,-185.34 305.05,-192.34 309.95,-192.34" />
+</a>
+</g>
+<text text-anchor="middle" x="366.5" y="-225.6" font-family="Arial" font-size="10.50" fill="#355f5a">Coordinator retires tool</text>
+<text text-anchor="middle" x="366.5" y="-213.6" font-family="Arial" font-size="10.50" fill="#355f5a">with recorded disposition</text>
+</g>
+
+<g id="mark-a73711a98847e067" class="edge" data-record-id="SC_RECOVER_T13" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Current custody, condition and disposition recorded">
+<title>n8-&gt;n10</title>
+<g id="a_mark-a73711a98847e067"><a ns1:title="Current custody, condition and disposition recorded">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M270.01,-136.91C238.29,-117.37 192.38,-89.09 156.33,-66.89" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="157.43,-64.69 150.18,-63.1 154.86,-68.86 157.43,-64.69" />
+</a>
+</g>
+<text text-anchor="middle" x="294.5" y="-109.6" font-family="Arial" font-size="10.50" fill="#355f5a">Current custody,</text>
+<text text-anchor="middle" x="294.5" y="-97.6" font-family="Arial" font-size="10.50" fill="#355f5a">condition and disposition</text>
+<text text-anchor="middle" x="294.5" y="-85.6" font-family="Arial" font-size="10.50" fill="#355f5a">recorded</text>
+</g>
+
+<g id="mark-87a730eda9081713" class="edge" data-record-id="SC_RECOVER_T14" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Quarantine and accountable pending decision remain visible">
+<title>n9-&gt;n10</title>
+<g id="a_mark-87a730eda9081713"><a ns1:title="Quarantine and accountable pending decision remain visible">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M101.55,-447.69C94.28,-415.79 79.5,-351 79.5,-351 79.5,-351 79.5,-351 79.5,-160 79.5,-160 88.08,-107.93 94.27,-70.34" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="96.75,-70.34 95.47,-63.04 91.91,-69.55 96.75,-70.34" />
+</a>
+</g>
+<text text-anchor="middle" x="133.5" y="-292.6" font-family="Arial" font-size="10.50" fill="#355f5a">Quarantine and</text>
+<text text-anchor="middle" x="133.5" y="-280.6" font-family="Arial" font-size="10.50" fill="#355f5a">accountable pending</text>
+<text text-anchor="middle" x="133.5" y="-268.6" font-family="Arial" font-size="10.50" fill="#355f5a">decision remain visible</text>
+</g>
+
+<g id="mark-6eba218c3fa60775" class="node" data-record-id="SC_RECOVER/receive" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Confirm returned-tool receipt">
+<title>n0</title>
+<g id="a_mark-6eba218c3fa60775"><a ns1:title="Confirm returned-tool receipt">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M581,-991C581,-991 408,-991 408,-991 402,-991 396,-985 396,-979 396,-979 396,-955 396,-955 396,-949 402,-943 408,-943 408,-943 581,-943 581,-943 587,-943 593,-949 593,-955 593,-955 593,-979 593,-979 593,-985 587,-991 581,-991" />
+<text text-anchor="middle" x="494.5" y="-970.8" font-family="Arial" font-size="14.00" fill="#153c3a">Confirm returned-tool receipt</text>
+<text text-anchor="middle" x="494.5" y="-955.8" font-family="Arial" font-size="14.00" fill="#153c3a">Entry step</text>
+</a>
+</g>
+</g>
+
+<g id="mark-7e6ae3199566e474" class="node" data-record-id="SC_RECOVER/assess" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Assess returned-tool condition">
+<title>n1</title>
+<g id="a_mark-7e6ae3199566e474"><a ns1:title="Assess returned-tool condition">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M556.5,-857C556.5,-857 432.5,-857 432.5,-857 426.5,-857 420.5,-851 420.5,-845 420.5,-845 420.5,-821 420.5,-821 420.5,-815 426.5,-809 432.5,-809 432.5,-809 556.5,-809 556.5,-809 562.5,-809 568.5,-815 568.5,-821 568.5,-821 568.5,-845 568.5,-845 568.5,-851 562.5,-857 556.5,-857" />
+<text text-anchor="middle" x="494.5" y="-836.8" font-family="Arial" font-size="14.00" fill="#153c3a">Assess returned-tool</text>
+<text text-anchor="middle" x="494.5" y="-821.8" font-family="Arial" font-size="14.00" fill="#153c3a">condition</text>
+</a>
+</g>
+</g>
+
+<g id="mark-83bd60dc3bade956" class="node" data-record-id="SC_RECOVER/quarantine" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Quarantine an unfit tool">
+<title>n2</title>
+<g id="a_mark-83bd60dc3bade956"><a ns1:title="Quarantine an unfit tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M495.5,-747C495.5,-747 353.5,-747 353.5,-747 347.5,-747 341.5,-741 341.5,-735 341.5,-735 341.5,-723 341.5,-723 341.5,-717 347.5,-711 353.5,-711 353.5,-711 495.5,-711 495.5,-711 501.5,-711 507.5,-717 507.5,-723 507.5,-723 507.5,-735 507.5,-735 507.5,-741 501.5,-747 495.5,-747" />
+<text text-anchor="middle" x="424.5" y="-725.3" font-family="Arial" font-size="14.00" fill="#153c3a">Quarantine an unfit tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-cefe8b6890e18b72" class="node" data-record-id="SC_RECOVER/repair" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate the repair request">
+<title>n3</title>
+<g id="a_mark-cefe8b6890e18b72"><a ns1:title="Coordinate the repair request">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M392.5,-649C392.5,-649 216.5,-649 216.5,-649 210.5,-649 204.5,-643 204.5,-637 204.5,-637 204.5,-625 204.5,-625 204.5,-619 210.5,-613 216.5,-613 216.5,-613 392.5,-613 392.5,-613 398.5,-613 404.5,-619 404.5,-625 404.5,-625 404.5,-637 404.5,-637 404.5,-643 398.5,-649 392.5,-649" />
+<text text-anchor="middle" x="304.5" y="-627.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate the repair request</text>
+</a>
+</g>
+</g>
+
+<g id="mark-4213492e41e30d8e" class="node" data-record-id="SC_RECOVER/report" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Receive the repair report">
+<title>n4</title>
+<g id="a_mark-4213492e41e30d8e"><a ns1:title="Receive the repair report">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M472,-539C472,-539 323,-539 323,-539 317,-539 311,-533 311,-527 311,-527 311,-515 311,-515 311,-509 317,-503 323,-503 323,-503 472,-503 472,-503 478,-503 484,-509 484,-515 484,-515 484,-527 484,-527 484,-533 478,-539 472,-539" />
+<text text-anchor="middle" x="397.5" y="-517.3" font-family="Arial" font-size="14.00" fill="#153c3a">Receive the repair report</text>
+</a>
+</g>
+</g>
+
+<g id="mark-602e78edb02f38b0" class="node" data-record-id="SC_RECOVER/reassess" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reassess after repair">
+<title>n5</title>
+<g id="a_mark-602e78edb02f38b0"><a ns1:title="Reassess after repair">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M469,-429C469,-429 340,-429 340,-429 334,-429 328,-423 328,-417 328,-417 328,-405 328,-405 328,-399 334,-393 340,-393 340,-393 469,-393 469,-393 475,-393 481,-399 481,-405 481,-405 481,-417 481,-417 481,-423 475,-429 469,-429" />
+<text text-anchor="middle" x="404.5" y="-407.3" font-family="Arial" font-size="14.00" fill="#153c3a">Reassess after repair</text>
+</a>
+</g>
+</g>
+
+<g id="mark-daf2523cd78ff581" class="node" data-record-id="SC_RECOVER/release" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Release a fit tool for availability">
+<title>n6</title>
+<g id="a_mark-daf2523cd78ff581"><a ns1:title="Release a fit tool for availability">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M561,-307C561,-307 440,-307 440,-307 434,-307 428,-301 428,-295 428,-295 428,-271 428,-271 428,-265 434,-259 440,-259 440,-259 561,-259 561,-259 567,-259 573,-265 573,-271 573,-271 573,-295 573,-295 573,-301 567,-307 561,-307" />
+<text text-anchor="middle" x="500.5" y="-286.8" font-family="Arial" font-size="14.00" fill="#153c3a">Release a fit tool for</text>
+<text text-anchor="middle" x="500.5" y="-271.8" font-family="Arial" font-size="14.00" fill="#153c3a">availability</text>
+</a>
+</g>
+</g>
+
+<g id="mark-96953895b3d0c131" class="node" data-record-id="SC_RECOVER/disposition" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Decide rework or retirement">
+<title>n7</title>
+<g id="a_mark-96953895b3d0c131"><a ns1:title="Decide rework or retirement">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M391.5,-301C391.5,-301 223.5,-301 223.5,-301 217.5,-301 211.5,-295 211.5,-289 211.5,-289 211.5,-277 211.5,-277 211.5,-271 217.5,-265 223.5,-265 223.5,-265 391.5,-265 391.5,-265 397.5,-265 403.5,-271 403.5,-277 403.5,-277 403.5,-289 403.5,-289 403.5,-295 397.5,-301 391.5,-301" />
+<text text-anchor="middle" x="307.5" y="-279.3" font-family="Arial" font-size="14.00" fill="#153c3a">Decide rework or retirement</text>
+</a>
+</g>
+</g>
+
+<g id="mark-fc59484aadf10e15" class="node" data-record-id="SC_RECOVER/ledger" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Maintain custody, condition and availability state">
+<title>n8</title>
+<g id="a_mark-fc59484aadf10e15"><a ns1:title="Maintain custody, condition and availability state">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M389,-185C389,-185 226,-185 226,-185 220,-185 214,-179 214,-173 214,-173 214,-149 214,-149 214,-143 220,-137 226,-137 226,-137 389,-137 389,-137 395,-137 401,-143 401,-149 401,-149 401,-173 401,-173 401,-179 395,-185 389,-185" />
+<text text-anchor="middle" x="307.5" y="-164.8" font-family="Arial" font-size="14.00" fill="#153c3a">Maintain custody, condition</text>
+<text text-anchor="middle" x="307.5" y="-149.8" font-family="Arial" font-size="14.00" fill="#153c3a">and availability state</text>
+</a>
+</g>
+</g>
+
+<g id="mark-3d880f93659a1a6d" class="node" data-record-id="SC_RECOVER/exception" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate an unresolved case">
+<title>n9</title>
+<g id="a_mark-3d880f93659a1a6d"><a ns1:title="Coordinate an unresolved case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M199,-484C199,-484 12,-484 12,-484 6,-484 0,-478 0,-472 0,-472 0,-460 0,-460 0,-454 6,-448 12,-448 12,-448 199,-448 199,-448 205,-448 211,-454 211,-460 211,-460 211,-472 211,-472 211,-478 205,-484 199,-484" />
+<text text-anchor="middle" x="105.5" y="-462.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate an unresolved case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-46cd8a2d519130a7" class="node" data-record-id="SC_RECOVER/status" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Communicate the current request outcome">
+<title>n10</title>
+<g id="a_mark-46cd8a2d519130a7"><a ns1:title="Communicate the current request outcome">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M177.5,-63C177.5,-63 23.5,-63 23.5,-63 17.5,-63 11.5,-57 11.5,-51 11.5,-51 11.5,-12 11.5,-12 11.5,-6 17.5,0 23.5,0 23.5,0 177.5,0 177.5,0 183.5,0 189.5,-6 189.5,-12 189.5,-12 189.5,-51 189.5,-51 189.5,-57 183.5,-63 177.5,-63" />
+<text text-anchor="middle" x="100.5" y="-42.8" font-family="Arial" font-size="14.00" fill="#153c3a">Communicate the current</text>
+<text text-anchor="middle" x="100.5" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">request outcome</text>
+<text text-anchor="middle" x="100.5" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">Declared exit</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="952pt" height="228pt" viewBox="0.00 0.00 951.58 228.08" role="img" aria-label="How is the proposed logical service responsibility divided?" data-view-id="logical|decomposition|LC_ROOT" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 205.04)">
+<title>architecture</title>
+
+<g id="mark-df0cd67b9fd4434c" class="edge" data-record-id="projection:logical|decomposition|LC_ROOT:contains-LC_COORD" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Logical responsibility decomposition">
+<title>n0-&gt;n1</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M79.16,-145.81C77.84,-136.31 77.64,-124.39 78.59,-114.19" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="80.35,-114.2 79.18,-109.03 76.87,-113.79 80.35,-114.2" />
+</g>
+
+
+<g id="mark-9bdd8e3ebe7fde61" class="edge" data-record-id="projection:logical|decomposition|LC_ROOT:contains-LC_HANDLING" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Logical responsibility decomposition">
+<title>n0-&gt;n2</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M132.51,-145.99C160.74,-135.45 197.05,-121.87 226.22,-110.98" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="227.13,-112.5 231.2,-109.11 225.91,-109.22 227.13,-112.5" />
+</g>
+
+<g id="mark-8c558b2d4cd1633c" class="edge" data-record-id="projection:logical|decomposition|LC_ROOT:contains-LC_COMMS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Logical responsibility decomposition">
+<title>n0-&gt;n3</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M158.73,-149.56C220.01,-138.08 308.52,-121.5 374.82,-109.08" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="375.36,-110.76 379.95,-108.12 374.72,-107.32 375.36,-110.76" />
+</g>
+
+<g id="mark-c53b2758d1bd05d6" class="edge" data-record-id="projection:logical|decomposition|LC_ROOT:contains-LC_CUSTODY" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Logical responsibility decomposition">
+<title>n0-&gt;n4</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M158.67,-154.89C291.83,-139.81 564,-109 564,-109 564,-109 564,-73 564,-73 564,-73 529.51,-53.99 501.45,-38.53" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="502.23,-36.97 497.01,-36.09 500.54,-40.03 502.23,-36.97" />
+</g>
+
+<g id="mark-8bc1f7eb9ac55c23" class="edge" data-record-id="projection:logical|decomposition|LC_ROOT:contains-LC_RECOVERY" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Logical responsibility decomposition">
+<title>n0-&gt;n5</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M158.59,-155.21C295.95,-140.25 583,-109 583,-109 583,-109 602.69,-67.79 615.42,-41.15" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="617.13,-41.62 617.71,-36.35 613.97,-40.11 617.13,-41.62" />
+</g>
+
+<g id="mark-57706c46b72983b5" class="edge" data-record-id="projection:logical|decomposition|LC_ROOT:contains-LC_RECORDS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Logical responsibility decomposition">
+<title>n0-&gt;n6</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M158.76,-155.6C302.27,-140.82 611,-109 611,-109 611,-109 709.77,-64.77 768.84,-38.33" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="769.87,-39.78 773.72,-36.14 768.44,-36.59 769.87,-39.78" />
+</g>
+
+
+<g id="mark-27bfb012ce21e619" class="node" data-record-id="LC_ROOT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Tool lending service">
+<title>n0</title>
+<g id="a_mark-27bfb012ce21e619"><a ns1:title="Tool lending service">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M146.5,-182C146.5,-182 27.5,-182 27.5,-182 21.5,-182 15.5,-176 15.5,-170 15.5,-170 15.5,-158 15.5,-158 15.5,-152 21.5,-146 27.5,-146 27.5,-146 146.5,-146 146.5,-146 152.5,-146 158.5,-152 158.5,-158 158.5,-158 158.5,-170 158.5,-170 158.5,-176 152.5,-182 146.5,-182" />
+<text text-anchor="middle" x="87" y="-160.3" font-family="Arial" font-size="14.00" fill="#263d69">Tool lending service</text>
+</a>
+</g>
+</g>
+
+<g id="mark-3e580b5ef0233433" class="node" data-record-id="LC_COORD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reservation coordination">
+<title>n1</title>
+<g id="a_mark-3e580b5ef0233433"><a ns1:title="Reservation coordination">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M162,-109C162,-109 12,-109 12,-109 6,-109 0,-103 0,-97 0,-97 0,-85 0,-85 0,-79 6,-73 12,-73 12,-73 162,-73 162,-73 168,-73 174,-79 174,-85 174,-85 174,-97 174,-97 174,-103 168,-109 162,-109" />
+<text text-anchor="middle" x="87" y="-87.3" font-family="Arial" font-size="14.00" fill="#263d69">Reservation coordination</text>
+</a>
+</g>
+</g>
+
+<g id="mark-ff4eef829cda59f2" class="node" data-record-id="LC_HANDLING" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Condition assessment">
+<title>n2</title>
+<g id="a_mark-ff4eef829cda59f2"><a ns1:title="Condition assessment">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M344,-109C344,-109 210,-109 210,-109 204,-109 198,-103 198,-97 198,-97 198,-85 198,-85 198,-79 204,-73 210,-73 210,-73 344,-73 344,-73 350,-73 356,-79 356,-85 356,-85 356,-97 356,-97 356,-103 350,-109 344,-109" />
+<text text-anchor="middle" x="277" y="-87.3" font-family="Arial" font-size="14.00" fill="#263d69">Condition assessment</text>
+</a>
+</g>
+</g>
+
+<g id="mark-f3fdc6555d755167" class="node" data-record-id="LC_COMMS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Member communication">
+<title>n3</title>
+<g id="a_mark-f3fdc6555d755167"><a ns1:title="Member communication">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M540,-109C540,-109 392,-109 392,-109 386,-109 380,-103 380,-97 380,-97 380,-85 380,-85 380,-79 386,-73 392,-73 392,-73 540,-73 540,-73 546,-73 552,-79 552,-85 552,-85 552,-97 552,-97 552,-103 546,-109 540,-109" />
+<text text-anchor="middle" x="466" y="-87.3" font-family="Arial" font-size="14.00" fill="#263d69">Member communication</text>
+</a>
+</g>
+</g>
+
+<g id="mark-f316535f5fd52222" class="node" data-record-id="LC_CUSTODY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Custody handover">
+<title>n4</title>
+<g id="a_mark-f316535f5fd52222"><a ns1:title="Custody handover">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M521,-36C521,-36 411,-36 411,-36 405,-36 399,-30 399,-24 399,-24 399,-12 399,-12 399,-6 405,0 411,0 411,0 521,0 521,0 527,0 533,-6 533,-12 533,-12 533,-24 533,-24 533,-30 527,-36 521,-36" />
+<text text-anchor="middle" x="466" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Custody handover</text>
+</a>
+</g>
+</g>
+
+<g id="mark-eb9cdeb1f57f8d78" class="node" data-record-id="LC_RECOVERY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Condition recovery">
+<title>n5</title>
+<g id="a_mark-eb9cdeb1f57f8d78"><a ns1:title="Condition recovery">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M682.5,-36C682.5,-36 569.5,-36 569.5,-36 563.5,-36 557.5,-30 557.5,-24 557.5,-24 557.5,-12 557.5,-12 557.5,-6 563.5,0 569.5,0 569.5,0 682.5,0 682.5,0 688.5,0 694.5,-6 694.5,-12 694.5,-12 694.5,-24 694.5,-24 694.5,-30 688.5,-36 682.5,-36" />
+<text text-anchor="middle" x="626" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Condition recovery</text>
+</a>
+</g>
+</g>
+
+<g id="mark-df2d1b0bd47391b3" class="node" data-record-id="LC_RECORDS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Service state and inventory">
+<title>n6</title>
+<g id="a_mark-df2d1b0bd47391b3"><a ns1:title="Service state and inventory">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M893.5,-36C893.5,-36 730.5,-36 730.5,-36 724.5,-36 718.5,-30 718.5,-24 718.5,-24 718.5,-12 718.5,-12 718.5,-6 724.5,0 730.5,0 730.5,0 893.5,0 893.5,0 899.5,0 905.5,-6 905.5,-12 905.5,-12 905.5,-24 905.5,-24 905.5,-30 899.5,-36 893.5,-36" />
+<text text-anchor="middle" x="812" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Service state and inventory</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

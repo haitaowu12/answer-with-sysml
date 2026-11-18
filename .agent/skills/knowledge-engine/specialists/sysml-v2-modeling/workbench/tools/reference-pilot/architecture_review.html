@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title><!-- PAGE_TITLE --></title>
+  <!-- READER_CSS -->
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to architecture</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Architecture navigation">
+      <a class="brand" href="#overview" aria-label="Architecture overview"><span class="brand-mark" aria-hidden="true">A<span>↗</span></span><span>Architecture<br><strong>review workspace</strong></span></a>
+      <div class="side-label">Explore the model</div>
+      <nav id="navigation">
+        <a href="#overview" data-section="overview"><span aria-hidden="true">01</span> Overview</a>
+        <a href="#operational" data-section="operational"><span aria-hidden="true">02</span> Operational</a>
+        <a href="#functions" data-section="functions"><span aria-hidden="true">03</span> Functions</a>
+        <a href="#logical" data-section="logical"><span aria-hidden="true">04</span> Logical architecture</a>
+        <a href="#scenarios" data-section="scenarios"><span aria-hidden="true">05</span> Scenarios &amp; states</a>
+        <a href="#requirements" data-section="requirements"><span aria-hidden="true">06</span> Requirements</a>
+        <a href="#decisions" data-section="decisions"><span aria-hidden="true">07</span> Decisions &amp; insights</a>
+        <a href="#evidence" data-section="evidence"><span aria-hidden="true">08</span> Evidence</a>
+      </nav>
+      <div class="side-footer"><span class="small-caps">Review basis</span><p>Proposed architecture.<br>Planned verification.<br>Open engineering decisions.</p><a href="model.sysml" download>Download native SysML <span aria-hidden="true">↓</span></a></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="project-name" id="project-name">Architecture study</div>
+        <div class="search-wrap">
+          <label class="sr-only" for="global-search">Search architecture and source evidence</label>
+          <input id="global-search" type="search" placeholder="Find a function, decision or source…" autocomplete="off" aria-controls="search-results" aria-expanded="false">
+          <kbd aria-hidden="true">/</kbd>
+          <div id="search-results" class="search-results" hidden></div>
+        </div>
+      </header>
+      <div class="assurance-bar" id="assurance" role="status"></div>
+      <main id="main" tabindex="-1"></main>
+    </div>
+    <aside id="inspector" class="inspector" aria-labelledby="inspector-heading" hidden></aside>
+  </div>
+  <div id="announcement" class="sr-only" aria-live="polite"></div>
+  <noscript><p class="noscript">Enable JavaScript for the interactive reader. The native model, architecture recipe and individual SVG diagrams remain available in this folder.</p></noscript>
+  <!-- READER_DATA -->
+  <!-- READER_JS -->
+</body>
+</html>

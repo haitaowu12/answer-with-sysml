@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "role": "forward-fixture-observed-results",
+  "architectureSha256": "48951f0b3286678a66f5ec5a0446170d82410b51f77ca38f7e5509b75e744a2a",
+  "modelSha256": "55da483fb850a1ef864fffe9ecf90f3084d9887cfc9cfc030ef2f782e9c915f1",
+  "bindingsSha256": "38d1d8f3d36df3fe332fb286024653bd8a18b1f7b08dddb5dbd196ee06d6d5db",
+  "nativeReportSha256": "3a5a4604e637ab89261dad2b163bac32498da79ef45e2d7e6019658290eea5e4",
+  "sourceSha256": "d326d400b32abc34edc8eae059a497972f3a81c2eb2828d32a5c5dd380426328",
+  "stages": {
+    "authoredConsistency": "passed",
+    "nativeAuthoring": "passed",
+    "nativeLanguage": "passed",
+    "nativeReconciliation": "passed",
+    "readerGeneration": "passed",
+    "readerInteraction": "not-run"
+  },
+  "counts": {
+    "actors": 5,
+    "operationalActivities": 7,
+    "functions": 32,
+    "exchanges": 44,
+    "logicalComponents": 7,
+    "allocations": 27,
+    "scenarios": 3,
+    "requirements": 14,
+    "verificationCases": 14,
+    "decisions": 6,
+    "stateMachines": 1,
+    "insights": 3,
+    "contextExchanges": 12,
+    "parameters": 9
+  },
+  "authoredErrors": 0,
+  "openReviewObligations": 15,
+  "nativeTranslationChecks": 338,
+  "nativeChecksPassed": true,
+  "reader": {
+    "diagrams": 32,
+    "records": 352,
+    "evidenceRecords": 8,
+    "nativeChecked": true
+  },
+  "initialSourceReview": {
+    "supported": 9,
+    "partial": 1
+  },
+  "reviewedSourceReassessment": {
+    "supported": 10,
+    "partial": 0
+  },
+  "engineeringAcceptance": "not-assessed",
+  "verificationExecution": "not-run",
+  "limitations": [
+    "Keyword handling was repaired using the first generated input; this is regression evidence for that defect.",
+    "The one missing planned boundary test was repaired after reading the independent questions; 10/10 is reassessment, not a blind score.",
+    "Guard predicates and quantitative criteria are modeled and reconciled, not executed.",
+    "Fifteen engineering decisions/unknown parameters remain open.",
+    "Reader interaction on this forward case is not yet inspected."
+  ]
+}

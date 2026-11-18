@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="827pt" height="686pt" viewBox="0.00 0.00 827.08 686.08" role="img" aria-label="How does this case progress, branch and recover under its declared conditions?" data-view-id="scenarios|scenario|SC_COLLECT" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 663.04)">
+<title>architecture</title>
+
+<g id="mark-f1a7b8343488dfa5" class="edge" data-record-id="SC_COLLECT_T01" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Member presents during an applicable ready reservation">
+<title>n0-&gt;n1</title>
+<g id="a_mark-f1a7b8343488dfa5"><a ns1:title="Member presents during an applicable ready reservation">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M405.57,-579.28C368.97,-568.16 335.5,-558 335.5,-558 335.5,-558 335.5,-522 335.5,-522 335.5,-522 335.64,-516.84 335.82,-510.42" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="338.28,-510.22 336.02,-503.16 333.38,-510.09 338.28,-510.22" />
+</a>
+</g>
+<text text-anchor="middle" x="402" y="-549.6" font-family="Arial" font-size="10.50" fill="#355f5a">Member presents during an</text>
+<text text-anchor="middle" x="402" y="-537.6" font-family="Arial" font-size="10.50" fill="#355f5a">applicable ready</text>
+<text text-anchor="middle" x="402" y="-525.6" font-family="Arial" font-size="10.50" fill="#355f5a">reservation</text>
+</g>
+
+<g id="mark-f5deb9e4043ddb2b" class="edge" data-record-id="SC_COLLECT_T02" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Deadline passed without collection, or member withdraws">
+<title>n0-&gt;n5</title>
+<g id="a_mark-f5deb9e4043ddb2b"><a ns1:title="Deadline passed without collection, or member withdraws">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M575.53,-577C601.25,-566.81 623.5,-558 623.5,-558 623.5,-558 651.45,-493.9 668.55,-454.7" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="670.84,-455.56 671.4,-448.17 666.35,-453.6 670.84,-455.56" />
+</a>
+</g>
+<text text-anchor="middle" x="696" y="-549.6" font-family="Arial" font-size="10.50" fill="#355f5a">Deadline passed without</text>
+<text text-anchor="middle" x="696" y="-537.6" font-family="Arial" font-size="10.50" fill="#355f5a">collection, or member</text>
+<text text-anchor="middle" x="696" y="-525.6" font-family="Arial" font-size="10.50" fill="#355f5a">withdraws</text>
+</g>
+
+<g id="mark-3e325437df4ae464" class="edge" data-record-id="SC_COLLECT_T03" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect New tool fault discovered">
+<title>n0-&gt;n6</title>
+<g id="a_mark-3e325437df4ae464"><a ns1:title="New tool fault discovered">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M497.66,-576.95C496.68,-541.11 495.07,-482.38 494.17,-449.42" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="496.62,-449.33 493.98,-442.4 491.72,-449.47 496.62,-449.33" />
+</a>
+</g>
+<text text-anchor="middle" x="557.5" y="-537.6" font-family="Arial" font-size="10.50" fill="#355f5a">New tool fault discovered</text>
+</g>
+
+<g id="mark-3dbcb023bb5557b6" class="edge" data-record-id="SC_COLLECT_T04" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Member and tool match reservation">
+<title>n1-&gt;n2</title>
+<g id="a_mark-3dbcb023bb5557b6"><a ns1:title="Member and tool match reservation">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M276.35,-466.95C243.52,-457.64 209.5,-448 209.5,-448 209.5,-448 203.91,-414.45 199.55,-388.32" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="201.93,-387.68 198.36,-381.18 197.1,-388.48 201.93,-387.68" />
+</a>
+</g>
+<text text-anchor="middle" x="266.5" y="-427.6" font-family="Arial" font-size="10.50" fill="#355f5a">Member and tool match</text>
+<text text-anchor="middle" x="266.5" y="-415.6" font-family="Arial" font-size="10.50" fill="#355f5a">reservation</text>
+</g>
+
+<g id="mark-2dd6f08714358c56" class="edge" data-record-id="SC_COLLECT_T05" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Identity or tool matching unresolved">
+<title>n1-&gt;n7</title>
+<g id="a_mark-2dd6f08714358c56"><a ns1:title="Identity or tool matching unresolved">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M336.94,-466.65C338,-425.12 340.67,-319.93 341.88,-272.21" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="344.34,-272.12 342.07,-265.06 339.44,-272 344.34,-272.12" />
+</a>
+</g>
+<text text-anchor="middle" x="398" y="-360.6" font-family="Arial" font-size="10.50" fill="#355f5a">Identity or tool matching</text>
+<text text-anchor="middle" x="398" y="-348.6" font-family="Arial" font-size="10.50" fill="#355f5a">unresolved</text>
+</g>
+
+<g id="mark-84707e41686115b9" class="edge" data-record-id="SC_COLLECT_T06" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Loan terms and receipt of identified tool accepted">
+<title>n2-&gt;n3</title>
+<g id="a_mark-84707e41686115b9"><a ns1:title="Loan terms and receipt of identified tool accepted">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M120.84,-332.91C89.7,-323.15 60.5,-314 60.5,-314 60.5,-314 60.5,-290 60.5,-290 60.5,-290 64.68,-284.33 69.97,-277.16" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="72,-278.54 74.19,-271.46 68.06,-275.63 72,-278.54" />
+</a>
+</g>
+<text text-anchor="middle" x="122" y="-305.6" font-family="Arial" font-size="10.50" fill="#355f5a">Loan terms and receipt of</text>
+<text text-anchor="middle" x="122" y="-293.6" font-family="Arial" font-size="10.50" fill="#355f5a">identified tool accepted</text>
+</g>
+
+<g id="mark-e1078f66140f8382" class="edge" data-record-id="SC_COLLECT_T07" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Terms or receipt acceptance unresolved">
+<title>n2-&gt;n7</title>
+<g id="a_mark-e1078f66140f8382"><a ns1:title="Terms or receipt acceptance unresolved">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M200.8,-332.92C205.99,-313.88 212.5,-290 212.5,-290 212.5,-290 248.65,-278.32 282.83,-267.28" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="283.72,-269.57 289.62,-265.08 282.21,-264.9 283.72,-269.57" />
+</a>
+</g>
+<text text-anchor="middle" x="268" y="-305.6" font-family="Arial" font-size="10.50" fill="#355f5a">Terms or receipt</text>
+<text text-anchor="middle" x="268" y="-293.6" font-family="Arial" font-size="10.50" fill="#355f5a">acceptance unresolved</text>
+</g>
+
+<g id="mark-2a4afafffc95d3ae" class="edge" data-record-id="SC_COLLECT_T08" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Custody transfer recorded from library to member">
+<title>n3-&gt;n4</title>
+<g id="a_mark-2a4afafffc95d3ae"><a ns1:title="Custody transfer recorded from library to member">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M111.47,-222.85C126.05,-205.96 145.7,-183.17 160.14,-166.44" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="162.1,-167.92 164.82,-161.02 158.39,-164.71 162.1,-167.92" />
+</a>
+</g>
+<text text-anchor="middle" x="209" y="-195.6" font-family="Arial" font-size="10.50" fill="#355f5a">Custody transfer recorded</text>
+<text text-anchor="middle" x="209" y="-183.6" font-family="Arial" font-size="10.50" fill="#355f5a">from library to member</text>
+</g>
+
+<g id="mark-479807eb869f17f6" class="edge" data-record-id="SC_COLLECT_T09" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect On-loan state recorded after custody transfer">
+<title>n4-&gt;n8</title>
+<g id="a_mark-479807eb869f17f6"><a ns1:title="On-loan state recorded after custody transfer">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M188.87,-124.97C198.62,-107.23 212.5,-82 212.5,-82 212.5,-82 231.83,-74.64 255.58,-65.59" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="256.72,-67.78 262.39,-63 254.98,-63.2 256.72,-67.78" />
+</a>
+</g>
+<text text-anchor="middle" x="268" y="-97.6" font-family="Arial" font-size="10.50" fill="#355f5a">On-loan state recorded</text>
+<text text-anchor="middle" x="268" y="-85.6" font-family="Arial" font-size="10.50" fill="#355f5a">after custody transfer</text>
+</g>
+
+<g id="mark-018ad56503ea78d2" class="edge" data-record-id="SC_COLLECT_T10" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Coordinator records still-fit release or reasoned extension">
+<title>n5-&gt;n8</title>
+<g id="a_mark-018ad56503ea78d2"><a ns1:title="Coordinator records still-fit release or reasoned extension">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M679.57,-399.86C676.67,-364.99 671.5,-303 671.5,-303 671.5,-303 671.5,-303 671.5,-142 671.5,-142 535.57,-96.76 438.45,-64.44" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="438.95,-62.02 431.53,-62.13 437.4,-66.67 438.95,-62.02" />
+</a>
+</g>
+<text text-anchor="middle" x="719.5" y="-256.6" font-family="Arial" font-size="10.50" fill="#355f5a">Coordinator records</text>
+<text text-anchor="middle" x="719.5" y="-244.6" font-family="Arial" font-size="10.50" fill="#355f5a">still-fit release or</text>
+<text text-anchor="middle" x="719.5" y="-232.6" font-family="Arial" font-size="10.50" fill="#355f5a">reasoned extension</text>
+</g>
+
+<g id="mark-1a8496e309c1132e" class="edge" data-record-id="SC_COLLECT_T11" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Fault and retained custody require coordinator disposition">
+<title>n6-&gt;n7</title>
+<g id="a_mark-1a8496e309c1132e"><a ns1:title="Fault and retained custody require coordinator disposition">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M487.72,-405.65C479,-379.49 463.5,-333 463.5,-333 463.5,-333 408.85,-294.61 373,-269.43" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="374.12,-267.22 366.99,-265.2 371.31,-271.23 374.12,-267.22" />
+</a>
+</g>
+<text text-anchor="middle" x="533.5" y="-366.6" font-family="Arial" font-size="10.50" fill="#355f5a">Fault and retained</text>
+<text text-anchor="middle" x="533.5" y="-354.6" font-family="Arial" font-size="10.50" fill="#355f5a">custody require</text>
+<text text-anchor="middle" x="533.5" y="-342.6" font-family="Arial" font-size="10.50" fill="#355f5a">coordinator disposition</text>
+</g>
+
+<g id="mark-3804edf1651b4446" class="edge" data-record-id="SC_COLLECT_T12" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Normal handover remains incomplete; current exception communicated">
+<title>n7-&gt;n8</title>
+<g id="a_mark-3804edf1651b4446"><a ns1:title="Normal handover remains incomplete; current exception communicated">
+<path fill="none" stroke="#588b86" stroke-width="1.1" d="M342.5,-228.89C342.5,-194.7 342.5,-117.22 342.5,-70.45" />
+<polygon fill="#588b86" stroke="#588b86" stroke-width="1.1" points="344.95,-70.21 342.5,-63.21 340.05,-70.21 344.95,-70.21" />
+</a>
+</g>
+<text text-anchor="middle" x="404.5" y="-152.6" font-family="Arial" font-size="10.50" fill="#355f5a">Normal handover remains</text>
+<text text-anchor="middle" x="404.5" y="-140.6" font-family="Arial" font-size="10.50" fill="#355f5a">incomplete; current</text>
+<text text-anchor="middle" x="404.5" y="-128.6" font-family="Arial" font-size="10.50" fill="#355f5a">exception communicated</text>
+</g>
+
+<g id="mark-83cd74d113cde52e" class="node" data-record-id="SC_COLLECT/hold" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Govern the confirmed hold interval">
+<title>n0</title>
+<g id="a_mark-83cd74d113cde52e"><a ns1:title="Govern the confirmed hold interval">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M579,-640C579,-640 418,-640 418,-640 412,-640 406,-634 406,-628 406,-628 406,-589 406,-589 406,-583 412,-577 418,-577 418,-577 579,-577 579,-577 585,-577 591,-583 591,-589 591,-589 591,-628 591,-628 591,-634 585,-640 579,-640" />
+<text text-anchor="middle" x="498.5" y="-619.8" font-family="Arial" font-size="14.00" fill="#153c3a">Govern the confirmed hold</text>
+<text text-anchor="middle" x="498.5" y="-604.8" font-family="Arial" font-size="14.00" fill="#153c3a">interval</text>
+<text text-anchor="middle" x="498.5" y="-589.8" font-family="Arial" font-size="14.00" fill="#153c3a">Entry step</text>
+</a>
+</g>
+</g>
+
+<g id="mark-515a2cb2ae7d4473" class="node" data-record-id="SC_COLLECT/match" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Match the collection case">
+<title>n1</title>
+<g id="a_mark-515a2cb2ae7d4473"><a ns1:title="Match the collection case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M413,-503C413,-503 260,-503 260,-503 254,-503 248,-497 248,-491 248,-491 248,-479 248,-479 248,-473 254,-467 260,-467 260,-467 413,-467 413,-467 419,-467 425,-473 425,-479 425,-479 425,-491 425,-491 425,-497 419,-503 413,-503" />
+<text text-anchor="middle" x="336.5" y="-481.3" font-family="Arial" font-size="14.00" fill="#153c3a">Match the collection case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-d1be88e9e7b6ba12" class="node" data-record-id="SC_COLLECT/accept" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Capture terms and identified-tool receipt acceptance">
+<title>n2</title>
+<g id="a_mark-d1be88e9e7b6ba12"><a ns1:title="Capture terms and identified-tool receipt acceptance">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M282,-381C282,-381 107,-381 107,-381 101,-381 95,-375 95,-369 95,-369 95,-345 95,-345 95,-339 101,-333 107,-333 107,-333 282,-333 282,-333 288,-333 294,-339 294,-345 294,-345 294,-369 294,-369 294,-375 288,-381 282,-381" />
+<text text-anchor="middle" x="194.5" y="-360.8" font-family="Arial" font-size="14.00" fill="#153c3a">Capture terms and identified-</text>
+<text text-anchor="middle" x="194.5" y="-345.8" font-family="Arial" font-size="14.00" fill="#153c3a">tool receipt acceptance</text>
+</a>
+</g>
+</g>
+
+<g id="mark-b4e7ea94eed1a0a7" class="node" data-record-id="SC_COLLECT/transfer" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Record custody transfer to member">
+<title>n3</title>
+<g id="a_mark-b4e7ea94eed1a0a7"><a ns1:title="Record custody transfer to member">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M171,-271C171,-271 12,-271 12,-271 6,-271 0,-265 0,-259 0,-259 0,-235 0,-235 0,-229 6,-223 12,-223 12,-223 171,-223 171,-223 177,-223 183,-229 183,-235 183,-235 183,-259 183,-259 183,-265 177,-271 171,-271" />
+<text text-anchor="middle" x="91.5" y="-250.8" font-family="Arial" font-size="14.00" fill="#153c3a">Record custody transfer to</text>
+<text text-anchor="middle" x="91.5" y="-235.8" font-family="Arial" font-size="14.00" fill="#153c3a">member</text>
+</a>
+</g>
+</g>
+
+<g id="mark-7765305d26901963" class="node" data-record-id="SC_COLLECT/on_loan" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Record the tool on loan">
+<title>n4</title>
+<g id="a_mark-7765305d26901963"><a ns1:title="Record the tool on loan">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M249.5,-161C249.5,-161 109.5,-161 109.5,-161 103.5,-161 97.5,-155 97.5,-149 97.5,-149 97.5,-137 97.5,-137 97.5,-131 103.5,-125 109.5,-125 109.5,-125 249.5,-125 249.5,-125 255.5,-125 261.5,-131 261.5,-137 261.5,-137 261.5,-149 261.5,-149 261.5,-155 255.5,-161 249.5,-161" />
+<text text-anchor="middle" x="179.5" y="-139.3" font-family="Arial" font-size="14.00" fill="#153c3a">Record the tool on loan</text>
+</a>
+</g>
+</g>
+
+<g id="mark-9ec3760b1e9e0a8a" class="node" data-record-id="SC_COLLECT/expiry" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Resolve expiry, withdrawal or extension">
+<title>n5</title>
+<g id="a_mark-9ec3760b1e9e0a8a"><a ns1:title="Resolve expiry, withdrawal or extension">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M769,-448C769,-448 594,-448 594,-448 588,-448 582,-442 582,-436 582,-436 582,-412 582,-412 582,-406 588,-400 594,-400 594,-400 769,-400 769,-400 775,-400 781,-406 781,-412 781,-412 781,-436 781,-436 781,-442 775,-448 769,-448" />
+<text text-anchor="middle" x="681.5" y="-427.8" font-family="Arial" font-size="14.00" fill="#153c3a">Resolve expiry, withdrawal or</text>
+<text text-anchor="middle" x="681.5" y="-412.8" font-family="Arial" font-size="14.00" fill="#153c3a">extension</text>
+</a>
+</g>
+</g>
+
+<g id="mark-26095211d380a4b9" class="node" data-record-id="SC_COLLECT/quarantine" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Quarantine an unfit tool">
+<title>n6</title>
+<g id="a_mark-26095211d380a4b9"><a ns1:title="Quarantine an unfit tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M564.5,-442C564.5,-442 422.5,-442 422.5,-442 416.5,-442 410.5,-436 410.5,-430 410.5,-430 410.5,-418 410.5,-418 410.5,-412 416.5,-406 422.5,-406 422.5,-406 564.5,-406 564.5,-406 570.5,-406 576.5,-412 576.5,-418 576.5,-418 576.5,-430 576.5,-430 576.5,-436 570.5,-442 564.5,-442" />
+<text text-anchor="middle" x="493.5" y="-420.3" font-family="Arial" font-size="14.00" fill="#153c3a">Quarantine an unfit tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-7e642b6681dba770" class="node" data-record-id="SC_COLLECT/exception" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate an unresolved case">
+<title>n7</title>
+<g id="a_mark-7e642b6681dba770"><a ns1:title="Coordinate an unresolved case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M436,-265C436,-265 249,-265 249,-265 243,-265 237,-259 237,-253 237,-253 237,-241 237,-241 237,-235 243,-229 249,-229 249,-229 436,-229 436,-229 442,-229 448,-235 448,-241 448,-241 448,-253 448,-253 448,-259 442,-265 436,-265" />
+<text text-anchor="middle" x="342.5" y="-243.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate an unresolved case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-aa5f96816c3faa1f" class="node" data-record-id="SC_COLLECT/status" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Communicate the current request outcome">
+<title>n8</title>
+<g id="a_mark-aa5f96816c3faa1f"><a ns1:title="Communicate the current request outcome">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M419.5,-63C419.5,-63 265.5,-63 265.5,-63 259.5,-63 253.5,-57 253.5,-51 253.5,-51 253.5,-12 253.5,-12 253.5,-6 259.5,0 265.5,0 265.5,0 419.5,0 419.5,0 425.5,0 431.5,-6 431.5,-12 431.5,-12 431.5,-51 431.5,-51 431.5,-57 425.5,-63 419.5,-63" />
+<text text-anchor="middle" x="342.5" y="-42.8" font-family="Arial" font-size="14.00" fill="#153c3a">Communicate the current</text>
+<text text-anchor="middle" x="342.5" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">request outcome</text>
+<text text-anchor="middle" x="342.5" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">Declared exit</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

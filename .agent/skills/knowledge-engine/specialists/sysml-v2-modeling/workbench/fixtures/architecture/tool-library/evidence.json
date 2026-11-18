@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "role": "source-inventory",
+  "sourceSha256": "d326d400b32abc34edc8eae059a497972f3a81c2eb2828d32a5c5dd380426328",
+  "records": [
+    {
+      "id": "TL-01",
+      "label": "Purpose and boundary",
+      "kind": "source-clause",
+      "section": "TL-01",
+      "chapter": "Fictional ConOps",
+      "status": "source-explicit",
+      "text": "The tool library lets neighbourhood members reserve, collect and return individually identified gardening tools. The service under study includes reservation coordination, volunteer-steward work, inventory/custody records, member communications and the decision to make a returned tool available again. It exchanges eligibility decisions with an independently managed membership registry and repair outcomes with an external repair provider. Registry internals, repair methods, payment collection, transport to a member's home and procurement of additional tools are outside this study. The brief does not select software, a locker, an organisation structure, or a communications technology.",
+      "q": "tl-01 purpose and boundary \n\nthe tool library lets neighbourhood members reserve, collect and return individually identified gardening tools. the service under study includes reservation coordination, volunteer-steward work, inventory/custody records, member communications and the decision to make a returned tool available again. it exchanges eligibility decisions with an independently managed membership registry and repair outcomes with an external repair provider. registry internals, repair methods, payment collection, transport to a member's home and procurement of additional tools are outside this study. the brief does not select software, a locker, an organisation structure, or a communications technology.\n\n"
+    },
+    {
+      "id": "TL-02",
+      "label": "Participants and authority",
+      "kind": "source-clause",
+      "section": "TL-02",
+      "chapter": "Fictional ConOps",
+      "status": "source-explicit",
+      "text": "A member requests a tool and accepts the terms of a loan. A volunteer steward handles tools and confirms condition. The duty coordinator owns exceptions and may extend a ready reservation with a recorded reason. The external membership registry alone owns the membership-eligibility decision; neither the tool service nor its volunteers may create a positive registry decision. The external repair provider may report work completed and known remaining defects, but does not decide whether the library offers a tool for loan again.",
+      "q": "tl-02 participants and authority \n\na member requests a tool and accepts the terms of a loan. a volunteer steward handles tools and confirms condition. the duty coordinator owns exceptions and may extend a ready reservation with a recorded reason. the external membership registry alone owns the membership-eligibility decision; neither the tool service nor its volunteers may create a positive registry decision. the external repair provider may report work completed and known remaining defects, but does not decide whether the library offers a tool for loan again.\n\n"
+    },
+    {
+      "id": "TL-03",
+      "label": "Request and candidate selection",
+      "kind": "source-clause",
+      "section": "TL-03",
+      "chapter": "Fictional ConOps",
+      "status": "source-explicit",
+      "text": "A request identifies the member, tool category and desired collection period. The service identifies an available candidate tool by its unique inventory identifier. If no candidate exists, the coordinator offers a wait-list or closes the request at the member's choice. A wait-list offer is not a reservation of a tool and must not reduce available inventory. The rule for choosing between competing requests has not been agreed.",
+      "q": "tl-03 request and candidate selection \n\na request identifies the member, tool category and desired collection period. the service identifies an available candidate tool by its unique inventory identifier. if no candidate exists, the coordinator offers a wait-list or closes the request at the member's choice. a wait-list offer is not a reservation of a tool and must not reduce available inventory. the rule for choosing between competing requests has not been agreed.\n\n"
+    },
+    {
+      "id": "TL-04",
+      "label": "Independent preparation contributions",
+      "kind": "source-clause",
+      "section": "TL-04",
+      "chapter": "Fictional ConOps",
+      "status": "source-explicit",
+      "text": "For a selected candidate, the service requests an eligibility decision from the registry while a steward inspects the candidate's condition. These two contributions may proceed concurrently; neither requires the other to finish first. The registry returns eligible, ineligible or unavailable, identifying the member and decision. The steward returns fit or unfit, identifying the tool and inspection. The service may prepare a ready reservation only when the selected member is eligible and the selected tool is fit. An unavailable registry result leaves the request pending; an ineligible result leaves it with the coordinator for refusal/clarification. An unfit candidate is quarantined and another candidate may be selected. This brief supplies no decision-freshness limit or maximum wait for the registry.",
+      "q": "tl-04 independent preparation contributions \n\nfor a selected candidate, the service requests an eligibility decision from the registry while a steward inspects the candidate's condition. these two contributions may proceed concurrently; neither requires the other to finish first. the registry returns eligible, ineligible or unavailable, identifying the member and decision. the steward returns fit or unfit, identifying the tool and inspection. the service may prepare a ready reservation only when the selected member is eligible and the selected tool is fit. an unavailable registry result leaves the request pending; an ineligible result leaves it with the coordinator for refusal/clarification. an unfit candidate is quarantined and another candidate may be selected. this brief supplies no decision-freshness limit or maximum wait for the registry.\n\n"
+    },
+    {
+      "id": "TL-05",
+      "label": "Ready notice and hold interval",
+      "kind": "source-clause",
+      "section": "TL-05",
+      "chapter": "Fictional ConOps",
+      "status": "source-explicit",
+      "text": "The service tells the member which tool is ready, the collection location and the hold deadline. The hold interval starts when delivery of the ready notice is confirmed, not when the notice is queued. Unless the member withdraws or a new tool fault is discovered, the ready reservation is held for at least two hours after confirmed notice delivery. If confirmation is absent, the reservation remains pending-notification and the coordinator resolves the contact problem; the service must not expire it using an assumed delivery time. After the hold deadline passes without collection, the coordinator may return a still-fit tool to available status or extend the reservation with a reason. Opening hours, channel acknowledgements and the chosen hold duration beyond the minimum require agreement.",
+      "q": "tl-05 ready notice and hold interval \n\nthe service tells the member which tool is ready, the collection location and the hold deadline. the hold interval starts when delivery of the ready notice is confirmed, not when the notice is queued. unless the member withdraws or a new tool fault is discovered, the ready reservation is held for at least two hours after confirmed notice delivery. if confirmation is absent, the reservation remains pending-notification and the coordinator resolves the contact problem; the service must not expire it using an assumed delivery time. after the hold deadline passes without collection, the coordinator may return a still-fit tool to available status or extend the reservation with a reason. opening hours, channel acknowledgements and the chosen hold duration beyond the minimum require agreement.\n\n"
+    },
+    {
+      "id": "TL-06",
+      "label": "Collection and custody",
+      "kind": "source-clause",
+      "section": "TL-06",
+      "chapter": "Fictional ConOps",
+      "status": "source-explicit",
+      "text": "At collection, a steward checks the member and the allocated tool against the reservation. The member accepts the loan terms and receipt of that identified tool. The service records the custody transfer from library to member and then records the tool as on loan. A ready notice, eligibility result or physical presentation of a tool by itself does not complete the custody transfer. If identity, tool matching or acceptance is unresolved, the coordinator retains the exception and the normal loan handover does not complete.",
+      "q": "tl-06 collection and custody \n\nat collection, a steward checks the member and the allocated tool against the reservation. the member accepts the loan terms and receipt of that identified tool. the service records the custody transfer from library to member and then records the tool as on loan. a ready notice, eligibility result or physical presentation of a tool by itself does not complete the custody transfer. if identity, tool matching or acceptance is unresolved, the coordinator retains the exception and the normal loan handover does not complete.\n\n"
+    },
+    {
+      "id": "TL-07",
+      "label": "Return and condition recovery",
+      "kind": "source-clause",
+      "section": "TL-07",
+      "chapter": "Fictional ConOps",
+      "status": "source-explicit",
+      "text": "A steward receives the identified tool, confirms receipt and records library custody. A member's report that a tool has been returned is not itself receipt evidence. The returned tool remains unavailable until its condition is assessed. A fit return may become available. An unfit return is quarantined and the coordinator decides whether to request external repair. After a repair report is received, a steward reassesses the tool. Only the steward's fit assessment permits the coordinator to release quarantine. A completed repair report with unresolved defects retains quarantine; a new repair attempt or retirement is a separate coordinator decision. No loan-success or repair-success claim follows solely from a notification.",
+      "q": "tl-07 return and condition recovery \n\na steward receives the identified tool, confirms receipt and records library custody. a member's report that a tool has been returned is not itself receipt evidence. the returned tool remains unavailable until its condition is assessed. a fit return may become available. an unfit return is quarantined and the coordinator decides whether to request external repair. after a repair report is received, a steward reassesses the tool. only the steward's fit assessment permits the coordinator to release quarantine. a completed repair report with unresolved defects retains quarantine; a new repair attempt or retirement is a separate coordinator decision. no loan-success or repair-success claim follows solely from a notification.\n\n"
+    },
+    {
+      "id": "TL-08",
+      "label": "Service information and unresolved sizing",
+      "kind": "source-clause",
+      "section": "TL-08",
+      "chapter": "Fictional ConOps",
+      "status": "source-explicit",
+      "text": "Members receive the current outcome of their request, including pending, ready, refused, extended or closed states. Stewards and the coordinator need inventory identity, current custody, condition, reservation linkage and unresolved exceptions. The service must not offer the same identified tool as available while it is reserved, on loan, awaiting returned-tool assessment or quarantined. Demand, tool counts, volunteer capacity, collection opening hours, target turnaround time and notification delivery performance are unknown. The architecture should identify the information needed for those assessments without assigning numbers. Verification activities may be planned from this brief; none have been executed.",
+      "q": "tl-08 service information and unresolved sizing \n\nmembers receive the current outcome of their request, including pending, ready, refused, extended or closed states. stewards and the coordinator need inventory identity, current custody, condition, reservation linkage and unresolved exceptions. the service must not offer the same identified tool as available while it is reserved, on loan, awaiting returned-tool assessment or quarantined. demand, tool counts, volunteer capacity, collection opening hours, target turnaround time and notification delivery performance are unknown. the architecture should identify the information needed for those assessments without assigning numbers. verification activities may be planned from this brief; none have been executed.\n"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="344pt" height="192pt" viewBox="0.00 0.00 344.08 192.08" role="img" aria-label="What crosses this candidate service boundary, and who retains authority?" data-view-id="operational|boundary|LC_CUSTODY" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 169.04)">
+<title>architecture</title>
+
+<g id="mark-4ded5b689d084efa" class="edge" data-record-id="CX_05" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Loan terms and identified-tool receipt acceptance">
+<title>n1-&gt;n0</title>
+<g id="a_mark-4ded5b689d084efa"><a ns1:title="Loan terms and identified-tool receipt acceptance">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M20.94,-109.84C10.63,-100.57 0,-91 0,-91 0,-91 0,-55 0,-55 0,-55 89.06,-41.12 156.59,-30.6" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="157.34,-32.96 163.87,-29.46 156.58,-28.12 157.34,-32.96" />
+</a>
+</g>
+<text text-anchor="middle" x="50" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Loan terms and</text>
+<text text-anchor="middle" x="50" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">identified-tool receipt</text>
+<text text-anchor="middle" x="50" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">acceptance</text>
+</g>
+
+<g id="mark-b9e27d75e87720ea" class="edge" data-record-id="CX_07" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Matching and physical returned-tool receipt evidence">
+<title>n2-&gt;n0</title>
+<g id="a_mark-b9e27d75e87720ea"><a ns1:title="Matching and physical returned-tool receipt evidence">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M171.79,-109.95C139.49,-100.64 106,-91 106,-91 106,-91 106,-55 106,-55 106,-55 134.94,-46.66 164.97,-38.02" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="165.75,-40.34 171.79,-36.05 164.39,-35.63 165.75,-40.34" />
+</a>
+</g>
+<text text-anchor="middle" x="159" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Matching and physical</text>
+<text text-anchor="middle" x="159" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">returned-tool receipt</text>
+<text text-anchor="middle" x="159" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">evidence</text>
+</g>
+
+
+<g id="mark-df3f7a03cd675141" class="node" data-record-id="LC_CUSTODY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Custody handover">
+<title>n0</title>
+<g id="a_mark-df3f7a03cd675141"><a ns1:title="Custody handover">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M286,-36C286,-36 176,-36 176,-36 170,-36 164,-30 164,-24 164,-24 164,-12 164,-12 164,-6 170,0 176,0 176,0 286,0 286,0 292,0 298,-6 298,-12 298,-12 298,-24 298,-24 298,-30 292,-36 286,-36" />
+<text text-anchor="middle" x="231" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Custody handover</text>
+</a>
+</g>
+</g>
+
+<g id="mark-5e19a0acba32c63c" class="node" data-record-id="A_MEMBER" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Member">
+<title>n1</title>
+<g id="a_mark-5e19a0acba32c63c"><a ns1:title="Member">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M66,-146C66,-146 14,-146 14,-146 8,-146 2,-140 2,-134 2,-134 2,-122 2,-122 2,-116 8,-110 14,-110 14,-110 66,-110 66,-110 72,-110 78,-116 78,-122 78,-122 78,-134 78,-134 78,-140 72,-146 66,-146" />
+<text text-anchor="middle" x="40" y="-124.3" font-family="Arial" font-size="14.00" fill="#5c471c">Member</text>
+</a>
+</g>
+</g>
+
+<g id="mark-03774a06ab907081" class="node" data-record-id="A_STEWARD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Volunteer steward">
+<title>n2</title>
+<g id="a_mark-03774a06ab907081"><a ns1:title="Volunteer steward">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M285.5,-146C285.5,-146 176.5,-146 176.5,-146 170.5,-146 164.5,-140 164.5,-134 164.5,-134 164.5,-122 164.5,-122 164.5,-116 170.5,-110 176.5,-110 176.5,-110 285.5,-110 285.5,-110 291.5,-110 297.5,-116 297.5,-122 297.5,-122 297.5,-134 297.5,-134 297.5,-140 291.5,-146 285.5,-146" />
+<text text-anchor="middle" x="231" y="-124.3" font-family="Arial" font-size="14.00" fill="#5c471c">Volunteer steward</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

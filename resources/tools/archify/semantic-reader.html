@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>System model</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172b36;background:#f3f6f7;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}button,select,input{font:inherit}button,select,summary{cursor:pointer}button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #248b9b;outline-offset:3px}
+main{max-width:1460px;margin:auto;padding:28px 32px 40px}.top{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:24px}
+.eyebrow{margin:0 0 6px;font-size:11px;font-weight:650;color:#56727a;letter-spacing:.12em;text-transform:uppercase}h1{margin:0;font-size:27px;line-height:1.15;letter-spacing:-.035em;font-weight:650}.switch{display:flex;align-items:center;gap:10px}.switch label{color:#526b76;font-size:13px}select{border:1px solid #c8d6db;border-radius:9px;background:white;padding:11px 34px 11px 12px;max-width:420px;min-width:250px;color:#193b49}
+.workshop{border-block:1px solid #c8d6db;padding:14px 0;margin-bottom:20px;display:flex;gap:12px;flex-wrap:wrap;align-items:end}.workshop[hidden]{display:none}.workshop label{display:grid;gap:4px;font-size:12px;color:#526b76}.workshop input{border:1px solid #c8d6db;border-radius:7px;padding:10px;max-width:160px}.workshop select{min-width:0;max-width:330px}.workshop button,.workshop a{border:1px solid #c8d6db;border-radius:8px;background:white;padding:10px;color:#244e60;text-decoration:none;font-size:13px}.workshop [role=status]{width:100%;font-size:13px;white-space:pre-wrap}.question{font-size:19px;line-height:1.35;font-weight:550;margin:0}.scope{margin:6px 0 0;font-size:13px;color:#607681}.view-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:8px}
+.source-button{border:1px solid #c8d6db;border-radius:8px;background:#fff;padding:9px 13px;white-space:nowrap;color:#244e60;font-size:13px}.selected{font-size:12px;color:#50727d;min-height:18px;margin:9px 0 0}.selected:empty{display:none}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start}.workspace.inspecting{grid-template-columns:minmax(0,1fr) 340px}.canvas{min-width:0}iframe{width:100%;height:690px;border:0;display:block;background:transparent;border-radius:12px}
+.browser-wrap{background:white;border:1px solid #d7e1e5;border-radius:12px;padding:20px;margin:20px 0}.browser-wrap[hidden]{display:none}.browser-tools{display:flex;gap:12px;margin-bottom:16px}.browser-tools input{font:inherit;padding:10px 12px;border:1px solid #c8d6db;border-radius:8px;width:100%;min-width:0}.model-tree{font-size:14px;line-height:1.6}.model-tree details{padding:2px 0 2px 20px}.model-tree summary{list-style:none;display:flex;gap:10px;align-items:center;min-height:38px}.model-tree summary::before{content:"›";color:#64838c;display:inline-block;width:14px;font-size:20px}.model-tree details[open]>summary::before{transform:rotate(90deg)}.model-tree button{border:0;background:transparent;padding:4px 6px;text-align:left;color:#244f60;line-height:1.4;border-radius:5px}.model-tree [aria-pressed=true]{background:#dceff0;outline:1px solid #5e9ca8}.model-tree small{font-size:11px;color:#718a94}.model-leaf{padding:4px 0 4px 40px;display:flex;gap:10px;align-items:center;min-height:34px}.reading-note{font-size:13px;line-height:1.65;color:#536f7b;margin:10px 8px 16px}.reading-note:empty{display:none}.matrix-wrap{overflow:auto;border:1px solid #d7e1e5;border-radius:12px;background:white;margin:20px 0 24px}.matrix-wrap[hidden],iframe[hidden]{display:none}.matrix{border-collapse:separate;border-spacing:0;min-width:640px;width:100%;font-size:13px}.matrix caption{text-align:left;padding:18px 20px;color:#52707b;font-size:12px}.matrix th{background:#edf5f6;color:#294f5f;text-align:left;font-weight:600}.matrix th,.matrix td{padding:17px;border-top:1px solid #dce6e9;border-right:1px solid #e4ebee;vertical-align:top}.matrix th small{display:block;margin-top:4px;font-size:11px;font-weight:400;color:#627e87}.matrix td{min-width:180px;color:#8ca0a7}.matrix button{border:0;background:transparent;color:#245c70;text-align:left;padding:0}.matrix .relation{display:block;background:#eef7f7;border:1px solid #c9e1e2;border-radius:6px;padding:8px 10px;margin:0 0 6px;line-height:1.5;width:100%}.matrix .flow{background:#edf2fd;border-color:#d3dff0}.matrix [aria-pressed=true]{outline:2px solid #268b97;outline-offset:4px}.legend{font-size:12px;color:#55717b;line-height:1.6;margin:0 8px 16px;display:flex;gap:4px 20px;flex-wrap:wrap}.legend span{display:block}.statement{border-left:3px solid #27838a;padding:11px 16px;margin:18px 8px;color:#284955;font-size:15px;line-height:1.6;white-space:pre-wrap}
+.source-panel{position:sticky;top:20px;background:#fff;border:1px solid #d7e1e5;border-radius:12px;padding:18px;max-height:80vh;overflow:auto}.source-panel[hidden]{display:none}.source-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.source-head h2{font-size:15px;margin:0}.source-head button{border:0;background:transparent;padding:4px 6px;color:#58717d;font-size:22px}.source-loc{font-size:12px;color:#597682;line-height:1.5;margin:8px 0 14px}.source-panel .workshop{display:block}.source-panel .workshop label{margin:9px 0}.source-panel .workshop select{width:100%;max-width:100%}.source-panel .workshop button{margin:7px 0}.source-panel .workshop details{margin:14px 0}.source-panel pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;color:#24424f;margin:0}
+.support{margin:12px 8px 0;max-width:1100px}.support h2{font-size:16px;margin:18px 0 10px}.support summary{font-size:13px;color:#416673;padding:12px 0}.rows{border-collapse:collapse;width:100%;font-size:13px;line-height:1.55}.rows th{text-align:left;color:#59737c;font-weight:550;font-size:11px;text-transform:uppercase;letter-spacing:.06em}.rows th,.rows td{padding:11px 12px;border-bottom:1px solid #dbe4e7;vertical-align:top}.rows td:first-child{width:30%;font-weight:550}.row-source{border:0;background:transparent;text-align:left;color:#245c70;padding:0;line-height:inherit}.notes{font-size:13px;line-height:1.65;color:#59717b;padding:0 0 12px}.notes p{margin:0 0 9px}footer{font-size:12px;color:#768b93;border-top:1px solid #dbe4e7;padding-top:15px;margin:26px 8px 0;display:flex;justify-content:space-between;gap:20px}footer a{color:#426e7d;text-decoration:none}
+@media(max-width:800px){main{padding:20px 14px 30px}.top{display:block;margin-bottom:20px}.switch{margin-top:18px}.switch label{min-width:32px}select{max-width:100%;width:100%;min-width:0}.workspace.inspecting{grid-template-columns:minmax(0,1fr)}.source-panel{position:static;max-height:none}iframe{height:610px}.question{font-size:17px}h1{font-size:25px}.view-head{gap:12px}.rows th,.rows td{padding:10px 7px}.source-button{padding:8px 10px}.legend{gap:4px 12px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+<header class="top"><div><p class="eyebrow">Explore the system</p><h1 id="model-title"></h1></div>
+<div class="switch"><label for="view-selector">View</label><select id="view-selector"></select></div></header>
+<section class="workshop" id="workshop" hidden aria-label="Model workshop"></section>
+<details class="support" id="model-results" hidden><summary>Calculation results</summary><div id="calculation-results"></div></details>
+<div class="view-head"><div><h2 class="question" id="question"></h2><p class="scope" id="scope"></p><p class="selected" id="selected" role="status" aria-live="polite"></p></div><button class="source-button" id="source-button" type="button" aria-expanded="false" aria-controls="source-panel">Source</button></div>
+<div class="workspace" id="workspace"><section class="canvas" aria-label="Selected model view"><iframe id="diagram" title="Interactive model view" sandbox="allow-scripts allow-downloads"></iframe><div class="matrix-wrap" id="matrix-wrap" hidden></div><div class="browser-wrap" id="browser-wrap" hidden></div><p class="reading-note" id="reading-note"></p><div class="legend" id="legend"></div><p class="statement" id="statement" hidden></p><div class="support" id="support"></div></section>
+<aside class="source-panel" id="source-panel" hidden aria-label="Model source"><div class="source-head"><h2 id="source-title">Model source</h2><button id="close-source" type="button" aria-label="Close source">×</button></div><p class="source-loc" id="source-location"></p><pre id="source-text"></pre></aside></div>
+<footer><span id="model-revision">Design model · verification results are not supplied</span><a id="download-source" download="model.sysml">Download model</a></footer>
+</main>
+<!-- MODEL_READER_DATA -->
+<script>
+(() => {
+  'use strict';
+  const data = JSON.parse(document.getElementById('reader-data').textContent);
+  const $ = id => document.getElementById(id);
+  const selector = $('view-selector');
+  let frame = $('diagram');
+  const initial = new URLSearchParams(location.hash.slice(1));
+  let current, selected = null, sourceId = null;
+  const states = Object.create(null);
+  if((data.modelService?.presentation||data.presentation)?.states)Object.assign(states,(data.modelService?.presentation||data.presentation).states);
+  if (initial.get('reader')) states[initial.get('view')] = initial.get('reader');
+  $('model-title').textContent = data.title;
+  document.title = data.title;
+  if(Number.isSafeInteger(data.revision))$('model-revision').textContent='Accepted model revision '+data.revision+' · Verification results are not supplied';
+  for (const view of data.views) {
+    const option = document.createElement('option'); option.value = view.id; option.textContent = view.label;
+    let group = [...selector.children].find(g => g.label === (view.group || 'Model views'));
+    if (!group) {group = document.createElement('optgroup');group.label = view.group || 'Model views';selector.append(group);}
+    group.append(option);
+    const match = view.nodes.find(node => node.selectionKey === initial.get('selection'));
+    if (match) selected = match;
+  }
+  $('download-source').href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data.source);
+  function address() {
+    const args = new URLSearchParams({view: current.id});
+    if (selected) args.set('selection', selected.selectionKey);
+    if (states[current.id]) args.set('reader', states[current.id]);
+    history.replaceState(null, '', '#' + args.toString());
+  }
+  function showSource(elementId, open = false) {
+    const evidence = data.evidence[elementId];
+    if (!evidence) return;
+    sourceId = elementId;
+    $('source-title').textContent = evidence.name?.startsWith('Unnamed ') ? 'Selected relationship' : evidence.name || 'Model source';
+    $('source-location').textContent = evidence.file + (evidence.line ? ' · lines ' + evidence.line + (evidence.endLine > evidence.line ? '–' + evidence.endLine : '') : '');
+    $('source-text').textContent = evidence.excerpt;
+    if (open) setInspector(true);
+  }
+  function setInspector(open) {
+    $('source-panel').hidden = !open;
+    $('workspace').classList.toggle('inspecting', open);
+    $('source-button').setAttribute('aria-expanded', String(open));
+  }
+  function selectionLabel() {
+    const visible = selected && current.nodes.some(node => node.selectionKey === selected.selectionKey);
+    if($('edit-target')){const target=selected&&data.modelService.subjects.find(s=>s.id===selected.elementId&&'element:'+s.id===selected.selectionKey);const id=target?.id||'',changed=$('edit-target').value!==id;$('edit-target').value=id;updateEditFields(changed);if(target)setInspector(true);}
+    $('selected').textContent = selected ? selected.label.replaceAll('\n', ' · ') + (visible ? '' : ' · selected in another view') : '';
+  }
+  function table(rows, parent, headings = ['Model relationship', 'Meaning / condition']) {
+    const table = document.createElement('table'); table.className = 'rows';
+    const head = table.createTHead().insertRow();
+    for (const label of headings) {const th = document.createElement('th'); th.textContent = label; head.append(th);}
+    const body = table.createTBody();
+    for (const row of rows) {
+      const tr = body.insertRow(), title = tr.insertCell(), description = tr.insertCell();
+      const button = document.createElement('button'); button.type = 'button'; button.className = 'row-source'; button.textContent = row.title;
+      button.addEventListener('click', () => showSource(row.elementIds[0], true)); title.append(button); description.textContent = row.body || 'Details are not supplied by this view.';
+    }
+    parent.append(table);
+  }
+  function selectNode(node) {
+    selected = node; showSource(node.elementId); selectionLabel(); address();
+    if(data.modelService&&!['matrix','browser'].includes(current.presentation))frame.contentWindow.postMessage({channel:'semantic-reader-host',nodeId:node.readerId},'*');
+    for (const button of document.querySelectorAll('#matrix-wrap [data-axis], #browser-wrap [data-axis]')) {
+      button.setAttribute('aria-pressed', String(button.dataset.axis === node.selectionKey));
+    }
+  }
+  function matrix(view) {
+    const wrap = $('matrix-wrap'); wrap.replaceChildren();
+    const table = document.createElement('table'); table.className = 'matrix';
+    const caption = table.createCaption(); caption.textContent = view.matrixCaption || 'Read rows to columns · arrows show declared transfers · — means no represented relationship in this scope';
+    const rowNodes = view.rowIds ? view.rowIds.map(id => view.nodes.find(n => n.id === id)) : view.nodes;
+    const columnNodes = view.columnIds ? view.columnIds.map(id => view.nodes.find(n => n.id === id)) : view.nodes;
+    function axis(node) {
+      const button = document.createElement('button'); button.type = 'button'; button.dataset.axis = node.selectionKey;
+      button.setAttribute('aria-pressed', String(selected?.selectionKey === node.selectionKey));
+      button.textContent = node.label.replaceAll('\n', ' · '); button.addEventListener('click', () => selectNode(node)); return button;
+    }
+    const head = table.createTHead().insertRow();
+    const origin = document.createElement('th'); origin.textContent = 'From / to'; head.append(origin);
+    for (const node of columnNodes) {const th = document.createElement('th');th.scope='col';th.append(axis(node));head.append(th);}
+    const body = table.createTBody();
+    for (const row of rowNodes) {
+      const tr = body.insertRow(), th = document.createElement('th');th.scope='row';th.append(axis(row));tr.append(th);
+      for (const column of columnNodes) {
+        const td = tr.insertCell();
+        const cell = view.matrix.find(c => c.row === row.id && c.column === column.id);
+        if (!cell) {td.textContent = '—';continue;}
+        for (const id of cell.relations) {
+          const edge = view.edges.find(e => e.id === id), button = document.createElement('button');
+          button.type = 'button'; button.className = 'relation' + (edge.kind === 'flow' ? ' flow' : '');
+          button.textContent = (edge.kind === 'flow' ? '→ ' : edge.kind === 'binding' ? '= ' : edge.kind === 'connection' ? '↔ ' : '→ ') + edge.label;
+          button.setAttribute('aria-label', row.label.replaceAll('\n',' · ') + ' to ' + column.label.replaceAll('\n',' · ') + ': ' + button.textContent);
+          button.addEventListener('click', () => showSource(edge.elementId,true)); td.append(button);
+        }
+      }
+    }
+    wrap.append(table);
+  }
+  function browserView(view) {
+    const wrap = $('browser-wrap'); wrap.replaceChildren();
+    const tools = document.createElement('div'); tools.className = 'browser-tools';
+    const search = document.createElement('input'); search.type='search';search.placeholder='Find a model element';search.setAttribute('aria-label','Find a model element');tools.append(search);wrap.append(tools);
+    const tree=document.createElement('div');tree.className='model-tree';wrap.append(tree);
+    function paint(query='') {
+      tree.replaceChildren();
+      const matches = new Set(view.nodes.filter(n => !query || (n.label+' '+(n.sublabel||'')).toLowerCase().includes(query.toLowerCase())).map(n=>n.id));
+      const visible = new Set(matches);
+      for (const id of matches) {let n=view.nodes.find(n=>n.id===id);while(n?.parent){visible.add(n.parent);n=view.nodes.find(x=>x.id===n.parent);}}
+      function add(node,parent,depth) {
+        if (!visible.has(node.id)) return;
+        const children=view.nodes.filter(n=>n.parent===node.id), box=document.createElement(children.length?'details':'div');
+        if (children.length) box.open=Boolean(query)||depth<1;else box.className='model-leaf';
+        const line=children.length?document.createElement('summary'):box;
+        const button=document.createElement('button');button.type='button';button.textContent=node.label;
+        button.dataset.axis=node.selectionKey;button.setAttribute('aria-pressed',String(selected?.selectionKey===node.selectionKey));
+        button.addEventListener('click',event=>{event.preventDefault();selectNode(node);});line.append(button);
+        const kind=document.createElement('small');kind.textContent=node.metaclass.replace(/([a-z])([A-Z])/g,'$1 $2');line.append(kind);
+        if(children.length){box.append(line);for(const child of children)add(child,box,depth+1);}parent.append(box);
+      }
+      for(const node of view.nodes.filter(n=>!n.parent))add(node,tree,0);
+      if(!matches.size){const empty=document.createElement('p');empty.textContent='No model elements match.';tree.append(empty);}
+    }
+    search.addEventListener('input',()=>paint(search.value));paint();
+  }
+  function switchView(id) {
+    current = data.views.find(view => view.id === id) || data.views[0];
+    selector.value = current.id;
+    if(data.modelService&&current.recipe){$('scope-subject').value=current.recipe.subject;$('scope-concern').value=current.recipe.concern;$('scope-depth').value=String(current.recipe.depth);}
+    $('question').textContent = current.question;
+    $('scope').textContent = current.scope;
+    const projection = current.projection;
+    $('reading-note').textContent = current.readingNote || '';
+    $('legend').replaceChildren();
+    for (const text of (current.readingLegend?.length ? current.readingLegend : current.matrixCaption ? [] : current.presentation === 'matrix' ? ['Connections and same-value bindings appear in both directions. Transfers appear only in their declared direction.'] : current.family === 'states' ? ['Arrows show modeled state changes. R numbers link to the conditions below.'] : projection.legendItems)) {const span = document.createElement('span'); span.textContent = text; $('legend').append(span);}
+    $('statement').textContent = projection.statement; $('statement').hidden = !projection.statement;
+    const support = $('support'); support.replaceChildren();
+    if (current.readingRows.length) {
+      const spatial = current.family === 'geometry';
+      const behavior = spatial || ['states','actions','state-regions','action-flow'].includes(current.family);
+      const box = document.createElement(behavior ? 'section' : 'details');
+      const label = document.createElement(behavior ? 'h2' : 'summary');
+      label.textContent = spatial ? 'Declared dimensions' : behavior ? 'Conditions and effects' : 'View details'; box.append(label); table(current.readingRows, box, spatial ? ['Dimension','Value'] : undefined); support.append(box);
+    }
+    if (projection.warnings.length || projection.omissions.length) {
+      const box = document.createElement('details'); box.className = 'notes';
+      const summary = document.createElement('summary'); summary.textContent = projection.warnings.length ? 'Scope · some detail is outside this view' : 'View scope'; box.append(summary);
+      for (const text of [...new Set([...projection.omissions, ...projection.warnings])]) {const p = document.createElement('p');p.textContent = text;box.append(p);} support.append(box);
+    }
+    selectionLabel();
+    showSource(selected?.elementId || projection.scopeElementId);
+    const grid = current.presentation === 'matrix', browsing = current.presentation === 'browser';
+    $('matrix-wrap').hidden = !grid; $('browser-wrap').hidden = !browsing;
+    if (grid || browsing) {frame.hidden = true; if(grid) matrix(current);else browserView(current);}
+    else {
+      // A fresh browsing context avoids stale opaque srcdoc layout/history
+      // after a hidden matrix presentation or repeated view switching.
+      const next = document.createElement('iframe');
+      next.id = 'diagram'; next.title = 'Interactive model view';
+      next.setAttribute('sandbox','allow-scripts allow-downloads');
+      frame.replaceWith(next); frame = next; frame.srcdoc = current.page;
+    }
+    address();
+  }
+  addEventListener('message', event => {
+    const message = event.data;
+    if (['matrix','browser'].includes(current.presentation) || event.source !== frame.contentWindow || message?.channel !== 'semantic-reader' || message.view !== current.id) return;
+    if (message.type === 'ready') {
+      const match = selected && current.nodes.find(node => node.selectionKey === selected.selectionKey);
+      const template = location.href.split('#')[0] + '#view=' + encodeURIComponent(current.id) + '&reader={state}';
+      frame.contentWindow.postMessage({channel:'semantic-reader-host', nodeId:match?.readerId,
+        state:states[current.id] || null, linkTemplate:template}, '*');
+    } else if(message.type==='restore-error'){selected=null;selectionLabel();$('reading-note').textContent='Saved reading state could not be restored for this view.';
+    } else if (message.type === 'state') {
+      states[current.id] = String(message.state || '').slice(0, 8192);
+      let reading;try{reading=JSON.parse(states[current.id]);}catch(_){}
+      // A source witness or a previous focus is not an edit target. Only a
+      // current single graphical focus, without a relationship, can name one.
+      const focus=reading?.focus;
+      selected=typeof focus==='string'&&!reading.relation&&message.node?.readerId===focus
+        ? current.nodes.find(node=>node.readerId===focus)||null : null;
+      if(selected)showSource(selected.elementId);
+      selectionLabel(); address();
+    } else if (message.type === 'source' && current.edges.some(edge => edge.elementId === message.elementId)) {
+      selected=null;selectionLabel();showSource(message.elementId, true);
+    }
+  });
+  selector.addEventListener('change', () => switchView(selector.value));
+  $('source-button').addEventListener('click', () => setInspector($('source-panel').hidden));
+  $('close-source').addEventListener('click', () => {setInspector(false);$('source-button').focus();});
+  function updateEditFields(reset=true){
+    const subject=selected&&data.modelService?.subjects.find(s=>s.id===selected.elementId&&s.id===$('edit-target')?.value);
+    if(!$('new-name'))return;
+    if(reset||!subject){$('new-name').value=subject?.name||'';$('new-value').value='';}
+    $('new-name').disabled=!subject;$('new-value').disabled=!subject||subject.kind!=='attributeUsage'||subject.valueEditable===false;
+    if($('rename-model'))$('rename-model').disabled=!subject;
+    if($('set-model-value'))$('set-model-value').disabled=!subject||subject.kind!=='attributeUsage'||subject.valueEditable===false;
+  }
+  function setupWorkshop(){
+    const service=data.modelService;if(!service)return;
+    const toolbar=$('workshop');let host=toolbar;host.hidden=false;
+    const label=(text,control)=>{const box=document.createElement('label');box.textContent=text;box.append(control);host.append(box);return control;};
+    const select=(id,items)=>{const control=document.createElement('select');control.id=id;for(const [value,text]of items){const option=document.createElement('option');option.value=value;option.textContent=text;control.append(option);}return control;};
+    const input=(id,type)=>{const control=document.createElement('input');control.id=id;control.type=type;return control;};
+    label('Subject',select('scope-subject',service.subjects.map(s=>[s.id,s.locator])));
+    label('Engineering question',select('scope-concern',[['structure','What is inside?'],['types','Which definitions type these usages?']]));
+    label('Depth',select('scope-depth',[1,2,3,4].map(n=>[n,String(n)])));
+    const feedback=document.createElement('p');feedback.setAttribute('role','status');feedback.id='workshop-status';
+    async function request(route,body){const response=await fetch(route,{method:'POST',headers:{'Content-Type':'application/json','X-Model-Session':service.token},body:JSON.stringify({baseRevision:service.revision,...body})}),value=await response.json();if(!response.ok||value.error)throw Error(value.error||'Change failed');return value;}
+    const reading=()=>request('/presentation',{presentation:{states,selected:selected?.selectionKey,view:current.id}});
+    const reload=()=>{address();location.reload();};
+    const button=(text,run)=>{const b=document.createElement('button');b.type='button';b.textContent=text;b.addEventListener('click',async()=>{b.disabled=true;try{await run();}catch(error){feedback.textContent=error.message;if(current?.recipe){$('scope-subject').value=current.recipe.subject;$('scope-concern').value=current.recipe.concern;$('scope-depth').value=String(current.recipe.depth);}}finally{b.disabled=false;updateEditFields(false);}});host.append(b);return b;};
+    button('Save scoped view',async()=>{await reading();const subject=service.subjects.find(s=>s.id===$('scope-subject').value),id='view-'+crypto.randomUUID();await request('/view',{recipe:{id,title:subject.name+' · '+$('scope-concern').value,subject:subject.id,concern:$('scope-concern').value,depth:Number($('scope-depth').value),arrangement:{}}});location.hash='view='+id;location.reload();});
+    const edits=document.createElement('section');edits.className='workshop';edits.setAttribute('aria-label','Selected object controls');$('source-panel').insertBefore(edits,$('source-text'));host=edits;
+    label('Selected model object',select('edit-target',[['','No single object selected'],...service.subjects.map(s=>[s.id,s.locator])])).disabled=true;
+    const editDetails=document.createElement('details'),editSummary=document.createElement('summary');editSummary.textContent='Edit model';editDetails.append(editSummary);edits.append(editDetails);host=editDetails;
+    label('Name',input('new-name','text'));label('Numeric literal value',input('new-value','number'));
+    button('Rename model object',async()=>{if(!selected||!service.subjects.some(s=>s.id===selected.elementId))throw Error('Select a supported model object in the drawing.');await reading();await request('/command',{operations:[{type:'rename',target:selected.elementId,name:$('new-name').value}]});reload();}).id='rename-model';
+    button('Change typed value',async()=>{if(!selected||!service.subjects.some(s=>s.id===selected.elementId)||$('new-value').disabled||!$('new-value').value.trim())throw Error('Select a numeric attribute and enter a value.');await reading();await request('/command',{operations:[{type:'set-value',target:selected.elementId,value:Number($('new-value').value)}]});reload();}).id='set-model-value';
+    const arrangeDetails=document.createElement('details'),arrangeSummary=document.createElement('summary');arrangeSummary.textContent='Arrange view';arrangeDetails.append(arrangeSummary);edits.append(arrangeDetails);host=arrangeDetails;
+    label('Appearance X',input('arrange-x','number'));label('Appearance Y',input('arrange-y','number'));
+    button('Arrange selected appearance',async()=>{const id=selected?.elementId;if(!current.nodes.some(n=>n.elementId===id))throw Error('Select an object visible in this view.');if(!$('arrange-x').value||!$('arrange-y').value)throw Error('Enter both arrangement coordinates.');await reading();await request('/arrange',{viewId:current.id,positions:{[id]:{x:Number($('arrange-x').value),y:Number($('arrange-y').value)}}});reload();});
+    host=toolbar;
+    for(const result of service.results||[])if(result.expression)button('Evaluate '+(result.label||result.id),async()=>{await reading();await request('/evaluate',{resultId:result.id});reload();});
+    button('Undo model / arrangement',async()=>{await request('/undo',{});reload();}).disabled=!service.canUndo;
+    button('Redo model / arrangement',async()=>{await request('/redo',{});reload();}).disabled=!service.canRedo;
+    button('Save editable project',async()=>{await reading();const a=document.createElement('a');a.href='/project';a.download='';a.click();});
+    const open=input('open-project','file');open.accept='.json';open.hidden=true;host.append(open);button('Reopen project',()=>open.click());open.addEventListener('change',async()=>{try{const project=JSON.parse(await open.files[0].text());await request('/open',{project});location.hash='';location.reload();}catch(error){feedback.textContent=error.message;}});
+    for(const [text,href]of [['Export native files','/native.zip'],['Export communication reader','/reader.html']]){const a=document.createElement('a');a.textContent=text;a.href=href;a.download='';if(href==='/reader.html')a.addEventListener('click',async event=>{event.preventDefault();try{await reading();const download=document.createElement('a');download.href=href;download.download='';download.click();}catch(error){feedback.textContent=error.message;}});host.append(a);}
+    host.append(feedback);feedback.textContent='Accepted revision '+service.revision+' · '+service.results.map(r=>(r.label||r.id)+': '+r.status).join(' · ');
+    $('download-source').href='/native.zip';$('download-source').download='native-sources.zip';$('download-source').textContent='Download native source files';updateEditFields();
+  }
+  if(data.results?.length&&$('calculation-results')){
+    $('model-results').hidden=false;
+    for(const result of data.results){
+      const line=document.createElement('p');line.textContent=(result.label||result.id)+': '+String(result.value??'Unavailable')+' · '+result.status;$('calculation-results').append(line);
+      if(result.receipt){const basis=document.createElement('details'),title=document.createElement('summary'),text=document.createElement('pre');title.textContent='Calculation basis';text.textContent=JSON.stringify(result.receipt,null,2);text.style.whiteSpace='pre-wrap';text.style.overflowWrap='anywhere';basis.append(title,text);$('calculation-results').append(basis);}
+    }
+  }
+  setupWorkshop();
+  if(!selected&&(data.modelService?.presentation||data.presentation)?.selected){for(const v of data.views){const n=v.nodes.find(n=>n.selectionKey===(data.modelService?.presentation||data.presentation).selected);if(n){selected=n;break;}}}
+  switchView(initial.get('view')||(data.modelService?.presentation||data.presentation)?.view);
+
+})();
+</script>
+</body>
+</html>

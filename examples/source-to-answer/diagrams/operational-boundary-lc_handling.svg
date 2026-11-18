@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="259pt" height="180pt" viewBox="0.00 0.00 259.08 180.08" role="img" aria-label="What crosses this candidate service boundary, and who retains authority?" data-view-id="operational|boundary|LC_HANDLING" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 157.04)">
+<title>architecture</title>
+
+<g id="mark-0298c3fe99cb5050" class="edge" data-record-id="CX_06" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Tool-linked condition findings and inspections">
+<title>n1-&gt;n0</title>
+<g id="a_mark-0298c3fe99cb5050"><a ns1:title="Tool-linked condition findings and inspections">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M70.53,-97.95C35.9,-88.64 0,-79 0,-79 0,-79 0,-55 0,-55 0,-55 31.29,-46.59 63.63,-37.91" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="64.41,-40.23 70.53,-36.05 63.14,-35.5 64.41,-40.23" />
+</a>
+</g>
+<text text-anchor="middle" x="57.5" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">Tool-linked condition</text>
+<text text-anchor="middle" x="57.5" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">findings and inspections</text>
+</g>
+
+
+<g id="mark-95a41ba91b8fe5e8" class="node" data-record-id="LC_HANDLING" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Condition assessment">
+<title>n0</title>
+<g id="a_mark-95a41ba91b8fe5e8"><a ns1:title="Condition assessment">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M201,-36C201,-36 67,-36 67,-36 61,-36 55,-30 55,-24 55,-24 55,-12 55,-12 55,-6 61,0 67,0 67,0 201,0 201,0 207,0 213,-6 213,-12 213,-12 213,-24 213,-24 213,-30 207,-36 201,-36" />
+<text text-anchor="middle" x="134" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Condition assessment</text>
+</a>
+</g>
+</g>
+
+<g id="mark-de8e60c37c42fd1d" class="node" data-record-id="A_STEWARD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Volunteer steward">
+<title>n1</title>
+<g id="a_mark-de8e60c37c42fd1d"><a ns1:title="Volunteer steward">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M188.5,-134C188.5,-134 79.5,-134 79.5,-134 73.5,-134 67.5,-128 67.5,-122 67.5,-122 67.5,-110 67.5,-110 67.5,-104 73.5,-98 79.5,-98 79.5,-98 188.5,-98 188.5,-98 194.5,-98 200.5,-104 200.5,-110 200.5,-110 200.5,-122 200.5,-122 200.5,-128 194.5,-134 188.5,-134" />
+<text text-anchor="middle" x="134" y="-112.3" font-family="Arial" font-size="14.00" fill="#5c471c">Volunteer steward</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

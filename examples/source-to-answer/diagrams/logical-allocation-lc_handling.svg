@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="576pt" height="167pt" viewBox="0.00 0.00 576.08 167.08" role="img" aria-label="Which functions are assigned to this logical responsibility?" data-view-id="logical|allocation|LC_HANDLING" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 144.04)">
+<title>architecture</title>
+
+<g id="mark-52e2eb51da76ffb2" class="edge" data-record-id="AL_F_INSPECT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Inspect the candidate tool responsibility">
+<title>n1-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M163.73,-78.98C178.73,-75.57 190,-73 190,-73 190,-73 288.69,-52.58 364.7,-36.85" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="365.62,-39.17 371.98,-35.35 364.63,-34.37 365.62,-39.17" />
+</g>
+
+<g id="mark-6e477c891c3b4324" class="edge" data-record-id="AL_F_RETURN_ASSESS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Assess returned-tool condition responsibility">
+<title>n2-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M328.51,-72.9C353.08,-62.09 382.06,-49.34 405.66,-38.95" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="406.74,-41.15 412.16,-36.09 404.77,-36.66 406.74,-41.15" />
+</g>
+
+<g id="mark-9fd18eb86eb900c5" class="edge" data-record-id="AL_F_REASSESS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Reassess after repair responsibility">
+<title>n3-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M443.37,-78.91C441.87,-68.44 441.6,-54.88 442.57,-43.31" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="445.04,-43.27 443.38,-36.04 440.17,-42.73 445.04,-43.27" />
+</g>
+
+
+<g id="mark-06e29765b3237dc2" class="node" data-record-id="LC_HANDLING" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Condition assessment">
+<title>n0</title>
+<g id="a_mark-06e29765b3237dc2"><a ns1:title="Condition assessment">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M518,-36C518,-36 384,-36 384,-36 378,-36 372,-30 372,-24 372,-24 372,-12 372,-12 372,-6 378,0 384,0 384,0 518,0 518,0 524,0 530,-6 530,-12 530,-12 530,-24 530,-24 530,-30 524,-36 518,-36" />
+<text text-anchor="middle" x="451" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Condition assessment</text>
+</a>
+</g>
+</g>
+
+<g id="mark-2b5fd9deb5eb0fe2" class="node" data-record-id="F_INSPECT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Inspect the candidate tool">
+<title>n1</title>
+<g id="a_mark-2b5fd9deb5eb0fe2"><a ns1:title="Inspect the candidate tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M166,-115C166,-115 12,-115 12,-115 6,-115 0,-109 0,-103 0,-103 0,-91 0,-91 0,-85 6,-79 12,-79 12,-79 166,-79 166,-79 172,-79 178,-85 178,-91 178,-91 178,-103 178,-103 178,-109 172,-115 166,-115" />
+<text text-anchor="middle" x="89" y="-93.3" font-family="Arial" font-size="14.00" fill="#153c3a">Inspect the candidate tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-94b056bc8e78b4fe" class="node" data-record-id="F_RETURN_ASSESS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Assess returned-tool condition">
+<title>n2</title>
+<g id="a_mark-94b056bc8e78b4fe"><a ns1:title="Assess returned-tool condition">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M338,-121C338,-121 214,-121 214,-121 208,-121 202,-115 202,-109 202,-109 202,-85 202,-85 202,-79 208,-73 214,-73 214,-73 338,-73 338,-73 344,-73 350,-79 350,-85 350,-85 350,-109 350,-109 350,-115 344,-121 338,-121" />
+<text text-anchor="middle" x="276" y="-100.8" font-family="Arial" font-size="14.00" fill="#153c3a">Assess returned-tool</text>
+<text text-anchor="middle" x="276" y="-85.8" font-family="Arial" font-size="14.00" fill="#153c3a">condition</text>
+</a>
+</g>
+</g>
+
+<g id="mark-1a71402826191de4" class="node" data-record-id="F_REASSESS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reassess after repair">
+<title>n3</title>
+<g id="a_mark-1a71402826191de4"><a ns1:title="Reassess after repair">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M515.5,-115C515.5,-115 386.5,-115 386.5,-115 380.5,-115 374.5,-109 374.5,-103 374.5,-103 374.5,-91 374.5,-91 374.5,-85 380.5,-79 386.5,-79 386.5,-79 515.5,-79 515.5,-79 521.5,-79 527.5,-85 527.5,-91 527.5,-91 527.5,-103 527.5,-103 527.5,-109 521.5,-115 515.5,-115" />
+<text text-anchor="middle" x="451" y="-93.3" font-family="Arial" font-size="14.00" fill="#153c3a">Reassess after repair</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="610pt" height="167pt" viewBox="0.00 0.00 610.08 167.08" role="img" aria-label="Which functions are assigned to this logical responsibility?" data-view-id="logical|allocation|LC_COMMS" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 144.04)">
+<title>architecture</title>
+
+<g id="mark-79d1bbf34643aeba" class="edge" data-record-id="AL_F_NOTICE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Deliver the ready notice responsibility">
+<title>n1-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M153.54,-78.92C167.53,-75.54 178,-73 178,-73 178,-73 294.61,-51.8 381.69,-35.97" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="382.25,-38.35 388.7,-34.69 381.37,-33.53 382.25,-38.35" />
+</g>
+
+<g id="mark-5fafdb7c59e69c4f" class="edge" data-record-id="AL_F_CONFIRM" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Record confirmed notice delivery responsibility">
+<title>n2-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M335.71,-72.9C363.89,-61.99 397.16,-49.12 424.13,-38.69" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="425.19,-40.9 430.84,-36.09 423.42,-36.33 425.19,-40.9" />
+</g>
+
+<g id="mark-7dd178ca8e9168e0" class="edge" data-record-id="AL_F_STATUS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Communicate the current request outcome responsibility">
+<title>n3-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M466.67,-72.9C465.82,-63.67 465.78,-53.03 466.54,-43.65" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="469,-43.68 467.32,-36.45 464.13,-43.15 469,-43.68" />
+</g>
+
+
+<g id="mark-dd45a2c65ce60e74" class="node" data-record-id="LC_COMMS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Member communication">
+<title>n0</title>
+<g id="a_mark-dd45a2c65ce60e74"><a ns1:title="Member communication">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M549,-36C549,-36 401,-36 401,-36 395,-36 389,-30 389,-24 389,-24 389,-12 389,-12 389,-6 395,0 401,0 401,0 549,0 549,0 555,0 561,-6 561,-12 561,-12 561,-24 561,-24 561,-30 555,-36 549,-36" />
+<text text-anchor="middle" x="475" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Member communication</text>
+</a>
+</g>
+</g>
+
+<g id="mark-9c5de2e6d7ba9d59" class="node" data-record-id="F_NOTICE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Deliver the ready notice">
+<title>n1</title>
+<g id="a_mark-9c5de2e6d7ba9d59"><a ns1:title="Deliver the ready notice">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M154,-115C154,-115 12,-115 12,-115 6,-115 0,-109 0,-103 0,-103 0,-91 0,-91 0,-85 6,-79 12,-79 12,-79 154,-79 154,-79 160,-79 166,-85 166,-91 166,-91 166,-103 166,-103 166,-109 160,-115 154,-115" />
+<text text-anchor="middle" x="83" y="-93.3" font-family="Arial" font-size="14.00" fill="#153c3a">Deliver the ready notice</text>
+</a>
+</g>
+</g>
+
+<g id="mark-d2fa50b32d824843" class="node" data-record-id="F_CONFIRM" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Record confirmed notice delivery">
+<title>n2</title>
+<g id="a_mark-d2fa50b32d824843"><a ns1:title="Record confirmed notice delivery">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M350,-121C350,-121 202,-121 202,-121 196,-121 190,-115 190,-109 190,-109 190,-85 190,-85 190,-79 196,-73 202,-73 202,-73 350,-73 350,-73 356,-73 362,-79 362,-85 362,-85 362,-109 362,-109 362,-115 356,-121 350,-121" />
+<text text-anchor="middle" x="276" y="-100.8" font-family="Arial" font-size="14.00" fill="#153c3a">Record confirmed notice</text>
+<text text-anchor="middle" x="276" y="-85.8" font-family="Arial" font-size="14.00" fill="#153c3a">delivery</text>
+</a>
+</g>
+</g>
+
+<g id="mark-72f94af4b2d37b6c" class="node" data-record-id="F_STATUS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Communicate the current request outcome">
+<title>n3</title>
+<g id="a_mark-72f94af4b2d37b6c"><a ns1:title="Communicate the current request outcome">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M552,-121C552,-121 398,-121 398,-121 392,-121 386,-115 386,-109 386,-109 386,-85 386,-85 386,-79 392,-73 398,-73 398,-73 552,-73 552,-73 558,-73 564,-79 564,-85 564,-85 564,-109 564,-109 564,-115 558,-121 552,-121" />
+<text text-anchor="middle" x="475" y="-100.8" font-family="Arial" font-size="14.00" fill="#153c3a">Communicate the current</text>
+<text text-anchor="middle" x="475" y="-85.8" font-family="Arial" font-size="14.00" fill="#153c3a">request outcome</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

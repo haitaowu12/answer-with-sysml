@@ -1,0 +1,13 @@
+Answer with SysML
+Copyright 2026 Tony Wu and contributors
+
+Original integration, skill instructions and adapters are distributed under the
+Apache License, Version 2.0. Components retain their own licenses:
+- Native reference workbench: Apache-2.0; native package LICENSE and NOTICE.
+- Archify rendering package: MIT; resources/tools/archify/upstream/LICENSE.
+- Embedded fonts: upstream/THIRD_PARTY_NOTICES.md.
+- OpenSysML-derived source: native diagram-ui/LICENSE.OpenSysML and notices.
+- Public modeling examples: retained per-example source and license records.
+
+The official SysML Pilot runtime is not distributed here. Install it separately
+from the pinned official release; its own LICENSE and LICENSE-GPL apply.

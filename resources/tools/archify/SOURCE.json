@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/tt-a1i/archify",
+  "revision": "1c2b42d660e4a7571813fb43839c79e3e9ca7720",
+  "tag": "v3.1.0",
+  "imported": "2026-10-15",
+  "scope": "archify/ production package, including native renderers, schemas, examples, references and notices; reproducible rendered example HTML omitted",
+  "localChanges": "Reader presentation and optional inspect-only traversal/camera-restore hooks in upstream/assets/template.html; shared CLI/localization reader policy in upstream/renderers/shared/{cli,i18n}.mjs; explicit final-border marker in upstream/renderers/lifecycle/render-lifecycle.mjs so the SysML adapter can remove inferred final semantics. Native layout algorithms and schemas remain retained. Host semantic binding and model-session code are local additions. See READER-POLICY.md and MODEL-EDITING.md. The 2026-10-22 presentation adapter also recognizes data-preserve-reading navigation so profile/notation links retain the current reading hash. 2026-11-07: owned architecture-only readable-v1 preset adds measured 14px relationship and 16/14px primary node typography, schema/generated-validator support and contained scrolling. Native defaults remain unchanged when omitted. See AUTHORING.md and output-catalogue/examples/archify-comparison.",
+  "excluded": "Repository automation, integrations, donor agent skills, generated sample HTML, development test runner and dependencies.",
+  "lastUpstreamReview": {
+    "date": "2026-10-16",
+    "revision": "ca67c9f16be0c8cad409cd45190aa052e0649b84",
+    "productionPackageDiff": "No changes in archify/ relative to the pinned 3.1.0 commit. New guides, public examples and pilot evaluation protocol reviewed."
+  }
+}

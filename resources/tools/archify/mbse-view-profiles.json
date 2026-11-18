@@ -1,0 +1,431 @@
+{
+  "schemaVersion": 1,
+  "role": "standards-informed-mbse-view-catalogue",
+  "source": {
+    "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+    "document": "formal/26-03-02",
+    "reviewed": "2026-10-16"
+  },
+  "boundary": "A local engineering-purpose catalogue derived from the language. These nineteen profiles are not a normative required diagram list. Status describes this reader only, never the scope of SysML. Native candidates are visual reuse candidates, not semantic equivalence claims.",
+  "profiles": [
+    {
+      "id": "viewpoints",
+      "group": "Purpose",
+      "title": "Stakeholders and concerns",
+      "question": "Whose question does this view answer?",
+      "standardFamilies": [
+        "GeneralView",
+        "GridView"
+      ],
+      "typicalForm": "Concern\u2013stakeholder\u2013viewpoint\u2013view graph, with an optional coverage register.",
+      "nativeCandidate": "architecture",
+      "primaryRenderer": "custom-concern-graph",
+      "requiredSemantics": [
+        "Stakeholder identity",
+        "framed concerns",
+        "viewpoint requirements",
+        "which view addresses each concern"
+      ],
+      "sourceSections": "\u00a77.21.3; \u00a77.26; \u00a78.2.3.26",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "context",
+      "group": "Purpose",
+      "title": "System context and boundary",
+      "question": "What is inside the system, and what interacts with it?",
+      "standardFamilies": [
+        "GeneralView",
+        "InterconnectionView"
+      ],
+      "typicalForm": "System boundary containing parts, external actors or systems outside it, boundary interfaces and declared exchanges.",
+      "nativeCandidate": "architecture",
+      "primaryRenderer": "native-context-summary",
+      "requiredSemantics": [
+        "Subject and external roles",
+        "inside versus outside",
+        "boundary interfaces",
+        "contact versus directed transfer"
+      ],
+      "sourceSections": "\u00a77.11\u20137.14; \u00a78.2.3.11\u201314",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "use-cases",
+      "group": "Purpose",
+      "title": "Use cases and operational objectives",
+      "question": "What useful outcome does the system provide to each actor?",
+      "standardFamilies": [
+        "GeneralView"
+      ],
+      "typicalForm": "Actor/subject roles with named case nodes, objectives and inclusion links; detailed behavior opens separately.",
+      "nativeCandidate": "architecture",
+      "primaryRenderer": "custom-case-graph",
+      "requiredSemantics": [
+        "Actor versus subject",
+        "observable objective",
+        "include semantics",
+        "realization links"
+      ],
+      "sourceSections": "\u00a77.25; \u00a78.2.3.25",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "scenarios",
+      "group": "Behavior",
+      "title": "Interaction scenarios",
+      "question": "Who exchanges what, and in which declared order?",
+      "standardFamilies": [
+        "SequenceView"
+      ],
+      "typicalForm": "Participants across the top, vertical lifelines and event occurrences, messages between them, nested interactions.",
+      "nativeCandidate": "sequence",
+      "primaryRenderer": "custom-event-sequence",
+      "requiredSemantics": [
+        "Lifeline feature identity",
+        "event occurrences",
+        "message endpoints and payload",
+        "partial order and nested scopes"
+      ],
+      "sourceSections": "\u00a77.9.5; \u00a77.16; \u00a79.2.20.2.7",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "membership",
+      "group": "Architecture",
+      "title": "Model membership browser",
+      "question": "Where does this element belong in the model?",
+      "standardFamilies": [
+        "BrowserView"
+      ],
+      "typicalForm": "Indented expandable model-element list, with ownership/membership icons and references.",
+      "nativeCandidate": "tree",
+      "primaryRenderer": "custom-membership-browser",
+      "requiredSemantics": [
+        "Model membership",
+        "owned versus imported members",
+        "definition versus usage",
+        "no occurrence expansion disguised as containment"
+      ],
+      "sourceSections": "\u00a79.2.20.2.2",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "definition-usage",
+      "group": "Architecture",
+      "title": "Definitions, usages and specialization",
+      "question": "What is reusable, and how is it used or specialized here?",
+      "standardFamilies": [
+        "GeneralView"
+      ],
+      "typicalForm": "Typed definition/usage boxes with compartments and distinct typing, specialization, subsetting and redefinition relationships.",
+      "nativeCandidate": "class",
+      "primaryRenderer": "custom-typed-element-graph",
+      "requiredSemantics": [
+        "Definition versus usage",
+        "feature typing",
+        "specialization",
+        "subsetting and redefinition",
+        "multiplicity"
+      ],
+      "sourceSections": "\u00a77.6; \u00a78.2.3.6",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "decomposition",
+      "group": "Architecture",
+      "title": "System breakdown and occurrences",
+      "question": "What composes this system at this scope?",
+      "standardFamilies": [
+        "GeneralView",
+        "InterconnectionView"
+      ],
+      "typicalForm": "Composition tree or nested part boxes; usages show type, multiplicity and contextual occurrence.",
+      "nativeCandidate": "tree",
+      "primaryRenderer": "native-occurrence-tree",
+      "requiredSemantics": [
+        "Composition versus reference",
+        "type and multiplicity",
+        "distinct repeated usages",
+        "definition versus occurrence scope"
+      ],
+      "sourceSections": "\u00a77.11; \u00a77.26.5 Table 25; \u00a78.2.3.11",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "connections",
+      "group": "Architecture",
+      "title": "Internal structure and interfaces",
+      "question": "How do parts connect through their boundary features?",
+      "standardFamilies": [
+        "InterconnectionView"
+      ],
+      "typicalForm": "Nested part boxes with small port/parameter squares on their boundaries, exact connector endpoints and bindings.",
+      "nativeCandidate": "architecture",
+      "primaryRenderer": "custom-ports",
+      "requiredSemantics": [
+        "Nested features",
+        "port identity and conjugation",
+        "connector ends",
+        "multiplicity",
+        "binding equality",
+        "explicit flow direction"
+      ],
+      "sourceSections": "\u00a77.12\u20137.14; \u00a78.2.3.12\u201314; \u00a79.2.20.2.6",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "exchanges",
+      "group": "Architecture",
+      "title": "Item and information exchanges",
+      "question": "What item moves from which source to which target?",
+      "standardFamilies": [
+        "InterconnectionView"
+      ],
+      "typicalForm": "Directed item-transfer graph or detailed flow overlay on a port interconnection view.",
+      "nativeCandidate": "dataflow",
+      "primaryRenderer": "native-exchange-summary",
+      "requiredSemantics": [
+        "Explicit source and target",
+        "item type",
+        "flow versus connection versus message",
+        "aggregation witnesses"
+      ],
+      "sourceSections": "\u00a77.16; \u00a78.2.3.16",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "action-flow",
+      "group": "Behavior",
+      "title": "Functions and action flow",
+      "question": "What actions occur, under which control and data conditions?",
+      "standardFamilies": [
+        "ActionFlowView"
+      ],
+      "typicalForm": "Rounded action nodes, input/output parameters, separate control and item flows, decision diamonds, fork/join bars and performer swimlanes.",
+      "nativeCandidate": "workflow",
+      "primaryRenderer": "custom-action-regions",
+      "requiredSemantics": [
+        "Action ownership",
+        "performed action and performer",
+        "control versus item flow",
+        "guards",
+        "fork/join versus decision/merge",
+        "loops",
+        "send/accept",
+        "parallelism"
+      ],
+      "sourceSections": "\u00a77.17; \u00a78.2.3.17; \u00a79.2.20.2.1",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "state-transition",
+      "group": "Behavior",
+      "title": "Modes and state transitions",
+      "question": "Which state changes are allowed, and what causes them?",
+      "standardFamilies": [
+        "StateTransitionView"
+      ],
+      "typicalForm": "Rounded states, nested/parallel regions, entry/do/exit compartments, arrows with trigger [guard] / effect.",
+      "nativeCandidate": "lifecycle",
+      "primaryRenderer": "native-flat-states-with-custom-regions",
+      "requiredSemantics": [
+        "State ownership",
+        "triggers guards effects",
+        "entry/do/exit",
+        "concurrency",
+        "explicit initial and final declarations"
+      ],
+      "sourceSections": "\u00a77.18; \u00a78.2.3.18; \u00a79.2.20.2.8",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "allocation",
+      "group": "Architecture",
+      "title": "Allocation and responsibility",
+      "question": "Which target realizes which source intent?",
+      "standardFamilies": [
+        "GeneralView",
+        "GridView"
+      ],
+      "typicalForm": "Two related hierarchies joined by labeled allocation links, or a function-to-component / logical-to-physical matrix.",
+      "nativeCandidate": "architecture",
+      "primaryRenderer": "custom-allocation-matrix",
+      "requiredSemantics": [
+        "Source intent",
+        "responsible target",
+        "typed allocation",
+        "many-to-many correspondence",
+        "allocation is not connectivity or proof of performance"
+      ],
+      "sourceSections": "\u00a77.15; \u00a78.2.3.15; Table 25 p.156",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "requirements",
+      "group": "Assurance",
+      "title": "Requirements and satisfaction",
+      "question": "What is required, under which assumptions, and by which subject?",
+      "standardFamilies": [
+        "GeneralView",
+        "GridView"
+      ],
+      "typicalForm": "Requirement boxes with subject, assumed/required constraints and nesting; satisfaction links and a coverage matrix.",
+      "nativeCandidate": "architecture",
+      "primaryRenderer": "custom-requirement-graph",
+      "requiredSemantics": [
+        "Subject",
+        "assumptions versus required constraints",
+        "requirement nesting",
+        "satisfaction assertion polarity",
+        "typed derivation evidence"
+      ],
+      "sourceSections": "\u00a77.21; \u00a78.2.3.21; \u00a79.2.20.2.3",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "verification",
+      "group": "Assurance",
+      "title": "Verification planning and evidence",
+      "question": "How will each requirement be verified, and what result exists?",
+      "standardFamilies": [
+        "GeneralView",
+        "ActionFlowView",
+        "GridView"
+      ],
+      "typicalForm": "Requirement\u2013verification-case links, a procedure/action view, plus method, configuration and verdict/evidence columns.",
+      "nativeCandidate": "architecture",
+      "primaryRenderer": "custom-verification-composite",
+      "requiredSemantics": [
+        "Case subject and objective",
+        "verify relationship",
+        "method",
+        "procedure",
+        "planned versus executed",
+        "pass fail inconclusive error",
+        "result provenance and applicability"
+      ],
+      "sourceSections": "\u00a77.24; \u00a78.2.3.24",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "parameters",
+      "group": "Analysis",
+      "title": "Calculations and constraints",
+      "question": "Which values are bound, computed or constrained?",
+      "standardFamilies": [
+        "InterconnectionView",
+        "GeneralView"
+      ],
+      "typicalForm": "Parameter squares around calculation/constraint nodes, binding lines, equations, quantities and units.",
+      "nativeCandidate": "dataflow",
+      "primaryRenderer": "custom-parameter-network",
+      "requiredSemantics": [
+        "Input/output versus equality binding",
+        "calculation result versus Boolean constraint",
+        "equations",
+        "units and dimensions",
+        "no invented solver result"
+      ],
+      "sourceSections": "\u00a77.19\u20137.20; \u00a78.2.3.19\u201320",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "analysis",
+      "group": "Analysis",
+      "title": "Analysis cases and trade studies",
+      "question": "Does the design meet the objective under stated assumptions?",
+      "standardFamilies": [
+        "GeneralView",
+        "ActionFlowView",
+        "GridView"
+      ],
+      "typicalForm": "Analysis case with subject, assumptions, input parameters and calculation workflow; result tables/plots and alternatives.",
+      "nativeCandidate": "workflow",
+      "primaryRenderer": "custom-analysis-composite",
+      "requiredSemantics": [
+        "Subject and objective",
+        "assumptions",
+        "inputs",
+        "method or solver link",
+        "computed versus assumed results",
+        "units",
+        "alternatives and comparison basis"
+      ],
+      "sourceSections": "\u00a77.23; \u00a78.2.3.23",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "geometry",
+      "group": "Analysis",
+      "title": "Geometry and spatial arrangement",
+      "question": "Where are the modeled spatial items, and what shapes do they have?",
+      "standardFamilies": [
+        "GeometryView"
+      ],
+      "typicalForm": "2D/3D shapes in coordinate frames, orientation/projection controls, optional quantity color maps.",
+      "nativeCandidate": "none",
+      "primaryRenderer": "custom-spatial",
+      "requiredSemantics": [
+        "Spatial item shape",
+        "coordinate frames",
+        "transforms",
+        "quantities and units",
+        "view direction",
+        "meaning of color scale"
+      ],
+      "sourceSections": "\u00a79.2.20.2.4; Geometry Domain Library",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "configuration",
+      "group": "Cross-cutting",
+      "title": "Variability and configuration",
+      "question": "Which alternatives are valid, and which selection is being reviewed?",
+      "standardFamilies": [
+        "GeneralView",
+        "GridView"
+      ],
+      "typicalForm": "Variation/variant tree or feature graph, selection table and validity constraints; overlays on structural views.",
+      "nativeCandidate": "tree",
+      "primaryRenderer": "custom-variant-view",
+      "requiredSemantics": [
+        "Variation versus variant",
+        "selection and exclusions",
+        "constraints",
+        "configuration identity",
+        "no unsupported selected state"
+      ],
+      "sourceSections": "\u00a77.6 definitions/usages and variability; \u00a78.2.3.6",
+      "status": "bounded-demo"
+    },
+    {
+      "id": "time",
+      "group": "Cross-cutting",
+      "title": "Occurrences, time and duration",
+      "question": "When do occurrences happen, and what timing is declared or observed?",
+      "standardFamilies": [
+        "SequenceView",
+        "GridView"
+      ],
+      "typicalForm": "Lifelines and ordering for interactions; time-scaled bands or history plots only when actual time/duration facts exist.",
+      "nativeCandidate": "timeline / waterfall",
+      "primaryRenderer": "custom-declared-duration",
+      "requiredSemantics": [
+        "Event versus interval",
+        "time units and reference",
+        "ordering versus elapsed time",
+        "declared versus measured",
+        "overlap versus control concurrency"
+      ],
+      "sourceSections": "\u00a77.9; \u00a77.13 successions; \u00a77.16",
+      "status": "bounded-demo"
+    }
+  ],
+  "demonstration": {
+    "source": "examples/pump-station-study/model.sysml",
+    "recipes": "examples/pump-station-study/views.json",
+    "presentations": 25,
+    "qualification": "Statically qualified source and exact recipe selection; communication-view fidelity tested separately. Bounded support, not complete language or graphical-notation conformance."
+  }
+}

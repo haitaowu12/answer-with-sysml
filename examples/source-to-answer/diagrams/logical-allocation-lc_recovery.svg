@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="826pt" height="240pt" viewBox="0.00 0.00 826.08 240.08" role="img" aria-label="Which functions are assigned to this logical responsibility?" data-view-id="logical|allocation|LC_RECOVERY" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 217.04)">
+<title>architecture</title>
+
+<g id="mark-3792d73ecd909381" class="edge" data-record-id="AL_F_QUARANTINE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Quarantine an unfit tool responsibility">
+<title>n1-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M147.48,-151.95C251.79,-124.36 446,-73 446,-73 446,-73 538.69,-51.97 608.39,-36.16" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="609.2,-38.48 615.48,-34.55 608.11,-33.71 609.2,-38.48" />
+</g>
+
+<g id="mark-fe5834560884c72b" class="edge" data-record-id="AL_F_REPAIR_REQUEST" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Coordinate the repair request responsibility">
+<title>n2-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M334.41,-151.95C406.25,-124.36 540,-73 540,-73 540,-73 590.47,-54.07 631.66,-38.63" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="632.74,-40.84 638.44,-36.09 631.02,-36.25 632.74,-40.84" />
+</g>
+
+<g id="mark-7605946dd4c918c3" class="edge" data-record-id="AL_F_REPAIR_REPORT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Receive the repair report responsibility">
+<title>n3-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M513.34,-151.84C533.18,-124.22 570,-73 570,-73 570,-73 609.14,-54.46 641.55,-39.11" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="642.65,-41.3 647.93,-36.09 640.55,-36.87 642.65,-41.3" />
+</g>
+
+<g id="mark-dae13557cebb7ba6" class="edge" data-record-id="AL_F_RELEASE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Release a fit tool for availability responsibility">
+<title>n4-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M642.55,-145.97C612.1,-129.05 576,-109 576,-109 576,-109 576,-73 576,-73 576,-73 612.77,-54.61 643.4,-39.3" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="644.66,-41.41 649.83,-36.09 642.47,-37.03 644.66,-41.41" />
+</g>
+
+
+<g id="mark-a76de92d0809c768" class="edge" data-record-id="AL_F_DISPOSITION" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decide rework or retirement responsibility">
+<title>n5-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M676.16,-72.81C674.92,-63.92 674.67,-52.91 675.42,-43.17" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="677.88,-43.25 676.18,-36.03 673,-42.73 677.88,-43.25" />
+</g>
+
+
+<g id="mark-ef2b6d07ba339964" class="node" data-record-id="LC_RECOVERY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Condition recovery">
+<title>n0</title>
+<g id="a_mark-ef2b6d07ba339964"><a ns1:title="Condition recovery">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M740.5,-36C740.5,-36 627.5,-36 627.5,-36 621.5,-36 615.5,-30 615.5,-24 615.5,-24 615.5,-12 615.5,-12 615.5,-6 621.5,0 627.5,0 627.5,0 740.5,0 740.5,0 746.5,0 752.5,-6 752.5,-12 752.5,-12 752.5,-24 752.5,-24 752.5,-30 746.5,-36 740.5,-36" />
+<text text-anchor="middle" x="684" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Condition recovery</text>
+</a>
+</g>
+</g>
+
+<g id="mark-8f581e69369b95d5" class="node" data-record-id="F_QUARANTINE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Quarantine an unfit tool">
+<title>n1</title>
+<g id="a_mark-8f581e69369b95d5"><a ns1:title="Quarantine an unfit tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M154,-188C154,-188 12,-188 12,-188 6,-188 0,-182 0,-176 0,-176 0,-164 0,-164 0,-158 6,-152 12,-152 12,-152 154,-152 154,-152 160,-152 166,-158 166,-164 166,-164 166,-176 166,-176 166,-182 160,-188 154,-188" />
+<text text-anchor="middle" x="83" y="-166.3" font-family="Arial" font-size="14.00" fill="#153c3a">Quarantine an unfit tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-f4bb624f21630a21" class="node" data-record-id="F_REPAIR_REQUEST" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate the repair request">
+<title>n2</title>
+<g id="a_mark-f4bb624f21630a21"><a ns1:title="Coordinate the repair request">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M378,-188C378,-188 202,-188 202,-188 196,-188 190,-182 190,-176 190,-176 190,-164 190,-164 190,-158 196,-152 202,-152 202,-152 378,-152 378,-152 384,-152 390,-158 390,-164 390,-164 390,-176 390,-176 390,-182 384,-188 378,-188" />
+<text text-anchor="middle" x="290" y="-166.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate the repair request</text>
+</a>
+</g>
+</g>
+
+<g id="mark-dde340cdef849482" class="node" data-record-id="F_REPAIR_REPORT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Receive the repair report">
+<title>n3</title>
+<g id="a_mark-dde340cdef849482"><a ns1:title="Receive the repair report">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M575.5,-188C575.5,-188 426.5,-188 426.5,-188 420.5,-188 414.5,-182 414.5,-176 414.5,-176 414.5,-164 414.5,-164 414.5,-158 420.5,-152 426.5,-152 426.5,-152 575.5,-152 575.5,-152 581.5,-152 587.5,-158 587.5,-164 587.5,-164 587.5,-176 587.5,-176 587.5,-182 581.5,-188 575.5,-188" />
+<text text-anchor="middle" x="501" y="-166.3" font-family="Arial" font-size="14.00" fill="#153c3a">Receive the repair report</text>
+</a>
+</g>
+</g>
+
+<g id="mark-71514489e2d2a872" class="node" data-record-id="F_RELEASE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Release a fit tool for availability">
+<title>n4</title>
+<g id="a_mark-71514489e2d2a872"><a ns1:title="Release a fit tool for availability">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M744.5,-194C744.5,-194 623.5,-194 623.5,-194 617.5,-194 611.5,-188 611.5,-182 611.5,-182 611.5,-158 611.5,-158 611.5,-152 617.5,-146 623.5,-146 623.5,-146 744.5,-146 744.5,-146 750.5,-146 756.5,-152 756.5,-158 756.5,-158 756.5,-182 756.5,-182 756.5,-188 750.5,-194 744.5,-194" />
+<text text-anchor="middle" x="684" y="-173.8" font-family="Arial" font-size="14.00" fill="#153c3a">Release a fit tool for</text>
+<text text-anchor="middle" x="684" y="-158.8" font-family="Arial" font-size="14.00" fill="#153c3a">availability</text>
+</a>
+</g>
+</g>
+
+<g id="mark-bc1c2c6f4689ab70" class="node" data-record-id="F_DISPOSITION" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Decide rework or retirement">
+<title>n5</title>
+<g id="a_mark-bc1c2c6f4689ab70"><a ns1:title="Decide rework or retirement">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M768,-109C768,-109 600,-109 600,-109 594,-109 588,-103 588,-97 588,-97 588,-85 588,-85 588,-79 594,-73 600,-73 600,-73 768,-73 768,-73 774,-73 780,-79 780,-85 780,-85 780,-97 780,-97 780,-103 774,-109 768,-109" />
+<text text-anchor="middle" x="684" y="-87.3" font-family="Arial" font-size="14.00" fill="#153c3a">Decide rework or retirement</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

@@ -2,19 +2,29 @@
 
 **Explain the system. Keep the model.**
 
-Turn a SysML v2 model into an interactive HTML explanation that people can open in a browser, explore and discuss. Keep the native model behind the visuals so the work remains useful after the presentation is over.
+Give an agent your source documents and a question. It interprets the material, builds or updates a native SysML v2 model, and answers with an interactive HTML explanation grounded in both the source and the model. Keep the model behind the visuals so the work remains useful after the presentation is over.
 
 Systems engineers need precision. Stakeholders need a clear story. Answer with SysML connects the two: selected views communicate the architecture, interfaces and behavior, while the underlying model preserves the elements and relationships those views describe.
 
 ```text
-System question → Native SysML model → Qualified views → Shareable HTML
-                          ↑                                  │
-                          └──────── Revise and regenerate ────┘
+Source documents + question → Agent interpretation → Native SysML model
+          ↑                                             │
+          └──── Source changes / follow-up questions ← HTML + model views
 ```
 
 ![Model-backed pump station view](examples/pump-station/preview.svg)
 
 [Build the example](examples/pump-station/README.md) · [Use the agent skill](SKILL.md)
+
+## From documents to a grounded answer
+
+The agent is the interpreter, not a text-to-diagram converter. It identifies source clauses, distinguishes facts from proposed design decisions, authors the model, and chooses views that answer your question. The bundled native engine checks the model; the reader binds its views to that exact revision.
+
+A follow-up question can reuse the model. A changed source document calls for source-impact review, a model update, qualification and regenerated answers. Native source and evidence remain available instead of being discarded after making a picture.
+
+**Start with:** “Read this concept of operations. Model the system, then explain who owns each decision and what must happen before release. Show the architecture and workflow, and link the answer to the source.”
+
+[Reproduce a source-to-model-to-answer study](examples/source-to-answer/README.md). This is an agent-guided workflow: the CLI consumes an authored recipe, not arbitrary prose, and does not autonomously certify the interpretation.
 
 ## Why this exists
 
@@ -101,7 +111,7 @@ Read the [SysML reader guide](resources/tools/archify/SYSML.md) for the complete
 
 ## Scope
 
-This is a bounded SysML v2 authoring and communication workflow, not a general-purpose modeling-tool replacement. Supported views depend on the qualified semantic profiles. A declared verification is not an executed test, and a rendered behavior view is not a simulation. The exported reader is read-only; model changes happen in the source and are qualified again.
+This is a bounded SysML v2 authoring and communication workflow, not a general-purpose modeling-tool replacement. Supported views depend on the qualified semantic profiles. Views are purpose-specific explanatory projections, not complete notation-preserving diagrams; inspect the native model for details not shown. A declared verification is not an executed test, and a rendered behavior view is not a simulation. The exported reader is read-only; model changes happen in the source and are qualified again.
 
 Before sharing, review the exported model and reader data as well as the visible page: the deliverable intentionally retains engineering information.
 

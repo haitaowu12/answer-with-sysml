@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="257pt" height="254pt" viewBox="0.00 0.00 257.08 254.08" role="img" aria-label="Which service contracts follow from the function allocations?" data-view-id="logical|interfaces|LC_COMMS" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 231.04)">
+<title>architecture</title>
+
+<g id="mark-82e150a1194c6f01" class="edge" data-record-id="projection:logical|interfaces|LC_COMMS:LC_COMMS-LC_COORD" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect 1 sent · 4 received">
+<title>n0-&gt;n1</title>
+<g id="a_mark-82e150a1194c6f01"><a ns1:title="1 sent · 4 received">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M117.34,-129.01C119.91,-135.62 122,-141 122,-141 122,-141 122,-153 122,-153 122,-153 119.91,-158.38 117.34,-164.99" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="119.49,-127.79 114.67,-122.16 114.93,-129.57 119.49,-127.79" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="114.93,-164.43 114.67,-171.84 119.49,-166.21 114.93,-164.43" />
+</a>
+</g>
+<text text-anchor="middle" x="166.5" y="-144.6" font-family="Arial" font-size="10.50" fill="#40565e">1 sent · 4 received</text>
+</g>
+
+<g id="mark-c40924911f6bcda0" class="edge" data-record-id="projection:logical|interfaces|LC_COMMS:LC_COMMS-LC_RECORDS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect 1 sent · 2 received">
+<title>n0-&gt;n2</title>
+<g id="a_mark-c40924911f6bcda0"><a ns1:title="1 sent · 2 received">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M49.97,-83.66C24.38,-75.13 0,-67 0,-67 0,-67 0,-55 0,-55 0,-55 24.38,-46.87 49.97,-38.34" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="49.43,-86.06 56.85,-85.95 50.98,-81.41 49.43,-86.06" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="50.98,-40.59 56.85,-36.05 49.43,-35.94 50.98,-40.59" />
+</a>
+</g>
+<text text-anchor="middle" x="44.5" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">1 sent · 2 received</text>
+</g>
+
+
+
+<g id="mark-5f33d8d180e6992d" class="node" data-record-id="LC_COMMS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Member communication">
+<title>n0</title>
+<g id="a_mark-5f33d8d180e6992d"><a ns1:title="Member communication">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M182,-122C182,-122 34,-122 34,-122 28,-122 22,-116 22,-110 22,-110 22,-98 22,-98 22,-92 28,-86 34,-86 34,-86 182,-86 182,-86 188,-86 194,-92 194,-98 194,-98 194,-110 194,-110 194,-116 188,-122 182,-122" />
+<text text-anchor="middle" x="108" y="-100.3" font-family="Arial" font-size="14.00" fill="#263d69">Member communication</text>
+</a>
+</g>
+</g>
+
+<g id="mark-300824011ef4b7d4" class="node" data-record-id="LC_COORD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reservation coordination">
+<title>n1</title>
+<g id="a_mark-300824011ef4b7d4"><a ns1:title="Reservation coordination">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M183,-208C183,-208 33,-208 33,-208 27,-208 21,-202 21,-196 21,-196 21,-184 21,-184 21,-178 27,-172 33,-172 33,-172 183,-172 183,-172 189,-172 195,-178 195,-184 195,-184 195,-196 195,-196 195,-202 189,-208 183,-208" />
+<text text-anchor="middle" x="108" y="-186.3" font-family="Arial" font-size="14.00" fill="#263d69">Reservation coordination</text>
+</a>
+</g>
+</g>
+
+<g id="mark-e3f442e74b455cb9" class="node" data-record-id="LC_RECORDS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Service state and inventory">
+<title>n2</title>
+<g id="a_mark-e3f442e74b455cb9"><a ns1:title="Service state and inventory">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M189.5,-36C189.5,-36 26.5,-36 26.5,-36 20.5,-36 14.5,-30 14.5,-24 14.5,-24 14.5,-12 14.5,-12 14.5,-6 20.5,0 26.5,0 26.5,0 189.5,0 189.5,0 195.5,0 201.5,-6 201.5,-12 201.5,-12 201.5,-24 201.5,-24 201.5,-30 195.5,-36 189.5,-36" />
+<text text-anchor="middle" x="108" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Service state and inventory</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

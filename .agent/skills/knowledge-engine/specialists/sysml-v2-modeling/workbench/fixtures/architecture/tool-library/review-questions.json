@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "authority": "Author-authored source questions frozen before generation; separate from the withheld parent acceptance exercise.",
+  "questions": [
+    {
+      "id": "Q01",
+      "question": "Who may decide eligibility and quarantine release?",
+      "expected": "Registry remains the eligibility authority; repair provider cannot release a tool.",
+      "sourceRef": "TL-02",
+      "relatedIds": [
+        "R_AUTH",
+        "R_RELEASE"
+      ]
+    },
+    {
+      "id": "Q02",
+      "question": "Does a wait-list reserve inventory?",
+      "expected": "No; member wait-list/closure choice retains an unfilled request without a tool reservation.",
+      "sourceRef": "TL-03",
+      "relatedIds": [
+        "R_WAIT"
+      ]
+    },
+    {
+      "id": "Q03",
+      "question": "Can either preparation contribution alone make a reservation ready?",
+      "expected": "No; independent concurrent registry and condition contributions must match the selected member/tool and both permit readiness.",
+      "sourceRef": "TL-04",
+      "relatedIds": [
+        "SC_PREP",
+        "R_GATE"
+      ]
+    },
+    {
+      "id": "Q04",
+      "question": "What starts the minimum hold?",
+      "expected": "Actual confirmed notice delivery; absence retains pending-notification and cannot create assumed-time expiry.",
+      "sourceRef": "TL-05",
+      "relatedIds": [
+        "R_HOLD",
+        "R_NO_ACK"
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "What completes collection?",
+      "expected": "Matching, terms and identified-tool receipt acceptance precede custody transfer, which precedes on-loan state.",
+      "sourceRef": "TL-06",
+      "relatedIds": [
+        "SC_COLLECT",
+        "R_CUSTODY"
+      ]
+    },
+    {
+      "id": "Q06",
+      "question": "Does a member report or repair-completed notice establish recovery?",
+      "expected": "No; actual steward receipt, condition assessment and accountable release are required in their respective cases.",
+      "sourceRef": "TL-07",
+      "relatedIds": [
+        "SC_RECOVER",
+        "R_RECEIPT",
+        "R_REPAIR",
+        "R_RELEASE"
+      ]
+    },
+    {
+      "id": "Q07",
+      "question": "When must availability be excluded?",
+      "expected": "Reserved, on loan, awaiting returned-tool assessment and quarantined identified tools are not available offers.",
+      "sourceRef": "TL-08",
+      "relatedIds": [
+        "SM_TOOL",
+        "R_INVENTORY"
+      ]
+    },
+    {
+      "id": "Q08",
+      "question": "Were absent sizing values or verification results invented?",
+      "expected": "No; unknown values remain unvalued and all verification cases remain planned.",
+      "sourceRef": "TL-08",
+      "relatedIds": [
+        "D_SIZING"
+      ]
+    }
+  ]
+}

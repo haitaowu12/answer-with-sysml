@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="748pt" height="522pt" viewBox="0.00 0.00 747.58 522.08" role="img" aria-label="What does each function produce, consume and exchange across this slice?" data-view-id="functions|flow|F_SUPPORT" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 499.04)">
+<title>architecture</title>
+
+<g id="mark-bc061614cfbbbfbb" class="edge" data-record-id="X_44" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Unresolved exception and retained state">
+<title>n0-&gt;n1</title>
+<g id="a_mark-bc061614cfbbbfbb"><a ns1:title="Unresolved exception and retained state">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M112.88,-341.97C120.57,-324.23 131.5,-299 131.5,-299 131.5,-299 175.32,-289.31 220.87,-279.24" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="221.59,-281.6 227.89,-277.69 220.53,-276.81 221.59,-281.6" />
+</a>
+</g>
+<text text-anchor="middle" x="193.5" y="-314.6" font-family="Arial" font-size="10.50" fill="#40565e">Unresolved exception and</text>
+<text text-anchor="middle" x="193.5" y="-302.6" font-family="Arial" font-size="10.50" fill="#40565e">retained state</text>
+</g>
+
+<g id="mark-722c72397463c036" class="edge" data-record-id="X_43" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Accountable pending/refused/closed outcome">
+<title>n0-&gt;n2</title>
+<g id="a_mark-722c72397463c036"><a ns1:title="Accountable pending/refused/closed outcome">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M97.92,-341.97C80.77,-303.45 40.5,-213 40.5,-213 40.5,-213 40.5,-177 40.5,-177 40.5,-177 172.5,-67 172.5,-67 172.5,-67 187.54,-59.74 205.11,-51.26" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="206.43,-53.34 211.67,-48.09 204.3,-48.93 206.43,-53.34" />
+</a>
+</g>
+<text text-anchor="middle" x="96.5" y="-204.6" font-family="Arial" font-size="10.50" fill="#40565e">Accountable</text>
+<text text-anchor="middle" x="96.5" y="-192.6" font-family="Arial" font-size="10.50" fill="#40565e">pending/refused/closed</text>
+<text text-anchor="middle" x="96.5" y="-180.6" font-family="Arial" font-size="10.50" fill="#40565e">outcome</text>
+</g>
+
+<g id="mark-1e9efb054a2673cb" class="edge" data-record-id="X_42" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Current inventory, reservation and exception state">
+<title>n1-&gt;n2</title>
+<g id="a_mark-1e9efb054a2673cb"><a ns1:title="Current inventory, reservation and exception state">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M281.26,-231.77C231.56,-203.07 153.5,-158 153.5,-158 153.5,-158 153.5,-110 153.5,-110 153.5,-110 194.2,-77.36 225.16,-52.54" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="226.89,-54.29 230.81,-48 223.82,-50.47 226.89,-54.29" />
+</a>
+</g>
+<text text-anchor="middle" x="215.5" y="-143.6" font-family="Arial" font-size="10.50" fill="#40565e">Current inventory,</text>
+<text text-anchor="middle" x="215.5" y="-131.6" font-family="Arial" font-size="10.50" fill="#40565e">reservation and exception</text>
+<text text-anchor="middle" x="215.5" y="-119.6" font-family="Arial" font-size="10.50" fill="#40565e">state</text>
+</g>
+
+<g id="mark-72d6f25ddc201c18" class="edge" data-record-id="X_41" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Available inventory identities">
+<title>n1-&gt;n3</title>
+<g id="a_mark-72d6f25ddc201c18"><a ns1:title="Available inventory identities">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M296.08,-231.79C285.44,-222.08 275.5,-213 275.5,-213 275.5,-213 275.5,-177 275.5,-177 275.5,-177 293.93,-169.48 315.2,-160.81" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="316.32,-163 321.88,-158.09 314.47,-158.46 316.32,-163" />
+</a>
+</g>
+<text text-anchor="middle" x="320.5" y="-198.6" font-family="Arial" font-size="10.50" fill="#40565e">Available inventory</text>
+<text text-anchor="middle" x="320.5" y="-186.6" font-family="Arial" font-size="10.50" fill="#40565e">identities</text>
+</g>
+
+<g id="mark-6eb3d680d0c099d0" class="edge" data-record-id="X_09" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Unavailable or ineligible membership case">
+<title>n3-&gt;n0</title>
+<g id="a_mark-6eb3d680d0c099d0"><a ns1:title="Unavailable or ineligible membership case">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M312.74,-158.11C231.11,-186.8 102.5,-232 102.5,-232 102.5,-232 102.5,-280 102.5,-280 102.5,-280 103.69,-311.45 104.58,-334.66" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="102.14,-334.96 104.85,-341.86 107.03,-334.77 102.14,-334.96" />
+</a>
+</g>
+<text text-anchor="middle" x="159" y="-259.6" font-family="Arial" font-size="10.50" fill="#40565e">Unavailable or ineligible</text>
+<text text-anchor="middle" x="159" y="-247.6" font-family="Arial" font-size="10.50" fill="#40565e">membership case</text>
+</g>
+
+<g id="mark-692dfb4972045598" class="edge" data-record-id="X_13" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Identified tool reservation linkage">
+<title>n3-&gt;n1</title>
+<g id="a_mark-692dfb4972045598"><a ns1:title="Identified tool reservation linkage">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M376.4,-158.4C374.34,-181.38 371.5,-213 371.5,-213 371.5,-213 363.95,-219.34 354.72,-227.1" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="352.92,-225.41 349.13,-231.79 356.07,-229.16 352.92,-225.41" />
+</a>
+</g>
+<text text-anchor="middle" x="421" y="-198.6" font-family="Arial" font-size="10.50" fill="#40565e">Identified tool</text>
+<text text-anchor="middle" x="421" y="-186.6" font-family="Arial" font-size="10.50" fill="#40565e">reservation linkage</text>
+</g>
+
+<g id="mark-46c55b3594557782" class="edge" data-record-id="X_11" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Member-selected wait-list or closure">
+<title>n3-&gt;n2</title>
+<g id="a_mark-46c55b3594557782"><a ns1:title="Member-selected wait-list or closure">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M352.97,-109.83C334.62,-93.18 309.78,-70.63 290.32,-52.97" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="291.82,-51.02 284.99,-48.13 288.52,-54.65 291.82,-51.02" />
+</a>
+</g>
+<text text-anchor="middle" x="391.5" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Member-selected wait-list</text>
+<text text-anchor="middle" x="391.5" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">or closure</text>
+</g>
+
+<g id="mark-3287398ac48b2a65" class="edge" data-record-id="projection:functions|flow|F_SUPPORT:F_LOAN-F_EXCEPTION" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect 3 explicit exchanges">
+<title>n4-&gt;n0</title>
+<g id="a_mark-3287398ac48b2a65"><a ns1:title="3 explicit exchanges">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M210.73,-427.91C183.78,-418.15 158.5,-409 158.5,-409 158.5,-409 143.75,-395.64 129.81,-383.01" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="131.17,-380.94 124.34,-378.06 127.88,-384.57 131.17,-380.94" />
+</a>
+</g>
+<text text-anchor="middle" x="207" y="-400.6" font-family="Arial" font-size="10.50" fill="#40565e">3 explicit exchanges</text>
+</g>
+
+<g id="mark-6ea6d55324e5a928" class="edge" data-record-id="projection:functions|flow|F_SUPPORT:F_LOAN-F_LEDGER" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect 2 explicit exchanges">
+<title>n4-&gt;n1</title>
+<g id="a_mark-6ea6d55324e5a928"><a ns1:title="2 explicit exchanges">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M277.26,-427.88C281.07,-395.89 287.5,-342 287.5,-342 287.5,-342 299.73,-311.41 309.52,-286.94" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="311.88,-287.64 312.21,-280.23 307.33,-285.82 311.88,-287.64" />
+</a>
+</g>
+<text text-anchor="middle" x="336" y="-357.6" font-family="Arial" font-size="10.50" fill="#40565e">2 explicit exchanges</text>
+</g>
+
+<g id="mark-52cb0f04f0819357" class="edge" data-record-id="X_21" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Extended or closed request outcome">
+<title>n4-&gt;n2</title>
+<g id="a_mark-52cb0f04f0819357"><a ns1:title="Extended or closed request outcome">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M353.13,-432.48C444.97,-410.86 584.5,-378 584.5,-378 584.5,-378 609.5,-361 609.5,-361 609.5,-361 609.5,-361 609.5,-133 609.5,-133 458.5,-67 458.5,-67 458.5,-67 406.51,-56.03 355.68,-45.3" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="355.88,-42.84 348.52,-43.79 354.87,-47.63 355.88,-42.84" />
+</a>
+</g>
+<text text-anchor="middle" x="655.5" y="-259.6" font-family="Arial" font-size="10.50" fill="#40565e">Extended or closed</text>
+<text text-anchor="middle" x="655.5" y="-247.6" font-family="Arial" font-size="10.50" fill="#40565e">request outcome</text>
+</g>
+
+<g id="mark-b1402a3c837f7106" class="edge" data-record-id="projection:functions|flow|F_SUPPORT:F_RETURN-F_LEDGER" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect 4 explicit exchanges">
+<title>n5-&gt;n1</title>
+<g id="a_mark-b1402a3c837f7106"><a ns1:title="4 explicit exchanges">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M457.22,-341.93C431.92,-326.1 393.86,-302.28 364.48,-283.9" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="365.59,-281.7 358.35,-280.06 362.99,-285.85 365.59,-281.7" />
+</a>
+</g>
+<text text-anchor="middle" x="471" y="-308.6" font-family="Arial" font-size="10.50" fill="#40565e">4 explicit exchanges</text>
+</g>
+
+<g id="mark-00952ba16bafa66c" class="node" data-record-id="F_EXCEPTION" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate an unresolved case">
+<title>n0</title>
+<g id="a_mark-00952ba16bafa66c"><a ns1:title="Coordinate an unresolved case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M199,-378C199,-378 12,-378 12,-378 6,-378 0,-372 0,-366 0,-366 0,-354 0,-354 0,-348 6,-342 12,-342 12,-342 199,-342 199,-342 205,-342 211,-348 211,-354 211,-354 211,-366 211,-366 211,-372 205,-378 199,-378" />
+<text text-anchor="middle" x="105.5" y="-356.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate an unresolved case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-84fa6f5813b5a14a" class="node" data-record-id="F_LEDGER" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Maintain custody, condition and availability state">
+<title>n1</title>
+<g id="a_mark-84fa6f5813b5a14a"><a ns1:title="Maintain custody, condition and availability state">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M403,-280C403,-280 240,-280 240,-280 234,-280 228,-274 228,-268 228,-268 228,-244 228,-244 228,-238 234,-232 240,-232 240,-232 403,-232 403,-232 409,-232 415,-238 415,-244 415,-244 415,-268 415,-268 415,-274 409,-280 403,-280" />
+<text text-anchor="middle" x="321.5" y="-259.8" font-family="Arial" font-size="14.00" fill="#153c3a">Maintain custody, condition</text>
+<text text-anchor="middle" x="321.5" y="-244.8" font-family="Arial" font-size="14.00" fill="#153c3a">and availability state</text>
+</a>
+</g>
+</g>
+
+<g id="mark-82189d0c466c2987" class="node" data-record-id="F_STATUS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Communicate the current request outcome">
+<title>n2</title>
+<g id="a_mark-82189d0c466c2987"><a ns1:title="Communicate the current request outcome">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M336.5,-48C336.5,-48 182.5,-48 182.5,-48 176.5,-48 170.5,-42 170.5,-36 170.5,-36 170.5,-12 170.5,-12 170.5,-6 176.5,0 182.5,0 182.5,0 336.5,0 336.5,0 342.5,0 348.5,-6 348.5,-12 348.5,-12 348.5,-36 348.5,-36 348.5,-42 342.5,-48 336.5,-48" />
+<text text-anchor="middle" x="259.5" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Communicate the current</text>
+<text text-anchor="middle" x="259.5" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">request outcome</text>
+</a>
+</g>
+</g>
+
+<g id="mark-9ab2b3b3cd830535" class="node" data-record-id="F_ACQUIRE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Prepare an eligible and fit reservation">
+<title>n3</title>
+<g id="a_mark-9ab2b3b3cd830535"><a ns1:title="Prepare an eligible and fit reservation">
+<path fill="#f6f6f3" stroke="#a8afa9" stroke-width="1.2" stroke-dasharray="5,2" d="M455.5,-158C455.5,-158 301.5,-158 301.5,-158 295.5,-158 289.5,-152 289.5,-146 289.5,-146 289.5,-122 289.5,-122 289.5,-116 295.5,-110 301.5,-110 301.5,-110 455.5,-110 455.5,-110 461.5,-110 467.5,-116 467.5,-122 467.5,-122 467.5,-146 467.5,-146 467.5,-152 461.5,-158 455.5,-158" />
+<text text-anchor="middle" x="378.5" y="-137.8" font-family="Arial" font-size="14.00" fill="#596660">Prepare an eligible and fit</text>
+<text text-anchor="middle" x="378.5" y="-122.8" font-family="Arial" font-size="14.00" fill="#596660">reservation</text>
+</a>
+</g>
+</g>
+
+<g id="mark-eeea8533b69825d4" class="node" data-record-id="F_LOAN" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Notify and transfer the reserved tool">
+<title>n4</title>
+<g id="a_mark-eeea8533b69825d4"><a ns1:title="Notify and transfer the reserved tool">
+<path fill="#f6f6f3" stroke="#a8afa9" stroke-width="1.2" stroke-dasharray="5,2" d="M341,-476C341,-476 208,-476 208,-476 202,-476 196,-470 196,-464 196,-464 196,-440 196,-440 196,-434 202,-428 208,-428 208,-428 341,-428 341,-428 347,-428 353,-434 353,-440 353,-440 353,-464 353,-464 353,-470 347,-476 341,-476" />
+<text text-anchor="middle" x="274.5" y="-455.8" font-family="Arial" font-size="14.00" fill="#596660">Notify and transfer the</text>
+<text text-anchor="middle" x="274.5" y="-440.8" font-family="Arial" font-size="14.00" fill="#596660">reserved tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-fb77ba940e9f43dd" class="node" data-record-id="F_RETURN" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Recover the returned tool">
+<title>n5</title>
+<g id="a_mark-fb77ba940e9f43dd"><a ns1:title="Recover the returned tool">
+<path fill="#f6f6f3" stroke="#a8afa9" stroke-width="1.2" stroke-dasharray="5,2" d="M561,-378C561,-378 408,-378 408,-378 402,-378 396,-372 396,-366 396,-366 396,-354 396,-354 396,-348 402,-342 408,-342 408,-342 561,-342 561,-342 567,-342 573,-348 573,-354 573,-354 573,-366 573,-366 573,-372 567,-378 561,-378" />
+<text text-anchor="middle" x="484.5" y="-356.3" font-family="Arial" font-size="14.00" fill="#596660">Recover the returned tool</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

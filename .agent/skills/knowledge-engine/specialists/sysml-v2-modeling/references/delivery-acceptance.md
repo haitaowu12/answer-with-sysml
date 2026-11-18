@@ -1,0 +1,43 @@
+# Model and view delivery acceptance
+
+## Engineering output is a reusable capability
+
+When an observed generation defect requires a reusable repair, fix its owning workflow or tool within the authorized task scope. Ordinary modeling work changes the user's model and evidence, not the installed skill. Flashlight, Vehicle and other examples are regression inputs, not special cases or proof of general engineering quality. Do not hard-code their names, IDs, expected diagrams or domain-specific arrangements into generic generation.
+
+**Prepare the engineering answer before rendering.** Establish the audience, review question, source basis, boundary and required facts in the existing model/view recipe. Select concern-specific views and supporting interface, condition or trace tables that answer that question. Use declared support limits to choose scopes; do not invent missing facts or silently narrow away the difficult part of the question. Reuse the existing project contract rather than adding a separate approval process.
+
+**Generate from one semantic basis.** Keep lab diagrams, HTML explanations, tables and agent answers tied to the same model revision and typed facts. Audience changes may alter terminology and detail, not the meaning of overlapping claims. Preserve occurrence identity, direction, multiplicity, units, conditions, unknowns and evidence status wherever they affect the selected question. Keep authored interpretation separate. Regeneration must reproduce those meanings without manual output edits; pixel identity is not required.
+
+**Judge the populated deliverable.** Require readable labels at the declared viewing size, no obscured or overlapping labels, unambiguous endpoints and a stated relationship legend. Split or navigate large scopes without losing their parent context. Include source/revision, scope, omissions, assumptions and review status. The reader must be able to follow the relevant interaction or state change, find its conditions and inspect its source. A parser pass, an SVG count, a font-size floor or a successful screenshot alone does not establish this quality.
+
+**Repair upstream and regenerate.** Turn a failing input into a reproducible regression at the normal workflow entry point. Identify whether the defect belongs to intake, modeling guidance, semantic extraction, projection, view selection, layout or packaging; repair that shared mechanism and rerun affected consumers from the unchanged input. Do not repair emitted HTML/SVG, rewrite a valid source model to accommodate a renderer, or waive a supported-scope failure to make a sample pass.
+
+**Demonstrate generalization before claiming it.** In addition to the original regression, test affected capability families on independent models not used to tune the change, with expected facts and output criteria set before generation. Vary names and label lengths, size and hierarchy, repeated occurrences, conditions and parallelism as relevant; test stale, invalid and unsupported inputs. Once a case informs a fix, it is a regression case, not fresh generalization evidence. Exercise source-change propagation and inspect regenerated lab and HTML views. Keep structural tests, semantic checks, visual findings and human task acceptance separate; record untested coverage.
+
+For supported scopes, unmet criteria block an engineering-ready claim. For unsupported scopes, return the specific limitation and a supported alternative where available, not a plausible substitute. The target is repeatable engineering-quality production across inputs; finite tests do not justify an all-input guarantee. These are workflow and release requirements, not a claim that every check is already automated.
+
+## Essential acceptance boundaries
+
+For ConOps-to-architecture work, use [architecture-construction.md](architecture-construction.md) and `scripts/sysml.py architecture`. A completed candidate must answer distinct questions about operational responsibility, system functions and typed exchanges, logical allocation/interfaces, normal and failure behavior, requirements and planned verification. Check the source-to-architecture dispositions against an independent source inventory; source retention alone is not development. Inspect a complete operational thread through these perspectives, including its exception and recovery branches. Preserve declared concurrency and terminal conditions.
+
+Keep five results separate: source interpretation, authored architecture consistency, native language/relationship reconciliation, reader usability, and engineering insight. Generated translation expectations are not independent source-meaning acceptance. Reader badges must match the exact model, recipe, binding and managed-report receipts. A stale recipe or altered model must be rejected. Verification remains planned until external results are supplied and assessed.
+
+The reader has one source inventory. A generic catalogue repeated in a second scope should link to its canonical view when its question, source revision and complete semantic payload are identical. Preserve views with different questions, scope, edges or facts. Do not flatten everything into a repeated catalogue or remove a distinct architecture view merely because some elements recur.
+
+For the independent contributor pilot, use `scripts/sysml.py contributor-check` with both managed baseline/candidate reports and their exact source snapshots, then `contributor-review` for a self-contained read-only HTML package. The [fixture contract](../workbench/fixtures/contributor-pilot/README.md) freezes expected engineering facts and failure cases. These reference commands do not mutate the separate product or qualify its different semantic runtime; production edits must continue through that product's approved command service.
+
+- Model ownership, typing, repeated occurrences, ports, connections, flows, behavior succession and trace links retain their different meanings. A connection is not automatically a flow; positive, negative and unknown satisfaction assertions remain distinct. Required and assumed constraints are not interchangeable. A design assertion is not proof.
+- Validate with the locked SysML 2.0/KerML 1.0 runtime and check resolved facts, not label strings. A parser pass does not establish fidelity to the intended system.
+- Keep the same source revision and identities across human views and agent answers. Reject stale retrieval; expose unknown scope and omitted features. A missing result is not proof of absence.
+- Preserve historical observations when source changes. Review affected applicability instead of rewriting old outcomes.
+- Do not claim native persistent graphical authoring, full-language notation, simulation, shared approval workflows or commissioning readiness from this bounded package.
+
+Deliver model source, source/evidence/decision records, expected-fact checks, usable views and actual validation results. Record the next unresolved engineering question. Leave generated evidence in a user model/evidence workspace, not in the skill's installed source tree.
+
+## Declared behavior explanations
+
+Use `python3 scripts/sysml.py explain --source /model/model.sysml --report /evidence/report.json --target 'System::behavior' --output /new/behavior.json` for a bounded state/action tree. This consumes a managed report; it does not parse diagram text or execute behavior. Fresh qualification supplies parallelism, entry/do/exit references and source end lines. Older reports keep missing facts unknown.
+
+A STATE or ACTION recipe may select `"renderer": "behavior"` to show the same typed projection in the lab, including its source-linked conditions table. ExhibitStateUsage is supported. The raw Pilot diagram remains separately available; this is a bounded declared-behavior profile, not full SysML graphical notation. Verification-case, inherited or unsupported control semantics are not silently substituted. Use the root HTML adapter's `sysml` command for automatic explanations from this projection; the standalone skill has no dependency on that optional adapter.
+
+Large part views use multiple rows. The initial Fit presents a whole-diagram overview and labels it as an overview when text is small. Read labels keeps at least 12 CSS pixels for diagram text and uses scrolling where a complete sheet cannot fit. Deeper-than-direct port chains remain explicitly unsupported. The public-projection fixture manifest pins external Flashlight and Vehicle test inputs; the root acceptance script downloads their exact bytes to its evidence workspace, not into installed skill source.

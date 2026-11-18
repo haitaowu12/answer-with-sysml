@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="413pt" height="254pt" viewBox="0.00 0.00 413.08 254.08" role="img" aria-label="Which service contracts follow from the function allocations?" data-view-id="logical|interfaces|LC_HANDLING" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 231.04)">
+<title>architecture</title>
+
+<g id="mark-a067e97d2a42307c" class="edge" data-record-id="projection:logical|interfaces|LC_HANDLING:LC_HANDLING-LC_COORD" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect 1 sent · 1 received">
+<title>n0-&gt;n1</title>
+<g id="a_mark-a067e97d2a42307c"><a ns1:title="1 sent · 1 received">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M96.34,-129.01C98.91,-135.62 101,-141 101,-141 101,-141 101,-153 101,-153 101,-153 98.91,-158.38 96.34,-164.99" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="98.49,-127.79 93.67,-122.16 93.93,-129.57 98.49,-127.79" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="93.93,-164.43 93.67,-171.84 98.49,-166.21 93.93,-164.43" />
+</a>
+</g>
+<text text-anchor="middle" x="145.5" y="-144.6" font-family="Arial" font-size="10.50" fill="#40565e">1 sent · 1 received</text>
+</g>
+
+
+<g id="mark-3688b4e6d5b1e18c" class="edge" data-record-id="projection:logical|interfaces|LC_HANDLING:LC_HANDLING-LC_RECOVERY" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect 4 sent · 1 received">
+<title>n0-&gt;n3</title>
+<g id="a_mark-3688b4e6d5b1e18c"><a ns1:title="4 sent · 1 received">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M126.12,-82.46C151.03,-69.38 183.19,-52.5 208.07,-39.44" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="124.82,-80.38 119.76,-85.8 127.1,-84.71 124.82,-80.38" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="209.49,-41.46 214.55,-36.03 207.22,-37.12 209.49,-41.46" />
+</a>
+</g>
+<text text-anchor="middle" x="220.5" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">4 sent · 1 received</text>
+</g>
+
+
+<g id="mark-e67916781d1d4fba" class="edge" data-record-id="projection:logical|interfaces|LC_HANDLING:LC_HANDLING-LC_CUSTODY" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect 0 sent · 1 received">
+<title>n2-&gt;n0</title>
+<g id="a_mark-e67916781d1d4fba"><a ns1:title="0 sent · 1 received">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M154.15,-33.27C161.84,-34.9 167,-36 167,-36 167,-36 278,-55 278,-55 278,-55 278,-67 278,-67 278,-67 223.83,-77.21 173.18,-86.76" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="172.49,-84.39 166.07,-88.1 173.4,-89.21 172.49,-84.39" />
+</a>
+</g>
+<text text-anchor="middle" x="322.5" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">0 sent · 1 received</text>
+</g>
+
+<g id="mark-9072087f0a49a39c" class="node" data-record-id="LC_HANDLING" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Condition assessment">
+<title>n0</title>
+<g id="a_mark-9072087f0a49a39c"><a ns1:title="Condition assessment">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M154,-122C154,-122 20,-122 20,-122 14,-122 8,-116 8,-110 8,-110 8,-98 8,-98 8,-92 14,-86 20,-86 20,-86 154,-86 154,-86 160,-86 166,-92 166,-98 166,-98 166,-110 166,-110 166,-116 160,-122 154,-122" />
+<text text-anchor="middle" x="87" y="-100.3" font-family="Arial" font-size="14.00" fill="#263d69">Condition assessment</text>
+</a>
+</g>
+</g>
+
+<g id="mark-8ecb621bf92644e1" class="node" data-record-id="LC_COORD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reservation coordination">
+<title>n1</title>
+<g id="a_mark-8ecb621bf92644e1"><a ns1:title="Reservation coordination">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M162,-208C162,-208 12,-208 12,-208 6,-208 0,-202 0,-196 0,-196 0,-184 0,-184 0,-178 6,-172 12,-172 12,-172 162,-172 162,-172 168,-172 174,-178 174,-184 174,-184 174,-196 174,-196 174,-202 168,-208 162,-208" />
+<text text-anchor="middle" x="87" y="-186.3" font-family="Arial" font-size="14.00" fill="#263d69">Reservation coordination</text>
+</a>
+</g>
+</g>
+
+<g id="mark-81e7b8de473ef241" class="node" data-record-id="LC_CUSTODY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Custody handover">
+<title>n2</title>
+<g id="a_mark-81e7b8de473ef241"><a ns1:title="Custody handover">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M142,-36C142,-36 32,-36 32,-36 26,-36 20,-30 20,-24 20,-24 20,-12 20,-12 20,-6 26,0 32,0 32,0 142,0 142,0 148,0 154,-6 154,-12 154,-12 154,-24 154,-24 154,-30 148,-36 142,-36" />
+<text text-anchor="middle" x="87" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Custody handover</text>
+</a>
+</g>
+</g>
+
+<g id="mark-ece26841909177f8" class="node" data-record-id="LC_RECOVERY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Condition recovery">
+<title>n3</title>
+<g id="a_mark-ece26841909177f8"><a ns1:title="Condition recovery">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M303.5,-36C303.5,-36 190.5,-36 190.5,-36 184.5,-36 178.5,-30 178.5,-24 178.5,-24 178.5,-12 178.5,-12 178.5,-6 184.5,0 190.5,0 190.5,0 303.5,0 303.5,0 309.5,0 315.5,-6 315.5,-12 315.5,-12 315.5,-24 315.5,-24 315.5,-30 309.5,-36 303.5,-36" />
+<text text-anchor="middle" x="247" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Condition recovery</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

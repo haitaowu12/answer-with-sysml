@@ -1,0 +1,4 @@
+{
+  "version": 1,
+  "directedRelationships": ["flow", "item-flow", "transition", "control", "message", "succession", "TransitionUsage", "FlowUsage", "SuccessionFlowUsage", "SuccessionAsUsage"]
+}

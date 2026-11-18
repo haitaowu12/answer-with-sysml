@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="1361pt" height="325pt" viewBox="0.00 0.00 1360.58 325.08" role="img" aria-label="Which functions are assigned to this logical responsibility?" data-view-id="logical|allocation|LC_COORD" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 302.04)">
+<title>architecture</title>
+
+<g id="mark-43813e819cc93c33" class="edge" data-record-id="AL_F_REQUEST" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Capture the request responsibility">
+<title>n1-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M112.17,-236.97C218.47,-191.91 499,-73 499,-73 499,-73 921.83,-40.84 1114.89,-26.16" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1115.15,-28.6 1121.94,-25.62 1114.77,-23.71 1115.15,-28.6" />
+</g>
+
+<g id="mark-77347e05dbbb53c8" class="edge" data-record-id="AL_F_SELECT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Select an available identified candidate responsibility">
+<title>n2-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M281.26,-230.89C370.49,-182.1 570,-73 570,-73 570,-73 937.09,-41.98 1114.8,-26.96" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1115.05,-29.4 1121.82,-26.37 1114.64,-24.52 1115.05,-29.4" />
+</g>
+
+<g id="mark-330b77dda3d1836f" class="edge" data-record-id="AL_F_NO_CAND" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Dispose of an unfilled request responsibility">
+<title>n3-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M427.09,-230.83C449.13,-199.1 486,-146 486,-146 486,-146 658,-73 658,-73 658,-73 957.16,-43.68 1114.61,-28.25" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1115.27,-30.65 1122,-27.53 1114.79,-25.77 1115.27,-30.65" />
+</g>
+
+<g id="mark-1d6a15547af40b4c" class="edge" data-record-id="AL_F_PREP" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Establish the preparation case responsibility">
+<title>n4-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M557.94,-230.97C527.76,-214.05 492,-194 492,-194 492,-194 492,-146 492,-146 492,-146 820,-73 820,-73 820,-73 999.42,-48.09 1114.56,-32.11" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1115.1,-34.51 1121.7,-31.12 1114.43,-29.65 1115.1,-34.51" />
+</g>
+
+
+<g id="mark-c64090a80fb31178" class="edge" data-record-id="AL_F_ELIG" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Obtain the registry decision responsibility">
+<title>n5-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M660.99,-151.95C761.28,-124.36 948,-73 948,-73 948,-73 1043.98,-53.14 1119.53,-37.51" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1120.42,-39.83 1126.78,-36.01 1119.42,-35.03 1120.42,-39.83" />
+</g>
+
+<g id="mark-11ff66b2e536039c" class="edge" data-record-id="AL_F_ASSESS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Assess preparation contributions responsibility">
+<title>n6-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M849.64,-145.88C925.39,-117.48 1044,-73 1044,-73 1044,-73 1102.55,-53.84 1149.9,-38.34" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1150.9,-40.59 1156.79,-36.09 1149.38,-35.93 1150.9,-40.59" />
+</g>
+
+<g id="mark-65ddf52c2486f6a9" class="edge" data-record-id="AL_F_RESERVE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Prepare the ready reservation responsibility">
+<title>n7-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M1002.06,-151.84C1031.11,-124.22 1085,-73 1085,-73 1085,-73 1127.93,-54.31 1163.27,-38.92" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1164.33,-41.13 1169.77,-36.09 1162.37,-36.63 1164.33,-41.13" />
+</g>
+
+<g id="mark-5b10356ee0197d84" class="edge" data-record-id="AL_F_EXPIRY" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Resolve expiry, withdrawal or extension responsibility">
+<title>n8-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M1163.72,-145.97C1130.44,-129.05 1091,-109 1091,-109 1091,-109 1091,-73 1091,-73 1091,-73 1131.51,-54.46 1165.06,-39.11" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1166.32,-41.23 1171.66,-36.09 1164.28,-36.77 1166.32,-41.23" />
+</g>
+
+
+<g id="mark-4691c730f9eed94f" class="edge" data-record-id="AL_F_EXCEPTION" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Coordinate an unresolved case responsibility">
+<title>n9-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M1201.16,-72.81C1199.92,-63.92 1199.67,-52.91 1200.42,-43.17" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="1202.88,-43.25 1201.18,-36.03 1198,-42.73 1202.88,-43.25" />
+</g>
+
+
+<g id="mark-bde40ce5c4f14be9" class="node" data-record-id="LC_COORD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reservation coordination">
+<title>n0</title>
+<g id="a_mark-bde40ce5c4f14be9"><a ns1:title="Reservation coordination">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M1284,-36C1284,-36 1134,-36 1134,-36 1128,-36 1122,-30 1122,-24 1122,-24 1122,-12 1122,-12 1122,-6 1128,0 1134,0 1134,0 1284,0 1284,0 1290,0 1296,-6 1296,-12 1296,-12 1296,-24 1296,-24 1296,-30 1290,-36 1284,-36" />
+<text text-anchor="middle" x="1209" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Reservation coordination</text>
+</a>
+</g>
+</g>
+
+<g id="mark-e5f759a3b7f56c00" class="node" data-record-id="F_REQUEST" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Capture the request">
+<title>n1</title>
+<g id="a_mark-e5f759a3b7f56c00"><a ns1:title="Capture the request">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M132,-273C132,-273 12,-273 12,-273 6,-273 0,-267 0,-261 0,-261 0,-249 0,-249 0,-243 6,-237 12,-237 12,-237 132,-237 132,-237 138,-237 144,-243 144,-249 144,-249 144,-261 144,-261 144,-267 138,-273 132,-273" />
+<text text-anchor="middle" x="72" y="-251.3" font-family="Arial" font-size="14.00" fill="#153c3a">Capture the request</text>
+</a>
+</g>
+</g>
+
+<g id="mark-1048fefa2ecd7809" class="node" data-record-id="F_SELECT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Select an available identified candidate">
+<title>n2</title>
+<g id="a_mark-1048fefa2ecd7809"><a ns1:title="Select an available identified candidate">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M297.5,-279C297.5,-279 180.5,-279 180.5,-279 174.5,-279 168.5,-273 168.5,-267 168.5,-267 168.5,-243 168.5,-243 168.5,-237 174.5,-231 180.5,-231 180.5,-231 297.5,-231 297.5,-231 303.5,-231 309.5,-237 309.5,-243 309.5,-243 309.5,-267 309.5,-267 309.5,-273 303.5,-279 297.5,-279" />
+<text text-anchor="middle" x="239" y="-258.8" font-family="Arial" font-size="14.00" fill="#153c3a">Select an available</text>
+<text text-anchor="middle" x="239" y="-243.8" font-family="Arial" font-size="14.00" fill="#153c3a">identified candidate</text>
+</a>
+</g>
+</g>
+
+<g id="mark-3ee575fd96e75807" class="node" data-record-id="F_NO_CAND" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Dispose of an unfilled request">
+<title>n3</title>
+<g id="a_mark-3ee575fd96e75807"><a ns1:title="Dispose of an unfilled request">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M476,-279C476,-279 346,-279 346,-279 340,-279 334,-273 334,-267 334,-267 334,-243 334,-243 334,-237 340,-231 346,-231 346,-231 476,-231 476,-231 482,-231 488,-237 488,-243 488,-243 488,-267 488,-267 488,-273 482,-279 476,-279" />
+<text text-anchor="middle" x="411" y="-258.8" font-family="Arial" font-size="14.00" fill="#153c3a">Dispose of an unfilled</text>
+<text text-anchor="middle" x="411" y="-243.8" font-family="Arial" font-size="14.00" fill="#153c3a">request</text>
+</a>
+</g>
+</g>
+
+<g id="mark-c5a18091ae622013" class="node" data-record-id="F_PREP" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Establish the preparation case">
+<title>n4</title>
+<g id="a_mark-c5a18091ae622013"><a ns1:title="Establish the preparation case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M674,-279C674,-279 524,-279 524,-279 518,-279 512,-273 512,-267 512,-267 512,-243 512,-243 512,-237 518,-231 524,-231 524,-231 674,-231 674,-231 680,-231 686,-237 686,-243 686,-243 686,-267 686,-267 686,-273 680,-279 674,-279" />
+<text text-anchor="middle" x="599" y="-258.8" font-family="Arial" font-size="14.00" fill="#153c3a">Establish the preparation</text>
+<text text-anchor="middle" x="599" y="-243.8" font-family="Arial" font-size="14.00" fill="#153c3a">case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-ec9f19e376e61f13" class="node" data-record-id="F_ELIG" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Obtain the registry decision">
+<title>n5</title>
+<g id="a_mark-ec9f19e376e61f13"><a ns1:title="Obtain the registry decision">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M681.5,-188C681.5,-188 516.5,-188 516.5,-188 510.5,-188 504.5,-182 504.5,-176 504.5,-176 504.5,-164 504.5,-164 504.5,-158 510.5,-152 516.5,-152 516.5,-152 681.5,-152 681.5,-152 687.5,-152 693.5,-158 693.5,-164 693.5,-164 693.5,-176 693.5,-176 693.5,-182 687.5,-188 681.5,-188" />
+<text text-anchor="middle" x="599" y="-166.3" font-family="Arial" font-size="14.00" fill="#153c3a">Obtain the registry decision</text>
+</a>
+</g>
+</g>
+
+<g id="mark-75eab6137380b125" class="node" data-record-id="F_ASSESS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Assess preparation contributions">
+<title>n6</title>
+<g id="a_mark-75eab6137380b125"><a ns1:title="Assess preparation contributions">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M846,-194C846,-194 730,-194 730,-194 724,-194 718,-188 718,-182 718,-182 718,-158 718,-158 718,-152 724,-146 730,-146 730,-146 846,-146 846,-146 852,-146 858,-152 858,-158 858,-158 858,-182 858,-182 858,-188 852,-194 846,-194" />
+<text text-anchor="middle" x="788" y="-173.8" font-family="Arial" font-size="14.00" fill="#153c3a">Assess preparation</text>
+<text text-anchor="middle" x="788" y="-158.8" font-family="Arial" font-size="14.00" fill="#153c3a">contributions</text>
+</a>
+</g>
+</g>
+
+<g id="mark-bf4631ff5b98a16f" class="node" data-record-id="F_RESERVE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Prepare the ready reservation">
+<title>n7</title>
+<g id="a_mark-bf4631ff5b98a16f"><a ns1:title="Prepare the ready reservation">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1073.5,-188C1073.5,-188 894.5,-188 894.5,-188 888.5,-188 882.5,-182 882.5,-176 882.5,-176 882.5,-164 882.5,-164 882.5,-158 888.5,-152 894.5,-152 894.5,-152 1073.5,-152 1073.5,-152 1079.5,-152 1085.5,-158 1085.5,-164 1085.5,-164 1085.5,-176 1085.5,-176 1085.5,-182 1079.5,-188 1073.5,-188" />
+<text text-anchor="middle" x="984" y="-166.3" font-family="Arial" font-size="14.00" fill="#153c3a">Prepare the ready reservation</text>
+</a>
+</g>
+</g>
+
+<g id="mark-2c939bf05757a56c" class="node" data-record-id="F_EXPIRY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Resolve expiry, withdrawal or extension">
+<title>n8</title>
+<g id="a_mark-2c939bf05757a56c"><a ns1:title="Resolve expiry, withdrawal or extension">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1296.5,-194C1296.5,-194 1121.5,-194 1121.5,-194 1115.5,-194 1109.5,-188 1109.5,-182 1109.5,-182 1109.5,-158 1109.5,-158 1109.5,-152 1115.5,-146 1121.5,-146 1121.5,-146 1296.5,-146 1296.5,-146 1302.5,-146 1308.5,-152 1308.5,-158 1308.5,-158 1308.5,-182 1308.5,-182 1308.5,-188 1302.5,-194 1296.5,-194" />
+<text text-anchor="middle" x="1209" y="-173.8" font-family="Arial" font-size="14.00" fill="#153c3a">Resolve expiry, withdrawal or</text>
+<text text-anchor="middle" x="1209" y="-158.8" font-family="Arial" font-size="14.00" fill="#153c3a">extension</text>
+</a>
+</g>
+</g>
+
+<g id="mark-298873d86c81098a" class="node" data-record-id="F_EXCEPTION" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate an unresolved case">
+<title>n9</title>
+<g id="a_mark-298873d86c81098a"><a ns1:title="Coordinate an unresolved case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1302.5,-109C1302.5,-109 1115.5,-109 1115.5,-109 1109.5,-109 1103.5,-103 1103.5,-97 1103.5,-97 1103.5,-85 1103.5,-85 1103.5,-79 1109.5,-73 1115.5,-73 1115.5,-73 1302.5,-73 1302.5,-73 1308.5,-73 1314.5,-79 1314.5,-85 1314.5,-85 1314.5,-97 1314.5,-97 1314.5,-103 1308.5,-109 1302.5,-109" />
+<text text-anchor="middle" x="1209" y="-87.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate an unresolved case</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

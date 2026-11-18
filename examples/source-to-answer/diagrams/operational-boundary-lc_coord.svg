@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="624pt" height="204pt" viewBox="0.00 0.00 624.08 204.08" role="img" aria-label="What crosses this candidate service boundary, and who retains authority?" data-view-id="operational|boundary|LC_COORD" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 181.04)">
+<title>architecture</title>
+
+<g id="mark-e882c6a7bc2178a2" class="edge" data-record-id="CX_02" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Identified membership eligibility query">
+<title>n0-&gt;n2</title>
+<g id="a_mark-e882c6a7bc2178a2"><a ns1:title="Identified membership eligibility query">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M403.59,-27.67C296.18,-38.32 128,-55 128,-55 128,-55 122.2,-89.78 118.07,-114.59" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="115.64,-114.29 116.9,-121.6 120.47,-115.09 115.64,-114.29" />
+</a>
+</g>
+<text text-anchor="middle" x="181" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Identified membership</text>
+<text text-anchor="middle" x="181" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">eligibility query</text>
+</g>
+
+<g id="mark-f18fe0c746341bcb" class="edge" data-record-id="CX_01" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Request, period, category, wait-list/closure choice and withdrawal">
+<title>n1-&gt;n0</title>
+<g id="a_mark-f18fe0c746341bcb"><a ns1:title="Request, period, category, wait-list/closure choice and withdrawal">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M298.94,-124.88C271.77,-114.79 240,-103 240,-103 240,-103 240,-55 240,-55 240,-55 325.45,-42.74 396.64,-32.53" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="397.34,-34.91 403.92,-31.49 396.64,-30.06 397.34,-34.91" />
+</a>
+</g>
+<text text-anchor="middle" x="293" y="-94.6" font-family="Arial" font-size="10.50" fill="#40565e">Request, period,</text>
+<text text-anchor="middle" x="293" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">category, wait-</text>
+<text text-anchor="middle" x="293" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">list/closure choice and</text>
+<text text-anchor="middle" x="293" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">withdrawal</text>
+</g>
+
+<g id="mark-ff100e7328f10659" class="edge" data-record-id="CX_03" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Member-linked eligibility decision and decision identity">
+<title>n2-&gt;n0</title>
+<g id="a_mark-ff100e7328f10659"><a ns1:title="Member-linked eligibility decision and decision identity">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M60,-121.95C30.54,-112.64 0,-103 0,-103 0,-103 0,-55 0,-55 0,-55 254.04,-36.37 396.66,-25.92" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="396.98,-28.35 403.78,-25.39 396.62,-23.46 396.98,-28.35" />
+</a>
+</g>
+<text text-anchor="middle" x="57.5" y="-88.6" font-family="Arial" font-size="10.50" fill="#40565e">Member-linked eligibility</text>
+<text text-anchor="middle" x="57.5" y="-76.6" font-family="Arial" font-size="10.50" fill="#40565e">decision and decision</text>
+<text text-anchor="middle" x="57.5" y="-64.6" font-family="Arial" font-size="10.50" fill="#40565e">identity</text>
+</g>
+
+<g id="mark-9769b48f77fbaccd" class="edge" data-record-id="CX_10" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Exception, extension and reservation disposition">
+<title>n3-&gt;n0</title>
+<g id="a_mark-9769b48f77fbaccd"><a ns1:title="Exception, extension and reservation disposition">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M428.82,-122.9C391.81,-113.31 352,-103 352,-103 352,-103 352,-55 352,-55 352,-55 384.46,-46.59 418,-37.91" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="419,-40.18 425.16,-36.05 417.77,-35.43 419,-40.18" />
+</a>
+</g>
+<text text-anchor="middle" x="412" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Exception, extension and</text>
+<text text-anchor="middle" x="412" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">reservation disposition</text>
+</g>
+
+
+<g id="mark-17b9e46f333ff28b" class="node" data-record-id="LC_COORD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reservation coordination">
+<title>n0</title>
+<g id="a_mark-17b9e46f333ff28b"><a ns1:title="Reservation coordination">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M566,-36C566,-36 416,-36 416,-36 410,-36 404,-30 404,-24 404,-24 404,-12 404,-12 404,-6 410,0 416,0 416,0 566,0 566,0 572,0 578,-6 578,-12 578,-12 578,-24 578,-24 578,-30 572,-36 566,-36" />
+<text text-anchor="middle" x="491" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Reservation coordination</text>
+</a>
+</g>
+</g>
+
+<g id="mark-479a2143395bff35" class="node" data-record-id="A_MEMBER" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Member">
+<title>n1</title>
+<g id="a_mark-479a2143395bff35"><a ns1:title="Member">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M363,-158C363,-158 311,-158 311,-158 305,-158 299,-152 299,-146 299,-146 299,-134 299,-134 299,-128 305,-122 311,-122 311,-122 363,-122 363,-122 369,-122 375,-128 375,-134 375,-134 375,-146 375,-146 375,-152 369,-158 363,-158" />
+<text text-anchor="middle" x="337" y="-136.3" font-family="Arial" font-size="14.00" fill="#5c471c">Member</text>
+</a>
+</g>
+</g>
+
+<g id="mark-0748d5d1e5c935d8" class="node" data-record-id="A_REGISTRY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect External membership registry">
+<title>n2</title>
+<g id="a_mark-0748d5d1e5c935d8"><a ns1:title="External membership registry">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M203,-158C203,-158 25,-158 25,-158 19,-158 13,-152 13,-146 13,-146 13,-134 13,-134 13,-128 19,-122 25,-122 25,-122 203,-122 203,-122 209,-122 215,-128 215,-134 215,-134 215,-146 215,-146 215,-152 209,-158 203,-158" />
+<text text-anchor="middle" x="114" y="-136.3" font-family="Arial" font-size="14.00" fill="#5c471c">External membership registry</text>
+</a>
+</g>
+</g>
+
+<g id="mark-5d1843164c669844" class="node" data-record-id="A_COORD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Duty coordinator">
+<title>n3</title>
+<g id="a_mark-5d1843164c669844"><a ns1:title="Duty coordinator">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M541,-158C541,-158 441,-158 441,-158 435,-158 429,-152 429,-146 429,-146 429,-134 429,-134 429,-128 435,-122 441,-122 441,-122 541,-122 541,-122 547,-122 553,-128 553,-134 553,-134 553,-146 553,-146 553,-152 547,-158 541,-158" />
+<text text-anchor="middle" x="491" y="-136.3" font-family="Arial" font-size="14.00" fill="#5c471c">Duty coordinator</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

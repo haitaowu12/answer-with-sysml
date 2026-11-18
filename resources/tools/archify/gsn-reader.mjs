@@ -1,0 +1,28 @@
+// GSN core shapes in the adopted standalone reader; no domain meaning from SVG.
+import fs from 'node:fs';
+import { applyTemplate, renderCards } from './upstream/renderers/shared/utils.mjs';
+const [input,output]=process.argv.slice(2);
+const data=JSON.parse(fs.readFileSync(input,'utf8'));
+const safe=value=>JSON.stringify(value).replaceAll('<','\\u003c').replaceAll('>','\\u003e').replaceAll('&','\\u0026');
+const template=fs.readFileSync(new URL('./upstream/assets/template.html',import.meta.url),'utf8');
+const styles=`<style>
+:root{--gsn-goal:#123b46;--gsn-strategy:#33294f;--gsn-other:#233548;--gsn-stroke:#85a5b7}[data-theme="light"]{--gsn-goal:#e8f3f4;--gsn-strategy:#eeeafa;--gsn-other:#edf1f8;--gsn-stroke:#607e8e}
+
+.header{text-align:left!important;max-width:1240px;margin-inline:auto!important}.header h1{font-size:30px!important}.cards,.reader-rail,#focus-chip,#node-outline,#btn-semantic-lens,#btn-route-probe,#btn-diagram-guide{display:none!important}.gsn-key{display:flex;gap:12px 24px;flex-wrap:wrap;font:12px/1.6 system-ui;color:var(--text-muted);margin:12px 0 20px}.gsn-tools{display:flex;align-items:center;gap:16px;margin:18px 0}.gsn-tools a,.gsn-tools button{font:13px system-ui;border:1px solid var(--panel-border);border-radius:8px;background:var(--panel);color:var(--text);padding:9px 13px;text-decoration:none}.gsn-scope{font:13px/1.7 system-ui;color:var(--text-muted)}.gsn-details{position:fixed;right:24px;bottom:28px;z-index:40;background:var(--panel);border:1px solid var(--panel-border);border-radius:12px;box-shadow:0 10px 35px #0002;width:340px;max-height:65vh;overflow:auto;padding:22px;color:var(--text)}.gsn-details[hidden]{display:none}.gsn-details h2{font-size:18px;margin:8px 0 12px}.gsn-details p{font:14px/1.65 system-ui;overflow-wrap:anywhere}.gsn-details small{color:var(--text-muted)}.gsn-details button{float:right;border:0;background:none;color:var(--text);font-size:20px;cursor:pointer}svg [data-node-id]{cursor:pointer}svg [data-node-id]:focus{outline:none}svg [data-node-id]:focus>rect,svg [data-node-id]:focus>ellipse,svg [data-node-id]:focus>circle,svg [data-node-id]:focus>polygon{stroke-width:3}.diagram-container{margin-top:14px!important;min-height:0!important}.diagram-container>svg{max-height:640px!important;min-width:0!important;width:100%!important}
+@media(max-width:700px){.gsn-details{left:14px;right:14px;bottom:14px;width:auto}.header h1{font-size:25px!important}.gsn-tools{flex-wrap:wrap}.diagram-container>svg{min-width:0!important;width:100%!important}}
+</style>`;
+const controls=`<div class="gsn-tools"><a id="download-case" download="assurance-case.json">Download argument</a><button type="button" id="inspect-goal">Inspect top claim</button><span class="gsn-scope">${data.model.profile.includes('draft')?'Draft argument':'Argument for review'}${data.model.nodes.some(n=>n.type==='undeveloped_goal')?' · includes undeveloped claims':''}</span></div><div class="gsn-key" aria-label="Diagram key"><span>Solid arrowhead: supported by</span><span>Hollow arrowhead: in context of</span><span>Diamond below a claim: undeveloped argument</span><span>A: assumption · J: justification</span></div>`;
+// The header contains the subject and the small GSN key; licenses travel separately.
+let html=applyTemplate(template,{title:data.title,subtitle:'Claims, reasoning, context and evidence',svg:data.svg,cards:renderCards([]),locale:'en',visualPreset:'classic'});
+html=html.replace('</head>',styles+'</head>');
+const marker='<div class="diagram-container';
+const at=html.indexOf(marker);
+if(at<0)throw new Error('Reader template diagram container changed');
+html=html.slice(0,at)+controls+html.slice(at);
+const inspect=`<aside class="gsn-details" id="gsn-details" hidden aria-label="Argument element"><button id="close-details" aria-label="Close details">×</button><small id="element-kind"></small><h2 id="element-title"></h2><p id="element-statement"></p><p id="element-status"></p><p id="element-evidence"></p></aside><script type="application/json" id="gsn-model">${safe(data.model)}</script><script>
+(()=>{'use strict';const model=JSON.parse(document.getElementById('gsn-model').textContent);const nodes=new Map(model.nodes.map(n=>[n.id,n]));const $=id=>document.getElementById(id);let last;
+function show(id){const n=nodes.get(id);if(!n)return;last=id;$('element-kind').textContent=n.type==='undeveloped_goal'?'Goal · undeveloped':n.type.charAt(0).toUpperCase()+n.type.slice(1);$('element-title').textContent=n.title;$('element-statement').textContent=n.statement;$('element-status').textContent=n.status||'';const e=n.evidence;$('element-evidence').textContent=e?['Evidence reference: '+(e.label||''),e.path||'',e.locator||'',e.status||''].filter(Boolean).join(' · '):'';$('gsn-details').hidden=false;}
+document.addEventListener('click',e=>{const n=e.target.closest('[data-node-id]');if(n)show(n.dataset.nodeId);});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('gsn-details').hidden=true;const n=e.target.closest('[data-node-id]');if(n&&['Enter',' '].includes(e.key)){e.preventDefault();show(n.dataset.nodeId);}});$('close-details').onclick=()=>{$('gsn-details').hidden=true;window.Archify?.focus?.clear?.();$('inspect-goal').focus();};$('inspect-goal').onclick=()=>{const supported=new Set(model.edges.filter(e=>e.type==='supported_by').map(e=>e.target));show(model.nodes.find(n=>['goal','undeveloped_goal'].includes(n.type)&&!supported.has(n.id))?.id);};$('download-case').href='data:application/json;charset=utf-8,'+encodeURIComponent(JSON.stringify(model,null,2));})();
+</script>`;
+html=html.replace('</body>',inspect+'</body>');
+fs.writeFileSync(output,html);

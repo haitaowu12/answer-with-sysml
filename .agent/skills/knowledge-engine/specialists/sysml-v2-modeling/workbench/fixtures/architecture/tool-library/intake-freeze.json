@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "role": "forward-example-authored-input-freeze",
+  "sourceSha256": "d326d400b32abc34edc8eae059a497972f3a81c2eb2828d32a5c5dd380426328",
+  "architectureSha256": "20acb5545b74dac9e92c6a0b9695319a7c6f16e3461eb1f92cbe5e8e7b4af6bd",
+  "questionsSha256": "ad2d97a307dca079a2cf42503afd5c6fbbf0bb6ee06ad10194af0980761af145",
+  "withheldParentAcceptanceRead": false,
+  "boundary": "A fictional forward authoring exercise, not a practitioner trial or proof of all-domain capability."
+}

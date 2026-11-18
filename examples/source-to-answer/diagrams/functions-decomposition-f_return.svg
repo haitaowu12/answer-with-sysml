@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="1379pt" height="252pt" viewBox="0.00 0.00 1378.58 252.08" role="img" aria-label="Which smaller responsibilities compose this function?" data-view-id="functions|decomposition|F_RETURN" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 229.04)">
+<title>architecture</title>
+
+<g id="mark-b33bd46298cfc11b" class="edge" data-record-id="projection:functions|decomposition|F_RETURN:parent-F_RECEIVE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Recover the returned tool">
+<title>n0-&gt;n1</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M90.87,-169.91C89.27,-158.75 89.07,-144.06 90.28,-132.02" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="92.02,-132.22 90.88,-127.04 88.54,-131.79 92.02,-132.22" />
+</g>
+
+
+<g id="mark-87548100e973adc9" class="edge" data-record-id="projection:functions|decomposition|F_RETURN:parent-F_RETURN_ASSESS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Recover the returned tool">
+<title>n0-&gt;n2</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M142.22,-169.91C168.58,-159.61 202.62,-146.3 231.92,-134.85" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="232.56,-136.48 236.58,-133.03 231.29,-133.22 232.56,-136.48" />
+</g>
+
+<g id="mark-747f1e351aebf1d5" class="edge" data-record-id="projection:functions|decomposition|F_RETURN:parent-F_QUARANTINE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Recover the returned tool">
+<title>n0-&gt;n3</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M187.27,-170.06C270.26,-154.23 381.5,-133 381.5,-133 381.5,-133 389.52,-131.06 400.9,-128.3" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="401.52,-129.95 405.96,-127.08 400.69,-126.55 401.52,-129.95" />
+</g>
+
+<g id="mark-e277fe10f78de721" class="edge" data-record-id="projection:functions|decomposition|F_RETURN:parent-F_REPAIR_REQUEST" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Recover the returned tool">
+<title>n0-&gt;n4</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M187.19,-176.87C324.15,-161.24 571.5,-133 571.5,-133 571.5,-133 581.58,-130.93 595.7,-128.03" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="596.09,-129.74 600.63,-127.02 595.38,-126.31 596.09,-129.74" />
+</g>
+
+<g id="mark-9f86fcf3d469012b" class="edge" data-record-id="projection:functions|decomposition|F_RETURN:parent-F_REPAIR_REPORT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Recover the returned tool">
+<title>n0-&gt;n5</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M187.13,-180.13C374.86,-165.59 795.5,-133 795.5,-133 795.5,-133 795.5,-85 795.5,-85 795.5,-85 752.72,-62.08 720.04,-44.57" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="720.53,-42.85 715.3,-42.03 718.88,-45.94 720.53,-42.85" />
+</g>
+
+<g id="mark-adbbf2ad3d7130a5" class="edge" data-record-id="projection:functions|decomposition|F_RETURN:parent-F_REASSESS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Recover the returned tool">
+<title>n0-&gt;n6</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M187.01,-180.32C378.58,-165.88 814.5,-133 814.5,-133 814.5,-133 842.82,-78.39 859.18,-46.83" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="860.75,-47.6 861.5,-42.35 857.65,-45.99 860.75,-47.6" />
+</g>
+
+<g id="mark-abe27b6b02839bc7" class="edge" data-record-id="projection:functions|decomposition|F_RETURN:parent-F_RELEASE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Recover the returned tool">
+<title>n0-&gt;n7</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M187.24,-180.59C385.38,-166.29 846.5,-133 846.5,-133 846.5,-133 938.5,-82.56 996.76,-50.63" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="997.7,-52.11 1001.24,-48.17 996.01,-49.04 997.7,-52.11" />
+</g>
+
+<g id="mark-6631f1e959b51441" class="edge" data-record-id="projection:functions|decomposition|F_RETURN:parent-F_DISPOSITION" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Recover the returned tool">
+<title>n0-&gt;n8</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M187.22,-181.09C397.66,-167.08 909.5,-133 909.5,-133 909.5,-133 1086.1,-74.67 1179.74,-43.75" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="1180.49,-45.34 1184.69,-42.11 1179.39,-42.02 1180.49,-45.34" />
+</g>
+
+
+<g id="mark-e31706be722e80b0" class="node" data-record-id="F_RETURN" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Recover the returned tool">
+<title>n0</title>
+<g id="a_mark-e31706be722e80b0"><a ns1:title="Recover the returned tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M175,-206C175,-206 22,-206 22,-206 16,-206 10,-200 10,-194 10,-194 10,-182 10,-182 10,-176 16,-170 22,-170 22,-170 175,-170 175,-170 181,-170 187,-176 187,-182 187,-182 187,-194 187,-194 187,-200 181,-206 175,-206" />
+<text text-anchor="middle" x="98.5" y="-184.3" font-family="Arial" font-size="14.00" fill="#153c3a">Recover the returned tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-ed4eda45b22a9d52" class="node" data-record-id="F_RECEIVE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Confirm returned-tool receipt">
+<title>n1</title>
+<g id="a_mark-ed4eda45b22a9d52"><a ns1:title="Confirm returned-tool receipt">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M185,-127C185,-127 12,-127 12,-127 6,-127 0,-121 0,-115 0,-115 0,-103 0,-103 0,-97 6,-91 12,-91 12,-91 185,-91 185,-91 191,-91 197,-97 197,-103 197,-103 197,-115 197,-115 197,-121 191,-127 185,-127" />
+<text text-anchor="middle" x="98.5" y="-105.3" font-family="Arial" font-size="14.00" fill="#153c3a">Confirm returned-tool receipt</text>
+</a>
+</g>
+</g>
+
+<g id="mark-a903dee38f7500c0" class="node" data-record-id="F_RETURN_ASSESS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Assess returned-tool condition">
+<title>n2</title>
+<g id="a_mark-a903dee38f7500c0"><a ns1:title="Assess returned-tool condition">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M357.5,-133C357.5,-133 233.5,-133 233.5,-133 227.5,-133 221.5,-127 221.5,-121 221.5,-121 221.5,-97 221.5,-97 221.5,-91 227.5,-85 233.5,-85 233.5,-85 357.5,-85 357.5,-85 363.5,-85 369.5,-91 369.5,-97 369.5,-97 369.5,-121 369.5,-121 369.5,-127 363.5,-133 357.5,-133" />
+<text text-anchor="middle" x="295.5" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Assess returned-tool</text>
+<text text-anchor="middle" x="295.5" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">condition</text>
+</a>
+</g>
+</g>
+
+<g id="mark-7a6dc68ba3745e7b" class="node" data-record-id="F_QUARANTINE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Quarantine an unfit tool">
+<title>n3</title>
+<g id="a_mark-7a6dc68ba3745e7b"><a ns1:title="Quarantine an unfit tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M547.5,-127C547.5,-127 405.5,-127 405.5,-127 399.5,-127 393.5,-121 393.5,-115 393.5,-115 393.5,-103 393.5,-103 393.5,-97 399.5,-91 405.5,-91 405.5,-91 547.5,-91 547.5,-91 553.5,-91 559.5,-97 559.5,-103 559.5,-103 559.5,-115 559.5,-115 559.5,-121 553.5,-127 547.5,-127" />
+<text text-anchor="middle" x="476.5" y="-105.3" font-family="Arial" font-size="14.00" fill="#153c3a">Quarantine an unfit tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-170b458dd7cb8e73" class="node" data-record-id="F_REPAIR_REQUEST" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate the repair request">
+<title>n4</title>
+<g id="a_mark-170b458dd7cb8e73"><a ns1:title="Coordinate the repair request">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M771.5,-127C771.5,-127 595.5,-127 595.5,-127 589.5,-127 583.5,-121 583.5,-115 583.5,-115 583.5,-103 583.5,-103 583.5,-97 589.5,-91 595.5,-91 595.5,-91 771.5,-91 771.5,-91 777.5,-91 783.5,-97 783.5,-103 783.5,-103 783.5,-115 783.5,-115 783.5,-121 777.5,-127 771.5,-127" />
+<text text-anchor="middle" x="683.5" y="-105.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate the repair request</text>
+</a>
+</g>
+</g>
+
+<g id="mark-9fe806472a518133" class="node" data-record-id="F_REPAIR_REPORT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Receive the repair report">
+<title>n5</title>
+<g id="a_mark-9fe806472a518133"><a ns1:title="Receive the repair report">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M758,-42C758,-42 609,-42 609,-42 603,-42 597,-36 597,-30 597,-30 597,-18 597,-18 597,-12 603,-6 609,-6 609,-6 758,-6 758,-6 764,-6 770,-12 770,-18 770,-18 770,-30 770,-30 770,-36 764,-42 758,-42" />
+<text text-anchor="middle" x="683.5" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Receive the repair report</text>
+</a>
+</g>
+</g>
+
+<g id="mark-389d4e903e0f62ca" class="node" data-record-id="F_REASSESS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reassess after repair">
+<title>n6</title>
+<g id="a_mark-389d4e903e0f62ca"><a ns1:title="Reassess after repair">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M935,-42C935,-42 806,-42 806,-42 800,-42 794,-36 794,-30 794,-30 794,-18 794,-18 794,-12 800,-6 806,-6 806,-6 935,-6 935,-6 941,-6 947,-12 947,-18 947,-18 947,-30 947,-30 947,-36 941,-42 935,-42" />
+<text text-anchor="middle" x="870.5" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Reassess after repair</text>
+</a>
+</g>
+</g>
+
+<g id="mark-d8edf505731de28c" class="node" data-record-id="F_RELEASE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Release a fit tool for availability">
+<title>n7</title>
+<g id="a_mark-d8edf505731de28c"><a ns1:title="Release a fit tool for availability">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1104,-48C1104,-48 983,-48 983,-48 977,-48 971,-42 971,-36 971,-36 971,-12 971,-12 971,-6 977,0 983,0 983,0 1104,0 1104,0 1110,0 1116,-6 1116,-12 1116,-12 1116,-36 1116,-36 1116,-42 1110,-48 1104,-48" />
+<text text-anchor="middle" x="1043.5" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Release a fit tool for</text>
+<text text-anchor="middle" x="1043.5" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">availability</text>
+</a>
+</g>
+</g>
+
+<g id="mark-055dc8f5188fb569" class="node" data-record-id="F_DISPOSITION" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Decide rework or retirement">
+<title>n8</title>
+<g id="a_mark-055dc8f5188fb569"><a ns1:title="Decide rework or retirement">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1320.5,-42C1320.5,-42 1152.5,-42 1152.5,-42 1146.5,-42 1140.5,-36 1140.5,-30 1140.5,-30 1140.5,-18 1140.5,-18 1140.5,-12 1146.5,-6 1152.5,-6 1152.5,-6 1320.5,-6 1320.5,-6 1326.5,-6 1332.5,-12 1332.5,-18 1332.5,-18 1332.5,-30 1332.5,-30 1332.5,-36 1326.5,-42 1320.5,-42" />
+<text text-anchor="middle" x="1236.5" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Decide rework or retirement</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

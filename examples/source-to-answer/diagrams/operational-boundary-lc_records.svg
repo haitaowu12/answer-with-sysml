@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="275pt" height="192pt" viewBox="0.00 0.00 274.58 192.08" role="img" aria-label="What crosses this candidate service boundary, and who retains authority?" data-view-id="operational|boundary|LC_RECORDS" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 169.04)">
+<title>architecture</title>
+
+<g id="mark-c91f8f3f000a17d6" class="edge" data-record-id="CX_12" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Tool identity, custody, condition and reservation linkage">
+<title>n0-&gt;n1</title>
+<g id="a_mark-c91f8f3f000a17d6"><a ns1:title="Tool identity, custody, condition and reservation linkage">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M100.17,-36.16C103.78,-45.43 107.5,-55 107.5,-55 107.5,-55 107.5,-91 107.5,-91 107.5,-91 105.41,-96.38 102.84,-102.99" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="100.43,-102.43 100.17,-109.84 104.99,-104.21 100.43,-102.43" />
+</a>
+</g>
+<text text-anchor="middle" x="168" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Tool identity, custody,</text>
+<text text-anchor="middle" x="168" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">condition and reservation</text>
+<text text-anchor="middle" x="168" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">linkage</text>
+</g>
+
+
+<g id="mark-fe2b2791c495cd14" class="node" data-record-id="LC_RECORDS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Service state and inventory">
+<title>n0</title>
+<g id="a_mark-fe2b2791c495cd14"><a ns1:title="Service state and inventory">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M175,-36C175,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 175,0 175,0 181,0 187,-6 187,-12 187,-12 187,-24 187,-24 187,-30 181,-36 175,-36" />
+<text text-anchor="middle" x="93.5" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Service state and inventory</text>
+</a>
+</g>
+</g>
+
+<g id="mark-c50f4c08055490b7" class="node" data-record-id="A_STEWARD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Volunteer steward">
+<title>n1</title>
+<g id="a_mark-c50f4c08055490b7"><a ns1:title="Volunteer steward">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M148,-146C148,-146 39,-146 39,-146 33,-146 27,-140 27,-134 27,-134 27,-122 27,-122 27,-116 33,-110 39,-110 39,-110 148,-110 148,-110 154,-110 160,-116 160,-122 160,-122 160,-134 160,-134 160,-140 154,-146 148,-146" />
+<text text-anchor="middle" x="93.5" y="-124.3" font-family="Arial" font-size="14.00" fill="#5c471c">Volunteer steward</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

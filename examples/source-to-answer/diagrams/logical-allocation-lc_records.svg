@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="631pt" height="167pt" viewBox="0.00 0.00 631.08 167.08" role="img" aria-label="Which functions are assigned to this logical responsibility?" data-view-id="logical|allocation|LC_RECORDS" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 144.04)">
+<title>architecture</title>
+
+<g id="mark-b27f2a2fe6c915d0" class="edge" data-record-id="AL_F_HOLD" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Govern the confirmed hold interval responsibility">
+<title>n1-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M185.04,-75.73C192.65,-74.06 197.5,-73 197.5,-73 197.5,-73 306.49,-52.98 391.75,-37.32" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="392.44,-39.69 398.88,-36.01 391.55,-34.87 392.44,-39.69" />
+</g>
+
+<g id="mark-071043e9c3e1be6f" class="edge" data-record-id="AL_F_ONLOAN" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Record the tool on loan responsibility">
+<title>n2-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M335.89,-78.91C366.83,-67 408.19,-51.08 440.49,-38.64" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="441.59,-40.84 447.24,-36.04 439.82,-36.27 441.59,-40.84" />
+</g>
+
+<g id="mark-e6d92ece77fc2bd5" class="edge" data-record-id="AL_F_LEDGER" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Maintain custody, condition and availability state responsibility">
+<title>n3-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M483.17,-72.9C482.32,-63.67 482.28,-53.03 483.04,-43.65" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="485.5,-43.68 483.82,-36.45 480.63,-43.15 485.5,-43.68" />
+</g>
+
+
+<g id="mark-c5f921b46530bc94" class="node" data-record-id="LC_RECORDS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Service state and inventory">
+<title>n0</title>
+<g id="a_mark-c5f921b46530bc94"><a ns1:title="Service state and inventory">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M573,-36C573,-36 410,-36 410,-36 404,-36 398,-30 398,-24 398,-24 398,-12 398,-12 398,-6 404,0 410,0 410,0 573,0 573,0 579,0 585,-6 585,-12 585,-12 585,-24 585,-24 585,-30 579,-36 573,-36" />
+<text text-anchor="middle" x="491.5" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Service state and inventory</text>
+</a>
+</g>
+</g>
+
+<g id="mark-3c3de4721f5fd866" class="node" data-record-id="F_HOLD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Govern the confirmed hold interval">
+<title>n1</title>
+<g id="a_mark-3c3de4721f5fd866"><a ns1:title="Govern the confirmed hold interval">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M173,-121C173,-121 12,-121 12,-121 6,-121 0,-115 0,-109 0,-109 0,-85 0,-85 0,-79 6,-73 12,-73 12,-73 173,-73 173,-73 179,-73 185,-79 185,-85 185,-85 185,-109 185,-109 185,-115 179,-121 173,-121" />
+<text text-anchor="middle" x="92.5" y="-100.8" font-family="Arial" font-size="14.00" fill="#153c3a">Govern the confirmed hold</text>
+<text text-anchor="middle" x="92.5" y="-85.8" font-family="Arial" font-size="14.00" fill="#153c3a">interval</text>
+</a>
+</g>
+</g>
+
+<g id="mark-3b25c2038db4d47a" class="node" data-record-id="F_ONLOAN" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Record the tool on loan">
+<title>n2</title>
+<g id="a_mark-3b25c2038db4d47a"><a ns1:title="Record the tool on loan">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M361.5,-115C361.5,-115 221.5,-115 221.5,-115 215.5,-115 209.5,-109 209.5,-103 209.5,-103 209.5,-91 209.5,-91 209.5,-85 215.5,-79 221.5,-79 221.5,-79 361.5,-79 361.5,-79 367.5,-79 373.5,-85 373.5,-91 373.5,-91 373.5,-103 373.5,-103 373.5,-109 367.5,-115 361.5,-115" />
+<text text-anchor="middle" x="291.5" y="-93.3" font-family="Arial" font-size="14.00" fill="#153c3a">Record the tool on loan</text>
+</a>
+</g>
+</g>
+
+<g id="mark-6c488b0c7af99e09" class="node" data-record-id="F_LEDGER" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Maintain custody, condition and availability state">
+<title>n3</title>
+<g id="a_mark-6c488b0c7af99e09"><a ns1:title="Maintain custody, condition and availability state">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M573,-121C573,-121 410,-121 410,-121 404,-121 398,-115 398,-109 398,-109 398,-85 398,-85 398,-79 404,-73 410,-73 410,-73 573,-73 573,-73 579,-73 585,-79 585,-85 585,-85 585,-109 585,-109 585,-115 579,-121 573,-121" />
+<text text-anchor="middle" x="491.5" y="-100.8" font-family="Arial" font-size="14.00" fill="#153c3a">Maintain custody, condition</text>
+<text text-anchor="middle" x="491.5" y="-85.8" font-family="Arial" font-size="14.00" fill="#153c3a">and availability state</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

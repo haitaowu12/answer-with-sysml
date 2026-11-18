@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "authority": "OMG SysML 2.0 Part 1 formal/26-03-02, \u00a77.26, \u00a78.2.3 and \u00a79.2.20; local runtime support remains separately bounded",
+  "source": "../../models/10_SYSML_V2_LANGUAGE/Example_Codes_and_Syntax/sysml_library/Systems_Library/StandardViewDefinitions.sysml",
+  "boundary": "A mapping of view meaning to presentation. Not a declaration of full SysML graphical-notation or language conformance.",
+  "families": [
+    {
+      "sysml": "GeneralView",
+      "native": "architecture",
+      "match": "partial",
+      "renderer": "native-general-and-custom-typed",
+      "implemented": [
+        "context",
+        "requirement",
+        "verification",
+        "decomposition",
+        "viewpoints",
+        "use-cases",
+        "definition-usage",
+        "requirements",
+        "configuration",
+        "analysis"
+      ],
+      "preserve": [
+        "typed relation labels",
+        "assertion polarity",
+        "planned versus executed status",
+        "source identity"
+      ],
+      "limits": [
+        "Bounded source concern/case, direct definition/usage typing, requirements and variation/selection profiles. Not every specialization, multiplicity, nested requirement or configuration constraint is rendered."
+      ]
+    },
+    {
+      "sysml": "InterconnectionView",
+      "native": "architecture",
+      "match": "partial",
+      "renderer": "custom-ports-and-parameters",
+      "implemented": [
+        "connections",
+        "parameters"
+      ],
+      "preserve": [
+        "component occurrence",
+        "port identity",
+        "binary connection endpoints",
+        "bindings",
+        "explicit item flow direction"
+      ],
+      "limits": [
+        "Direct part.port binary interconnections; local calculation inputs/results, explicit values and selected Boolean constraints. Arbitrary solver execution and general nested port chains are unsupported."
+      ]
+    },
+    {
+      "sysml": "ActionFlowView",
+      "native": "workflow",
+      "match": "partial",
+      "renderer": "custom-action-regions",
+      "implemented": [
+        "action-flow"
+      ],
+      "preserve": [
+        "ownership",
+        "control versus item flow",
+        "guards",
+        "fork/join",
+        "parallelism",
+        "parameters"
+      ],
+      "limits": [
+        "Local actions, parameters, explicit control/item flows, fork/join and decision/merge nodes. General loops, performer lanes, nested call expansion and all send/accept semantics are not qualified. Unsupported subtypes fail closed."
+      ]
+    },
+    {
+      "sysml": "StateTransitionView",
+      "native": "lifecycle",
+      "match": "partial",
+      "renderer": "native-flat-states-and-custom-regions",
+      "implemented": [
+        "states",
+        "state-regions"
+      ],
+      "preserve": [
+        "all state and transition identities",
+        "trigger/guard/effect",
+        "unknowns",
+        "scope ownership"
+      ],
+      "limits": [
+        "Flat state summaries plus source-owned nested/concurrent states, declared entry, trigger/guard/effect and entry/do/exit inspection. Unknown concurrency or missing condition fields are refused. No inferred preferred state or outcome."
+      ]
+    },
+    {
+      "sysml": "SequenceView",
+      "native": "sequence",
+      "match": "partial",
+      "renderer": "custom-event-sequence",
+      "implemented": [
+        "scenarios"
+      ],
+      "preserve": [
+        "lifeline identity",
+        "event occurrence",
+        "message endpoints",
+        "explicit partial order"
+      ],
+      "limits": [
+        "Local feature lifelines, event occurrences, explicitly typed messages, self-messages and acyclic precedence. Nested interactions and arbitrary message payload semantics are not qualified. Vertical ranks are not elapsed time or a total order."
+      ]
+    },
+    {
+      "sysml": "GeometryView",
+      "native": null,
+      "match": "none",
+      "renderer": "custom-spatial",
+      "implemented": [
+        "geometry"
+      ],
+      "preserve": [
+        "shape",
+        "coordinate frame",
+        "units",
+        "spatial transform",
+        "quantity/color mapping"
+      ],
+      "limits": [
+        "Positive rectangular-cuboid dimensions with supported length units. Local isometric shape envelopes only; assembly frames, transforms, clearances, other solids and CAD operations are not implemented."
+      ]
+    },
+    {
+      "sysml": "GridView",
+      "native": null,
+      "match": "none",
+      "renderer": "custom-matrix-and-analysis",
+      "implemented": [
+        "interface-matrix",
+        "allocation",
+        "verification-coverage",
+        "time"
+      ],
+      "preserve": [
+        "row and column identity",
+        "directed versus undirected relationships",
+        "multiple relations per cell",
+        "source witnesses",
+        "bounded scope"
+      ],
+      "limits": [
+        "Exact typed relationship matrices, planned verification coverage, bounded scalar arithmetic for analysis cases and declared duration budgets. No executed verification result or measured timing is inferred."
+      ]
+    },
+    {
+      "sysml": "BrowserView",
+      "native": "tree",
+      "match": "partial",
+      "renderer": "custom-membership-browser",
+      "implemented": [
+        "membership"
+      ],
+      "preserve": [
+        "model membership",
+        "owned versus imported members",
+        "definition versus usage"
+      ],
+      "limits": [
+        "Indented searchable source-owned namespace membership, with definition/usage labels. Imported library members and occurrence feature expansion are deliberately outside this profile."
+      ]
+    }
+  ],
+  "additionalProjections": [
+    {
+      "concern": "Part occurrence decomposition",
+      "sysmlBasis": "GeneralView / InterconnectionView",
+      "native": "tree",
+      "renderer": "native-tree",
+      "implemented": true,
+      "limits": [
+        "Selected part occurrence/composition scope; not identical to model membership."
+      ]
+    },
+    {
+      "concern": "Explicit item exchanges",
+      "sysmlBasis": "InterconnectionView",
+      "native": "dataflow",
+      "renderer": "native-dataflow",
+      "implemented": true,
+      "limits": [
+        "Acyclic explicitly directed transfer graph, two to five presentation columns. Placement implies neither execution order nor measured timing."
+      ]
+    },
+    {
+      "concern": "Chronology or elapsed-time analysis",
+      "native": [
+        "timeline",
+        "waterfall"
+      ],
+      "implemented": true,
+      "limits": [
+        "Explicit configured duration/start features in supported units only. No measured or calendar history extraction."
+      ],
+      "renderer": "custom-declared-duration"
+    },
+    {
+      "concern": "Class and relational data structures",
+      "native": [
+        "class",
+        "erd"
+      ],
+      "implemented": false,
+      "limits": [
+        "UML class and database ER semantics are not substitutes for SysML definition/usage or feature typing."
+      ]
+    }
+  ],
+  "normativeSource": {
+    "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+    "document": "formal/26-03-02",
+    "reviewed": "2026-10-16"
+  },
+  "mbseCatalogue": "mbse-view-profiles.json"
+}

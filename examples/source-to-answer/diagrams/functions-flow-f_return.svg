@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="747pt" height="816pt" viewBox="0.00 0.00 746.58 816.08" role="img" aria-label="What does each function produce, consume and exchange across this slice?" data-view-id="functions|flow|F_RETURN" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 793.04)">
+<title>architecture</title>
+
+<g id="mark-f6c0585233ce06e0" class="edge" data-record-id="X_28" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Confirmed physical receipt and library custody">
+<title>n0-&gt;n1</title>
+<g id="a_mark-f6c0585233ce06e0"><a ns1:title="Confirmed physical receipt and library custody">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M384.91,-733.93C350.43,-715.3 294.77,-685.23 254.59,-663.52" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="255.6,-661.28 248.27,-660.11 253.27,-665.59 255.6,-661.28" />
+</a>
+</g>
+<text text-anchor="middle" x="393" y="-706.6" font-family="Arial" font-size="10.50" fill="#40565e">Confirmed physical</text>
+<text text-anchor="middle" x="393" y="-694.6" font-family="Arial" font-size="10.50" fill="#40565e">receipt and library</text>
+<text text-anchor="middle" x="393" y="-682.6" font-family="Arial" font-size="10.50" fill="#40565e">custody</text>
+</g>
+
+<g id="mark-f65aae938457a054" class="edge" data-record-id="X_29" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Awaiting-assessment state and custody">
+<title>n0-&gt;n9</title>
+<g id="a_mark-f65aae938457a054"><a ns1:title="Awaiting-assessment state and custody">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M440,-733.93C483.8,-702.13 573.5,-637 573.5,-637 573.5,-637 573.5,-637 573.5,-133 573.5,-133 479.5,-67 479.5,-67 479.5,-67 468.13,-60.18 454.55,-52.03" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="455.45,-49.71 448.19,-48.21 452.93,-53.91 455.45,-49.71" />
+</a>
+</g>
+<text text-anchor="middle" x="637" y="-388.6" font-family="Arial" font-size="10.50" fill="#40565e">Awaiting-assessment state</text>
+<text text-anchor="middle" x="637" y="-376.6" font-family="Arial" font-size="10.50" fill="#40565e">and custody</text>
+</g>
+
+<g id="mark-0938512201fc14ec" class="edge" data-record-id="X_31" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Unfit return inspection">
+<title>n1-&gt;n2</title>
+<g id="a_mark-0938512201fc14ec"><a ns1:title="Unfit return inspection">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M226.14,-611.92C243.15,-592.88 264.5,-569 264.5,-569 264.5,-569 287.11,-560.94 310.93,-552.45" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="311.89,-554.71 317.66,-550.05 310.25,-550.09 311.89,-554.71" />
+</a>
+</g>
+<text text-anchor="middle" x="317" y="-578.6" font-family="Arial" font-size="10.50" fill="#40565e">Unfit return inspection</text>
+</g>
+
+<g id="mark-f9dbfdeff959f72e" class="edge" data-record-id="X_30" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Fit return inspection">
+<title>n1-&gt;n6</title>
+<g id="a_mark-f9dbfdeff959f72e"><a ns1:title="Fit return inspection">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M165.79,-611.85C114.16,-581.76 30.5,-533 30.5,-533 30.5,-533 30.5,-533 30.5,-237 30.5,-237 47.85,-194.86 60.25,-164.75" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="62.57,-165.55 62.97,-158.15 58.04,-163.69 62.57,-165.55" />
+</a>
+</g>
+<text text-anchor="middle" x="78" y="-382.6" font-family="Arial" font-size="10.50" fill="#40565e">Fit return inspection</text>
+</g>
+
+<g id="mark-d54e6a3caa8d0c63" class="edge" data-record-id="X_32" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Quarantined tool and defect context">
+<title>n2-&gt;n3</title>
+<g id="a_mark-d54e6a3caa8d0c63"><a ns1:title="Quarantined tool and defect context">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M360.67,-513.84C356.37,-498.55 350.04,-476.02 345.24,-458.96" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="347.54,-458.09 343.29,-452.01 342.82,-459.42 347.54,-458.09" />
+</a>
+</g>
+<text text-anchor="middle" x="405" y="-486.6" font-family="Arial" font-size="10.50" fill="#40565e">Quarantined tool and</text>
+<text text-anchor="middle" x="405" y="-474.6" font-family="Arial" font-size="10.50" fill="#40565e">defect context</text>
+</g>
+
+<g id="mark-56a2d2a4f2ac2f16" class="edge" data-record-id="X_33" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Quarantine state">
+<title>n2-&gt;n9</title>
+<g id="a_mark-56a2d2a4f2ac2f16"><a ns1:title="Quarantine state">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M409.55,-513.95C433.59,-504.64 458.5,-495 458.5,-495 458.5,-495 475.5,-435 475.5,-435 475.5,-435 475.5,-435 475.5,-133 475.5,-133 458.5,-67 458.5,-67 458.5,-67 451.1,-60.66 442.05,-52.9" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="443.49,-50.91 436.58,-48.21 440.3,-54.63 443.49,-50.91" />
+</a>
+</g>
+<text text-anchor="middle" x="515.5" y="-284.6" font-family="Arial" font-size="10.50" fill="#40565e">Quarantine state</text>
+</g>
+
+<g id="mark-888c7f8ac99aaefd" class="edge" data-record-id="X_34" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Repair case and identified tool">
+<title>n3-&gt;n4</title>
+<g id="a_mark-888c7f8ac99aaefd"><a ns1:title="Repair case and identified tool">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M298.47,-415.84C276.83,-406.57 254.5,-397 254.5,-397 254.5,-397 245.32,-377.34 237.48,-360.53" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="239.63,-359.34 234.45,-354.03 235.19,-361.41 239.63,-359.34" />
+</a>
+</g>
+<text text-anchor="middle" x="294" y="-388.6" font-family="Arial" font-size="10.50" fill="#40565e">Repair case and</text>
+<text text-anchor="middle" x="294" y="-376.6" font-family="Arial" font-size="10.50" fill="#40565e">identified tool</text>
+</g>
+
+<g id="mark-64f9b7fd0a463e68" class="edge" data-record-id="X_35" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Completed work and remaining defects">
+<title>n4-&gt;n5</title>
+<g id="a_mark-64f9b7fd0a463e68"><a ns1:title="Completed work and remaining defects">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M225.07,-317.84C224.3,-308.57 223.5,-299 223.5,-299 223.5,-299 223.18,-280.03 222.91,-263.42" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="225.35,-262.99 222.78,-256.03 220.45,-263.07 225.35,-262.99" />
+</a>
+</g>
+<text text-anchor="middle" x="273" y="-290.6" font-family="Arial" font-size="10.50" fill="#40565e">Completed work and</text>
+<text text-anchor="middle" x="273" y="-278.6" font-family="Arial" font-size="10.50" fill="#40565e">remaining defects</text>
+</g>
+
+<g id="mark-5f9f7d64806111cc" class="edge" data-record-id="X_36" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Steward fit reassessment">
+<title>n5-&gt;n6</title>
+<g id="a_mark-5f9f7d64806111cc"><a ns1:title="Steward fit reassessment">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M161.87,-219.95C128.79,-210.64 94.5,-201 94.5,-201 94.5,-201 88.3,-182.39 82.48,-164.93" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="84.73,-163.95 80.19,-158.08 80.08,-165.5 84.73,-163.95" />
+</a>
+</g>
+<text text-anchor="middle" x="155" y="-186.6" font-family="Arial" font-size="10.50" fill="#40565e">Steward fit reassessment</text>
+</g>
+
+<g id="mark-c92247898941fabb" class="edge" data-record-id="X_37" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Remaining defects/unfit reassessment">
+<title>n5-&gt;n7</title>
+<g id="a_mark-c92247898941fabb"><a ns1:title="Remaining defects/unfit reassessment">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M222.02,-219.84C221.77,-210.57 221.5,-201 221.5,-201 221.5,-201 221.5,-177 221.5,-177 221.5,-177 254.87,-165.42 286.56,-154.42" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="287.48,-156.69 293.28,-152.08 285.87,-152.06 287.48,-156.69" />
+</a>
+</g>
+<text text-anchor="middle" x="277.5" y="-192.6" font-family="Arial" font-size="10.50" fill="#40565e">Remaining defects/unfit</text>
+<text text-anchor="middle" x="277.5" y="-180.6" font-family="Arial" font-size="10.50" fill="#40565e">reassessment</text>
+</g>
+
+<g id="mark-e7e8cf72929dc444" class="edge" data-record-id="X_40" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Authorised available status">
+<title>n6-&gt;n9</title>
+<g id="a_mark-e7e8cf72929dc444"><a ns1:title="Authorised available status">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M131.26,-109.92C179.7,-90.88 240.5,-67 240.5,-67 240.5,-67 273.14,-58.89 309.72,-49.8" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="310.39,-52.15 316.6,-48.09 309.21,-47.4 310.39,-52.15" />
+</a>
+</g>
+<text text-anchor="middle" x="289" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Authorised available</text>
+<text text-anchor="middle" x="289" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">status</text>
+</g>
+
+<g id="mark-7546df36c36aeff1" class="edge" data-record-id="X_38" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect New repair decision">
+<title>n7-&gt;n3</title>
+<g id="a_mark-7546df36c36aeff1"><a ns1:title="New repair decision">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M342.27,-152.36C341.59,-202.82 339.62,-349.64 338.83,-408.33" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="336.38,-408.66 338.73,-415.69 341.28,-408.72 336.38,-408.66" />
+</a>
+</g>
+<text text-anchor="middle" x="387.5" y="-284.6" font-family="Arial" font-size="10.50" fill="#40565e">New repair decision</text>
+</g>
+
+<g id="mark-ea509f9ea642e553" class="edge" data-record-id="X_39" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Retirement or retained-quarantine disposition">
+<title>n7-&gt;n9</title>
+<g id="a_mark-ea509f9ea642e553"><a ns1:title="Retirement or retained-quarantine disposition">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M343.03,-115.66C343.62,-96.1 344.5,-67 344.5,-67 344.5,-67 355.06,-60.18 367.67,-52.03" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="369.03,-54.07 373.58,-48.21 366.37,-49.95 369.03,-54.07" />
+</a>
+</g>
+<text text-anchor="middle" x="400.5" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Retirement or retained-</text>
+<text text-anchor="middle" x="400.5" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">quarantine disposition</text>
+</g>
+
+<g id="mark-85fd65aa16908759" class="edge" data-record-id="X_10" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Unfit candidate identity and inspection">
+<title>n8-&gt;n2</title>
+<g id="a_mark-85fd65aa16908759"><a ns1:title="Unfit candidate identity and inspection">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M386.37,-611.85C382.06,-595.54 376.29,-573.75 371.91,-557.21" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="374.16,-556.16 370,-550.02 369.43,-557.41 374.16,-556.16" />
+</a>
+</g>
+<text text-anchor="middle" x="435" y="-584.6" font-family="Arial" font-size="10.50" fill="#40565e">Unfit candidate identity</text>
+<text text-anchor="middle" x="435" y="-572.6" font-family="Arial" font-size="10.50" fill="#40565e">and inspection</text>
+</g>
+
+<g id="mark-11944fb4cb37f044" class="node" data-record-id="F_RECEIVE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Confirm returned-tool receipt">
+<title>n0</title>
+<g id="a_mark-11944fb4cb37f044"><a ns1:title="Confirm returned-tool receipt">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M503,-770C503,-770 330,-770 330,-770 324,-770 318,-764 318,-758 318,-758 318,-746 318,-746 318,-740 324,-734 330,-734 330,-734 503,-734 503,-734 509,-734 515,-740 515,-746 515,-746 515,-758 515,-758 515,-764 509,-770 503,-770" />
+<text text-anchor="middle" x="416.5" y="-748.3" font-family="Arial" font-size="14.00" fill="#153c3a">Confirm returned-tool receipt</text>
+</a>
+</g>
+</g>
+
+<g id="mark-ae11edf77ff760e4" class="node" data-record-id="F_RETURN_ASSESS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Assess returned-tool condition">
+<title>n1</title>
+<g id="a_mark-ae11edf77ff760e4"><a ns1:title="Assess returned-tool condition">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M267.5,-660C267.5,-660 143.5,-660 143.5,-660 137.5,-660 131.5,-654 131.5,-648 131.5,-648 131.5,-624 131.5,-624 131.5,-618 137.5,-612 143.5,-612 143.5,-612 267.5,-612 267.5,-612 273.5,-612 279.5,-618 279.5,-624 279.5,-624 279.5,-648 279.5,-648 279.5,-654 273.5,-660 267.5,-660" />
+<text text-anchor="middle" x="205.5" y="-639.8" font-family="Arial" font-size="14.00" fill="#153c3a">Assess returned-tool</text>
+<text text-anchor="middle" x="205.5" y="-624.8" font-family="Arial" font-size="14.00" fill="#153c3a">condition</text>
+</a>
+</g>
+</g>
+
+<g id="mark-2d5e645af877e808" class="node" data-record-id="F_QUARANTINE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Quarantine an unfit tool">
+<title>n2</title>
+<g id="a_mark-2d5e645af877e808"><a ns1:title="Quarantine an unfit tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M436.5,-550C436.5,-550 294.5,-550 294.5,-550 288.5,-550 282.5,-544 282.5,-538 282.5,-538 282.5,-526 282.5,-526 282.5,-520 288.5,-514 294.5,-514 294.5,-514 436.5,-514 436.5,-514 442.5,-514 448.5,-520 448.5,-526 448.5,-526 448.5,-538 448.5,-538 448.5,-544 442.5,-550 436.5,-550" />
+<text text-anchor="middle" x="365.5" y="-528.3" font-family="Arial" font-size="14.00" fill="#153c3a">Quarantine an unfit tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-2fb6c63728d9151e" class="node" data-record-id="F_REPAIR_REQUEST" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate the repair request">
+<title>n3</title>
+<g id="a_mark-2fb6c63728d9151e"><a ns1:title="Coordinate the repair request">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M426.5,-452C426.5,-452 250.5,-452 250.5,-452 244.5,-452 238.5,-446 238.5,-440 238.5,-440 238.5,-428 238.5,-428 238.5,-422 244.5,-416 250.5,-416 250.5,-416 426.5,-416 426.5,-416 432.5,-416 438.5,-422 438.5,-428 438.5,-428 438.5,-440 438.5,-440 438.5,-446 432.5,-452 426.5,-452" />
+<text text-anchor="middle" x="338.5" y="-430.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate the repair request</text>
+</a>
+</g>
+</g>
+
+<g id="mark-6a8f0846ce31b161" class="node" data-record-id="F_REPAIR_REPORT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Receive the repair report">
+<title>n4</title>
+<g id="a_mark-6a8f0846ce31b161"><a ns1:title="Receive the repair report">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M301,-354C301,-354 152,-354 152,-354 146,-354 140,-348 140,-342 140,-342 140,-330 140,-330 140,-324 146,-318 152,-318 152,-318 301,-318 301,-318 307,-318 313,-324 313,-330 313,-330 313,-342 313,-342 313,-348 307,-354 301,-354" />
+<text text-anchor="middle" x="226.5" y="-332.3" font-family="Arial" font-size="14.00" fill="#153c3a">Receive the repair report</text>
+</a>
+</g>
+</g>
+
+<g id="mark-03176622e98cd8a6" class="node" data-record-id="F_REASSESS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Reassess after repair">
+<title>n5</title>
+<g id="a_mark-03176622e98cd8a6"><a ns1:title="Reassess after repair">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M287,-256C287,-256 158,-256 158,-256 152,-256 146,-250 146,-244 146,-244 146,-232 146,-232 146,-226 152,-220 158,-220 158,-220 287,-220 287,-220 293,-220 299,-226 299,-232 299,-232 299,-244 299,-244 299,-250 293,-256 287,-256" />
+<text text-anchor="middle" x="222.5" y="-234.3" font-family="Arial" font-size="14.00" fill="#153c3a">Reassess after repair</text>
+</a>
+</g>
+</g>
+
+<g id="mark-eb8c8b8b70601365" class="node" data-record-id="F_RELEASE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Release a fit tool for availability">
+<title>n6</title>
+<g id="a_mark-eb8c8b8b70601365"><a ns1:title="Release a fit tool for availability">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M133,-158C133,-158 12,-158 12,-158 6,-158 0,-152 0,-146 0,-146 0,-122 0,-122 0,-116 6,-110 12,-110 12,-110 133,-110 133,-110 139,-110 145,-116 145,-122 145,-122 145,-146 145,-146 145,-152 139,-158 133,-158" />
+<text text-anchor="middle" x="72.5" y="-137.8" font-family="Arial" font-size="14.00" fill="#153c3a">Release a fit tool for</text>
+<text text-anchor="middle" x="72.5" y="-122.8" font-family="Arial" font-size="14.00" fill="#153c3a">availability</text>
+</a>
+</g>
+</g>
+
+<g id="mark-e35a5b89ef3f0e4e" class="node" data-record-id="F_DISPOSITION" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Decide rework or retirement">
+<title>n7</title>
+<g id="a_mark-e35a5b89ef3f0e4e"><a ns1:title="Decide rework or retirement">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M426.5,-152C426.5,-152 258.5,-152 258.5,-152 252.5,-152 246.5,-146 246.5,-140 246.5,-140 246.5,-128 246.5,-128 246.5,-122 252.5,-116 258.5,-116 258.5,-116 426.5,-116 426.5,-116 432.5,-116 438.5,-122 438.5,-128 438.5,-128 438.5,-140 438.5,-140 438.5,-146 432.5,-152 426.5,-152" />
+<text text-anchor="middle" x="342.5" y="-130.3" font-family="Arial" font-size="14.00" fill="#153c3a">Decide rework or retirement</text>
+</a>
+</g>
+</g>
+
+<g id="mark-828923de0d7c7ab3" class="node" data-record-id="F_ACQUIRE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Prepare an eligible and fit reservation">
+<title>n8</title>
+<g id="a_mark-828923de0d7c7ab3"><a ns1:title="Prepare an eligible and fit reservation">
+<path fill="#f6f6f3" stroke="#a8afa9" stroke-width="1.2" stroke-dasharray="5,2" d="M469.5,-660C469.5,-660 315.5,-660 315.5,-660 309.5,-660 303.5,-654 303.5,-648 303.5,-648 303.5,-624 303.5,-624 303.5,-618 309.5,-612 315.5,-612 315.5,-612 469.5,-612 469.5,-612 475.5,-612 481.5,-618 481.5,-624 481.5,-624 481.5,-648 481.5,-648 481.5,-654 475.5,-660 469.5,-660" />
+<text text-anchor="middle" x="392.5" y="-639.8" font-family="Arial" font-size="14.00" fill="#596660">Prepare an eligible and fit</text>
+<text text-anchor="middle" x="392.5" y="-624.8" font-family="Arial" font-size="14.00" fill="#596660">reservation</text>
+</a>
+</g>
+</g>
+
+<g id="mark-ccafdc7989da8888" class="node" data-record-id="F_SUPPORT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Keep service decisions and state accountable">
+<title>n9</title>
+<g id="a_mark-ccafdc7989da8888"><a ns1:title="Keep service decisions and state accountable">
+<path fill="#f6f6f3" stroke="#a8afa9" stroke-width="1.2" stroke-dasharray="5,2" d="M492,-48C492,-48 327,-48 327,-48 321,-48 315,-42 315,-36 315,-36 315,-12 315,-12 315,-6 321,0 327,0 327,0 492,0 492,0 498,0 504,-6 504,-12 504,-12 504,-36 504,-36 504,-42 498,-48 492,-48" />
+<text text-anchor="middle" x="409.5" y="-27.8" font-family="Arial" font-size="14.00" fill="#596660">Keep service decisions and</text>
+<text text-anchor="middle" x="409.5" y="-12.8" font-family="Arial" font-size="14.00" fill="#596660">state accountable</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

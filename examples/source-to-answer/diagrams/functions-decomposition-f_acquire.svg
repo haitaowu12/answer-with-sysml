@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="1351pt" height="264pt" viewBox="0.00 0.00 1350.58 264.08" role="img" aria-label="Which smaller responsibilities compose this function?" data-view-id="functions|decomposition|F_ACQUIRE" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 241.04)">
+<title>architecture</title>
+
+<g id="mark-9d511e161536fcb0" class="edge" data-record-id="projection:functions|decomposition|F_ACQUIRE:parent-F_REQUEST" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Prepare an eligible and fit reservation">
+<title>n0-&gt;n1</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M80.84,-169.88C79.7,-158.15 79.72,-143.96 80.91,-132.35" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="82.67,-132.38 81.54,-127.21 79.2,-131.96 82.67,-132.38" />
+</g>
+
+
+<g id="mark-7f55e5906bc53c28" class="edge" data-record-id="projection:functions|decomposition|F_ACQUIRE:parent-F_SELECT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Prepare an eligible and fit reservation">
+<title>n0-&gt;n2</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M135.52,-169.88C157.05,-159.18 182.7,-146.43 204.79,-135.45" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="205.74,-136.93 209.44,-133.14 204.18,-133.8 205.74,-136.93" />
+</g>
+
+<g id="mark-3fc2acb859fbd8a6" class="edge" data-record-id="projection:functions|decomposition|F_ACQUIRE:parent-F_NO_CAND" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Prepare an eligible and fit reservation">
+<title>n0-&gt;n3</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M178.19,-171.51C249.64,-154.29 338,-133 338,-133 338,-133 341,-132.23 345.89,-130.98" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="346.48,-132.64 350.89,-129.7 345.62,-129.25 346.48,-132.64" />
+</g>
+
+<g id="mark-7315b8a30436ef6f" class="edge" data-record-id="projection:functions|decomposition|F_ACQUIRE:parent-F_PREP" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Prepare an eligible and fit reservation">
+<title>n0-&gt;n4</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M178.2,-180.5C303.64,-162.91 517,-133 517,-133 517,-133 519.46,-132.43 523.62,-131.46" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="524.27,-133.11 528.75,-130.27 523.48,-129.7 524.27,-133.11" />
+</g>
+
+<g id="mark-3403d8ddd94a3cc3" class="edge" data-record-id="projection:functions|decomposition|F_ACQUIRE:parent-F_ELIG" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Prepare an eligible and fit reservation">
+<title>n0-&gt;n5</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M178.03,-184.47C350.85,-167.9 715,-133 715,-133 715,-133 715,-85 715,-85 715,-85 677.49,-62.27 648.65,-44.79" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="649.29,-43.13 644.1,-42.03 647.47,-46.12 649.29,-43.13" />
+</g>
+
+<g id="mark-f0c8ceb13f098198" class="edge" data-record-id="projection:functions|decomposition|F_ACQUIRE:parent-F_INSPECT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Prepare an eligible and fit reservation">
+<title>n0-&gt;n6</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M178.01,-184.72C354.95,-168.26 734,-133 734,-133 734,-133 779.89,-77.94 806.13,-46.44" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="807.68,-47.31 809.54,-42.35 804.99,-45.07 807.68,-47.31" />
+</g>
+
+<g id="mark-663864399df96836" class="edge" data-record-id="projection:functions|decomposition|F_ACQUIRE:parent-F_ASSESS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Prepare an eligible and fit reservation">
+<title>n0-&gt;n7</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M178.07,-185.19C363.31,-168.94 773,-133 773,-133 773,-133 883.02,-82.22 952.18,-50.3" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="953.28,-51.72 957.09,-48.04 951.81,-48.54 953.28,-51.72" />
+</g>
+
+<g id="mark-40cf7e7c1359c9a4" class="edge" data-record-id="projection:functions|decomposition|F_ACQUIRE:parent-F_RESERVE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Prepare an eligible and fit reservation">
+<title>n0-&gt;n8</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M178.2,-185.91C377.99,-170.03 844,-133 844,-133 844,-133 1038.66,-74.44 1141.3,-43.56" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="1141.83,-45.23 1146.12,-42.11 1140.82,-41.88 1141.83,-45.23" />
+</g>
+
+
+<g id="mark-f8dd38d4c42f9d6f" class="node" data-record-id="F_ACQUIRE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Prepare an eligible and fit reservation">
+<title>n0</title>
+<g id="a_mark-f8dd38d4c42f9d6f"><a ns1:title="Prepare an eligible and fit reservation">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M166,-218C166,-218 12,-218 12,-218 6,-218 0,-212 0,-206 0,-206 0,-182 0,-182 0,-176 6,-170 12,-170 12,-170 166,-170 166,-170 172,-170 178,-176 178,-182 178,-182 178,-206 178,-206 178,-212 172,-218 166,-218" />
+<text text-anchor="middle" x="89" y="-197.8" font-family="Arial" font-size="14.00" fill="#153c3a">Prepare an eligible and fit</text>
+<text text-anchor="middle" x="89" y="-182.8" font-family="Arial" font-size="14.00" fill="#153c3a">reservation</text>
+</a>
+</g>
+</g>
+
+<g id="mark-386c711384177ebf" class="node" data-record-id="F_REQUEST" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Capture the request">
+<title>n1</title>
+<g id="a_mark-386c711384177ebf"><a ns1:title="Capture the request">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M149,-127C149,-127 29,-127 29,-127 23,-127 17,-121 17,-115 17,-115 17,-103 17,-103 17,-97 23,-91 29,-91 29,-91 149,-91 149,-91 155,-91 161,-97 161,-103 161,-103 161,-115 161,-115 161,-121 155,-127 149,-127" />
+<text text-anchor="middle" x="89" y="-105.3" font-family="Arial" font-size="14.00" fill="#153c3a">Capture the request</text>
+</a>
+</g>
+</g>
+
+<g id="mark-7573bcf8a60e926c" class="node" data-record-id="F_SELECT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Select an available identified candidate">
+<title>n2</title>
+<g id="a_mark-7573bcf8a60e926c"><a ns1:title="Select an available identified candidate">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M314.5,-133C314.5,-133 197.5,-133 197.5,-133 191.5,-133 185.5,-127 185.5,-121 185.5,-121 185.5,-97 185.5,-97 185.5,-91 191.5,-85 197.5,-85 197.5,-85 314.5,-85 314.5,-85 320.5,-85 326.5,-91 326.5,-97 326.5,-97 326.5,-121 326.5,-121 326.5,-127 320.5,-133 314.5,-133" />
+<text text-anchor="middle" x="256" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Select an available</text>
+<text text-anchor="middle" x="256" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">identified candidate</text>
+</a>
+</g>
+</g>
+
+<g id="mark-0aa88b1af3315544" class="node" data-record-id="F_NO_CAND" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Dispose of an unfilled request">
+<title>n3</title>
+<g id="a_mark-0aa88b1af3315544"><a ns1:title="Dispose of an unfilled request">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M493,-133C493,-133 363,-133 363,-133 357,-133 351,-127 351,-121 351,-121 351,-97 351,-97 351,-91 357,-85 363,-85 363,-85 493,-85 493,-85 499,-85 505,-91 505,-97 505,-97 505,-121 505,-121 505,-127 499,-133 493,-133" />
+<text text-anchor="middle" x="428" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Dispose of an unfilled</text>
+<text text-anchor="middle" x="428" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">request</text>
+</a>
+</g>
+</g>
+
+<g id="mark-56e7714fac23c6de" class="node" data-record-id="F_PREP" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Establish the preparation case">
+<title>n4</title>
+<g id="a_mark-56e7714fac23c6de"><a ns1:title="Establish the preparation case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M691,-133C691,-133 541,-133 541,-133 535,-133 529,-127 529,-121 529,-121 529,-97 529,-97 529,-91 535,-85 541,-85 541,-85 691,-85 691,-85 697,-85 703,-91 703,-97 703,-97 703,-121 703,-121 703,-127 697,-133 691,-133" />
+<text text-anchor="middle" x="616" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Establish the preparation</text>
+<text text-anchor="middle" x="616" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-2dd8e1175281ead1" class="node" data-record-id="F_ELIG" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Obtain the registry decision">
+<title>n5</title>
+<g id="a_mark-2dd8e1175281ead1"><a ns1:title="Obtain the registry decision">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M698.5,-42C698.5,-42 533.5,-42 533.5,-42 527.5,-42 521.5,-36 521.5,-30 521.5,-30 521.5,-18 521.5,-18 521.5,-12 527.5,-6 533.5,-6 533.5,-6 698.5,-6 698.5,-6 704.5,-6 710.5,-12 710.5,-18 710.5,-18 710.5,-30 710.5,-30 710.5,-36 704.5,-42 698.5,-42" />
+<text text-anchor="middle" x="616" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Obtain the registry decision</text>
+</a>
+</g>
+</g>
+
+<g id="mark-0b326b5ac7218d33" class="node" data-record-id="F_INSPECT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Inspect the candidate tool">
+<title>n6</title>
+<g id="a_mark-0b326b5ac7218d33"><a ns1:title="Inspect the candidate tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M901,-42C901,-42 747,-42 747,-42 741,-42 735,-36 735,-30 735,-30 735,-18 735,-18 735,-12 741,-6 747,-6 747,-6 901,-6 901,-6 907,-6 913,-12 913,-18 913,-18 913,-30 913,-30 913,-36 907,-42 901,-42" />
+<text text-anchor="middle" x="824" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Inspect the candidate tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-7873f6bdbbd2cedf" class="node" data-record-id="F_ASSESS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Assess preparation contributions">
+<title>n7</title>
+<g id="a_mark-7873f6bdbbd2cedf"><a ns1:title="Assess preparation contributions">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1065,-48C1065,-48 949,-48 949,-48 943,-48 937,-42 937,-36 937,-36 937,-12 937,-12 937,-6 943,0 949,0 949,0 1065,0 1065,0 1071,0 1077,-6 1077,-12 1077,-12 1077,-36 1077,-36 1077,-42 1071,-48 1065,-48" />
+<text text-anchor="middle" x="1007" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Assess preparation</text>
+<text text-anchor="middle" x="1007" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">contributions</text>
+</a>
+</g>
+</g>
+
+<g id="mark-e9af461b2ff01400" class="node" data-record-id="F_RESERVE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Prepare the ready reservation">
+<title>n8</title>
+<g id="a_mark-e9af461b2ff01400"><a ns1:title="Prepare the ready reservation">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M1292.5,-42C1292.5,-42 1113.5,-42 1113.5,-42 1107.5,-42 1101.5,-36 1101.5,-30 1101.5,-30 1101.5,-18 1101.5,-18 1101.5,-12 1107.5,-6 1113.5,-6 1113.5,-6 1292.5,-6 1292.5,-6 1298.5,-6 1304.5,-12 1304.5,-18 1304.5,-18 1304.5,-30 1304.5,-30 1304.5,-36 1298.5,-42 1292.5,-42" />
+<text text-anchor="middle" x="1203" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Prepare the ready reservation</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,3569 @@
+{
+  "schemaVersion": 1,
+  "title": "Community tool library — connected architecture exercise",
+  "source": {
+    "id": "TL",
+    "title": "Fictional Community Tool Library ConOps",
+    "path": "source.md",
+    "sha256": "d326d400b32abc34edc8eae059a497972f3a81c2eb2828d32a5c5dd380426328"
+  },
+  "scope": {
+    "name": "Community tool lending service",
+    "boundary": "A sociotechnical service for reservation coordination, steward work, records, member communication and return-to-availability decisions. Membership eligibility remains the external registry decision; repair methods and provider decisions remain external. Logical components below are candidate responsibilities, not selected software or organisations.",
+    "included": [
+      "Requests, candidate selection and wait-list dispositions",
+      "Concurrent eligibility and condition contributions, including negative outcomes",
+      "Ready notice, confirmed delivery, hold interval and expiry/extension",
+      "Identified-tool custody transfer and return receipt",
+      "Condition assessment, quarantine, repair response, reassessment and release",
+      "Inventory/request state, source constraints, unresolved sizing and planned checks"
+    ],
+    "excluded": [
+      "Registry internals",
+      "Repair methods",
+      "Payment collection",
+      "Home transport",
+      "Tool procurement",
+      "Software, lockers, organisation structure and communications technology selection"
+    ],
+    "phase": "Concept operational and system analysis with candidate logical allocations",
+    "decision": "Agree authority, handover evidence, admission/release conditions and information responsibilities before selecting implementation.",
+    "requiredConcerns": [
+      "operational",
+      "system",
+      "logical",
+      "requirements",
+      "verification",
+      "states"
+    ],
+    "requiredScenarioKinds": [
+      "nominal",
+      "failure",
+      "recovery"
+    ]
+  },
+  "actors": [
+    {
+      "id": "A_MEMBER",
+      "label": "Member",
+      "description": "Requests and collects a tool; accepts loan terms and receipt.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-02",
+        "TL-06"
+      ]
+    },
+    {
+      "id": "A_STEWARD",
+      "label": "Volunteer steward",
+      "description": "Handles tools, confirms receipt and assesses condition.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-02",
+        "TL-07"
+      ]
+    },
+    {
+      "id": "A_COORD",
+      "label": "Duty coordinator",
+      "description": "Owns exceptions, extensions, repair requests and quarantine release decisions.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-02",
+        "TL-05",
+        "TL-07"
+      ]
+    },
+    {
+      "id": "A_REGISTRY",
+      "label": "External membership registry",
+      "description": "Sole authority for the membership eligibility decision.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-01",
+        "TL-02",
+        "TL-04"
+      ]
+    },
+    {
+      "id": "A_REPAIR",
+      "label": "External repair provider",
+      "description": "Reports completed work and remaining defects; cannot release tools for lending.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-02",
+        "TL-07"
+      ]
+    }
+  ],
+  "operationalActivities": [
+    {
+      "id": "OA_REQUEST",
+      "label": "Request and accept a tool loan",
+      "description": "Express the need, select wait-list/closure and accept a specific loan.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03",
+        "TL-06"
+      ],
+      "performer": "A_MEMBER"
+    },
+    {
+      "id": "OA_COORD",
+      "label": "Coordinate reservations and exceptions",
+      "description": "Select a candidate, keep unresolved cases accountable and govern reservation disposition.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03",
+        "TL-05"
+      ],
+      "performer": "A_COORD"
+    },
+    {
+      "id": "OA_ELIG",
+      "label": "Decide membership eligibility",
+      "description": "Return identified eligible, ineligible or unavailable decision.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-02",
+        "TL-04"
+      ],
+      "performer": "A_REGISTRY"
+    },
+    {
+      "id": "OA_CONDITION",
+      "label": "Assess identified-tool condition",
+      "description": "Inspect candidate, return or repaired tool and retain fit/unfit evidence.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-07"
+      ],
+      "performer": "A_STEWARD"
+    },
+    {
+      "id": "OA_CUSTODY",
+      "label": "Confirm tool handover and return",
+      "description": "Confirm matched collection, terms/receipt and physical returned-tool receipt.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06",
+        "TL-07"
+      ],
+      "performer": "A_STEWARD"
+    },
+    {
+      "id": "OA_REPAIR",
+      "label": "Report repair outcome",
+      "description": "Supply completed work and known remaining defects for reassessment.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-02",
+        "TL-07"
+      ],
+      "performer": "A_REPAIR"
+    },
+    {
+      "id": "OA_INFO",
+      "label": "Maintain accountable service information",
+      "description": "Make current request, inventory, custody and exception information available.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "performer": "A_COORD"
+    }
+  ],
+  "logicalComponents": [
+    {
+      "id": "LC_ROOT",
+      "label": "Tool lending service",
+      "description": "Candidate responsibility decomposition.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01",
+        "TL-08"
+      ]
+    },
+    {
+      "id": "LC_COORD",
+      "label": "Reservation coordination",
+      "description": "Own request, candidate and eligibility coordination without taking registry decision authority.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01",
+        "TL-08"
+      ],
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_HANDLING",
+      "label": "Condition assessment",
+      "description": "Own steward inspection evidence and matching of its identified tool.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01",
+        "TL-08"
+      ],
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_COMMS",
+      "label": "Member communication",
+      "description": "Own notice content, confirmation evidence and current-outcome communication.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01",
+        "TL-08"
+      ],
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_CUSTODY",
+      "label": "Custody handover",
+      "description": "Own matching, terms/receipt acceptance and ordered custody transfer.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01",
+        "TL-08"
+      ],
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_RECOVERY",
+      "label": "Condition recovery",
+      "description": "Own quarantine, external repair coordination and authorised release or retirement.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01",
+        "TL-08"
+      ],
+      "parent": "LC_ROOT"
+    },
+    {
+      "id": "LC_RECORDS",
+      "label": "Service state and inventory",
+      "description": "Own identified-tool state, custody linkage, hold timing and availability invariant.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01",
+        "TL-08"
+      ],
+      "parent": "LC_ROOT"
+    }
+  ],
+  "functions": [
+    {
+      "id": "F_ROOT",
+      "label": "Deliver a tool lending service",
+      "description": "Group functions by outcome, inputs and handover responsibility.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01"
+      ],
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_ACQUIRE",
+      "label": "Prepare an eligible and fit reservation",
+      "description": "Group functions by outcome, inputs and handover responsibility.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01"
+      ],
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ],
+      "parent": "F_ROOT"
+    },
+    {
+      "id": "F_LOAN",
+      "label": "Notify and transfer the reserved tool",
+      "description": "Group functions by outcome, inputs and handover responsibility.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01"
+      ],
+      "level": "system",
+      "realizes": [
+        "OA_CUSTODY"
+      ],
+      "parent": "F_ROOT"
+    },
+    {
+      "id": "F_RETURN",
+      "label": "Recover the returned tool",
+      "description": "Group functions by outcome, inputs and handover responsibility.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01"
+      ],
+      "level": "system",
+      "realizes": [
+        "OA_CONDITION"
+      ],
+      "parent": "F_ROOT"
+    },
+    {
+      "id": "F_SUPPORT",
+      "label": "Keep service decisions and state accountable",
+      "description": "Group functions by outcome, inputs and handover responsibility.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-01"
+      ],
+      "level": "system",
+      "realizes": [
+        "OA_INFO"
+      ],
+      "parent": "F_ROOT"
+    },
+    {
+      "id": "F_REQUEST",
+      "label": "Capture the request",
+      "description": "Retain member, category and desired collection period.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "parent": "F_ACQUIRE",
+      "level": "system",
+      "realizes": [
+        "OA_REQUEST"
+      ]
+    },
+    {
+      "id": "F_SELECT",
+      "label": "Select an available identified candidate",
+      "description": "Use the current inventory state; do not reserve inventory for a wait-list.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03",
+        "TL-08"
+      ],
+      "parent": "F_ACQUIRE",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_NO_CAND",
+      "label": "Dispose of an unfilled request",
+      "description": "Offer wait-list or closure at the member choice without a tool reservation.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "parent": "F_ACQUIRE",
+      "level": "system",
+      "realizes": [
+        "OA_REQUEST"
+      ]
+    },
+    {
+      "id": "F_PREP",
+      "label": "Establish the preparation case",
+      "description": "Retain the selected member/tool identifiers before the two independent preparation contributions.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "parent": "F_ACQUIRE",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_ELIG",
+      "label": "Obtain the registry decision",
+      "description": "Request and retain the external decision and identifiers; do not manufacture a positive decision.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-02",
+        "TL-04"
+      ],
+      "parent": "F_ACQUIRE",
+      "level": "system",
+      "realizes": [
+        "OA_ELIG"
+      ]
+    },
+    {
+      "id": "F_INSPECT",
+      "label": "Inspect the candidate tool",
+      "description": "Retain the steward fit/unfit finding for the selected identified tool.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "parent": "F_ACQUIRE",
+      "level": "system",
+      "realizes": [
+        "OA_CONDITION"
+      ]
+    },
+    {
+      "id": "F_ASSESS",
+      "label": "Assess preparation contributions",
+      "description": "Match member/tool evidence and distinguish eligible-and-fit, unavailable, ineligible and unfit cases.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "parent": "F_ACQUIRE",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_RESERVE",
+      "label": "Prepare the ready reservation",
+      "description": "Commit the eligible member/fit identified tool reservation; exclude that tool from available offers.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-08"
+      ],
+      "parent": "F_ACQUIRE",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_NOTICE",
+      "label": "Deliver the ready notice",
+      "description": "Provide tool, location and hold deadline; retain delivery outcome separately from queueing. Deadline/acknowledgement coordination needs agreement.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "parent": "F_LOAN",
+      "level": "system",
+      "realizes": [
+        "OA_INFO"
+      ]
+    },
+    {
+      "id": "F_CONFIRM",
+      "label": "Record confirmed notice delivery",
+      "description": "Retain actual confirmed delivery time; missing confirmation remains pending-notification.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "parent": "F_LOAN",
+      "level": "system",
+      "realizes": [
+        "OA_INFO"
+      ]
+    },
+    {
+      "id": "F_HOLD",
+      "label": "Govern the confirmed hold interval",
+      "description": "Bind the minimum hold to confirmed delivery time; withdrawal/new fault exceptions remain separate.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "parent": "F_LOAN",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_EXPIRY",
+      "label": "Resolve expiry, withdrawal or extension",
+      "description": "Coordinator returns a still-fit tool after expiry or records the extension reason; withdrawal is a separate release cause.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "parent": "F_LOAN",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_MATCH",
+      "label": "Match the collection case",
+      "description": "Steward checks member and allocated tool against the reservation.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "parent": "F_LOAN",
+      "level": "system",
+      "realizes": [
+        "OA_CUSTODY"
+      ]
+    },
+    {
+      "id": "F_ACCEPT",
+      "label": "Capture terms and identified-tool receipt acceptance",
+      "description": "Record member acceptance; presentation or readiness alone is insufficient.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "parent": "F_LOAN",
+      "level": "system",
+      "realizes": [
+        "OA_REQUEST"
+      ]
+    },
+    {
+      "id": "F_TRANSFER",
+      "label": "Record custody transfer to member",
+      "description": "Commit library-to-member custody only after matching and acceptance evidence.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "parent": "F_LOAN",
+      "level": "system",
+      "realizes": [
+        "OA_CUSTODY"
+      ]
+    },
+    {
+      "id": "F_ONLOAN",
+      "label": "Record the tool on loan",
+      "description": "Update on-loan state after the custody transfer record.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06",
+        "TL-08"
+      ],
+      "parent": "F_LOAN",
+      "level": "system",
+      "realizes": [
+        "OA_INFO"
+      ]
+    },
+    {
+      "id": "F_RECEIVE",
+      "label": "Confirm returned-tool receipt",
+      "description": "Steward receives the identified tool and records library custody; a member report alone is insufficient.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "parent": "F_RETURN",
+      "level": "system",
+      "realizes": [
+        "OA_CUSTODY"
+      ]
+    },
+    {
+      "id": "F_RETURN_ASSESS",
+      "label": "Assess returned-tool condition",
+      "description": "Keep received tool unavailable pending fit/unfit assessment.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "parent": "F_RETURN",
+      "level": "system",
+      "realizes": [
+        "OA_CONDITION"
+      ]
+    },
+    {
+      "id": "F_QUARANTINE",
+      "label": "Quarantine an unfit tool",
+      "description": "Retain identity, condition and unavailability.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-07"
+      ],
+      "parent": "F_RETURN",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_REPAIR_REQUEST",
+      "label": "Coordinate the repair request",
+      "description": "Coordinator decides whether to request external repair and retains tool/defect context.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "parent": "F_RETURN",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_REPAIR_REPORT",
+      "label": "Receive the repair report",
+      "description": "Retain completed work and remaining defects; the report grants no lending release.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-02",
+        "TL-07"
+      ],
+      "parent": "F_RETURN",
+      "level": "system",
+      "realizes": [
+        "OA_REPAIR"
+      ]
+    },
+    {
+      "id": "F_REASSESS",
+      "label": "Reassess after repair",
+      "description": "Steward reassesses the identified tool before any quarantine release.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "parent": "F_RETURN",
+      "level": "system",
+      "realizes": [
+        "OA_CONDITION"
+      ]
+    },
+    {
+      "id": "F_RELEASE",
+      "label": "Release a fit tool for availability",
+      "description": "Apply the accountable availability decision; quarantine release requires the steward fit finding and coordinator decision.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "parent": "F_RETURN",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_DISPOSITION",
+      "label": "Decide rework or retirement",
+      "description": "Coordinator retains quarantine for remaining defects and chooses a separate repair attempt or retirement.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "parent": "F_RETURN",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_EXCEPTION",
+      "label": "Coordinate an unresolved case",
+      "description": "Keep pending, refusal, contact, handover and condition exceptions with an accountable coordinator.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-05",
+        "TL-06",
+        "TL-07"
+      ],
+      "parent": "F_SUPPORT",
+      "level": "system",
+      "realizes": [
+        "OA_COORD"
+      ]
+    },
+    {
+      "id": "F_LEDGER",
+      "label": "Maintain custody, condition and availability state",
+      "description": "Maintain tool identity, custody, condition, reservation linkage and unresolved exceptions; prevent available offers in excluded states.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "parent": "F_SUPPORT",
+      "level": "system",
+      "realizes": [
+        "OA_INFO"
+      ]
+    },
+    {
+      "id": "F_STATUS",
+      "label": "Communicate the current request outcome",
+      "description": "Provide pending, ready, refused, extended or closed outcomes without implying loan or repair success.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07",
+        "TL-08"
+      ],
+      "parent": "F_SUPPORT",
+      "level": "system",
+      "realizes": [
+        "OA_INFO"
+      ]
+    }
+  ],
+  "allocations": [
+    {
+      "id": "AL_F_REQUEST",
+      "label": "Capture the request responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "function": "F_REQUEST",
+      "component": "LC_COORD",
+      "rationale": "Keep the capture the request evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_SELECT",
+      "label": "Select an available identified candidate responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03",
+        "TL-08"
+      ],
+      "function": "F_SELECT",
+      "component": "LC_COORD",
+      "rationale": "Keep the select an available identified candidate evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_NO_CAND",
+      "label": "Dispose of an unfilled request responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "function": "F_NO_CAND",
+      "component": "LC_COORD",
+      "rationale": "Keep the dispose of an unfilled request evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_PREP",
+      "label": "Establish the preparation case responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "function": "F_PREP",
+      "component": "LC_COORD",
+      "rationale": "Keep the establish the preparation case evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_ELIG",
+      "label": "Obtain the registry decision responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-02",
+        "TL-04"
+      ],
+      "function": "F_ELIG",
+      "component": "LC_COORD",
+      "rationale": "Keep the obtain the registry decision evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_INSPECT",
+      "label": "Inspect the candidate tool responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "function": "F_INSPECT",
+      "component": "LC_HANDLING",
+      "rationale": "Keep the inspect the candidate tool evidence and decision with the condition assessment responsibility."
+    },
+    {
+      "id": "AL_F_ASSESS",
+      "label": "Assess preparation contributions responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "function": "F_ASSESS",
+      "component": "LC_COORD",
+      "rationale": "Keep the assess preparation contributions evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_RESERVE",
+      "label": "Prepare the ready reservation responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-08"
+      ],
+      "function": "F_RESERVE",
+      "component": "LC_COORD",
+      "rationale": "Keep the prepare the ready reservation evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_NOTICE",
+      "label": "Deliver the ready notice responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "function": "F_NOTICE",
+      "component": "LC_COMMS",
+      "rationale": "Keep the deliver the ready notice evidence and decision with the member communication responsibility."
+    },
+    {
+      "id": "AL_F_CONFIRM",
+      "label": "Record confirmed notice delivery responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "function": "F_CONFIRM",
+      "component": "LC_COMMS",
+      "rationale": "Keep the record confirmed notice delivery evidence and decision with the member communication responsibility."
+    },
+    {
+      "id": "AL_F_HOLD",
+      "label": "Govern the confirmed hold interval responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "function": "F_HOLD",
+      "component": "LC_RECORDS",
+      "rationale": "Keep the govern the confirmed hold interval evidence and decision with the service state and inventory responsibility."
+    },
+    {
+      "id": "AL_F_EXPIRY",
+      "label": "Resolve expiry, withdrawal or extension responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "function": "F_EXPIRY",
+      "component": "LC_COORD",
+      "rationale": "Keep the resolve expiry, withdrawal or extension evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_MATCH",
+      "label": "Match the collection case responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "function": "F_MATCH",
+      "component": "LC_CUSTODY",
+      "rationale": "Keep the match the collection case evidence and decision with the custody handover responsibility."
+    },
+    {
+      "id": "AL_F_ACCEPT",
+      "label": "Capture terms and identified-tool receipt acceptance responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "function": "F_ACCEPT",
+      "component": "LC_CUSTODY",
+      "rationale": "Keep the capture terms and identified-tool receipt acceptance evidence and decision with the custody handover responsibility."
+    },
+    {
+      "id": "AL_F_TRANSFER",
+      "label": "Record custody transfer to member responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "function": "F_TRANSFER",
+      "component": "LC_CUSTODY",
+      "rationale": "Keep the record custody transfer to member evidence and decision with the custody handover responsibility."
+    },
+    {
+      "id": "AL_F_ONLOAN",
+      "label": "Record the tool on loan responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06",
+        "TL-08"
+      ],
+      "function": "F_ONLOAN",
+      "component": "LC_RECORDS",
+      "rationale": "Keep the record the tool on loan evidence and decision with the service state and inventory responsibility."
+    },
+    {
+      "id": "AL_F_RECEIVE",
+      "label": "Confirm returned-tool receipt responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "function": "F_RECEIVE",
+      "component": "LC_CUSTODY",
+      "rationale": "Keep the confirm returned-tool receipt evidence and decision with the custody handover responsibility."
+    },
+    {
+      "id": "AL_F_RETURN_ASSESS",
+      "label": "Assess returned-tool condition responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "function": "F_RETURN_ASSESS",
+      "component": "LC_HANDLING",
+      "rationale": "Keep the assess returned-tool condition evidence and decision with the condition assessment responsibility."
+    },
+    {
+      "id": "AL_F_QUARANTINE",
+      "label": "Quarantine an unfit tool responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-07"
+      ],
+      "function": "F_QUARANTINE",
+      "component": "LC_RECOVERY",
+      "rationale": "Keep the quarantine an unfit tool evidence and decision with the condition recovery responsibility."
+    },
+    {
+      "id": "AL_F_REPAIR_REQUEST",
+      "label": "Coordinate the repair request responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "function": "F_REPAIR_REQUEST",
+      "component": "LC_RECOVERY",
+      "rationale": "Keep the coordinate the repair request evidence and decision with the condition recovery responsibility."
+    },
+    {
+      "id": "AL_F_REPAIR_REPORT",
+      "label": "Receive the repair report responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-02",
+        "TL-07"
+      ],
+      "function": "F_REPAIR_REPORT",
+      "component": "LC_RECOVERY",
+      "rationale": "Keep the receive the repair report evidence and decision with the condition recovery responsibility."
+    },
+    {
+      "id": "AL_F_REASSESS",
+      "label": "Reassess after repair responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "function": "F_REASSESS",
+      "component": "LC_HANDLING",
+      "rationale": "Keep the reassess after repair evidence and decision with the condition assessment responsibility."
+    },
+    {
+      "id": "AL_F_RELEASE",
+      "label": "Release a fit tool for availability responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "function": "F_RELEASE",
+      "component": "LC_RECOVERY",
+      "rationale": "Keep the release a fit tool for availability evidence and decision with the condition recovery responsibility."
+    },
+    {
+      "id": "AL_F_DISPOSITION",
+      "label": "Decide rework or retirement responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "function": "F_DISPOSITION",
+      "component": "LC_RECOVERY",
+      "rationale": "Keep the decide rework or retirement evidence and decision with the condition recovery responsibility."
+    },
+    {
+      "id": "AL_F_EXCEPTION",
+      "label": "Coordinate an unresolved case responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-05",
+        "TL-06",
+        "TL-07"
+      ],
+      "function": "F_EXCEPTION",
+      "component": "LC_COORD",
+      "rationale": "Keep the coordinate an unresolved case evidence and decision with the reservation coordination responsibility."
+    },
+    {
+      "id": "AL_F_LEDGER",
+      "label": "Maintain custody, condition and availability state responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "function": "F_LEDGER",
+      "component": "LC_RECORDS",
+      "rationale": "Keep the maintain custody, condition and availability state evidence and decision with the service state and inventory responsibility."
+    },
+    {
+      "id": "AL_F_STATUS",
+      "label": "Communicate the current request outcome responsibility",
+      "description": "Candidate allocation; no implementation or organisation is selected.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07",
+        "TL-08"
+      ],
+      "function": "F_STATUS",
+      "component": "LC_COMMS",
+      "rationale": "Keep the communicate the current request outcome evidence and decision with the member communication responsibility."
+    }
+  ],
+  "exchanges": [
+    {
+      "id": "X_01",
+      "label": "Member, category and collection window",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "source": "F_REQUEST",
+      "target": "F_SELECT",
+      "item": "Member, category and collection window",
+      "condition": "Request received",
+      "kind": "data"
+    },
+    {
+      "id": "X_02",
+      "label": "Unfilled request",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "source": "F_SELECT",
+      "target": "F_NO_CAND",
+      "item": "Unfilled request",
+      "condition": "No available candidate",
+      "kind": "data"
+    },
+    {
+      "id": "X_03",
+      "label": "Selected tool and member identifiers",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "F_SELECT",
+      "target": "F_PREP",
+      "item": "Selected tool and member identifiers",
+      "condition": "Candidate is available",
+      "kind": "data"
+    },
+    {
+      "id": "X_04",
+      "label": "Identified membership decision request",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "F_PREP",
+      "target": "F_ELIG",
+      "item": "Identified membership decision request",
+      "condition": "Preparation case selected",
+      "kind": "data"
+    },
+    {
+      "id": "X_05",
+      "label": "Identified candidate inspection request",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "F_PREP",
+      "target": "F_INSPECT",
+      "item": "Identified candidate inspection request",
+      "condition": "Preparation case selected",
+      "kind": "data"
+    },
+    {
+      "id": "X_06",
+      "label": "Member-linked eligible/ineligible/unavailable decision",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "F_ELIG",
+      "target": "F_ASSESS",
+      "item": "Member-linked eligible/ineligible/unavailable decision",
+      "condition": "Registry contribution received",
+      "kind": "data"
+    },
+    {
+      "id": "X_07",
+      "label": "Tool-linked fit/unfit inspection",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "F_INSPECT",
+      "target": "F_ASSESS",
+      "item": "Tool-linked fit/unfit inspection",
+      "condition": "Steward contribution received",
+      "kind": "data"
+    },
+    {
+      "id": "X_08",
+      "label": "Matched eligible member and fit tool evidence",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "F_ASSESS",
+      "target": "F_RESERVE",
+      "item": "Matched eligible member and fit tool evidence",
+      "condition": "Both admission contributions permit readiness",
+      "kind": "data"
+    },
+    {
+      "id": "X_09",
+      "label": "Unavailable or ineligible membership case",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "F_ASSESS",
+      "target": "F_EXCEPTION",
+      "item": "Unavailable or ineligible membership case",
+      "condition": "Admission unresolved or denied",
+      "kind": "data"
+    },
+    {
+      "id": "X_10",
+      "label": "Unfit candidate identity and inspection",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "F_ASSESS",
+      "target": "F_QUARANTINE",
+      "item": "Unfit candidate identity and inspection",
+      "condition": "Candidate unfit",
+      "kind": "data"
+    },
+    {
+      "id": "X_11",
+      "label": "Member-selected wait-list or closure",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "source": "F_NO_CAND",
+      "target": "F_STATUS",
+      "item": "Member-selected wait-list or closure",
+      "condition": "No reservation created",
+      "kind": "data"
+    },
+    {
+      "id": "X_12",
+      "label": "Ready tool, location and deadline information",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "F_RESERVE",
+      "target": "F_NOTICE",
+      "item": "Ready tool, location and deadline information",
+      "condition": "Ready reservation prepared",
+      "kind": "data"
+    },
+    {
+      "id": "X_13",
+      "label": "Identified tool reservation linkage",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "source": "F_RESERVE",
+      "target": "F_LEDGER",
+      "item": "Identified tool reservation linkage",
+      "condition": "Ready reservation committed",
+      "kind": "data"
+    },
+    {
+      "id": "X_14",
+      "label": "Notice delivery outcome",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "F_NOTICE",
+      "target": "F_CONFIRM",
+      "item": "Notice delivery outcome",
+      "condition": "Delivery evidence supplied or missing",
+      "kind": "data"
+    },
+    {
+      "id": "X_15",
+      "label": "Confirmed delivery time and reservation identity",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "F_CONFIRM",
+      "target": "F_HOLD",
+      "item": "Confirmed delivery time and reservation identity",
+      "condition": "Actual delivery confirmed",
+      "kind": "data"
+    },
+    {
+      "id": "X_16",
+      "label": "Missing delivery confirmation",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "F_CONFIRM",
+      "target": "F_EXCEPTION",
+      "item": "Missing delivery confirmation",
+      "condition": "No confirmation evidence",
+      "kind": "data"
+    },
+    {
+      "id": "X_17",
+      "label": "Effective hold deadline or extension information",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "F_HOLD",
+      "target": "F_NOTICE",
+      "item": "Effective hold deadline or extension information",
+      "condition": "Deadline communication needs reconciliation",
+      "kind": "data"
+    },
+    {
+      "id": "X_18",
+      "label": "Current ready reservation",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "source": "F_HOLD",
+      "target": "F_MATCH",
+      "item": "Current ready reservation",
+      "condition": "Member presents for collection",
+      "kind": "data"
+    },
+    {
+      "id": "X_19",
+      "label": "Deadline and collection/withdrawal state",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "F_HOLD",
+      "target": "F_EXPIRY",
+      "item": "Deadline and collection/withdrawal state",
+      "condition": "Deadline passed or withdrawal received",
+      "kind": "data"
+    },
+    {
+      "id": "X_20",
+      "label": "Still-fit release or reasoned extension disposition",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "F_EXPIRY",
+      "target": "F_LEDGER",
+      "item": "Still-fit release or reasoned extension disposition",
+      "condition": "Coordinator decides",
+      "kind": "data"
+    },
+    {
+      "id": "X_21",
+      "label": "Extended or closed request outcome",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "source": "F_EXPIRY",
+      "target": "F_STATUS",
+      "item": "Extended or closed request outcome",
+      "condition": "Disposition recorded",
+      "kind": "data"
+    },
+    {
+      "id": "X_22",
+      "label": "Matched member and identified tool",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "source": "F_MATCH",
+      "target": "F_ACCEPT",
+      "item": "Matched member and identified tool",
+      "condition": "Identity and reservation match",
+      "kind": "data"
+    },
+    {
+      "id": "X_23",
+      "label": "Unresolved identity or tool mismatch",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "source": "F_MATCH",
+      "target": "F_EXCEPTION",
+      "item": "Unresolved identity or tool mismatch",
+      "condition": "Matching incomplete",
+      "kind": "data"
+    },
+    {
+      "id": "X_24",
+      "label": "Accepted terms and identified-tool receipt",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "source": "F_ACCEPT",
+      "target": "F_TRANSFER",
+      "item": "Accepted terms and identified-tool receipt",
+      "condition": "Both acceptance obligations recorded",
+      "kind": "data"
+    },
+    {
+      "id": "X_25",
+      "label": "Unresolved acceptance",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "source": "F_ACCEPT",
+      "target": "F_EXCEPTION",
+      "item": "Unresolved acceptance",
+      "condition": "Acceptance incomplete",
+      "kind": "data"
+    },
+    {
+      "id": "X_26",
+      "label": "Recorded library-to-member custody transfer",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "source": "F_TRANSFER",
+      "target": "F_ONLOAN",
+      "item": "Recorded library-to-member custody transfer",
+      "condition": "Custody record exists",
+      "kind": "data"
+    },
+    {
+      "id": "X_27",
+      "label": "On-loan state and custody link",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "source": "F_ONLOAN",
+      "target": "F_LEDGER",
+      "item": "On-loan state and custody link",
+      "condition": "After transfer record",
+      "kind": "data"
+    },
+    {
+      "id": "X_28",
+      "label": "Confirmed physical receipt and library custody",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_RECEIVE",
+      "target": "F_RETURN_ASSESS",
+      "item": "Confirmed physical receipt and library custody",
+      "condition": "Identified tool received",
+      "kind": "data"
+    },
+    {
+      "id": "X_29",
+      "label": "Awaiting-assessment state and custody",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_RECEIVE",
+      "target": "F_LEDGER",
+      "item": "Awaiting-assessment state and custody",
+      "condition": "Receipt confirmed",
+      "kind": "data"
+    },
+    {
+      "id": "X_30",
+      "label": "Fit return inspection",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_RETURN_ASSESS",
+      "target": "F_RELEASE",
+      "item": "Fit return inspection",
+      "condition": "Tool assessed fit",
+      "kind": "data"
+    },
+    {
+      "id": "X_31",
+      "label": "Unfit return inspection",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_RETURN_ASSESS",
+      "target": "F_QUARANTINE",
+      "item": "Unfit return inspection",
+      "condition": "Tool assessed unfit",
+      "kind": "data"
+    },
+    {
+      "id": "X_32",
+      "label": "Quarantined tool and defect context",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_QUARANTINE",
+      "target": "F_REPAIR_REQUEST",
+      "item": "Quarantined tool and defect context",
+      "condition": "Coordinator considers repair",
+      "kind": "data"
+    },
+    {
+      "id": "X_33",
+      "label": "Quarantine state",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "source": "F_QUARANTINE",
+      "target": "F_LEDGER",
+      "item": "Quarantine state",
+      "condition": "Unfit condition retained",
+      "kind": "data"
+    },
+    {
+      "id": "X_34",
+      "label": "Repair case and identified tool",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_REPAIR_REQUEST",
+      "target": "F_REPAIR_REPORT",
+      "item": "Repair case and identified tool",
+      "condition": "External repair requested",
+      "kind": "data"
+    },
+    {
+      "id": "X_35",
+      "label": "Completed work and remaining defects",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_REPAIR_REPORT",
+      "target": "F_REASSESS",
+      "item": "Completed work and remaining defects",
+      "condition": "Provider report received",
+      "kind": "data"
+    },
+    {
+      "id": "X_36",
+      "label": "Steward fit reassessment",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_REASSESS",
+      "target": "F_RELEASE",
+      "item": "Steward fit reassessment",
+      "condition": "Tool reassessed fit",
+      "kind": "data"
+    },
+    {
+      "id": "X_37",
+      "label": "Remaining defects/unfit reassessment",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_REASSESS",
+      "target": "F_DISPOSITION",
+      "item": "Remaining defects/unfit reassessment",
+      "condition": "Quarantine retained",
+      "kind": "data"
+    },
+    {
+      "id": "X_38",
+      "label": "New repair decision",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_DISPOSITION",
+      "target": "F_REPAIR_REQUEST",
+      "item": "New repair decision",
+      "condition": "Coordinator requests another attempt",
+      "kind": "data"
+    },
+    {
+      "id": "X_39",
+      "label": "Retirement or retained-quarantine disposition",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_DISPOSITION",
+      "target": "F_LEDGER",
+      "item": "Retirement or retained-quarantine disposition",
+      "condition": "Coordinator decides",
+      "kind": "data"
+    },
+    {
+      "id": "X_40",
+      "label": "Authorised available status",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "F_RELEASE",
+      "target": "F_LEDGER",
+      "item": "Authorised available status",
+      "condition": "Required condition/release evidence present",
+      "kind": "data"
+    },
+    {
+      "id": "X_41",
+      "label": "Available inventory identities",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "source": "F_LEDGER",
+      "target": "F_SELECT",
+      "item": "Available inventory identities",
+      "condition": "Tool not reserved/on-loan/awaiting assessment/quarantined",
+      "kind": "data"
+    },
+    {
+      "id": "X_42",
+      "label": "Current inventory, reservation and exception state",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "source": "F_LEDGER",
+      "target": "F_STATUS",
+      "item": "Current inventory, reservation and exception state",
+      "condition": "Current outcome needed",
+      "kind": "data"
+    },
+    {
+      "id": "X_43",
+      "label": "Accountable pending/refused/closed outcome",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "source": "F_EXCEPTION",
+      "target": "F_STATUS",
+      "item": "Accountable pending/refused/closed outcome",
+      "condition": "Exception disposition known",
+      "kind": "data"
+    },
+    {
+      "id": "X_44",
+      "label": "Unresolved exception and retained state",
+      "description": "Potential transfer with the stated applicability; temporal behavior is modeled separately.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "source": "F_EXCEPTION",
+      "target": "F_LEDGER",
+      "item": "Unresolved exception and retained state",
+      "condition": "Exception persists",
+      "kind": "data"
+    }
+  ],
+  "contextExchanges": [
+    {
+      "id": "CX_01",
+      "label": "Request, period, category, wait-list/closure choice and withdrawal",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "source": "A_MEMBER",
+      "target": "LC_COORD",
+      "item": "Request, period, category, wait-list/closure choice and withdrawal",
+      "kind": "data"
+    },
+    {
+      "id": "CX_02",
+      "label": "Identified membership eligibility query",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "LC_COORD",
+      "target": "A_REGISTRY",
+      "item": "Identified membership eligibility query",
+      "kind": "data"
+    },
+    {
+      "id": "CX_03",
+      "label": "Member-linked eligibility decision and decision identity",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "A_REGISTRY",
+      "target": "LC_COORD",
+      "item": "Member-linked eligibility decision and decision identity",
+      "kind": "data"
+    },
+    {
+      "id": "CX_04",
+      "label": "Ready tool, location, deadline and current request outcome",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "LC_COMMS",
+      "target": "A_MEMBER",
+      "item": "Ready tool, location, deadline and current request outcome",
+      "kind": "data"
+    },
+    {
+      "id": "CX_05",
+      "label": "Loan terms and identified-tool receipt acceptance",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "source": "A_MEMBER",
+      "target": "LC_CUSTODY",
+      "item": "Loan terms and identified-tool receipt acceptance",
+      "kind": "data"
+    },
+    {
+      "id": "CX_06",
+      "label": "Tool-linked condition findings and inspections",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "source": "A_STEWARD",
+      "target": "LC_HANDLING",
+      "item": "Tool-linked condition findings and inspections",
+      "kind": "data"
+    },
+    {
+      "id": "CX_07",
+      "label": "Matching and physical returned-tool receipt evidence",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "A_STEWARD",
+      "target": "LC_CUSTODY",
+      "item": "Matching and physical returned-tool receipt evidence",
+      "kind": "data"
+    },
+    {
+      "id": "CX_08",
+      "label": "Identified-tool repair request and defects",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "LC_RECOVERY",
+      "target": "A_REPAIR",
+      "item": "Identified-tool repair request and defects",
+      "kind": "data"
+    },
+    {
+      "id": "CX_09",
+      "label": "Work completed and known remaining defects",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "A_REPAIR",
+      "target": "LC_RECOVERY",
+      "item": "Work completed and known remaining defects",
+      "kind": "data"
+    },
+    {
+      "id": "CX_10",
+      "label": "Exception, extension and reservation disposition",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "source": "A_COORD",
+      "target": "LC_COORD",
+      "item": "Exception, extension and reservation disposition",
+      "kind": "data"
+    },
+    {
+      "id": "CX_11",
+      "label": "Repair, quarantine release or retirement decision",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "source": "A_COORD",
+      "target": "LC_RECOVERY",
+      "item": "Repair, quarantine release or retirement decision",
+      "kind": "data"
+    },
+    {
+      "id": "CX_12",
+      "label": "Tool identity, custody, condition and reservation linkage",
+      "description": "Boundary contract retaining the participant authority; no protocol selected.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "source": "LC_RECORDS",
+      "target": "A_STEWARD",
+      "item": "Tool identity, custody, condition and reservation linkage",
+      "kind": "data"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC_PREP",
+      "label": "Prepare a reservation and confirmed notice",
+      "description": "A bounded declared operational thread. Guards are review predicates, not executed decisions.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03",
+        "TL-04",
+        "TL-05"
+      ],
+      "kind": "nominal",
+      "steps": [
+        {
+          "id": "request",
+          "function": "F_REQUEST",
+          "label": "Capture the request"
+        },
+        {
+          "id": "select",
+          "function": "F_SELECT",
+          "label": "Select an available identified candidate"
+        },
+        {
+          "id": "no_candidate",
+          "function": "F_NO_CAND",
+          "label": "Dispose of an unfilled request"
+        },
+        {
+          "id": "prepare",
+          "function": "F_PREP",
+          "label": "Establish the preparation case"
+        },
+        {
+          "id": "registry",
+          "function": "F_ELIG",
+          "label": "Obtain the registry decision"
+        },
+        {
+          "id": "inspect",
+          "function": "F_INSPECT",
+          "label": "Inspect the candidate tool"
+        },
+        {
+          "id": "assess",
+          "function": "F_ASSESS",
+          "label": "Assess preparation contributions"
+        },
+        {
+          "id": "reserve",
+          "function": "F_RESERVE",
+          "label": "Prepare the ready reservation"
+        },
+        {
+          "id": "quarantine",
+          "function": "F_QUARANTINE",
+          "label": "Quarantine an unfit tool"
+        },
+        {
+          "id": "pending",
+          "function": "F_EXCEPTION",
+          "label": "Coordinate an unresolved case"
+        },
+        {
+          "id": "refused",
+          "function": "F_EXCEPTION",
+          "label": "Coordinate an unresolved case"
+        },
+        {
+          "id": "notice",
+          "function": "F_NOTICE",
+          "label": "Deliver the ready notice"
+        },
+        {
+          "id": "confirm",
+          "function": "F_CONFIRM",
+          "label": "Record confirmed notice delivery"
+        },
+        {
+          "id": "contact",
+          "function": "F_EXCEPTION",
+          "label": "Coordinate an unresolved case"
+        },
+        {
+          "id": "hold",
+          "function": "F_HOLD",
+          "label": "Govern the confirmed hold interval"
+        },
+        {
+          "id": "status",
+          "function": "F_STATUS",
+          "label": "Communicate the current request outcome"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "SC_PREP_T01",
+          "from": "request",
+          "to": "select",
+          "condition": "Complete request identifiers available"
+        },
+        {
+          "id": "SC_PREP_T02",
+          "from": "select",
+          "to": "no_candidate",
+          "condition": "No candidate tool available"
+        },
+        {
+          "id": "SC_PREP_T03",
+          "from": "no_candidate",
+          "to": "status",
+          "condition": "Member chooses wait-list or closure; no inventory reserved"
+        },
+        {
+          "id": "SC_PREP_T04",
+          "from": "select",
+          "to": "prepare",
+          "condition": "An available identified candidate is selected"
+        },
+        {
+          "id": "SC_PREP_T05",
+          "from": "prepare",
+          "to": "registry",
+          "condition": "The selected case requires the registry contribution",
+          "kind": "parallel"
+        },
+        {
+          "id": "SC_PREP_T06",
+          "from": "prepare",
+          "to": "inspect",
+          "condition": "The selected case requires the condition contribution",
+          "kind": "parallel"
+        },
+        {
+          "id": "SC_PREP_T07",
+          "from": "registry",
+          "to": "assess",
+          "condition": "Identified registry decision received, including unavailable",
+          "kind": "join"
+        },
+        {
+          "id": "SC_PREP_T08",
+          "from": "inspect",
+          "to": "assess",
+          "condition": "Identified fit or unfit inspection recorded",
+          "kind": "join"
+        },
+        {
+          "id": "SC_PREP_T09",
+          "from": "assess",
+          "to": "reserve",
+          "condition": "Selected member eligible and selected tool fit"
+        },
+        {
+          "id": "SC_PREP_T10",
+          "from": "assess",
+          "to": "quarantine",
+          "condition": "Candidate unfit regardless of eligibility disposition"
+        },
+        {
+          "id": "SC_PREP_T11",
+          "from": "quarantine",
+          "to": "select",
+          "condition": "Coordinator selects another candidate if one is available"
+        },
+        {
+          "id": "SC_PREP_T12",
+          "from": "assess",
+          "to": "pending",
+          "condition": "Candidate fit and registry unavailable"
+        },
+        {
+          "id": "SC_PREP_T13",
+          "from": "assess",
+          "to": "refused",
+          "condition": "Candidate fit and member ineligible"
+        },
+        {
+          "id": "SC_PREP_T14",
+          "from": "pending",
+          "to": "status",
+          "condition": "Request retained pending with coordinator"
+        },
+        {
+          "id": "SC_PREP_T15",
+          "from": "refused",
+          "to": "status",
+          "condition": "Refusal/clarification retained with coordinator"
+        },
+        {
+          "id": "SC_PREP_T16",
+          "from": "reserve",
+          "to": "notice",
+          "condition": "Ready reservation recorded"
+        },
+        {
+          "id": "SC_PREP_T17",
+          "from": "notice",
+          "to": "confirm",
+          "condition": "Delivery confirmation evidence received"
+        },
+        {
+          "id": "SC_PREP_T18",
+          "from": "notice",
+          "to": "contact",
+          "condition": "Delivery confirmation absent"
+        },
+        {
+          "id": "SC_PREP_T19",
+          "from": "contact",
+          "to": "notice",
+          "condition": "Coordinator resolves contact and authorises another attempt"
+        },
+        {
+          "id": "SC_PREP_T20",
+          "from": "confirm",
+          "to": "hold",
+          "condition": "Confirmed delivery time matched to the reservation"
+        },
+        {
+          "id": "SC_PREP_T21",
+          "from": "hold",
+          "to": "status",
+          "condition": "Effective deadline meets minimum confirmed-delivery hold"
+        }
+      ],
+      "entryStep": "request",
+      "exitSteps": [
+        "status"
+      ],
+      "entryConditions": [
+        "Member submits a tool category and collection period."
+      ],
+      "exitConditions": [
+        "Wait-list/closure, accountable unresolved case, or ready reservation with confirmed hold basis."
+      ],
+      "parallelGroups": [
+        {
+          "id": "PREP_BOTH",
+          "from": "prepare",
+          "branches": [
+            "registry",
+            "inspect"
+          ],
+          "join": "assess",
+          "description": "Independent registry and steward contributions are both required before readiness assessment."
+        }
+      ]
+    },
+    {
+      "id": "SC_COLLECT",
+      "label": "Resolve collection, expiry and failed handover",
+      "description": "A bounded declared operational thread. Guards are review predicates, not executed decisions.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05",
+        "TL-06"
+      ],
+      "kind": "failure",
+      "steps": [
+        {
+          "id": "hold",
+          "function": "F_HOLD",
+          "label": "Govern the confirmed hold interval"
+        },
+        {
+          "id": "match",
+          "function": "F_MATCH",
+          "label": "Match the collection case"
+        },
+        {
+          "id": "accept",
+          "function": "F_ACCEPT",
+          "label": "Capture terms and identified-tool receipt acceptance"
+        },
+        {
+          "id": "transfer",
+          "function": "F_TRANSFER",
+          "label": "Record custody transfer to member"
+        },
+        {
+          "id": "on_loan",
+          "function": "F_ONLOAN",
+          "label": "Record the tool on loan"
+        },
+        {
+          "id": "expiry",
+          "function": "F_EXPIRY",
+          "label": "Resolve expiry, withdrawal or extension"
+        },
+        {
+          "id": "quarantine",
+          "function": "F_QUARANTINE",
+          "label": "Quarantine an unfit tool"
+        },
+        {
+          "id": "exception",
+          "function": "F_EXCEPTION",
+          "label": "Coordinate an unresolved case"
+        },
+        {
+          "id": "status",
+          "function": "F_STATUS",
+          "label": "Communicate the current request outcome"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "SC_COLLECT_T01",
+          "from": "hold",
+          "to": "match",
+          "condition": "Member presents during an applicable ready reservation"
+        },
+        {
+          "id": "SC_COLLECT_T02",
+          "from": "hold",
+          "to": "expiry",
+          "condition": "Deadline passed without collection, or member withdraws"
+        },
+        {
+          "id": "SC_COLLECT_T03",
+          "from": "hold",
+          "to": "quarantine",
+          "condition": "New tool fault discovered"
+        },
+        {
+          "id": "SC_COLLECT_T04",
+          "from": "match",
+          "to": "accept",
+          "condition": "Member and tool match reservation"
+        },
+        {
+          "id": "SC_COLLECT_T05",
+          "from": "match",
+          "to": "exception",
+          "condition": "Identity or tool matching unresolved"
+        },
+        {
+          "id": "SC_COLLECT_T06",
+          "from": "accept",
+          "to": "transfer",
+          "condition": "Loan terms and receipt of identified tool accepted"
+        },
+        {
+          "id": "SC_COLLECT_T07",
+          "from": "accept",
+          "to": "exception",
+          "condition": "Terms or receipt acceptance unresolved"
+        },
+        {
+          "id": "SC_COLLECT_T08",
+          "from": "transfer",
+          "to": "on_loan",
+          "condition": "Custody transfer recorded from library to member"
+        },
+        {
+          "id": "SC_COLLECT_T09",
+          "from": "on_loan",
+          "to": "status",
+          "condition": "On-loan state recorded after custody transfer"
+        },
+        {
+          "id": "SC_COLLECT_T10",
+          "from": "expiry",
+          "to": "status",
+          "condition": "Coordinator records still-fit release or reasoned extension"
+        },
+        {
+          "id": "SC_COLLECT_T11",
+          "from": "quarantine",
+          "to": "exception",
+          "condition": "Fault and retained custody require coordinator disposition"
+        },
+        {
+          "id": "SC_COLLECT_T12",
+          "from": "exception",
+          "to": "status",
+          "condition": "Normal handover remains incomplete; current exception communicated"
+        }
+      ],
+      "entryStep": "hold",
+      "exitSteps": [
+        "status"
+      ],
+      "entryConditions": [
+        "An identified ready reservation has a confirmed-delivery hold basis."
+      ],
+      "exitConditions": [
+        "Recorded loan, expiry/extension, withdrawal or retained exception; no notification-only custody transfer."
+      ]
+    },
+    {
+      "id": "SC_RECOVER",
+      "label": "Return, repair and release condition recovery",
+      "description": "A bounded declared operational thread. Guards are review predicates, not executed decisions.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07",
+        "TL-08"
+      ],
+      "kind": "recovery",
+      "steps": [
+        {
+          "id": "receive",
+          "function": "F_RECEIVE",
+          "label": "Confirm returned-tool receipt"
+        },
+        {
+          "id": "assess",
+          "function": "F_RETURN_ASSESS",
+          "label": "Assess returned-tool condition"
+        },
+        {
+          "id": "quarantine",
+          "function": "F_QUARANTINE",
+          "label": "Quarantine an unfit tool"
+        },
+        {
+          "id": "repair",
+          "function": "F_REPAIR_REQUEST",
+          "label": "Coordinate the repair request"
+        },
+        {
+          "id": "report",
+          "function": "F_REPAIR_REPORT",
+          "label": "Receive the repair report"
+        },
+        {
+          "id": "reassess",
+          "function": "F_REASSESS",
+          "label": "Reassess after repair"
+        },
+        {
+          "id": "release",
+          "function": "F_RELEASE",
+          "label": "Release a fit tool for availability"
+        },
+        {
+          "id": "disposition",
+          "function": "F_DISPOSITION",
+          "label": "Decide rework or retirement"
+        },
+        {
+          "id": "ledger",
+          "function": "F_LEDGER",
+          "label": "Maintain custody, condition and availability state"
+        },
+        {
+          "id": "exception",
+          "function": "F_EXCEPTION",
+          "label": "Coordinate an unresolved case"
+        },
+        {
+          "id": "status",
+          "function": "F_STATUS",
+          "label": "Communicate the current request outcome"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "SC_RECOVER_T01",
+          "from": "receive",
+          "to": "assess",
+          "condition": "Steward confirms identified physical receipt and library custody"
+        },
+        {
+          "id": "SC_RECOVER_T02",
+          "from": "assess",
+          "to": "release",
+          "condition": "Returned tool assessed fit"
+        },
+        {
+          "id": "SC_RECOVER_T03",
+          "from": "assess",
+          "to": "quarantine",
+          "condition": "Returned tool assessed unfit"
+        },
+        {
+          "id": "SC_RECOVER_T04",
+          "from": "quarantine",
+          "to": "repair",
+          "condition": "Coordinator considers the repair disposition"
+        },
+        {
+          "id": "SC_RECOVER_T05",
+          "from": "repair",
+          "to": "report",
+          "condition": "External repair request authorised; await provider report"
+        },
+        {
+          "id": "SC_RECOVER_T06",
+          "from": "repair",
+          "to": "exception",
+          "condition": "Repair decision remains pending"
+        },
+        {
+          "id": "SC_RECOVER_T07",
+          "from": "report",
+          "to": "reassess",
+          "condition": "Repair report received regardless of completion wording"
+        },
+        {
+          "id": "SC_RECOVER_T08",
+          "from": "reassess",
+          "to": "release",
+          "condition": "Steward records fit reassessment and coordinator permits quarantine release"
+        },
+        {
+          "id": "SC_RECOVER_T09",
+          "from": "reassess",
+          "to": "disposition",
+          "condition": "Defects remain or tool is unfit; retain quarantine"
+        },
+        {
+          "id": "SC_RECOVER_T10",
+          "from": "disposition",
+          "to": "repair",
+          "condition": "Coordinator requests a separate new repair attempt"
+        },
+        {
+          "id": "SC_RECOVER_T11",
+          "from": "disposition",
+          "to": "ledger",
+          "condition": "Coordinator retires tool with recorded disposition"
+        },
+        {
+          "id": "SC_RECOVER_T12",
+          "from": "release",
+          "to": "ledger",
+          "condition": "Required fit/release evidence supports available status"
+        },
+        {
+          "id": "SC_RECOVER_T13",
+          "from": "ledger",
+          "to": "status",
+          "condition": "Current custody, condition and disposition recorded"
+        },
+        {
+          "id": "SC_RECOVER_T14",
+          "from": "exception",
+          "to": "status",
+          "condition": "Quarantine and accountable pending decision remain visible"
+        }
+      ],
+      "entryStep": "receive",
+      "exitSteps": [
+        "status"
+      ],
+      "entryConditions": [
+        "A returned identified tool is physically presented to a steward."
+      ],
+      "exitConditions": [
+        "Assessed available, retired, or retained unavailable/quarantine state with current outcome."
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R_AUTH",
+      "label": "Retain registry decision authority",
+      "description": "Retain registry member/decision identity and eligible, ineligible or unavailable outcome; neither service nor volunteer creates a positive decision.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-02",
+        "TL-04"
+      ],
+      "subject": "F_ELIG",
+      "condition": "Whenever membership eligibility is required",
+      "criterion": "Retain registry member/decision identity and eligible, ineligible or unavailable outcome; neither service nor volunteer creates a positive decision.",
+      "derivedFrom": [
+        "F_ELIG"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_AUTH"
+      ]
+    },
+    {
+      "id": "R_WAIT",
+      "label": "Keep wait-list separate from reservation",
+      "description": "Offer wait-list or closure at member choice without a reservation or decrease of available inventory.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "subject": "F_NO_CAND",
+      "condition": "When no candidate tool exists",
+      "criterion": "Offer wait-list or closure at member choice without a reservation or decrease of available inventory.",
+      "derivedFrom": [
+        "F_NO_CAND"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_WAIT"
+      ]
+    },
+    {
+      "id": "R_GATE",
+      "label": "Require both matching preparation contributions",
+      "description": "The selected member is eligible and selected tool fit, with matching decision/inspection identities; unavailable remains pending, ineligible remains accountable, unfit is quarantined.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "subject": "F_ASSESS",
+      "condition": "Before preparing a ready reservation",
+      "criterion": "The selected member is eligible and selected tool fit, with matching decision/inspection identities; unavailable remains pending, ineligible remains accountable, unfit is quarantined.",
+      "derivedFrom": [
+        "F_ASSESS"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_GATE"
+      ]
+    },
+    {
+      "id": "R_NOTICE",
+      "label": "Provide the ready notice content",
+      "description": "Identify the ready tool, collection location and hold deadline; retain queueing and confirmed delivery as different events.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "subject": "F_NOTICE",
+      "condition": "When communicating ready status",
+      "criterion": "Identify the ready tool, collection location and hold deadline; retain queueing and confirmed delivery as different events.",
+      "derivedFrom": [
+        "F_NOTICE"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_NOTICE"
+      ]
+    },
+    {
+      "id": "R_HOLD",
+      "label": "Maintain at least two confirmed-delivery hours",
+      "description": "Hold the ready reservation for at least two hours measured from confirmed notice delivery, not queued-notice time.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "subject": "F_HOLD",
+      "condition": "After confirmed delivery unless member withdraws or a new tool fault is discovered",
+      "criterion": "Hold the ready reservation for at least two hours measured from confirmed notice delivery, not queued-notice time.",
+      "derivedFrom": [
+        "F_HOLD"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_HOLD"
+      ],
+      "formalConstraint": {
+        "attribute": "minimumConfirmedDeliveryHold",
+        "quantity": "duration",
+        "operator": ">=",
+        "value": 2,
+        "unit": "h"
+      }
+    },
+    {
+      "id": "R_NO_ACK",
+      "label": "Retain pending notification without confirmation",
+      "description": "Keep pending-notification and coordinator contact resolution; do not expire using an assumed delivery time.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "subject": "F_CONFIRM",
+      "condition": "When delivery confirmation is absent",
+      "criterion": "Keep pending-notification and coordinator contact resolution; do not expire using an assumed delivery time.",
+      "derivedFrom": [
+        "F_CONFIRM"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_NO_ACK"
+      ]
+    },
+    {
+      "id": "R_EXTEND",
+      "label": "Record the coordinator expiry/extension decision",
+      "description": "Only return a still-fit tool to available or extend with a recorded coordinator reason; retain withdrawal and fault as distinct causes.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "subject": "F_EXPIRY",
+      "condition": "After deadline passes without collection",
+      "criterion": "Only return a still-fit tool to available or extend with a recorded coordinator reason; retain withdrawal and fault as distinct causes.",
+      "derivedFrom": [
+        "F_EXPIRY"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_EXTEND"
+      ]
+    },
+    {
+      "id": "R_CUSTODY",
+      "label": "Complete matched and accepted custody handover",
+      "description": "Require member/tool matching, accepted loan terms and receipt of the identified tool; record library-to-member custody then on-loan state. Ready notice, eligibility or presentation alone cannot complete transfer.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "subject": "F_TRANSFER",
+      "condition": "Before recording the tool on loan",
+      "criterion": "Require member/tool matching, accepted loan terms and receipt of the identified tool; record library-to-member custody then on-loan state. Ready notice, eligibility or presentation alone cannot complete transfer.",
+      "derivedFrom": [
+        "F_TRANSFER"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_CUSTODY"
+      ]
+    },
+    {
+      "id": "R_RECEIPT",
+      "label": "Require actual returned-tool receipt",
+      "description": "Record steward-confirmed identified receipt and library custody; member return report alone is insufficient.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "subject": "F_RECEIVE",
+      "condition": "When accepting return of a tool",
+      "criterion": "Record steward-confirmed identified receipt and library custody; member return report alone is insufficient.",
+      "derivedFrom": [
+        "F_RECEIVE"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_RECEIPT"
+      ]
+    },
+    {
+      "id": "R_REPAIR",
+      "label": "Reassess repair without implied release",
+      "description": "Steward reassesses condition; completion wording or unresolved defects cannot establish fit or lending availability.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-02",
+        "TL-07"
+      ],
+      "subject": "F_REASSESS",
+      "condition": "When a repair report arrives",
+      "criterion": "Steward reassesses condition; completion wording or unresolved defects cannot establish fit or lending availability.",
+      "derivedFrom": [
+        "F_REASSESS"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_REPAIR"
+      ]
+    },
+    {
+      "id": "R_RELEASE",
+      "label": "Preserve quarantine release authority",
+      "description": "Require steward fit assessment and coordinator release decision; remaining defects retain quarantine and require a separate rework/retirement decision.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "subject": "F_RELEASE",
+      "condition": "Before releasing quarantine",
+      "criterion": "Require steward fit assessment and coordinator release decision; remaining defects retain quarantine and require a separate rework/retirement decision.",
+      "derivedFrom": [
+        "F_RELEASE"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_RELEASE"
+      ]
+    },
+    {
+      "id": "R_INVENTORY",
+      "label": "Prevent contradictory available offers",
+      "description": "An identified tool is not offered as available while reserved, on loan, awaiting returned-tool assessment or quarantined.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "subject": "F_LEDGER",
+      "condition": "Whenever inventory candidates are offered",
+      "criterion": "An identified tool is not offered as available while reserved, on loan, awaiting returned-tool assessment or quarantined.",
+      "derivedFrom": [
+        "F_LEDGER"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_INVENTORY"
+      ]
+    },
+    {
+      "id": "R_RECORDS",
+      "label": "Retain decision-relevant service information",
+      "description": "Retain tool identity, custody, condition, reservation linkage and unresolved exceptions for steward/coordinator work.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "subject": "F_LEDGER",
+      "condition": "While coordinating a tool/request case",
+      "criterion": "Retain tool identity, custody, condition, reservation linkage and unresolved exceptions for steward/coordinator work.",
+      "derivedFrom": [
+        "F_LEDGER"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_RECORDS"
+      ]
+    },
+    {
+      "id": "R_OUTCOME",
+      "label": "Communicate current request disposition",
+      "description": "Communicate current pending, ready, refused, extended or closed outcome without inferring loan/repair success from notification.",
+      "basis": "source-explicit",
+      "status": "draft",
+      "sourceRefs": [
+        "TL-08",
+        "TL-07"
+      ],
+      "subject": "F_STATUS",
+      "condition": "When request status changes",
+      "criterion": "Communicate current pending, ready, refused, extended or closed outcome without inferring loan/repair success from notification.",
+      "derivedFrom": [
+        "F_STATUS"
+      ],
+      "rationale": "Preserve the source condition, authority and observable outcome.",
+      "verificationIds": [
+        "V_R_OUTCOME"
+      ]
+    }
+  ],
+  "verificationCases": [
+    {
+      "id": "V_R_AUTH",
+      "label": "Review retain registry decision authority",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-02",
+        "TL-04"
+      ],
+      "requirementIds": [
+        "R_AUTH"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Inspect decision provenance and unavailable/ineligible cases.",
+      "expectedResult": "Retain registry member/decision identity and eligible, ineligible or unavailable outcome; neither service nor volunteer creates a positive decision."
+    },
+    {
+      "id": "V_R_WAIT",
+      "label": "Review keep wait-list separate from reservation",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "requirementIds": [
+        "R_WAIT"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Compare inventory before/after wait-list and closure choices.",
+      "expectedResult": "Offer wait-list or closure at member choice without a reservation or decrease of available inventory."
+    },
+    {
+      "id": "V_R_GATE",
+      "label": "Review require both matching preparation contributions",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "requirementIds": [
+        "R_GATE"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Walk eligible/fit, unavailable/fit, ineligible/fit and eligible/unfit cases, including mismatched identifiers.",
+      "expectedResult": "The selected member is eligible and selected tool fit, with matching decision/inspection identities; unavailable remains pending, ineligible remains accountable, unfit is quarantined."
+    },
+    {
+      "id": "V_R_NOTICE",
+      "label": "Review provide the ready notice content",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "requirementIds": [
+        "R_NOTICE"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Inspect notice content and independent delivery confirmation evidence.",
+      "expectedResult": "Identify the ready tool, collection location and hold deadline; retain queueing and confirmed delivery as different events."
+    },
+    {
+      "id": "V_R_HOLD",
+      "label": "Review maintain at least two confirmed-delivery hours",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "requirementIds": [
+        "R_HOLD"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Use an identified ready reservation and a controlled time basis. Record queued-notice time separately from actual confirmed-delivery time t0. Observe just before t0 + 2 h and at t0 + 2 h; separately observe just before, at and after the agreed hold deadline, which may exceed the minimum. Repeat with no delivery confirmation, member withdrawal, a newly discovered fault, and coordinator extension with a recorded reason. Keep opening hours and the chosen duration as agreed test inputs, not invented source values.",
+      "expectedResult": "Without withdrawal or a new fault, the reservation remains held before t0 + 2 h and through the applicable agreed hold deadline. At/after the agreed deadline without collection, only the coordinator records a still-fit release or reasoned extension. Withdrawal and new fault follow their explicit dispositions. Without confirmed delivery, pending-notification remains, no t0 is invented and no ordinary expiry is inferred. Queueing time never substitutes for confirmed delivery. These are planned observations, not measured results."
+    },
+    {
+      "id": "V_R_NO_ACK",
+      "label": "Review retain pending notification without confirmation",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "requirementIds": [
+        "R_NO_ACK"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Suppress confirmation and inspect state and absence of assumed-time expiry.",
+      "expectedResult": "Keep pending-notification and coordinator contact resolution; do not expire using an assumed delivery time."
+    },
+    {
+      "id": "V_R_EXTEND",
+      "label": "Review record the coordinator expiry/extension decision",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "requirementIds": [
+        "R_EXTEND"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Walk expiry, reasoned extension and new-fault cases.",
+      "expectedResult": "Only return a still-fit tool to available or extend with a recorded coordinator reason; retain withdrawal and fault as distinct causes."
+    },
+    {
+      "id": "V_R_CUSTODY",
+      "label": "Review complete matched and accepted custody handover",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-06"
+      ],
+      "requirementIds": [
+        "R_CUSTODY"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Try mismatch, missing terms, missing receipt and notice-only cases; compare custody/state event order.",
+      "expectedResult": "Require member/tool matching, accepted loan terms and receipt of the identified tool; record library-to-member custody then on-loan state. Ready notice, eligibility or presentation alone cannot complete transfer."
+    },
+    {
+      "id": "V_R_RECEIPT",
+      "label": "Review require actual returned-tool receipt",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "requirementIds": [
+        "R_RECEIPT"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Compare a member-only report with witnessed steward receipt.",
+      "expectedResult": "Record steward-confirmed identified receipt and library custody; member return report alone is insufficient."
+    },
+    {
+      "id": "V_R_REPAIR",
+      "label": "Review reassess repair without implied release",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-02",
+        "TL-07"
+      ],
+      "requirementIds": [
+        "R_REPAIR"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Use completed-with-defects report followed by fit and unfit reassessment cases.",
+      "expectedResult": "Steward reassesses condition; completion wording or unresolved defects cannot establish fit or lending availability."
+    },
+    {
+      "id": "V_R_RELEASE",
+      "label": "Review preserve quarantine release authority",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "requirementIds": [
+        "R_RELEASE"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Inspect release authority and block provider-only completion.",
+      "expectedResult": "Require steward fit assessment and coordinator release decision; remaining defects retain quarantine and require a separate rework/retirement decision."
+    },
+    {
+      "id": "V_R_INVENTORY",
+      "label": "Review prevent contradictory available offers",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "requirementIds": [
+        "R_INVENTORY"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Query available offers in each excluded state and after a valid release.",
+      "expectedResult": "An identified tool is not offered as available while reserved, on loan, awaiting returned-tool assessment or quarantined."
+    },
+    {
+      "id": "V_R_RECORDS",
+      "label": "Review retain decision-relevant service information",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "requirementIds": [
+        "R_RECORDS"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Inspect a full lifecycle record and deliberately omit each required relation.",
+      "expectedResult": "Retain tool identity, custody, condition, reservation linkage and unresolved exceptions for steward/coordinator work."
+    },
+    {
+      "id": "V_R_OUTCOME",
+      "label": "Review communicate current request disposition",
+      "description": "Planned evidence activity; no executed result.",
+      "basis": "proposed",
+      "status": "planned",
+      "sourceRefs": [
+        "TL-08",
+        "TL-07"
+      ],
+      "requirementIds": [
+        "R_OUTCOME"
+      ],
+      "method": "Inspection and scenario walkthrough",
+      "setup": "Compare communicated outcome with current custody, condition and exception state.",
+      "expectedResult": "Communicate current pending, ready, refused, extended or closed outcome without inferring loan/repair success from notification."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D_PRIORITY",
+      "label": "How are competing requests ordered?",
+      "description": "Unresolved design question; options are proposals, not approved policy.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-03"
+      ],
+      "question": "How are competing requests ordered?",
+      "affects": [
+        "F_SELECT"
+      ],
+      "options": [
+        "FIFO",
+        "Prioritised allocation with an agreed basis"
+      ]
+    },
+    {
+      "id": "D_REGISTRY",
+      "label": "What are decision freshness and registry wait limits?",
+      "description": "Unresolved design question; options are proposals, not approved policy.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "question": "What are decision freshness and registry wait limits?",
+      "affects": [
+        "F_ELIG",
+        "F_ASSESS"
+      ],
+      "options": [
+        "Agree validity and timeout policy",
+        "Retain explicit pending cases until a decision"
+      ]
+    },
+    {
+      "id": "D_NOTICE",
+      "label": "How are notice deadline and actual delivery confirmation coordinated?",
+      "description": "Unresolved design question; options are proposals, not approved policy.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "question": "How are notice deadline and actual delivery confirmation coordinated?",
+      "affects": [
+        "F_NOTICE",
+        "F_CONFIRM",
+        "F_HOLD"
+      ],
+      "options": [
+        "Agreed acknowledgement plus reconciled deadline",
+        "Another agreed confirmation/deadline protocol"
+      ]
+    },
+    {
+      "id": "D_HOURS",
+      "label": "Which opening hours and hold duration beyond the minimum apply?",
+      "description": "Unresolved design question; options are proposals, not approved policy.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "question": "Which opening hours and hold duration beyond the minimum apply?",
+      "affects": [
+        "F_HOLD",
+        "F_EXPIRY"
+      ],
+      "options": [
+        "Agree collection windows and duration",
+        "Keep minimum bound and schedule unresolved"
+      ]
+    },
+    {
+      "id": "D_SIZING",
+      "label": "What demand, inventory and volunteer basis supports sizing?",
+      "description": "Unresolved design question; options are proposals, not approved policy.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "question": "What demand, inventory and volunteer basis supports sizing?",
+      "affects": [
+        "F_SELECT",
+        "F_LEDGER"
+      ],
+      "options": [
+        "Gather demand/capacity observations",
+        "Retain unquantified concept until evidence exists"
+      ]
+    },
+    {
+      "id": "D_COMBINED",
+      "label": "How are simultaneous reservation exceptions ordered?",
+      "description": "Unresolved design question; options are proposals, not approved policy.",
+      "basis": "proposed",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-05"
+      ],
+      "question": "How are simultaneous reservation exceptions ordered?",
+      "affects": [
+        "F_ASSESS",
+        "F_EXCEPTION"
+      ],
+      "options": [
+        "Prioritise condition quarantine while preserving eligibility state",
+        "Agree another explicit rule preserving both obligations"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "P_FRESH",
+      "label": "Eligibility freshness",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "value": null,
+      "unit": "time",
+      "decisionId": "D_REGISTRY"
+    },
+    {
+      "id": "P_WAIT",
+      "label": "Registry wait limit",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "value": null,
+      "unit": "time",
+      "decisionId": "D_REGISTRY"
+    },
+    {
+      "id": "P_HOURS",
+      "label": "Collection opening hours",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "value": null,
+      "unit": "schedule",
+      "decisionId": "D_HOURS"
+    },
+    {
+      "id": "P_HOLD",
+      "label": "Chosen hold beyond the minimum",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "value": null,
+      "unit": "time",
+      "decisionId": "D_HOURS"
+    },
+    {
+      "id": "P_DEMAND",
+      "label": "Demand profile",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "value": null,
+      "unit": "requests/time",
+      "decisionId": "D_SIZING"
+    },
+    {
+      "id": "P_TOOLS",
+      "label": "Tool counts",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "value": null,
+      "unit": "tools",
+      "decisionId": "D_SIZING"
+    },
+    {
+      "id": "P_CAPACITY",
+      "label": "Volunteer capacity",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "value": null,
+      "unit": "work/time",
+      "decisionId": "D_SIZING"
+    },
+    {
+      "id": "P_TURNAROUND",
+      "label": "Target turnaround",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "value": null,
+      "unit": "time",
+      "decisionId": "D_SIZING"
+    },
+    {
+      "id": "P_NOTICE",
+      "label": "Notification delivery performance",
+      "description": "No source value is supplied; do not infer a target.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-08"
+      ],
+      "value": null,
+      "unit": "unagreed",
+      "decisionId": "D_NOTICE"
+    }
+  ],
+  "stateMachines": [
+    {
+      "id": "SM_TOOL",
+      "label": "Identified-tool availability lifecycle",
+      "description": "Representative identified-tool record lifecycle; no fleet size or execution is inferred.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-04",
+        "TL-05",
+        "TL-06",
+        "TL-07",
+        "TL-08"
+      ],
+      "subject": "LC_RECORDS",
+      "initial": "available",
+      "terminalStates": [
+        "retired"
+      ],
+      "terminalPolicy": "ongoing",
+      "lifecycleExitCondition": "The identified record remains governed until retirement and retention disposition.",
+      "states": [
+        {
+          "id": "available",
+          "label": "Available"
+        },
+        {
+          "id": "pending_notice",
+          "label": "Reserved, pending notification"
+        },
+        {
+          "id": "ready",
+          "label": "Ready under confirmed hold"
+        },
+        {
+          "id": "on_loan",
+          "label": "On loan"
+        },
+        {
+          "id": "awaiting_assessment",
+          "label": "Library custody, awaiting assessment"
+        },
+        {
+          "id": "quarantined",
+          "label": "Quarantined"
+        },
+        {
+          "id": "retired",
+          "label": "Retired"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "ST_01",
+          "from": "available",
+          "to": "pending_notice",
+          "event": "Ready reservation committed",
+          "guard": "Matching eligible member and fit tool evidence present",
+          "effect": "Exclude from available offers"
+        },
+        {
+          "id": "ST_02",
+          "from": "pending_notice",
+          "to": "ready",
+          "event": "Notice delivery confirmed",
+          "guard": "Effective deadline is at least two hours from actual confirmed delivery",
+          "effect": "Retain confirmed hold basis"
+        },
+        {
+          "id": "ST_03",
+          "from": "pending_notice",
+          "to": "available",
+          "event": "Member withdraws",
+          "guard": "Coordinator records withdrawal and tool remains fit",
+          "effect": "Close reservation"
+        },
+        {
+          "id": "ST_04",
+          "from": "pending_notice",
+          "to": "quarantined",
+          "event": "New fault found",
+          "guard": "Condition concern applies to identified tool",
+          "effect": "Retain unavailable condition"
+        },
+        {
+          "id": "ST_05",
+          "from": "ready",
+          "to": "on_loan",
+          "event": "Custody transfer recorded",
+          "guard": "Member/tool match and terms/identified-tool receipt accepted",
+          "effect": "Record on-loan after custody transfer"
+        },
+        {
+          "id": "ST_06",
+          "from": "ready",
+          "to": "available",
+          "event": "Expiry or withdrawal disposition recorded",
+          "guard": "Coordinator permits release, tool still fit and no extension",
+          "effect": "Clear reservation and offer availability"
+        },
+        {
+          "id": "ST_07",
+          "from": "ready",
+          "to": "quarantined",
+          "event": "New tool fault found",
+          "guard": "Fault overrides continued readiness",
+          "effect": "Retain quarantine"
+        },
+        {
+          "id": "ST_08",
+          "from": "on_loan",
+          "to": "awaiting_assessment",
+          "event": "Steward confirms returned-tool receipt",
+          "guard": "Identified physical receipt and library custody recorded",
+          "effect": "Keep unavailable for assessment"
+        },
+        {
+          "id": "ST_09",
+          "from": "awaiting_assessment",
+          "to": "available",
+          "event": "Fit return assessment recorded",
+          "guard": "Identified tool assessed fit",
+          "effect": "Permit available status"
+        },
+        {
+          "id": "ST_10",
+          "from": "awaiting_assessment",
+          "to": "quarantined",
+          "event": "Unfit return assessment recorded",
+          "guard": "Identified tool assessed unfit",
+          "effect": "Retain quarantine"
+        },
+        {
+          "id": "ST_11",
+          "from": "quarantined",
+          "to": "available",
+          "event": "Coordinator releases quarantine",
+          "guard": "Steward fit reassessment exists; repair report alone is insufficient",
+          "effect": "Permit availability"
+        },
+        {
+          "id": "ST_12",
+          "from": "quarantined",
+          "to": "retired",
+          "event": "Coordinator retires tool",
+          "guard": "Retirement separately decided and recorded",
+          "effect": "Keep out of available inventory"
+        }
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "id": "I_JOIN",
+      "label": "Readiness depends on two different authorities",
+      "description": "Eligibility and condition may run concurrently; matching both contributions is the admission boundary.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-02",
+        "TL-04"
+      ],
+      "observation": "Registry and steward evidence have different subjects and owners.",
+      "implication": "A shared readiness record needs both identities; success of either contribution alone cannot admit.",
+      "relatedIds": [
+        "F_ELIG",
+        "F_INSPECT",
+        "F_ASSESS",
+        "SC_PREP",
+        "R_GATE"
+      ]
+    },
+    {
+      "id": "I_TIME",
+      "label": "Delivery confirmation determines the hold origin",
+      "description": "Queueing a notice cannot start the required minimum hold.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "observation": "The hold origin is a confirmed delivery event whose mechanism is unresolved.",
+      "implication": "Agree confirmation and deadline reconciliation before specifying notification timing behavior.",
+      "relatedIds": [
+        "F_NOTICE",
+        "F_CONFIRM",
+        "F_HOLD",
+        "R_HOLD",
+        "D_NOTICE"
+      ]
+    },
+    {
+      "id": "I_RELEASE",
+      "label": "Repair completion and lending release are separate",
+      "description": "Provider evidence feeds a steward reassessment and coordinator release decision.",
+      "basis": "derived",
+      "status": "proposed",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "observation": "Remaining defects can coexist with a completed-work report.",
+      "implication": "Do not wire repair completion directly to available inventory.",
+      "relatedIds": [
+        "F_REPAIR_REPORT",
+        "F_REASSESS",
+        "F_RELEASE",
+        "R_RELEASE"
+      ]
+    }
+  ],
+  "coverage": {
+    "sourceSections": [
+      {
+        "sourceSection": "TL-01",
+        "modelIds": [
+          "LC_ROOT",
+          "F_ROOT"
+        ],
+        "reason": "Developed as a connected service responsibility, condition or explicit unresolved decision."
+      },
+      {
+        "sourceSection": "TL-02",
+        "modelIds": [
+          "A_REGISTRY",
+          "A_REPAIR",
+          "R_AUTH",
+          "R_RELEASE"
+        ],
+        "reason": "Developed as a connected service responsibility, condition or explicit unresolved decision."
+      },
+      {
+        "sourceSection": "TL-03",
+        "modelIds": [
+          "F_REQUEST",
+          "F_SELECT",
+          "F_NO_CAND",
+          "R_WAIT",
+          "D_PRIORITY"
+        ],
+        "reason": "Developed as a connected service responsibility, condition or explicit unresolved decision."
+      },
+      {
+        "sourceSection": "TL-04",
+        "modelIds": [
+          "SC_PREP",
+          "R_GATE",
+          "F_ELIG",
+          "F_INSPECT",
+          "D_REGISTRY"
+        ],
+        "reason": "Developed as a connected service responsibility, condition or explicit unresolved decision."
+      },
+      {
+        "sourceSection": "TL-05",
+        "modelIds": [
+          "R_HOLD",
+          "R_NO_ACK",
+          "R_EXTEND",
+          "D_NOTICE",
+          "D_HOURS"
+        ],
+        "reason": "Developed as a connected service responsibility, condition or explicit unresolved decision."
+      },
+      {
+        "sourceSection": "TL-06",
+        "modelIds": [
+          "SC_COLLECT",
+          "R_CUSTODY"
+        ],
+        "reason": "Developed as a connected service responsibility, condition or explicit unresolved decision."
+      },
+      {
+        "sourceSection": "TL-07",
+        "modelIds": [
+          "SC_RECOVER",
+          "R_RECEIPT",
+          "R_REPAIR",
+          "R_RELEASE"
+        ],
+        "reason": "Developed as a connected service responsibility, condition or explicit unresolved decision."
+      },
+      {
+        "sourceSection": "TL-08",
+        "modelIds": [
+          "R_INVENTORY",
+          "R_RECORDS",
+          "R_OUTCOME",
+          "D_SIZING"
+        ],
+        "reason": "Developed as a connected service responsibility, condition or explicit unresolved decision."
+      }
+    ]
+  }
+}

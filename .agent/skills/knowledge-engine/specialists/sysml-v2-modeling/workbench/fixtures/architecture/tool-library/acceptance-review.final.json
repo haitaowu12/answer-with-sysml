@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "role": "reviewed-regression-source-meaning-reassessment",
+  "acceptanceQuestionsSha256": "b596dd2ad4e6a7ecc290ecc71e6c3f0c9c25893ebab9c41c43f9eaa57f294b20",
+  "architectureSha256": "48951f0b3286678a66f5ec5a0446170d82410b51f77ca38f7e5509b75e744a2a",
+  "modelSha256": "55da483fb850a1ef864fffe9ecf90f3084d9887cfc9cfc030ef2f782e9c915f1",
+  "assessmentTiming": "After the frozen 9-supported/1-partial review, only V_R_HOLD setup and expectedResult were refined; the maintained candidate was freshly qualified and reconciled through the normal CLI.",
+  "questions": [
+    {
+      "id": "TLQ01",
+      "status": "supported",
+      "recordIds": [
+        "LC_ROOT",
+        "A_REGISTRY",
+        "A_REPAIR",
+        "CX_02",
+        "CX_03",
+        "CX_08",
+        "CX_09"
+      ],
+      "finding": "Boundary includes steward work and coordination; registry and repair outcomes cross actual typed actor/service ports. Logical allocations remain proposed. No physical technology selected."
+    },
+    {
+      "id": "TLQ02",
+      "status": "supported",
+      "recordIds": [
+        "SC_PREP",
+        "F_PREP",
+        "F_ELIG",
+        "F_INSPECT",
+        "F_ASSESS",
+        "R_GATE"
+      ],
+      "finding": "Actual native fork/join preserves independent registry and inspection contributions, their identified member/tool payloads and conjunction before readiness."
+    },
+    {
+      "id": "TLQ03",
+      "status": "supported",
+      "recordIds": [
+        "F_NO_CAND",
+        "F_EXCEPTION",
+        "F_QUARANTINE",
+        "SC_PREP",
+        "R_WAIT",
+        "D_PRIORITY",
+        "D_REGISTRY"
+      ],
+      "finding": "Distinct no-candidate, pending, refused and unfit paths; unfit repeats selection. Wait-list has no inventory reservation; timing/fairness stay unresolved."
+    },
+    {
+      "id": "TLQ04",
+      "status": "supported",
+      "recordIds": [
+        "R_HOLD",
+        "F_CONFIRM",
+        "F_HOLD",
+        "F_EXPIRY",
+        "SC_COLLECT",
+        "D_HOURS"
+      ],
+      "finding": "Native subject-bound >=2 h requirement is a minimum. Confirmed-delivery origin, withdrawal/new-fault exceptions and reasoned extension are retained; no capacity inference."
+    },
+    {
+      "id": "TLQ05",
+      "status": "supported",
+      "recordIds": [
+        "F_NOTICE",
+        "F_CONFIRM",
+        "F_EXCEPTION",
+        "SM_TOOL",
+        "R_NO_ACK"
+      ],
+      "finding": "Missing confirmation reaches the coordinator contact path and pending-notification state; no assumed delivered timestamp or ordinary expiry from pending notification."
+    },
+    {
+      "id": "TLQ06",
+      "status": "supported",
+      "recordIds": [
+        "SC_COLLECT",
+        "F_MATCH",
+        "F_ACCEPT",
+        "F_TRANSFER",
+        "F_ONLOAN",
+        "F_RECEIVE",
+        "R_CUSTODY",
+        "R_RECEIPT"
+      ],
+      "finding": "Typed functional flows and native control order preserve matching, acceptance, custody record then on-loan state; return requires steward-confirmed receipt. Unresolved handover remains accountable."
+    },
+    {
+      "id": "TLQ07",
+      "status": "supported",
+      "recordIds": [
+        "SC_RECOVER",
+        "F_REPAIR_REPORT",
+        "F_REASSESS",
+        "F_RELEASE",
+        "F_DISPOSITION",
+        "R_REPAIR",
+        "R_RELEASE"
+      ],
+      "finding": "Repair report feeds steward reassessment. Release requires fit evidence and coordinator authority; remaining defects retain quarantine and separate rework/retirement decisions."
+    },
+    {
+      "id": "TLQ08",
+      "status": "supported",
+      "recordIds": [
+        "SM_TOOL",
+        "F_LEDGER",
+        "R_INVENTORY"
+      ],
+      "finding": "Availability lifecycle distinguishes reserved, on-loan, awaiting-assessment and quarantined states, with evidence/decision guards. No claim of proved concurrent implementation."
+    },
+    {
+      "id": "TLQ09",
+      "status": "supported",
+      "recordIds": [
+        "SC_RECOVER",
+        "LC_HANDLING",
+        "LC_RECOVERY",
+        "F_RETURN_ASSESS",
+        "F_RELEASE",
+        "R_RELEASE",
+        "V_R_RELEASE"
+      ],
+      "finding": "Complete return-to-availability/recovery slice crosses typed functional exchanges and native logical allocations/interfaces; human operational performance remains distinct."
+    },
+    {
+      "id": "TLQ10",
+      "status": "supported",
+      "recordIds": [
+        "V_R_GATE",
+        "V_R_HOLD",
+        "V_R_EXTEND",
+        "V_R_REPAIR",
+        "D_SIZING",
+        "D_REGISTRY",
+        "D_PRIORITY"
+      ],
+      "finding": "The revised plan now observes just before and at confirmed-delivery t0 + 2 h and just before, at and after the agreed deadline. It includes no confirmation, withdrawal, new fault and reasoned coordinator extension; no queued time substitutes for t0. Other planned cases and unknown inputs are unchanged."
+    }
+  ],
+  "summary": {
+    "supported": 10,
+    "partial": 0,
+    "forbiddenClaimsObserved": [],
+    "initialHeldOutResult": "9 supported,1 partial; repaired and reassessed as a known regression case"
+  },
+  "limits": "Author-reviewed source meaning against independently prepared questions; not a real practitioner trial, behavioral execution, design approval or all-domain capability proof. The keyword-escaping fix already makes this a regression case for that generator behavior.",
+  "priorReview": "acceptance-review.initial.json"
+}

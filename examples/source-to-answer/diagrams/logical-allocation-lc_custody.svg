@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="874pt" height="167pt" viewBox="0.00 0.00 874.08 167.08" role="img" aria-label="Which functions are assigned to this logical responsibility?" data-view-id="logical|allocation|LC_CUSTODY" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 144.04)">
+<title>architecture</title>
+
+<g id="mark-4ae3045d6d37d2ec" class="edge" data-record-id="AL_F_MATCH" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Match the collection case responsibility">
+<title>n1-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M162.49,-78.98C177.35,-75.57 188.5,-73 188.5,-73 188.5,-73 506.63,-41.25 654.98,-26.44" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="655.63,-28.84 662.35,-25.7 655.14,-23.96 655.63,-28.84" />
+</g>
+
+<g id="mark-54686fae490398e6" class="edge" data-record-id="AL_F_ACCEPT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Capture terms and identified-tool receipt acceptance responsibility">
+<title>n2-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M400.04,-75.37C407.09,-73.91 411.5,-73 411.5,-73 411.5,-73 561.55,-47.52 655.5,-31.57" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="655.96,-33.97 662.45,-30.39 655.14,-29.14 655.96,-33.97" />
+</g>
+
+<g id="mark-1bcf8d047ace1c4d" class="edge" data-record-id="AL_F_TRANSFER" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Record custody transfer to member responsibility">
+<title>n3-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M579.71,-72.9C610.14,-61.95 646.1,-49.01 675.16,-38.55" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="676.25,-40.76 682.01,-36.09 674.59,-36.15 676.25,-40.76" />
+</g>
+
+<g id="mark-a326aaf3e4e061f7" class="edge" data-record-id="AL_F_RECEIVE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Confirm returned-tool receipt responsibility">
+<title>n4-&gt;n0</title>
+<path fill="none" stroke="#7586b0" stroke-width="1.1" stroke-dasharray="5,2" d="M721.87,-78.91C720.37,-68.44 720.1,-54.88 721.07,-43.31" />
+<polygon fill="#7586b0" stroke="#7586b0" stroke-width="1.1" points="723.54,-43.27 721.88,-36.04 718.67,-42.73 723.54,-43.27" />
+</g>
+
+
+<g id="mark-ddcfcf81408290f6" class="node" data-record-id="LC_CUSTODY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Custody handover">
+<title>n0</title>
+<g id="a_mark-ddcfcf81408290f6"><a ns1:title="Custody handover">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M784.5,-36C784.5,-36 674.5,-36 674.5,-36 668.5,-36 662.5,-30 662.5,-24 662.5,-24 662.5,-12 662.5,-12 662.5,-6 668.5,0 674.5,0 674.5,0 784.5,0 784.5,0 790.5,0 796.5,-6 796.5,-12 796.5,-12 796.5,-24 796.5,-24 796.5,-30 790.5,-36 784.5,-36" />
+<text text-anchor="middle" x="729.5" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Custody handover</text>
+</a>
+</g>
+</g>
+
+<g id="mark-9712dc118e028fc3" class="node" data-record-id="F_MATCH" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Match the collection case">
+<title>n1</title>
+<g id="a_mark-9712dc118e028fc3"><a ns1:title="Match the collection case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M165,-115C165,-115 12,-115 12,-115 6,-115 0,-109 0,-103 0,-103 0,-91 0,-91 0,-85 6,-79 12,-79 12,-79 165,-79 165,-79 171,-79 177,-85 177,-91 177,-91 177,-103 177,-103 177,-109 171,-115 165,-115" />
+<text text-anchor="middle" x="88.5" y="-93.3" font-family="Arial" font-size="14.00" fill="#153c3a">Match the collection case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-327b84a79703fe36" class="node" data-record-id="F_ACCEPT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Capture terms and identified-tool receipt acceptance">
+<title>n2</title>
+<g id="a_mark-327b84a79703fe36"><a ns1:title="Capture terms and identified-tool receipt acceptance">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M388,-121C388,-121 213,-121 213,-121 207,-121 201,-115 201,-109 201,-109 201,-85 201,-85 201,-79 207,-73 213,-73 213,-73 388,-73 388,-73 394,-73 400,-79 400,-85 400,-85 400,-109 400,-109 400,-115 394,-121 388,-121" />
+<text text-anchor="middle" x="300.5" y="-100.8" font-family="Arial" font-size="14.00" fill="#153c3a">Capture terms and identified-</text>
+<text text-anchor="middle" x="300.5" y="-85.8" font-family="Arial" font-size="14.00" fill="#153c3a">tool receipt acceptance</text>
+</a>
+</g>
+</g>
+
+<g id="mark-40528fd0e297614b" class="node" data-record-id="F_TRANSFER" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Record custody transfer to member">
+<title>n3</title>
+<g id="a_mark-40528fd0e297614b"><a ns1:title="Record custody transfer to member">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M595,-121C595,-121 436,-121 436,-121 430,-121 424,-115 424,-109 424,-109 424,-85 424,-85 424,-79 430,-73 436,-73 436,-73 595,-73 595,-73 601,-73 607,-79 607,-85 607,-85 607,-109 607,-109 607,-115 601,-121 595,-121" />
+<text text-anchor="middle" x="515.5" y="-100.8" font-family="Arial" font-size="14.00" fill="#153c3a">Record custody transfer to</text>
+<text text-anchor="middle" x="515.5" y="-85.8" font-family="Arial" font-size="14.00" fill="#153c3a">member</text>
+</a>
+</g>
+</g>
+
+<g id="mark-8ac3a9d32abf36fc" class="node" data-record-id="F_RECEIVE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Confirm returned-tool receipt">
+<title>n4</title>
+<g id="a_mark-8ac3a9d32abf36fc"><a ns1:title="Confirm returned-tool receipt">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M816,-115C816,-115 643,-115 643,-115 637,-115 631,-109 631,-103 631,-103 631,-91 631,-91 631,-85 637,-79 643,-79 643,-79 816,-79 816,-79 822,-79 828,-85 828,-91 828,-91 828,-103 828,-103 828,-109 822,-115 816,-115" />
+<text text-anchor="middle" x="729.5" y="-93.3" font-family="Arial" font-size="14.00" fill="#153c3a">Confirm returned-tool receipt</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

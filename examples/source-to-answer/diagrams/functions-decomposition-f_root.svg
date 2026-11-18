@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="820pt" height="179pt" viewBox="0.00 0.00 819.58 179.08" role="img" aria-label="Which smaller responsibilities compose this function?" data-view-id="functions|decomposition|F_ROOT" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 156.04)">
+<title>architecture</title>
+
+<g id="mark-be578f782e7026a2" class="edge" data-record-id="projection:functions|decomposition|F_ROOT:parent-F_ACQUIRE" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Deliver a tool lending service">
+<title>n0-&gt;n1</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M80.84,-84.88C79.89,-75.16 79.75,-63.75 80.4,-53.51" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="82.17,-53.41 80.82,-48.28 78.68,-53.13 82.17,-53.41" />
+</g>
+
+
+<g id="mark-1cbfb4b18a0beb4b" class="edge" data-record-id="projection:functions|decomposition|F_ROOT:parent-F_LOAN" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Deliver a tool lending service">
+<title>n0-&gt;n2</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M142.23,-84.99C167.3,-74.15 197.27,-61.2 222.93,-50.1" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="223.77,-51.65 227.67,-48.05 222.38,-48.43 223.77,-51.65" />
+</g>
+
+<g id="mark-0d149ffa838cec60" class="edge" data-record-id="projection:functions|decomposition|F_ROOT:parent-F_RETURN" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Deliver a tool lending service">
+<title>n0-&gt;n3</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M164.84,-91.92C248.67,-74.15 372,-48 372,-48 372,-48 380.69,-46 392.95,-43.18" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="393.53,-44.84 398.01,-42.02 392.75,-41.43 393.53,-44.84" />
+</g>
+
+<g id="mark-9ab8b8517b9b6297" class="edge" data-record-id="projection:functions|decomposition|F_ROOT:parent-F_SUPPORT" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Deliver a tool lending service">
+<title>n0-&gt;n4</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M164.62,-98.62C300.75,-81.75 573,-48 573,-48 573,-48 575.26,-47.51 579.12,-46.67" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="579.83,-48.31 584.34,-45.54 579.09,-44.89 579.83,-48.31" />
+</g>
+
+<g id="mark-8aad925b53f8b2db" class="node" data-record-id="F_ROOT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Deliver a tool lending service">
+<title>n0</title>
+<g id="a_mark-8aad925b53f8b2db"><a ns1:title="Deliver a tool lending service">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M152.5,-133C152.5,-133 25.5,-133 25.5,-133 19.5,-133 13.5,-127 13.5,-121 13.5,-121 13.5,-97 13.5,-97 13.5,-91 19.5,-85 25.5,-85 25.5,-85 152.5,-85 152.5,-85 158.5,-85 164.5,-91 164.5,-97 164.5,-97 164.5,-121 164.5,-121 164.5,-127 158.5,-133 152.5,-133" />
+<text text-anchor="middle" x="89" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Deliver a tool lending</text>
+<text text-anchor="middle" x="89" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">service</text>
+</a>
+</g>
+</g>
+
+<g id="mark-9ed8a94ffef0cb57" class="node" data-record-id="F_ACQUIRE" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Prepare an eligible and fit reservation">
+<title>n1</title>
+<g id="a_mark-9ed8a94ffef0cb57"><a ns1:title="Prepare an eligible and fit reservation">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M166,-48C166,-48 12,-48 12,-48 6,-48 0,-42 0,-36 0,-36 0,-12 0,-12 0,-6 6,0 12,0 12,0 166,0 166,0 172,0 178,-6 178,-12 178,-12 178,-36 178,-36 178,-42 172,-48 166,-48" />
+<text text-anchor="middle" x="89" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Prepare an eligible and fit</text>
+<text text-anchor="middle" x="89" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">reservation</text>
+</a>
+</g>
+</g>
+
+<g id="mark-b1f975752d75dce7" class="node" data-record-id="F_LOAN" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Notify and transfer the reserved tool">
+<title>n2</title>
+<g id="a_mark-b1f975752d75dce7"><a ns1:title="Notify and transfer the reserved tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M347.5,-48C347.5,-48 214.5,-48 214.5,-48 208.5,-48 202.5,-42 202.5,-36 202.5,-36 202.5,-12 202.5,-12 202.5,-6 208.5,0 214.5,0 214.5,0 347.5,0 347.5,0 353.5,0 359.5,-6 359.5,-12 359.5,-12 359.5,-36 359.5,-36 359.5,-42 353.5,-48 347.5,-48" />
+<text text-anchor="middle" x="281" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Notify and transfer the</text>
+<text text-anchor="middle" x="281" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">reserved tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-d700d0ece50fa609" class="node" data-record-id="F_RETURN" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Recover the returned tool">
+<title>n3</title>
+<g id="a_mark-d700d0ece50fa609"><a ns1:title="Recover the returned tool">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M548.5,-42C548.5,-42 395.5,-42 395.5,-42 389.5,-42 383.5,-36 383.5,-30 383.5,-30 383.5,-18 383.5,-18 383.5,-12 389.5,-6 395.5,-6 395.5,-6 548.5,-6 548.5,-6 554.5,-6 560.5,-12 560.5,-18 560.5,-18 560.5,-30 560.5,-30 560.5,-36 554.5,-42 548.5,-42" />
+<text text-anchor="middle" x="472" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Recover the returned tool</text>
+</a>
+</g>
+</g>
+
+<g id="mark-d0ad6a49ea2a648f" class="node" data-record-id="F_SUPPORT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Keep service decisions and state accountable">
+<title>n4</title>
+<g id="a_mark-d0ad6a49ea2a648f"><a ns1:title="Keep service decisions and state accountable">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M761.5,-48C761.5,-48 596.5,-48 596.5,-48 590.5,-48 584.5,-42 584.5,-36 584.5,-36 584.5,-12 584.5,-12 584.5,-6 590.5,0 596.5,0 596.5,0 761.5,0 761.5,0 767.5,0 773.5,-6 773.5,-12 773.5,-12 773.5,-36 773.5,-36 773.5,-42 767.5,-48 761.5,-48" />
+<text text-anchor="middle" x="679" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Keep service decisions and</text>
+<text text-anchor="middle" x="679" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">state accountable</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,79 @@
+{
+  "title": "Frozen source questions for fictional tool-library architecture",
+  "version": "1.0.0",
+  "preparedBeforeModelAuthoring": true,
+  "source": "tool-library-conops.md",
+  "purpose": "Independent source-meaning and review-answer checks. IDs, counts, package shapes and renderer implementation are deliberately not prescribed.",
+  "questions": [
+    {
+      "id": "TLQ01",
+      "question": "What is inside the service, what authority stays external, and what has not been designed?",
+      "sourceRefs": ["TL-01", "TL-02"],
+      "expectedEvidence": ["A service boundary that includes volunteer handling and coordination", "An external registry eligibility exchange", "An external repair outcome exchange", "Logical responsibility choices marked as proposals"],
+      "forbiddenClaims": ["The service decides membership eligibility", "A cloud application or automated locker has been selected", "Repair methods or home delivery are designed"]
+    },
+    {
+      "id": "TLQ02",
+      "question": "Can eligibility and condition be assessed independently, and must the correct two results be reconciled before a ready reservation?",
+      "sourceRefs": ["TL-03", "TL-04"],
+      "expectedEvidence": ["Concurrent registry request and candidate inspection", "A ready condition requiring eligible member AND fit identified tool", "Member decision and tool inspection identities preserved in the exchanges"],
+      "forbiddenClaims": ["Eligibility substitutes for condition assessment", "A fit tool substitutes for eligibility", "The source requires a fixed eligibility-then-inspection sequence", "An unavailable result is treated as eligible"]
+    },
+    {
+      "id": "TLQ03",
+      "question": "How do the no-candidate, ineligible, unavailable and unfit cases differ?",
+      "sourceRefs": ["TL-03", "TL-04"],
+      "expectedEvidence": ["No candidate offers wait-list or member-selected closure without allocating inventory", "Ineligible remains an accountable refusal/clarification case", "Registry unavailable remains pending", "Unfit candidate is quarantined and candidate selection can repeat"],
+      "forbiddenClaims": ["Every failure follows the same successful checkout path", "A wait-list is a tool reservation", "The source supplies a registry timeout or fairness algorithm"]
+    },
+    {
+      "id": "TLQ04",
+      "question": "What starts the hold clock, what is its minimum, and when does that obligation cease to apply?",
+      "sourceRefs": ["TL-05"],
+      "expectedEvidence": ["A duration requirement of at least 2 h on the ready-reservation hold", "The clock origin is confirmed notice delivery", "Member withdrawal and new fault are explicit exceptions", "Coordinator extension with reason is distinguishable from expiration"],
+      "forbiddenClaims": ["Queuing or sending a notice proves delivery", "A reservation expires two hours after the request", "The minimum fixes a universal exact two-hour hold", "Two hours proves storage or volunteer capacity"]
+    },
+    {
+      "id": "TLQ05",
+      "question": "What happens when a notice lacks confirmation?",
+      "sourceRefs": ["TL-05"],
+      "expectedEvidence": ["Pending-notification state or explicit equivalent", "Contact exception assigned to the coordinator", "No inferred delivered timestamp or expiry from unconfirmed delivery"],
+      "forbiddenClaims": ["A missing delivery acknowledgement starts the ordinary expiry clock", "An acknowledgement technology or maximum retry time is source-mandated"]
+    },
+    {
+      "id": "TLQ06",
+      "question": "What event and evidence transfer custody at collection and return?",
+      "sourceRefs": ["TL-06", "TL-07"],
+      "expectedEvidence": ["Matched member, reservation and tool plus member acceptance before on-loan custody", "Steward-confirmed receipt before returned library custody", "Unresolved match/acceptance retained under coordinator ownership"],
+      "forbiddenClaims": ["Ready status completes the loan", "Member reports of return prove library receipt", "Every item handover is represented only by a traceability citation"]
+    },
+    {
+      "id": "TLQ07",
+      "question": "Can a repair report by itself return a tool to available inventory?",
+      "sourceRefs": ["TL-02", "TL-07"],
+      "expectedEvidence": ["Repair report flows to steward reassessment", "Fit reassessment permits coordinator quarantine release", "Unresolved defects keep quarantine and lead to a new repair or retirement decision"],
+      "forbiddenClaims": ["The repair provider controls availability", "Technical work completion automatically releases quarantine", "Every returned tool is immediately available"]
+    },
+    {
+      "id": "TLQ08",
+      "question": "Does the inventory state preserve exclusivity through reservation, custody and condition changes?",
+      "sourceRefs": ["TL-06", "TL-07", "TL-08"],
+      "expectedEvidence": ["Identified tool status distinguishes available, reserved, on loan, awaiting assessment and quarantined", "Availability is prohibited while any incompatible condition holds", "State changes have responsible decisions or evidence"],
+      "forbiddenClaims": ["A tool can be available and on loan in the same selected case", "An event label without conditions establishes availability", "The state model proves concurrency implementation correct"]
+    },
+    {
+      "id": "TLQ09",
+      "question": "What does the logical decomposition allocate, and can a reviewer follow one complete behavioural slice?",
+      "sourceRefs": ["TL-01", "TL-04", "TL-06", "TL-07"],
+      "expectedEvidence": ["A connected request-to-loan or return-to-availability scenario with typed information/object/control exchanges", "Function-to-logical responsibility allocation distinct from human operational participation", "Requirements and planned verification tied to the relevant subject"],
+      "forbiddenClaims": ["A list of paragraph definitions alone is complete architecture", "An actor dependency alone is functional allocation", "A selected logical decomposition is source-approved"]
+    },
+    {
+      "id": "TLQ10",
+      "question": "How would the source obligations be checked, and which results remain unknown?",
+      "sourceRefs": ["TL-04", "TL-05", "TL-07", "TL-08"],
+      "expectedEvidence": ["Planned checks of both conjunctive readiness inputs and each non-success outcome", "Planned hold check before 2 h and at/after the chosen deadline, referenced to confirmed delivery and exceptions", "Planned repair-complete-but-still-unfit case", "Unknown demand, capacity, timing, fairness and freshness inputs remain explicit decisions/data needs"],
+      "forbiddenClaims": ["A parser pass establishes verified operations", "Service throughput is calculated without demand or capacity inputs", "A verification plan is an executed result", "All unresolved source decisions are automatically accepted"]
+    }
+  ]
+}

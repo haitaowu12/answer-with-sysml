@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="475pt" height="192pt" viewBox="0.00 0.00 474.58 192.08" role="img" aria-label="What crosses this candidate service boundary, and who retains authority?" data-view-id="operational|boundary|LC_RECOVERY" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 169.04)">
+<title>architecture</title>
+
+<g id="mark-dc200b1330bf70a3" class="edge" data-record-id="CX_08" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Identified-tool repair request and defects">
+<title>n0-&gt;n1</title>
+<g id="a_mark-dc200b1330bf70a3"><a ns1:title="Identified-tool repair request and defects">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M291.29,-30.19C226.41,-40.76 139,-55 139,-55 139,-55 139,-91 139,-91 139,-91 141.24,-96.38 143.99,-102.99" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="141.9,-104.32 146.85,-109.84 146.42,-102.44 141.9,-104.32" />
+</a>
+</g>
+<text text-anchor="middle" x="187" y="-76.6" font-family="Arial" font-size="10.50" fill="#40565e">Identified-tool repair</text>
+<text text-anchor="middle" x="187" y="-64.6" font-family="Arial" font-size="10.50" fill="#40565e">request and defects</text>
+</g>
+
+<g id="mark-a70d5afd3f0799d6" class="edge" data-record-id="CX_09" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Work completed and known remaining defects">
+<title>n1-&gt;n0</title>
+<g id="a_mark-a70d5afd3f0799d6"><a ns1:title="Work completed and known remaining defects">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M81.06,-109.95C41.25,-100.64 0,-91 0,-91 0,-91 0,-55 0,-55 0,-55 178.68,-37.13 284.28,-26.57" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="284.72,-28.99 291.44,-25.86 284.23,-24.11 284.72,-28.99" />
+</a>
+</g>
+<text text-anchor="middle" x="66.5" y="-76.6" font-family="Arial" font-size="10.50" fill="#40565e">Work completed and known</text>
+<text text-anchor="middle" x="66.5" y="-64.6" font-family="Arial" font-size="10.50" fill="#40565e">remaining defects</text>
+</g>
+
+<g id="mark-4d8754f56216f2b4" class="edge" data-record-id="CX_11" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Repair, quarantine release or retirement decision">
+<title>n2-&gt;n0</title>
+<g id="a_mark-4d8754f56216f2b4"><a ns1:title="Repair, quarantine release or retirement decision">
+<path fill="none" stroke="#6b7e86" stroke-width="1.1" d="M303.64,-109.95C272.88,-100.64 241,-91 241,-91 241,-91 241,-55 241,-55 241,-55 268.32,-46.73 296.78,-38.12" />
+<polygon fill="#6b7e86" stroke="#6b7e86" stroke-width="1.1" points="297.65,-40.42 303.64,-36.05 296.23,-35.73 297.65,-40.42" />
+</a>
+</g>
+<text text-anchor="middle" x="291" y="-82.6" font-family="Arial" font-size="10.50" fill="#40565e">Repair, quarantine</text>
+<text text-anchor="middle" x="291" y="-70.6" font-family="Arial" font-size="10.50" fill="#40565e">release or retirement</text>
+<text text-anchor="middle" x="291" y="-58.6" font-family="Arial" font-size="10.50" fill="#40565e">decision</text>
+</g>
+
+
+<g id="mark-84d1750a6c6e9a7a" class="node" data-record-id="LC_RECOVERY" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Condition recovery">
+<title>n0</title>
+<g id="a_mark-84d1750a6c6e9a7a"><a ns1:title="Condition recovery">
+<path fill="#eaf0fb" stroke="#7586b0" stroke-width="1.2" d="M416.5,-36C416.5,-36 303.5,-36 303.5,-36 297.5,-36 291.5,-30 291.5,-24 291.5,-24 291.5,-12 291.5,-12 291.5,-6 297.5,0 303.5,0 303.5,0 416.5,0 416.5,0 422.5,0 428.5,-6 428.5,-12 428.5,-12 428.5,-24 428.5,-24 428.5,-30 422.5,-36 416.5,-36" />
+<text text-anchor="middle" x="360" y="-14.3" font-family="Arial" font-size="14.00" fill="#263d69">Condition recovery</text>
+</a>
+</g>
+</g>
+
+<g id="mark-33e2488500b35e62" class="node" data-record-id="A_REPAIR" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect External repair provider">
+<title>n1</title>
+<g id="a_mark-33e2488500b35e62"><a ns1:title="External repair provider">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M224.5,-146C224.5,-146 83.5,-146 83.5,-146 77.5,-146 71.5,-140 71.5,-134 71.5,-134 71.5,-122 71.5,-122 71.5,-116 77.5,-110 83.5,-110 83.5,-110 224.5,-110 224.5,-110 230.5,-110 236.5,-116 236.5,-122 236.5,-122 236.5,-134 236.5,-134 236.5,-140 230.5,-146 224.5,-146" />
+<text text-anchor="middle" x="154" y="-124.3" font-family="Arial" font-size="14.00" fill="#5c471c">External repair provider</text>
+</a>
+</g>
+</g>
+
+<g id="mark-5fa5fe95bdd30d70" class="node" data-record-id="A_COORD" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Duty coordinator">
+<title>n2</title>
+<g id="a_mark-5fa5fe95bdd30d70"><a ns1:title="Duty coordinator">
+<path fill="#fff7e7" stroke="#b59959" stroke-width="1.2" d="M410,-146C410,-146 310,-146 310,-146 304,-146 298,-140 298,-134 298,-134 298,-122 298,-122 298,-116 304,-110 310,-110 310,-110 410,-110 410,-110 416,-110 422,-116 422,-122 422,-122 422,-134 422,-134 422,-140 416,-146 410,-146" />
+<text text-anchor="middle" x="360" y="-124.3" font-family="Arial" font-size="14.00" fill="#5c471c">Duty coordinator</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

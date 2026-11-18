@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="670pt" height="179pt" viewBox="0.00 0.00 669.58 179.08" role="img" aria-label="Which smaller responsibilities compose this function?" data-view-id="functions|decomposition|F_SUPPORT" class="architecture-svg">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 156.04)">
+<title>architecture</title>
+
+<g id="mark-6d3954cf574fd195" class="edge" data-record-id="projection:functions|decomposition|F_SUPPORT:parent-F_EXCEPTION" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Keep service decisions and state accountable">
+<title>n0-&gt;n1</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M97.34,-84.88C96.2,-73.15 96.22,-58.96 97.41,-47.35" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="99.17,-47.38 98.04,-42.21 95.7,-46.96 99.17,-47.38" />
+</g>
+
+
+<g id="mark-6365658d93442641" class="edge" data-record-id="projection:functions|decomposition|F_SUPPORT:parent-F_LEDGER" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Keep service decisions and state accountable">
+<title>n0-&gt;n2</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M167.32,-84.99C196.69,-74.06 231.83,-60.98 261.79,-49.83" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="262.48,-51.44 266.56,-48.05 261.26,-48.16 262.48,-51.44" />
+</g>
+
+<g id="mark-03d2034df1fac3cc" class="edge" data-record-id="projection:functions|decomposition|F_SUPPORT:parent-F_STATUS" data-mark-kind="edge" tabindex="0" role="button" aria-label="Inspect Decomposes Keep service decisions and state accountable">
+<title>n0-&gt;n3</title>
+<path fill="none" stroke="#a0aaa4" stroke-width="1.1" d="M200.22,-90.73C297.41,-73 434.5,-48 434.5,-48 434.5,-48 436.63,-47.51 440.27,-46.67" />
+<polygon fill="#a0aaa4" stroke="#a0aaa4" stroke-width="1.1" points="440.72,-48.36 445.2,-45.54 439.94,-44.95 440.72,-48.36" />
+</g>
+
+<g id="mark-a7548820548aec6e" class="node" data-record-id="F_SUPPORT" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Keep service decisions and state accountable">
+<title>n0</title>
+<g id="a_mark-a7548820548aec6e"><a ns1:title="Keep service decisions and state accountable">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M188,-133C188,-133 23,-133 23,-133 17,-133 11,-127 11,-121 11,-121 11,-97 11,-97 11,-91 17,-85 23,-85 23,-85 188,-85 188,-85 194,-85 200,-91 200,-97 200,-97 200,-121 200,-121 200,-127 194,-133 188,-133" />
+<text text-anchor="middle" x="105.5" y="-112.8" font-family="Arial" font-size="14.00" fill="#153c3a">Keep service decisions and</text>
+<text text-anchor="middle" x="105.5" y="-97.8" font-family="Arial" font-size="14.00" fill="#153c3a">state accountable</text>
+</a>
+</g>
+</g>
+
+<g id="mark-78bb651bd26f18f8" class="node" data-record-id="F_EXCEPTION" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Coordinate an unresolved case">
+<title>n1</title>
+<g id="a_mark-78bb651bd26f18f8"><a ns1:title="Coordinate an unresolved case">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M199,-42C199,-42 12,-42 12,-42 6,-42 0,-36 0,-30 0,-30 0,-18 0,-18 0,-12 6,-6 12,-6 12,-6 199,-6 199,-6 205,-6 211,-12 211,-18 211,-18 211,-30 211,-30 211,-36 205,-42 199,-42" />
+<text text-anchor="middle" x="105.5" y="-20.3" font-family="Arial" font-size="14.00" fill="#153c3a">Coordinate an unresolved case</text>
+</a>
+</g>
+</g>
+
+<g id="mark-ad979be37c46179a" class="node" data-record-id="F_LEDGER" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Maintain custody, condition and availability state">
+<title>n2</title>
+<g id="a_mark-ad979be37c46179a"><a ns1:title="Maintain custody, condition and availability state">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M410,-48C410,-48 247,-48 247,-48 241,-48 235,-42 235,-36 235,-36 235,-12 235,-12 235,-6 241,0 247,0 247,0 410,0 410,0 416,0 422,-6 422,-12 422,-12 422,-36 422,-36 422,-42 416,-48 410,-48" />
+<text text-anchor="middle" x="328.5" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Maintain custody, condition</text>
+<text text-anchor="middle" x="328.5" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">and availability state</text>
+</a>
+</g>
+</g>
+
+<g id="mark-db07745eaf0265af" class="node" data-record-id="F_STATUS" data-mark-kind="node" tabindex="0" role="button" aria-label="Inspect Communicate the current request outcome">
+<title>n3</title>
+<g id="a_mark-db07745eaf0265af"><a ns1:title="Communicate the current request outcome">
+<path fill="#eff7f4" stroke="#527975" stroke-width="1.2" d="M611.5,-48C611.5,-48 457.5,-48 457.5,-48 451.5,-48 445.5,-42 445.5,-36 445.5,-36 445.5,-12 445.5,-12 445.5,-6 451.5,0 457.5,0 457.5,0 611.5,0 611.5,0 617.5,0 623.5,-6 623.5,-12 623.5,-12 623.5,-36 623.5,-36 623.5,-42 617.5,-48 611.5,-48" />
+<text text-anchor="middle" x="534.5" y="-27.8" font-family="Arial" font-size="14.00" fill="#153c3a">Communicate the current</text>
+<text text-anchor="middle" x="534.5" y="-12.8" font-family="Arial" font-size="14.00" fill="#153c3a">request outcome</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

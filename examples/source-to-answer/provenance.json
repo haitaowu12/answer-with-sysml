@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "source": "../../.agent/skills/knowledge-engine/specialists/sysml-v2-modeling/workbench/fixtures/architecture/tool-library/source.md",
+  "sourceSha256": "d326d400b32abc34edc8eae059a497972f3a81c2eb2828d32a5c5dd380426328",
+  "modelSha256": "4e7f795872a3093a12d2eb6326dfedc8f13f2b36cb43e9d0a6fc5b07fbcbb30f",
+  "recipeSha256": "48951f0b3286678a66f5ec5a0446170d82410b51f77ca38f7e5509b75e744a2a",
+  "claims": [
+    {
+      "id": "parallel-preparation",
+      "sourceRefs": [
+        "TL-04"
+      ],
+      "modelElements": [
+        {
+          "qualifiedName": "ToolLibraryArchitecture::System::functions::F_ROOT::F_ACQUIRE::F_ELIG",
+          "metaclass": "ActionUsage"
+        },
+        {
+          "qualifiedName": "ToolLibraryArchitecture::System::functions::F_ROOT::F_ACQUIRE::F_INSPECT",
+          "metaclass": "ActionUsage"
+        },
+        {
+          "qualifiedName": "ToolLibraryArchitecture::System::functions::F_ROOT::F_ACQUIRE::F_ASSESS",
+          "metaclass": "ActionUsage"
+        }
+      ]
+    },
+    {
+      "id": "eligibility-authority",
+      "sourceRefs": [
+        "TL-02",
+        "TL-04"
+      ],
+      "modelElements": [
+        {
+          "qualifiedName": "ToolLibraryArchitecture::Operational::context::A_REGISTRY",
+          "metaclass": "PartUsage"
+        },
+        {
+          "qualifiedName": "ToolLibraryArchitecture::System::functions::F_ROOT::F_ACQUIRE::F_ELIG",
+          "metaclass": "ActionUsage"
+        }
+      ]
+    },
+    {
+      "id": "repair-release",
+      "sourceRefs": [
+        "TL-07"
+      ],
+      "modelElements": [
+        {
+          "qualifiedName": "ToolLibraryArchitecture::System::functions::F_ROOT::F_RETURN::F_REASSESS",
+          "metaclass": "ActionUsage"
+        },
+        {
+          "qualifiedName": "ToolLibraryArchitecture::System::functions::F_ROOT::F_RETURN::F_RELEASE",
+          "metaclass": "ActionUsage"
+        }
+      ]
+    },
+    {
+      "id": "confirmed-hold",
+      "sourceRefs": [
+        "TL-05"
+      ],
+      "modelElements": [
+        {
+          "qualifiedName": "ToolLibraryArchitecture::System::functions::F_ROOT::F_LOAN::F_CONFIRM",
+          "metaclass": "ActionUsage"
+        },
+        {
+          "qualifiedName": "ToolLibraryArchitecture::System::functions::F_ROOT::F_LOAN::F_HOLD",
+          "metaclass": "ActionUsage"
+        }
+      ]
+    }
+  ],
+  "qualification": "native language and translation checks passed",
+  "visualAcceptance": "not established in this environment",
+  "authoredRecipe": "../../.agent/skills/knowledge-engine/specialists/sysml-v2-modeling/workbench/fixtures/architecture/tool-library/architecture.json",
+  "renderedRecipe": "architecture.json",
+  "renderedRecipeSha256": "48951f0b3286678a66f5ec5a0446170d82410b51f77ca38f7e5509b75e744a2a",
+  "canonicalRecipeSha256": "a6b585686cb931a26350946c0f9a862243c25dd11d23acd35005ce2e3805376e",
+  "canonicalRecipeEncoding": "UTF-8 JSON, sorted keys, ensure_ascii=false, separators comma/colon"
+}
